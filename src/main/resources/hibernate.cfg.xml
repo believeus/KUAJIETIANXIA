@@ -45,6 +45,8 @@
 		<mapping class="cn.believeus.model.Authority"/>
 		<mapping class="cn.believeus.model.Role"/>
 		<mapping class="cn.believeus.model.Tuser"/>
+		<mapping class="cn.believeus.model.Tmessage"/>
+		<mapping class="cn.believeus.model.Tnews"/>
 		
 		
 	</session-factory>

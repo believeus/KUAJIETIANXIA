@@ -25,9 +25,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			margin-top: 0px;
 			margin-right: 0px;
 			margin-bottom: 0px;
-			background-color: #016aa9;
 			overflow:hidden;
-			background: url("/static/public/images/backbg.jpg") no-repeat scroll center top / 100% auto #fefefe;
 		}
 		.STYLE1 {
 			color: #000000;
@@ -36,7 +34,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	</style>
   </head>
   
-  <body style="overflow-y: hidden;background: url(/static/public/images/backbg1.jpg);">
+  <body>
     <!-- Begin Name:wuqiwei 此处必须加：不加验证之后就不能表单提交了,所以如果已经验证直接跳转到/admin/manager.jhtml页面 -->
      <shiro:authenticated>
       <script type="text/javascript">
@@ -45,20 +43,27 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	</shiro:authenticated>
 	<!-- End Name:wuqiwei 此处必须加：不加验证之后就不能表单提交了,所以如果已经验证直接跳转到/admin/manager.jhtml页面 -->
 	
-	<div class="center" style="width: 100%; height: 1000px;margin: 0 auto;">
-		<div style="background-color: #d9e1f4;height: 39px;left: 50%;margin-left: -300px;margin-top: -100px;position: absolute;top: 50%;width: 600px;">
+	<div class="center" style="width: 100%; height: 1000px;margin-top: 200px;">
+		<div style="float: left;margin-left: 400px">
+			<img alt="logo" src="/static/public/images/logo.png" width="200px" height="200px"/>
+		</div>
+		<div style="height: 39px;left: 50%;margin-left: -300px;position: absolute;top: 50%;width: 600px;margin-top: -100px;">
 			<form action="/admin/login.jhtml" method="post">
+				<div>
 				<div style="float: left;border: 1px solid #A8AFB7;width: 35px;height: 37px;">
 					<img src="/static/public/images/user.png" style="width: 20px;height: 20px;margin: 8px 0px 0px 7px;" />
 				</div>
 				<div style="float: left;">
-					<input type="text" name="username" id="username" placeholder="用户名" style="width: 130px;height: 38px;border: none;text-indent: 10px;" />
+					<input type="text" name="username" id="username" placeholder="用户名" style="width: 130px;height: 38px;text-indent: 10px;" />
 				</div>
+				</div>
+				<div>
 				<div style="float: left;border: 1px solid #A8AFB7;width: 35px;height: 37px;">
 					<img src="/static/public/images/lock.png" style="width: 15px;height: 20px;margin: 8px 0px 0px 10px;" />
 				</div>
 				<div style="float: left;">
-					<input type="password" name="password" id="password" placeholder="密码" style="width: 130px;height: 38px;border: none;text-indent: 10px;" />
+					<input type="password" name="password" id="password" placeholder="密码" style="width: 130px;height: 38px;text-indent: 10px;" />
+				</div>
 				</div>
 				<div style="margin-left: 141px;">
 					<input type="submit"  value="登陆" style="float: left;width: 125px;height: 39px;" />

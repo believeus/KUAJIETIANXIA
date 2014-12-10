@@ -15,9 +15,10 @@
 	<script type="text/javascript" src='/static/public/js/outlook2.js'></script>
     <script type="text/javascript">
 	 var _menus = {"menus":[
-			{"menuid":"1","icon":"icon-sys","menuname":"会员",
+			{"menuid":"1","icon":"icon-sys","menuname":"内容管理",
 				"menus":[
-				         {"menuname":"会员管理","icon":"icon-users","url":"/admin/member/list.jhtml"},
+				         {"menuname":"企业新闻管理","icon":"icon-users","url":"/admin/news/list.jhtml"},
+				         {"menuname":"用户咨询管理","icon":"icon-set","url":"/admin/message/list.jhtml"},
 					]
 			}
 		/* 	,{"menuid":"2","icon":"icon-sys","menuname":"系统管理",
