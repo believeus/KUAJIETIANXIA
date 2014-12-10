@@ -328,7 +328,7 @@ body{
 	color:#fff!important;
 }
 .orange li:hover>a,.orange li.active a{
-	color:#2BD5B4!important;
+	color:#8E2C2D!important;
 }
 .yellow li:hover>a,.yellow li.active a{
 	background:#febf01;
@@ -704,7 +704,7 @@ input[type="search"].sb-search-input {
 /*----//End-find-place----*/
 /*---holiday-types-----*/
 .holiday-types{
-	background: url(../images/type-bg.jpg) no-repeat center center;
+	background: url(../images/type-bg.jpg) no-repeat center center #3C4D5F;
 	padding: 7em 0;
 	margin: 2em 0;
 }
@@ -738,7 +738,7 @@ input[type="search"].sb-search-input {
 	-o-transition:0.5s all;
 }
 .holiday-type-grid:hover a{
-	color:#1DD2AF;
+	color:#962727;
 }
 .holiday-type-grid span{
 	width: 126px;

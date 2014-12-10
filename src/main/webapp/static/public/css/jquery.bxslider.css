@@ -31,7 +31,10 @@
 
 .bx-wrapper .bx-viewport {
 	left: -5px;
-	background: #fff;
+	background: #eeeeee;
+}
+.client-grids {
+    background: none repeat scroll 0 0 #eeeeee;
 }
 
 .bx-wrapper .bx-pager,

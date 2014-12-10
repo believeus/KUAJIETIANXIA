@@ -256,12 +256,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		        <div class="flexslider carousel">
 		          <ul class="slides">
 		            <li onclick="location.href='#';">
-		  	    	    <img src="/static/public/images/p1.jpg" />
+		  	    	    <img src="/static/public/images/huanghelou.png" />
 		  	    	    <!----place-caption-info---->
 		  	    	    <div class="caption-info">
 		  	    	    	 <div class="caption-info-head">
 		  	    	    	 	<div class="caption-info-head-left">
-			  	    	    	 	<h4><a href="#">Hong Kong & Macau</a></h4>
+			  	    	    	 	<h4><a href="#">黄鹤楼&天下江上第一楼</a></h4>
 			  	    	    	 	<span>Bonus Extras!</span>
 		  	    	    	 	</div>
 		  	    	    	 	<div class="caption-info-head-right">
@@ -273,12 +273,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		  	    	     <!----//place-caption-info---->
 		  	    		</li>
 		  	    		 <li onclick="location.href='#';">
-		  	    	    <img src="/static/public/images/p2.jpg" />
+		  	    	    <img src="/static/public/images/huanghelou2.png" />
 		  	    	    <!----place-caption-info---->
 		  	    	    <div class="caption-info">
 		  	    	    	 <div class="caption-info-head">
 		  	    	    	 	<div class="caption-info-head-left">
-			  	    	    	 	<h4><a href="#">Hong Kong & Macau</a></h4>
+			  	    	    	 	<h4><a href="#">昔人已乘黄鹤去，此地空余黄鹤楼。</a></h4>
 			  	    	    	 	<span>Bonus Extras!</span>
 		  	    	    	 	</div>
 		  	    	    	 	<div class="caption-info-head-right">
@@ -290,12 +290,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		  	    	     <!----//place-caption-info---->
 		  	    		</li>
 		  	    		 <li onclick="location.href='#';">
-		  	    	    <img src="/static/public/images/p3.jpg" />
+		  	    	    <img src="/static/public/images/changjiangdaqiao.png" />
 		  	    	    <!----place-caption-info---->
 		  	    	    <div class="caption-info">
 		  	    	    	 <div class="caption-info-head">
 		  	    	    	 	<div class="caption-info-head-left">
-			  	    	    	 	<h4><a href="#">Hong Kong & Macau</a></h4>
+			  	    	    	 	<h4><a href="#">长江大桥&万里长江第一桥</a></h4>
 			  	    	    	 	<span>Bonus Extras!</span>
 		  	    	    	 	</div>
 		  	    	    	 	<div class="caption-info-head-right">
@@ -307,13 +307,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		  	    	     <!----//place-caption-info---->
 		  	    		</li>
 		  	    		 <li onclick="location.href='#';">
-		  	    	    <img src="/static/public/images/p4.jpg" />
+		  	    	    <img src="/static/public/images/changjiangdaqiao2.png" />
 		  	    	    <!----place-caption-info---->
 		  	    	    <div class="caption-info">
 		  	    	    	 <div class="caption-info-head">
 		  	    	    	 	<div class="caption-info-head-left">
-			  	    	    	 	<h4><a href="#">Hong Kong & Macau</a></h4>
-			  	    	    	 	<span>Bonus Extras!</span>
+			  	    	    	 	<h4><a href="#">风墙动，龟蛇静，起宏图。一桥飞架南北，天堑变通途。</a></h4>
+			  	    	    	 	<!-- <span>Bonus Extras!</span> -->
 		  	    	    	 	</div>
 		  	    	    	 	<div class="caption-info-head-right">
 		  	    	    	 		<span> </span>
@@ -324,7 +324,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		  	    	     <!----//place-caption-info---->
 		  	    		</li>
 		            <li onclick="location.href='#';">
-		  	    	    <img src="/static/public/images/p5.jpg" />
+		  	    	    <img src="/static/public/images/qingchuanqiao.png" />
 		  	    	    <!----place-caption-info---->
 		  	    	    <div class="caption-info">
 		  	    	    	 <div class="caption-info-head">
@@ -341,7 +341,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		  	    	     <!----//place-caption-info---->
 		  	    		</li>
 		  	    		 <li onclick="location.href='#';">
-		  	    	    <img src="/static/public/images/p6.jpg" />
+		  	    	    <img src="/static/public/images/qingchuanqiu2.png" />
 		  	    	    <!----place-caption-info---->
 		  	    	    <div class="caption-info">
 		  	    	    	 <div class="caption-info-head">
