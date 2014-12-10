@@ -1,8 +1,8 @@
 /**
- * BxSlider v4.0 - Fully loaded, responsive content slider
+ * BxSlider v4.1.2 - Fully loaded, responsive content slider
  * http://bxslider.com
  *
- * Written by: Steven Wanderski, 2012
+ * Written by: Steven Wanderski, 2014
  * http://stevenwanderski.com
  * (while drinking Belgian ales and listening to jazz)
  *
@@ -15,9 +15,9 @@
 ===================================*/
 
 .bx-wrapper {
-	margin:0 auto;
 	position: relative;
-	padding: 3em 0;
+	margin: 0 auto;
+	padding: 0;
 	*zoom: 1;
 }
 
@@ -30,14 +30,22 @@
 ===================================*/
 
 .bx-wrapper .bx-viewport {
-	left: -5px;
-	background: #fff;
+
+
+	
+	/*fix other elements on the page moving (on Chrome)*/
+	-webkit-transform: translatez(0);
+	-moz-transform: translatez(0);
+    	-ms-transform: translatez(0);
+    	-o-transform: translatez(0);
+    	transform: translatez(0);
 }
 
 .bx-wrapper .bx-pager,
 .bx-wrapper .bx-controls-auto {
 	position: absolute;
-	bottom: -30px;
+	/* bottom: 5px; */
+	bottom: 15px;
 	width: 100%;
 }
 
@@ -45,7 +53,7 @@
 
 .bx-wrapper .bx-loading {
 	min-height: 50px;
-	background: url(images/bx_loader.gif) center center no-repeat #fff;
+	/* background: url(../images/ajax-loader.gif) center center no-repeat #fff; */
 	height: 100%;
 	width: 100%;
 	position: absolute;
@@ -57,7 +65,11 @@
 /* PAGER */
 
 .bx-wrapper .bx-pager {
-	display:none;
+	text-align: center;
+	font-size: .85em;
+	font-family: Arial;
+	font-weight: bold;
+	color: #666;
 }
 
 .bx-wrapper .bx-pager .bx-pager-item,
@@ -68,33 +80,34 @@
 }
 
 .bx-wrapper .bx-pager.bx-default-pager a {
-	background: #666;
+	/* background: #7a3f0d; */
 	text-indent: -9999px;
 	display: block;
-	width: 10px;
-	height: 10px;
+	/* width: 10px;
+	height: 10px; */
 	margin: 0 5px;
 	outline: 0;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	border-radius: 5px;
+	border-radius: 50%;
+	width:15px;
+	height:15px;
+	background:#e2703e;
 }
 
 .bx-wrapper .bx-pager.bx-default-pager a:hover,
 .bx-wrapper .bx-pager.bx-default-pager a.active {
-	background: #000;
+	background: #ffffff;
 }
 
 /* DIRECTION CONTROLS (NEXT / PREV) */
 
 .bx-wrapper .bx-prev {
 	left: 10px;
-	background: url(/static/public/images/controls.png) no-repeat 0 -32px;
+	background: url(/static/public/images/controls.png) no-repeat 0 -35px;
 }
 
 .bx-wrapper .bx-next {
 	right: 10px;
-	background: url(/static/public/images/controls.png) no-repeat -43px -32px;
+	background: url(/static/public/images/controls.png) no-repeat -35px -35px;
 }
 
 .bx-wrapper .bx-prev:hover {
@@ -102,7 +115,7 @@
 }
 
 .bx-wrapper .bx-next:hover {
-	background-position: -43px 0;
+	background-position: -35px 0;
 }
 
 .bx-wrapper .bx-controls-direction a {
@@ -110,8 +123,8 @@
 	top: 50%;
 	margin-top: -16px;
 	outline: 0;
-	width: 32px;
-	height: 32px;
+	width: 35px;
+	height: 35px;
 	text-indent: -9999px;
 	z-index: 9999;
 }
@@ -174,7 +187,7 @@
 	position: absolute;
 	bottom: 0;
 	left: 0;
-	background: #666\9;
+	background: #666;
 	background: rgba(80, 80, 80, 0.75);
 	width: 100%;
 }
