@@ -158,13 +158,17 @@ body{
 	list-style: none;
 	margin-right: 8%;
 }
+.right li {
+    line-height: 20px !important;
+}
 .flexy-menu li{
 	display:inline;
 	font-size:13px;
 	margin:0;
 	padding:0;
 	float:left;
-	line-height:20px;
+	line-height:66px;
+/* 	line-height:20px; */
 	position:relative;
 }
 .flexy-menu>li>a{
@@ -201,7 +205,7 @@ body{
 	box-shadow: 0 1px 1px rgba(0,0,0,0.3);
 }
 .flexy-menu ul{
-	top:61px;
+	top:107px;
 	left:0;
 }
 .flexy-menu ul li ul{
@@ -215,7 +219,8 @@ body{
 	font-size:12px;
 }
 .flexy-menu ul li a{
-	padding:10px 20px;
+	padding:5px 20px;
+/* 	padding:10px 20px; */
 	width:100%;
 	color:#dedede;
 	font-size:13px;
@@ -328,7 +333,7 @@ body{
 	color:#fff!important;
 }
 .orange li:hover>a,.orange li.active a{
-	color:#8E2C2D!important;
+	color:#8E2C2D;
 }
 .yellow li:hover>a,.yellow li.active a{
 	background:#febf01;
@@ -704,7 +709,7 @@ input[type="search"].sb-search-input {
 /*----//End-find-place----*/
 /*---holiday-types-----*/
 .holiday-types{
-	background: url(../images/type-bg.jpg) no-repeat center center #3C4D5F;
+	background: url(../images/type-bg.jpg) no-repeat center center;/*  #3C4D5F; */
 	padding: 7em 0;
 	margin: 2em 0;
 }
@@ -800,12 +805,14 @@ input[type="search"].sb-search-input {
 	color:#626262
 }
 .bxslider li{
-	border-top: 5px solid #24211E;
+	border-top: 5px solid #000 ;
 	padding: 1em;
 	border-left: 1px solid #DDD;
 	border-right: 1px solid #DDD;
 	border-bottom: 1px solid #DDD;
+	border-bottom: 1px solid #DDD;
 	background: #eee;
+	height:123px;
 }
 /*----
 .bxslider li:after{
@@ -816,19 +823,22 @@ input[type="search"].sb-search-input {
 }
 ----*/
 .bxslider li p{
-	font-size:0.875em;
-	color:#717171;
+	font-size:1.05em;
+	color:#333333;
 	line-height:1.5em;
+	height:85px;
 }
 .bxslider li a{
-	color: #24211E;
+	color: #2C3E50;
 	font-size: 1.2em;
 	display: block;
 	padding: 0.4em 0 0;
+	font-weight:
 }
 .bxslider li span{
-	color:#999;
-	font-size:0.8em;
+	color:#962727;
+	font-size:1.2em;
+	font-weight: bold;
 }
 .clients{
 	padding: 3em 0 6em;
@@ -836,7 +846,66 @@ input[type="search"].sb-search-input {
 /*---//holiday-types-----*/
 /*----start-footer----*/
 .footer{
-	background:#2C3E50;
+	background:#1D1D1D;
+	width:100%;
+	height:auto;
+}
+.footer-content{
+	width:1710px;
+	height:430px;
+	overflow:hidden;
+	background:#1D1D1D;
+	margin:0 auto;
+	padding-top:90px;
+}
+.content-left-title{
+	color: #fff;
+    font-family: microsoft yahei;
+    font-size: 23px;
+    margin-bottom: 20px;
+}
+.footer-content-left{
+	width:425px;
+	height:auto;
+	float:left;
+}
+.footer-content-middle{
+	color: #999;
+    float: left;
+    height: auto;
+    line-height: 50px;
+    margin-left: 80px;
+    margin-top: 80px;
+    width: 300px;
+}
+.footer-content-right{
+	float: right;
+	height:auto;
+	width:860px;
+}
+.footer-content-right span {
+    color: #fff;
+    display: block;
+    font-size: 13px;
+    margin: 10px 0;
+}
+.subBtn{
+	background:#BCBCBC;border:1px solid #BCBCBC;border-radius:3px;padding:7px 40px;cursor:pointer;
+}
+.sub-footer{
+	width:100%;
+	height:50px;
+	line-height:50px;
+	background:#141414;
+}
+.sub-footer-content{
+	width:1710px;
+	background:#141414;
+	height:50px;
+	line-height:50px;
+	margin:0 auto;
+	text-align:center;
+	color:#C9C9C9;
 }
 .footer-grid{
 	float: left;
