@@ -18,7 +18,7 @@
 			{"menuid":"1","icon":"icon-sys","menuname":"内容管理",
 				"menus":[
 				         {"menuname":"企业新闻管理","icon":"icon-users","url":"/admin/news/list.jhtml"},
-				         {"menuname":"用户咨询管理","icon":"icon-set","url":"/admin/message/list.jhtml"},
+				         {"menuname":"用户留言管理","icon":"icon-set","url":"/admin/message/list.jhtml"},
 					]
 			}
 		/* 	,{"menuid":"2","icon":"icon-sys","menuname":"系统管理",

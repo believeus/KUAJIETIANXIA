@@ -45,7 +45,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	
 	<div class="center" style="width: 100%; height: 1000px;margin-top: 200px;">
 		<div style="float: left;margin-left: 400px">
-			<img alt="logo" src="/static/public/images/logo.png" width="200px" height="200px"/>
+			<img alt="logo" src="/static/public/images/logo_kjtx.jpg" />
 		</div>
 		<div style="height: 39px;left: 50%;margin-left: -300px;position: absolute;top: 50%;width: 600px;margin-top: -100px;">
 			<form action="/admin/login.jhtml" method="post">
