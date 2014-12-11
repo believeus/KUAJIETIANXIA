@@ -9,17 +9,126 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <head>
     
     <title>集团产业</title>
-    
-	<meta http-equiv="pragma" content="no-cache">
-	<meta http-equiv="cache-control" content="no-cache">
-	<meta http-equiv="expires" content="0">    
-	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
-	<meta http-equiv="description" content="This is my page">
-	
-
+    <link rel="stylesheet" href="/static/public/css/style.css" />
+    <script type="text/javascript" src="/static/public/js/jquery-1.9.1.min.js"></script>
+    <!----start-top-nav-script---->
+	<script type="text/javascript" src="/static/public/js/kjtx/flexy-menu.js"></script>
+	<script type="text/javascript">$(document).ready(function(){$(".flexy-menu").flexymenu({speed: 400,type: "horizontal",align: "right"});});</script>
+	<!----//End-top-nav-script---->
   </head>
   
   <body>
     <jsp:include page="/WEB-INF/include/header.jsp" />
+    <div class="kjtx-main">
+    	<p class="kjtx-main-title">集团产业</p>
+    	<div class="kjtx-main-list">
+    		<div class="kjtx-main-list-img">
+    			<img src="/static/public/images/cy01.jpg" width="272" height="210"/>
+    		</div>
+    		<div class="kjtx-main-list-name">
+    			生物产业:胶原蛋白
+    		</div>
+    		<div class="kjtx-main-list-content">
+	    		跨界天下，是你及家人健康和谐的温暖港湾
+    		</div>
+    	</div>
+    	<div class="kjtx-main-list">
+    		<div class="kjtx-main-list-img">
+    			<img src="/static/public/images/cy01.jpg" width="272" height="210"/>
+    		</div>
+    		<div class="kjtx-main-list-name">
+    			生物产业:胶原蛋白
+    		</div>
+    		<div class="kjtx-main-list-content">
+	    		跨界天下，是你及家人健康和谐的温暖港湾
+    		</div>
+    	</div>
+    	<div class="kjtx-main-list">
+    		<div class="kjtx-main-list-img">
+    			<img src="/static/public/images/cy01.jpg" width="272" height="210"/>
+    		</div>
+    		<div class="kjtx-main-list-name">
+    			生物产业:胶原蛋白
+    		</div>
+    		<div class="kjtx-main-list-content">
+	    		跨界天下，是你及家人健康和谐的温暖港湾
+    		</div>
+    	</div>
+    	<div class="kjtx-main-list" style="margin-right:0;">
+    		<div class="kjtx-main-list-img">
+    			<img src="/static/public/images/cy01.jpg" width="272" height="210"/>
+    		</div>
+    		<div class="kjtx-main-list-name">
+    			生物产业:胶原蛋白
+    		</div>
+    		<div class="kjtx-main-list-content">
+	    		跨界天下，是你及家人健康和谐的温暖港湾
+    		</div>
+    	</div>
+    	<div class="kjtx-main-list">
+    		<div class="kjtx-main-list-img">
+    			<img src="/static/public/images/cy01.jpg" width="272" height="210"/>
+    		</div>
+    		<div class="kjtx-main-list-name">
+    			生物产业:胶原蛋白
+    		</div>
+    		<div class="kjtx-main-list-content">
+	    		跨界天下，是你及家人健康和谐的温暖港湾
+    		</div>
+    	</div>
+    	<div class="kjtx-main-list">
+    		<div class="kjtx-main-list-img">
+    			<img src="/static/public/images/cy01.jpg" width="272" height="210"/>
+    		</div>
+    		<div class="kjtx-main-list-name">
+    			生物产业:胶原蛋白
+    		</div>
+    		<div class="kjtx-main-list-content">
+	    		跨界天下，是你及家人健康和谐的温暖港湾
+    		</div>
+    	</div>
+    	<div class="kjtx-main-list">
+    		<div class="kjtx-main-list-img">
+    			<img src="/static/public/images/cy01.jpg" width="272" height="210"/>
+    		</div>
+    		<div class="kjtx-main-list-name">
+    			生物产业:胶原蛋白
+    		</div>
+    		<div class="kjtx-main-list-content">
+	    		跨界天下，是你及家人健康和谐的温暖港湾
+    		</div>
+    	</div>
+    	<div class="kjtx-main-list" style="margin-right:0;">
+    		<div class="kjtx-main-list-img">
+    			<img src="/static/public/images/cy01.jpg" width="272" height="210"/>
+    		</div>
+    		<div class="kjtx-main-list-name">
+    			生物产业:胶原蛋白
+    		</div>
+    		<div class="kjtx-main-list-content">
+	    		跨界天下，是你及家人健康和谐的温暖港湾
+    		</div>
+    	</div>
+    </div>
+   	<div class="kjtx-more">查看更多...</div>
+    <jsp:include page="/WEB-INF/include/footer.jsp" />
+    <style type="text/css">
+		.flex-viewport{
+			width: 1340px;
+			margin:0 auto;
+		}
+		.slides img {
+		    height: 210px;
+		}
+		.bx-viewport{
+			height:160px !important;
+		}
+		.active li a{
+			color:#dedede !important;
+		}
+		.active li a:hover{
+			color:#8E2C2D !important;
+		}
+	</style>
   </body>
 </html>

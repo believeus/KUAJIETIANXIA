@@ -43,7 +43,7 @@ html[xmlns] .slides {display: block;}
 .flexslider .slides {zoom: 1;padding: 1em 0;}
 
 .carousel li {
-margin: 0 0.7em;
+margin: 0 0.5em;
 background: #EEEEEE;
 padding: 0.3em;
 border-radius: 0.3em;

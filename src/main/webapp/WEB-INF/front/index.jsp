@@ -63,10 +63,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <link rel="stylesheet" href="/static/public/css/jquery-ui.css" />
 <!---//calender-style---->
 <style type="text/css">
-	body{
-		font-size:12px;
-		font-family:microsoft yahei;
-	}
 	a:hover{text-decoration:underline;color: #C20C0C;}
 	.carousel li{
 		width: 261px !important;
@@ -86,14 +82,20 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<!-- start slider -->
 		    <div id="fwslider">
 		        <div class="slider_container">
-		            <div class="slide"> 
+		           <!--  <div class="slide"> 
 	                    <img src="/static/public/images/dingsheng.jpg" alt=""/>
-		            </div>
+		            </div> -->
 		            <div class="slide">
 		                <img src="/static/public/images/yuzhou.jpg" alt=""/>
 		            </div>
 		            <div class="slide">
-		                <img src="/static/public/images/slider-bg.jpg" alt=""/>
+		                <img src="/static/public/images/banner1.jpg" alt=""/>
+		            </div>
+		            <div class="slide">
+		                <img src="/static/public/images/banner2.jpg" alt=""/>
+		            </div>
+		            <div class="slide">
+		                <img src="/static/public/images/banner3.jpg" alt=""/>
 		            </div>
 		        </div>
 		        <div class="timers"> </div>
@@ -428,18 +430,21 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<!----start-footer---->
 		<div class="footer">
 			<div class="footer-content">
-				<div class="footer-content-left">
+				<!-- <div class="footer-content-left">
 					<p class="content-left-title">跨界天下</p>
 					<img src="/static/public/images/footerImg.png" />
-				</div>
-				<div class="footer-content-middle">
+				</div> -->
+				<p class="content-left-title" style="margin-bottom:50px;text-align:center;">
+					<span style="border-bottom: 2px solid #fff;display: block; margin: 0 auto;width: 150px;">在线咨询</span>
+				</p>
+				<div class="footer-content-middle" style="margin-top:0;">
+					<p style="font-size: 21px;color: #fff;">恭候您的垂询</p>
 					<p>咨询电话：027-65650999</p>
 					<p>邮箱：hbydcf@126.com</p>
 					<p>网址：www.eyinde.com</p>
 					<p>地址：武汉市江汉区民权路长江大厦25楼</p>
 				</div>
 				<div class="footer-content-right">
-					<p class="content-left-title" style="margin-bottom:10px;">在线咨询</p>
 					<form action="#" method="post">
 						<table>
 							<tr>
@@ -477,15 +482,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				</div>
 			</div>
 		</div>
-		<div class="sub-footer">
-			<div class="sub-footer-content">
-				Copyright &copy; 2014 湖北银德财富创业投资有限公司All Rights Reserved 沪ICP备88888888号-34
-			</div>
-		</div>
+		<jsp:include page="/WEB-INF/include/footer.jsp" />
 		<!----//End-footer---->
 		<style type="text/css">
 			.flex-viewport{
-				width: 1700px;
+				width: 1340px;
 				margin:0 auto;
 			}
 			.slides img {

@@ -34,8 +34,24 @@ public class ControllerIndex {
 		return "/WEB-INF/front/destinations.jsp";
 	}
 	
-
-	
+	/**
+	 * 集团资讯
+	 * @param request
+	 * @return
+	 */
+	@RequestMapping(value = "/zixunList")
+	public String zixun(HttpServletRequest request) {
+		return "/WEB-INF/front/zixunList.jsp";
+	}
+	/**
+	 * 集团资讯
+	 * @param request
+	 * @return
+	 */
+	@RequestMapping(value = "/zixunContent")
+	public String zixunContent(HttpServletRequest request) {
+		return "/WEB-INF/front/zixunContent.jsp";
+	}
 	
 
 }
