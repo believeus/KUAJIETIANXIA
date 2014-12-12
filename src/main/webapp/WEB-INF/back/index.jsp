@@ -19,6 +19,12 @@
 				"menus":[
 				         {"menuname":"企业新闻管理","icon":"icon-users","url":"/admin/news/list.jhtml"},
 				         {"menuname":"用户留言管理","icon":"icon-set","url":"/admin/message/list.jhtml"},
+				         {"menuname":"集团文化管理","icon":"icon-set","url":"/admin/culture/list.jhtml"},
+				         {"menuname":"集团产业管理","icon":"icon-set","url":"/admin/industry/list.jhtml"},
+				         {"menuname":"集团资讯管理","icon":"icon-set","url":"/admin/information/list.jhtml"},
+				         {"menuname":"企业信息管理","icon":"icon-set","url":"/admin/enterpriseInfo/list.jhtml"},
+				         {"menuname":"首页图片管理","icon":"icon-set","url":"/admin/banner/list.jhtml"},
+				         {"menuname":"合作伙伴管理","icon":"icon-set","url":"/admin/partners/list.jhtml"},
 					]
 			}
 		/* 	,{"menuid":"2","icon":"icon-sys","menuname":"系统管理",
