@@ -22,12 +22,13 @@ import cn.believeus.PaginationUtil.Page;
 import cn.believeus.PaginationUtil.Pageable;
 import cn.believeus.PaginationUtil.PaginationUtil;
 import cn.believeus.model.Culture;
+import cn.believeus.model.Industry;
 import cn.believeus.service.BaseService;
 
 @Controller
-public class CultureController {
+public class IndustryController {
 	
-	private static final Log log=LogFactory.getLog(CultureController.class);
+	private static final Log log=LogFactory.getLog(IndustryController.class);
 	
 	@Resource
 	private MydfsTrackerServer mydfsTrackerServer;
@@ -36,11 +37,11 @@ public class CultureController {
 	private BaseService baseService;
 
 	/**
-	 * 文化列表
+	 * 产业列表
 	 * @return
 	 */
-	@RequiresPermissions("culture:view")
-	@RequestMapping(value="/admin/culture/list")
+	@RequiresPermissions("industry:view")
+	@RequestMapping(value="/admin/industry/list")
 	public String list(HttpServletRequest request){
 		String pageNumber = request.getParameter("pageNumber");
 		// 如果为空，则设置为1
@@ -48,32 +49,32 @@ public class CultureController {
 			pageNumber="1";
 		}
 		Pageable pageable=new Pageable(Integer.valueOf(pageNumber),20);
-		String hql="From Culture news order by news.editTime desc";
+		String hql="From Industry news order by news.editTime desc";
 		Page<?> page = baseService.findObjectList(hql, pageable);
-		request.setAttribute("cultures", page.getContent());
+		request.setAttribute("industry", page.getContent());
 		request.setAttribute("size",page.getTotal());
 		// 分页
 		PaginationUtil.pagination(request,page.getPageNumber(),page.getTotalPages(), 0);
 
-		return "/WEB-INF/back/culture/list.jsp";
+		return "/WEB-INF/back/industry/list.jsp";
 	}
 	
 	/**
-	 * 新闻添加
+	 * 产业添加
 	 * @return
 	 */
-	@RequestMapping(value="/admin/culture/add")
+	@RequestMapping(value="/admin/industry/add")
 	public String add(){
-		return "/WEB-INF/back/culture/add.jsp";
+		return "/WEB-INF/back/industry/add.jsp";
 	} 
 	
 	/**
-	 * 新闻保存
+	 * 产业保存
 	 * @return
 	 * */
-	@RequiresPermissions("culture:create")
-	@RequestMapping(value="/admin/culture/save")
-	public String save(Culture culture,HttpServletRequest request){
+	@RequiresPermissions("industry:create")
+	@RequestMapping(value="/admin/industry/save")
+	public String save(Industry industry,HttpServletRequest request){
 		MultipartHttpServletRequest multipartRequest = (MultipartHttpServletRequest) request;
 		String storepath = "";
 		Map<String, MultipartFile> files = multipartRequest.getFileMap();
@@ -93,32 +94,32 @@ public class CultureController {
 			}
 		}
 		if (!storepath.equals("")) {
-			culture.setPath(storepath);
+			industry.setPath(storepath);
 		}
-		baseService.saveOrUpdata(culture);
-		return "redirect:/admin/culture/list.jhtml";
+		baseService.saveOrUpdata(industry);
+		return "redirect:/admin/industry/list.jhtml";
 	}
 	/**
-	 * 文化修改
+	 * 产业修改
 	 * @return
 	 */
-	@RequiresPermissions("culture:update")
-	@RequestMapping(value="/admin/culture/edit")
+	@RequiresPermissions("industry:update")
+	@RequestMapping(value="/admin/industry/edit")
 	public String edit(Integer id, HttpServletRequest request){
-		Culture culture = (Culture) baseService.findObject(Culture.class, id);
-		request.setAttribute("culture", culture);
-		return "/WEB-INF/back/culture/edit.jsp";
+		Industry industry = (Industry) baseService.findObject(Industry.class, id);
+		request.setAttribute("industry", industry);
+		return "/WEB-INF/back/industry/edit.jsp";
 	}
 	
 	/**
-	 * 文化删除
+	 * 产业删除
 	 * @return
 	 */
-	@RequiresPermissions("culture:delete")
-	@RequestMapping(value="/admin/culture/delete")
+	@RequiresPermissions("industry:delete")
+	@RequestMapping(value="/admin/industry/delete")
 	public @ResponseBody String cultureDel(Integer[] ids){
 		List<Integer> list = Arrays.asList(ids); 
-		baseService.delete(Culture.class, list);
+		baseService.delete(Industry.class, list);
 		return "{\"type\":\"success\"}";
 	}
 }
