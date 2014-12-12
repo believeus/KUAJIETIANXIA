@@ -11,9 +11,9 @@ import javax.persistence.Table;
 public class Partners extends TbaseEntity {
 
 	private static final long serialVersionUID = -5743797339215834848L;
-	private String logo;//链接
-	private String name;//图片路径
-	private String introduction;//名称
+	private String logo;//图片路径
+	private String name;//名称
+	private String introduction;//介绍
 	
 	
 	public String getLogo() {
@@ -34,6 +34,5 @@ public class Partners extends TbaseEntity {
 	public void setIntroduction(String introduction) {
 		this.introduction = introduction;
 	}
-	
 	
 }
