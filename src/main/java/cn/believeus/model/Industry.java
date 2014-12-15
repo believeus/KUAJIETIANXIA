@@ -1,6 +1,12 @@
 package cn.believeus.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 /**
@@ -19,6 +25,8 @@ public class Industry extends TbaseEntity {
 	private String introduction;//介绍
 	
 	private String content;//内容
+	
+	private List<Partners> partners=new ArrayList<Partners>();
 
 	public String getName() {
 		return name;
@@ -51,5 +59,15 @@ public class Industry extends TbaseEntity {
 	public void setContent(String content) {
 		this.content = content;
 	}
+
+	@OneToMany(mappedBy="industry",cascade=CascadeType.ALL,fetch=FetchType.LAZY)
+	public List<Partners> getPartners() {
+		return partners;
+	}
+
+	public void setPartners(List<Partners> partners) {
+		this.partners = partners;
+	}
+	
 	
 }

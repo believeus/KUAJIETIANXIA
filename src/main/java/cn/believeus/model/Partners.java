@@ -1,6 +1,14 @@
 package cn.believeus.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 /**
@@ -14,7 +22,8 @@ public class Partners extends TbaseEntity {
 	private String logo;//图片路径
 	private String name;//名称
 	private String introduction;//介绍
-	
+	private Industry industry;
+	private List<Product> products=new ArrayList<Product>();
 	
 	public String getLogo() {
 		return logo;
@@ -34,5 +43,22 @@ public class Partners extends TbaseEntity {
 	public void setIntroduction(String introduction) {
 		this.introduction = introduction;
 	}
+	@ManyToOne
+	@JoinColumn(name = "fk_industryId", referencedColumnName = "id")
+	public Industry getIndustry() {
+		return industry;
+	}
+	public void setIndustry(Industry industry) {
+		this.industry = industry;
+	}
+	
+	@OneToMany(mappedBy="partner",cascade=CascadeType.ALL,fetch=FetchType.LAZY)
+	public List<Product> getProducts() {
+		return products;
+	}
+	public void setProducts(List<Product> products) {
+		this.products = products;
+	}
+	
 	
 }

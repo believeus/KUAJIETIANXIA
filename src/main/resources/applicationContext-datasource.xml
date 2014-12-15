@@ -27,6 +27,8 @@
 		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
 		<property name="configLocation" value="classpath:hibernate.cfg.xml" />
+		<!-- spring 3.1 version function -->
+		<!-- <property name="packagesToScan" value="cn.believeus.model"/> -->
 	</bean>
 	<bean id="transactionManager"
 		class="org.springframework.orm.hibernate3.HibernateTransactionManager">

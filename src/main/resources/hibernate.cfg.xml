@@ -53,7 +53,7 @@
 		<mapping class="cn.believeus.model.Industry"/>
 		<mapping class="cn.believeus.model.Information"/>
 		<mapping class="cn.believeus.model.EnterpriseInfo"/>
-		
+		<mapping class="cn.believeus.model.Product"/>
 		
 	</session-factory>
 
