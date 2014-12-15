@@ -247,4 +247,28 @@ public class BaseDao extends HibernateDaoSupport {
 			}
 		});
 	}
+	
+	public Page<?> getPageDateList(final Class<?> clazz, final Pageable pageable) {
+		return (Page<?>)getHibernateTemplate().execute(new HibernateCallback<Object>() {
+
+			@SuppressWarnings("unchecked")
+			@Override
+			public Object doInHibernate(Session session)
+					throws HibernateException, SQLException {
+				String hql = "from " + clazz.getName();
+				Query query = session.createQuery(hql);
+				long total = query.list().size();
+				query = session.createQuery(hql);
+				int totalPages = (int) Math.ceil((double) total / (double) pageable.getPageSize());
+				if (totalPages < pageable.getPageNumber()) {
+					pageable.setPageNumber(totalPages);
+				}
+				query.setFirstResult((pageable.getPageNumber() - 1) * pageable.getPageSize());
+				query.setMaxResults(pageable.getPageSize());
+			    @SuppressWarnings("rawtypes")
+				Page page = new Page(query.list(), (int)total, pageable);
+			    return page;
+			}
+		});
+	}
 }

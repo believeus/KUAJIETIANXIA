@@ -13,21 +13,23 @@ public class Product extends TbaseEntity{
 	// 商品名称
 	private String name;
 	// 商品描述
-	private String desc;
+	private String descption;
 	// 商品图片路径
 	private String imgpath;
-	private Partners partner;
+	private Partners partners;
 	public String getName() {
 		return name;
 	}
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getDesc() {
-		return desc;
+	
+	
+	public String getDescption() {
+		return descption;
 	}
-	public void setDesc(String desc) {
-		this.desc = desc;
+	public void setDescption(String descption) {
+		this.descption = descption;
 	}
 	public String getImgpath() {
 		return imgpath;
@@ -36,13 +38,15 @@ public class Product extends TbaseEntity{
 		this.imgpath = imgpath;
 	}
 	@ManyToOne
-	@JoinColumn(name = "fk_partnerId", referencedColumnName = "id")
-	public Partners getPartner() {
-		return partner;
+	@JoinColumn(name = "fk_productId", referencedColumnName = "id")
+	public Partners getPartners() {
+		return partners;
 	}
-	public void setPartner(Partners partner) {
-		this.partner = partner;
+	public void setPartners(Partners partners) {
+		this.partners = partners;
 	}
+	
+	
 	
 	
 	

@@ -52,7 +52,7 @@ public class Partners extends TbaseEntity {
 		this.industry = industry;
 	}
 	
-	@OneToMany(mappedBy="partner",cascade=CascadeType.ALL,fetch=FetchType.LAZY)
+	@OneToMany(mappedBy="partners",cascade=CascadeType.ALL,fetch=FetchType.LAZY)
 	public List<Product> getProducts() {
 		return products;
 	}

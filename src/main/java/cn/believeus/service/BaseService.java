@@ -82,5 +82,9 @@ public class BaseService{
 	public Page<?> findObjectList(String hql, Pageable pageable) {
 		return (Page<?>) baseDao.getPageDateList(hql,pageable );
 	}
+	public Page<?> findObjectList(Class<?> clazz, Pageable pageable) {
+		return (Page<?>) baseDao.getPageDateList(clazz,pageable );
+	}
+	
 
 }
