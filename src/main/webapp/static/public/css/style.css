@@ -29,29 +29,44 @@ a{text-decoration:none;}
 .vertical-top{	vertical-align:top;}/* vertical align top */
 nav.vertical ul li{	display:block;}/* vertical menu */
 nav.horizontal ul li{	display: inline-block;}/* horizontal menu */
-img{max-width:100%;}
+/* img{max-width:100%;} */
 /*end reset*/
 body{
 	font-family: 'Open Sans', sans-serif;
 	background:#FFF;
 }
 /* ********************* */
+.main-content a:hover{
+	color:#942D2A;
+	text-decoration: underline;
+}
+.jiantou{
+	width:21px;
+	height:19px;
+	display:inline-block;
+	background:url(/static/public/images/jiantou.png);
+	position: relative;
+    top: 5px;
+    margin-right: 15px;
+}
 .kjtx-main{
-	width:1200px;
+	width:1400px;
 	height:auto;overflow:hidden;
 	margin:0 auto;
 }
 .kjtx-main-title{
 	font-family: microsoft yahei;
     font-size: 25px;
-    margin: 20px 0;	
+    margin: 20px auto;	
     color:#666666;
+    width: 1400px;
+    border-bottom: 2px solid #aeaeae;
 }
 .kjtx-main-list{
 	width:283px;
 	height:315px;
 	float:left;
-	margin-right:18px;
+	margin-right:85px;
 	margin-bottom:50px;
 	border:1px solid #D0C5BF;
 	/* border-bottom:2px solid #000; */
@@ -71,7 +86,7 @@ body{
 	color:#000;
 }
 .kjtx-more{
-	width:1200px;height:50px;line-height:50px;margin:0 auto;margin-bottom:50px;font-family:microsoft yahei;border-radius:5px;background:#414141;text-align:center;color:#C6C6C6;font-size:20px;font-weight:bold;
+	width:1400px;height:50px;line-height:50px;margin:0 auto;margin-bottom:50px;font-family:microsoft yahei;border-radius:5px;background:#414141;text-align:center;color:#C6C6C6;font-size:20px;font-weight:bold;
 }
 .kjtx-main-list-img{
 	height: 210px;
@@ -269,7 +284,7 @@ body{
 .top-nav{
 	float:right;
 	position: relative;
-	width: 67%;
+	/* width: 67%; */
 }
 /*----//main-header----*/
 /*----top-nav-----*/
@@ -866,7 +881,7 @@ input[type="search"].sb-search-input {
 	-o-transition:0.5s all;
 }
 .holiday-type-grid:hover a{
-	color:#962727;
+	color:#17D3B0;
 }
 .holiday-type-grid span{
 	width: 126px;
@@ -969,15 +984,15 @@ input[type="search"].sb-search-input {
 /*---//holiday-types-----*/
 /*----start-footer----*/
 .footer{
-	background:#1D1D1D;
+	background:#F3F6FA;
 	width:100%;
 	height:auto;
 }
 .footer-content{
-	width:1200px;
-	height:470px;
+	width:1830px;
+	height:370px;
 	overflow:hidden;
-	background:#1D1D1D;
+	background:#F3F6FA;
 	margin:0 auto;
 	padding-top:20px;
 }
@@ -1010,6 +1025,25 @@ input[type="search"].sb-search-input {
     display: block;
     font-size: 13px;
     margin: 10px 0;
+}
+.partners-list-parent{
+	width:100%;
+	height:auto;
+	overflow:hidden;
+	margin-top:30px;
+}
+.partners-list{
+	border: 2px solid #922d2c;
+    border-radius: 100px;
+    float: left;
+    height: 170px;
+    margin-right: 60px;
+    width: 170px;
+    cursor:pointer;
+}
+.partners-list img {
+    position: relative;
+    left: -30px;
 }
 .subBtn{
 	background:#BCBCBC;border:1px solid #BCBCBC;border-radius:3px;padding:7px 40px;cursor:pointer;

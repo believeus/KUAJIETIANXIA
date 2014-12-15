@@ -4,11 +4,12 @@ String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<title>合作伙伴列表 - Powered By believeus</title>
+	<title>公司产品列表 - Powered By believeus</title>
 	<meta name="author" content="believeus Team" />
 	<meta name="copyright" content="believeus" />
 	<link href="/static/public/css/common_s.css" rel="stylesheet" type="text/css" />
@@ -30,11 +31,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   <body>
     <div class="path">
-		<a href="/admin/manager.jhtml" target="_parent">首页</a> &raquo; 内容列表 <span>共${size}条记录</span>
+		<a href="/admin/manager.jhtml" target="_parent">首页</a> &raquo; 产品列表 <span>共${size}条记录</span>
 	</div>
 	<div>
 		<div class="bar">
-			<a href="/admin/partners/add.jhtml" class="iconButton">
+			<a href="/admin/product/add.jhtml" class="iconButton">
 				<span class="addIcon">&nbsp;</span>添加
 			</a>
 		<div class="buttonWrap">
@@ -55,19 +56,19 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					<a href="javascript:;" class="sort" name="id">排序编号</a>
 				</th>
 				<th>
-					<a href="javascript:;" class="sort" name="industry">所属产业</a>
+					<a href="javascript:;" class="sort" name="partners">所属公司</a>
 				</th>
 				<th>
 					<a href="javascript:;" class="sort" name="name">名称</a>
 				</th>
-				<th>
-					<a href="javascript:;" class="sort" name="introduction">介绍</a>
+				<th>  
+					<a href="javascript:;" class="sort" name="desc">介绍</a>
 				</th>
 				<th>
 					<a href="#"  class="sort">操作</a>
 				</th>
 			</tr>
-			<c:forEach var="myNew" items="${partners}" varStatus="status">
+			<c:forEach var="myNew" items="${products}" varStatus="status">
 				<tr>
 					<td>
 						<input type="checkbox" name="ids" value="${myNew.id}" />
@@ -76,23 +77,26 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						<span>${status.index+1}</span>
 					</td>
 					<td>
-						${myNew.industry.name}
+						${myNew.partners.name}
 					</td>
 					<td>
 						${myNew.name}
 					</td>
 					<td>
-						${myNew.introduction}
+						${fn:substring(myNew.descption, 0, 12)}
+						<c:if test="${fn:length(myNew.descption) > 12 }">
+		   					...
+	   					</c:if>
 					</td>
 					<td>
-						<a href="/admin/partners/edit.jhtml?id=${myNew.id}">[修改]</a>
+						<a href="/admin/product/edit.jhtml?id=${myNew.id}">[修改]</a>
 					</td>
 				</tr>
 			</c:forEach>
 		</table>
 	</div>
 	<div>
-		<form action="/admin/partners/list.jhtml" id="listForm">
+		<form action="/admin/product/list.jhtml" id="listForm">
 			<jsp:include page="/WEB-INF/include/pagination.jsp" flush="true" />
 		</form>
 	</div>

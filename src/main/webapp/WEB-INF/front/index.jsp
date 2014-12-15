@@ -36,7 +36,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <!---smoth-scrlling---->
 <script type="text/javascript">
 	$(document).ready(function(){
-		$('a[href^="#"]').on('click',function (e) {
+		/* $('a[href^="#"]').on('click',function (e) {
 		    e.preventDefault();
 		    var target = this.hash,
 		    $target = $(target);
@@ -45,7 +45,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		    }, 1000, 'swing', function () {
 		        window.location.hash = target;
 		    });
-		});
+		}); */
 	});
 </script>
 <!---//smoth-scrlling---->
@@ -86,6 +86,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	                    <img src="/static/public/images/dingsheng.jpg" alt=""/>
 		            </div> -->
 		            <div class="slide">
+		                <img src="/static/public/images/ding.jpg" alt=""/>
+		            </div>
+		            <div class="slide">
 		                <img src="/static/public/images/yuzhou.jpg" alt=""/>
 		            </div>
 		            <div class="slide">
@@ -108,7 +111,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<div class="offers">
 			<div class="offers-head">
 				<h3>跨界天下</h3>
-				<p>物华天宝，荆楚雄风!</p>
+				<p>物华天宝 荆楚雄风</p>
 			</div>
 			<!-- start content_slider -->
 			<!-- FlexSlider -->
@@ -389,7 +392,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<div class="clients">
 			<div class="client-head">
 				<h3>集团资讯</h3>
-				<span>海阔凭鱼跃，天空任鸟飞!</span>
+				<span>海阔凭鱼跃 天空任鸟飞</span>
 			</div>
 			<div class="client-grids">
 				<ul class="bxslider">
@@ -430,11 +433,57 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<!----start-footer---->
 		<div class="footer">
 			<div class="footer-content">
+				<div class="client-head">
+					<h3>合作伙伴</h3>
+					<span>众志成城 联合梦想</span>
+				</div>
+				<div class="partners-list-parent">
+					<div class="partners-list">
+						<a href="#">
+							<img src="/static/public/images/E8BA-1E00-42A3.png" height="170"/>
+						</a>
+					</div>
+					<div class="partners-list">
+						<a href="#">
+							<img src="/static/public/images/E8BA-1E00-42A3.png" height="170"/>
+						</a>
+					</div>
+					<div class="partners-list">
+						<a href="#">
+							<img src="/static/public/images/E8BA-1E00-42A3.png" height="170"/>
+						</a>
+					</div>
+					<div class="partners-list">
+						<a href="#">
+							<img src="/static/public/images/E8BA-1E00-42A3.png" height="170"/>
+						</a>
+					</div>
+					<div class="partners-list">
+						<a href="#">
+							<img src="/static/public/images/E8BA-1E00-42A3.png" height="170"/>
+						</a>
+					</div>
+					<div class="partners-list">
+						<a href="#">
+							<img src="/static/public/images/E8BA-1E00-42A3.png" height="170"/>
+						</a>
+					</div>
+					<div class="partners-list">
+						<a href="#">
+							<img src="/static/public/images/E8BA-1E00-42A3.png" height="170"/>
+						</a>
+					</div>
+					<div class="partners-list" style="margin-right:0;">
+						<a href="#">
+							<img src="/static/public/images/E8BA-1E00-42A3.png" height="170"/>
+						</a>
+					</div>
+				</div>
 				<!-- <div class="footer-content-left">
 					<p class="content-left-title">跨界天下</p>
 					<img src="/static/public/images/footerImg.png" />
 				</div> -->
-				<p class="content-left-title" style="margin-bottom:50px;text-align:center;">
+				<!-- <p class="content-left-title" style="margin-bottom:50px;text-align:center;">
 					<span style="border-bottom: 2px solid #fff;display: block; margin: 0 auto;width: 150px;">在线咨询</span>
 				</p>
 				<div class="footer-content-middle" style="margin-top:0;">
@@ -479,14 +528,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 							</tr>
 						</table>
 					</form>
-				</div>
+				</div> -->
 			</div>
 		</div>
 		<jsp:include page="/WEB-INF/include/footer.jsp" />
 		<!----//End-footer---->
 		<style type="text/css">
 			.flex-viewport{
-				width: 1340px;
+				width: 1685px;
 				margin:0 auto;
 			}
 			.slides img {

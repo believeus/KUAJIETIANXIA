@@ -3,12 +3,12 @@
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
-
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<title>添加集团产业 - Powered By believeus</title>
+     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>编辑公司产品 - Powered By believeus</title>
 	<meta name="author" content="believeus Team" />
 	<meta name="copyright" content="believeus" />
 	<link href="/static/public/css/common_s.css" rel="stylesheet" type="text/css" />
@@ -33,25 +33,18 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	        $('textarea').valid();
 	    });
 	    
-	    var editor1 = new UE.ui.Editor();
-	    editor1.render('editor1');
-	    editor1.addListener('contentchange',function(){
-	        this.sync();
-	        $('#editor1').valid();
-	    });
-	
 		var $inputForm = $("#inputForm");
+		
 		// 表单验证
 		$inputForm.validate({
 			rules: {
-				introduction: "required",
-				upload_img: "required",
-				content: "required",
-				entitle: "required",
-				encontent: "required",
-				type:"required"
+				descption: "required",
+				partner: "required",
+				name: "required",
+				upload_img: "required"
 			}
 		});
+		
 		
 	});
 	
@@ -59,29 +52,44 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-    <div class="path">
-		<a href="/admin/manager.jhtml" target="_parent">首页</a> &raquo; 添加集团产业
+     <div class="path">
+		<a href="/admin/manager.jhtml" target="_parent">首页</a> &raquo; 编辑公司产品
 	</div>
-	<form id="inputForm" action="/admin/industry/save.jhtml" method="post" enctype="multipart/form-data">
+	<form id="inputForm" action="/admin/product/save.jhtml" method="post" enctype="multipart/form-data">
+		<input type="hidden" name="id" value="${product.id }"/>
+		<input type="hidden" name="path" value="${product.imgpath}"/>
 		<table class="input">
 			<tr>
 				<th>
-					产业名称:
+					所属公司:
 				</th>
 				<td>
-					<input type="text" name="name" class="text"/>
+					<select name="">
+						<option value="">--请选择--</option>
+						<c:forEach items="${partners }" var="partner">
+							<option value="${partner.id }" <c:if test="${partner.id eq(product.partners.id) }"> selected="selected"</c:if>  >${partner.name }</option>
+						</c:forEach>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<th>
+					名称:
+				</th>
+				<td>
+					<input type="text" name="name" class="text" maxlength="10000" value="${product.name}"/>
 				</td>
 			</tr>
 			<tr id="pathTr">
 				<th>
-					相关图片:
+					<span class="requiredField">*</span>相关图片:
 				</th>
 				<td colspan="3">
 					<div>
 						<span style="float:left">
 							<div id="preview_wrapper">    
 						        <div id="preview_fake" >    
-						            <img id="preview" onload="onPreviewLoad(this,190,120)" src="/static/public/images/bg.png"/>
+						            <img id="preview" onload="onPreviewLoad(this,190,120)" src="/${product.imgpath}"/>
 						        </div>    
 						    </div>    
 						    <br/>    
@@ -99,15 +107,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					介绍:
 				</th>
 				<td colspan="3">
-					<textarea id="editor" name="introduction" maxlength="10000" class="editor"></textarea>
-				</td>
-			</tr>
-			<tr id="contentTr">
-				<th>
-					内容:
-				</th>
-				<td colspan="3">
-					<textarea id="editor1" name="content" maxlength="10000" class="editor"></textarea>
+					<textarea id="editor" name="descption" class="editor">${product.descption}</textarea>
 				</td>
 			</tr>
 			<tr>
@@ -116,7 +116,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				</th>
 				<td colspan="3">
 					<input type="submit" class="button" value="确定" />
-					<input type="button" class="button" value="返回"  onclick="javascript:window.history.back();"/>
+					<input type="button" class="button" value="返回" onclick="javascript:window.history.back();"/>
 				</td>
 			</tr>
 		</table>

@@ -25,6 +25,7 @@
 				         {"menuname":"企业信息管理","icon":"icon-set","url":"/admin/companyView.jhtml"},
 				         {"menuname":"首页图片管理","icon":"icon-set","url":"/admin/banner/list.jhtml"},
 				         {"menuname":"合作伙伴管理","icon":"icon-set","url":"/admin/partners/list.jhtml"},
+				         {"menuname":"公司产品管理","icon":"icon-set","url":"/admin/product/list.jhtml"},
 					]
 			}
 		/* 	,{"menuid":"2","icon":"icon-sys","menuname":"系统管理",

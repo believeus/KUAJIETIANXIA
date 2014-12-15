@@ -19,8 +19,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   <body>
     <jsp:include page="/WEB-INF/include/header.jsp" />
+     <img src="/static/public/images/bg-2.png" width="100%" style="margin-top: -1px;"/>
     <div class="kjtx-main">
-    	<p class="kjtx-main-title">集团资讯</p>
+    	<p class="kjtx-main-title">
+    		<span style="border-bottom: 2px solid #922d2c;">集团资讯</span>
+   		</p>
     	<div class="main-nav">
     		<ul>
     			<li><div class="nav_cry"></div><a class="current" href="#">关于乐退</a></li>
@@ -31,13 +34,23 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     	</div>
     	<div class="main-content">
     		<ul>
-    			<li>&gt;&gt;<a href="#">与新煤化工合作</a><span class="title-date">2014-11-22</span></li>
-    			<li>&gt;&gt;<a href="#">壳氏唯亮相2014中国上海国际网络购物交易会</a><span class="title-date">2014-11-22</span></li>
-    			<li>&gt;&gt;<a href="#">习近平：让互联网发展成果惠及13亿中国人民</a><span class="title-date">2014-11-22</span></li>
-    			<li>&gt;&gt;<a href="#">微信电话本退出之后</a><span class="title-date">2014-11-22</span></li>
-    			<li>&gt;&gt;<a href="#">工信部确认我国将取消食盐专营</a><span class="title-date">2014-11-22</span></li>
-    			<li>&gt;&gt;<a href="#">与新煤化工合作</a><span class="title-date">2014-11-22</span></li>
-    			<li>&gt;&gt;<a href="#">与新煤化工合作</a><span class="title-date">2014-11-22</span></li>
+    			<li>
+    				<i class="jiantou"></i>
+    				<a href="#">与新煤化工合作</a>
+    				<span class="title-date">2014-11-22</span>
+   				</li>
+    			<li><i class="jiantou"></i><a href="#">壳氏唯亮相2014中国上海国际网络购物交易会</a><span class="title-date">2014-11-22</span></li>
+    			<li><i class="jiantou"></i><a href="#">习近平：让互联网发展成果惠及13亿中国人民</a><span class="title-date">2014-11-22</span></li>
+    			<li><i class="jiantou"></i><a href="#">微信电话本退出之后</a><span class="title-date">2014-11-22</span></li>
+    			<li><i class="jiantou"></i><a href="#">工信部确认我国将取消食盐专营</a><span class="title-date">2014-11-22</span></li>
+    			<li><i class="jiantou"></i><a href="#">与新煤化工合作</a><span class="title-date">2014-11-22</span></li>
+    			<li><i class="jiantou"></i><a href="#">壳氏唯亮相2014中国上海国际网络购物交易会</a><span class="title-date">2014-11-22</span></li>
+    			<li><i class="jiantou"></i><a href="#">习近平：让互联网发展成果惠及13亿中国人民</a><span class="title-date">2014-11-22</span></li>
+    			<li><i class="jiantou"></i><a href="#">微信电话本退出之后</a><span class="title-date">2014-11-22</span></li>
+    			<li><i class="jiantou"></i><a href="#">工信部确认我国将取消食盐专营</a><span class="title-date">2014-11-22</span></li>
+    			<li><i class="jiantou"></i><a href="#">与新煤化工合作</a><span class="title-date">2014-11-22</span></li>
+    			<li><i class="jiantou"></i><a href="#">壳氏唯亮相2014中国上海国际网络购物交易会</a><span class="title-date">2014-11-22</span></li>
+    			<li><i class="jiantou"></i><a href="#">习近平：让互联网发展成果惠及13亿中国人民</a><span class="title-date">2014-11-22</span></li>
     		</ul>
     		<p class="page_list">
     			<a href="#">首页</a>

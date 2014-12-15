@@ -67,6 +67,19 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<table class="input">
 			<tr>
 				<th>
+					所属产业:
+				</th>
+				<td>
+					<select name="">
+						<option value="">--请选择--</option>
+						<c:forEach items="${industries }" var="industry">
+							<option value="${industry.id }" <c:if test="${industry.id eq(partners.industry.id) }"></c:if>  >${industry.name }</option>
+						</c:forEach>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<th>
 					名称:
 				</th>
 				<td>

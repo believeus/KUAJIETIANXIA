@@ -21,15 +21,15 @@ import org.springframework.web.multipart.MultipartHttpServletRequest;
 import cn.believeus.PaginationUtil.Page;
 import cn.believeus.PaginationUtil.Pageable;
 import cn.believeus.PaginationUtil.PaginationUtil;
-import cn.believeus.model.Culture;
-import cn.believeus.model.Industry;
+import cn.believeus.model.Information;
 import cn.believeus.model.Partners;
+import cn.believeus.model.Product;
 import cn.believeus.service.BaseService;
 
 @Controller
-public class PartnersController {
+public class ProductController {
 	
-	private static final Log log=LogFactory.getLog(PartnersController.class);
+	private static final Log log=LogFactory.getLog(ProductController.class);
 	
 	@Resource
 	private MydfsTrackerServer mydfsTrackerServer;
@@ -38,11 +38,11 @@ public class PartnersController {
 	private BaseService baseService;
 
 	/**
-	 * 合作伙伴列表
+	 * 公司产品列表
 	 * @return
 	 */
-	@RequiresPermissions("partners:view")
-	@RequestMapping(value="/admin/partners/list")
+	@RequiresPermissions("product:view")
+	@RequestMapping(value="/admin/product/list")
 	public String list(HttpServletRequest request){
 		String pageNumber = request.getParameter("pageNumber");
 		// 如果为空，则设置为1
@@ -50,35 +50,35 @@ public class PartnersController {
 			pageNumber="1";
 		}
 		Pageable pageable=new Pageable(Integer.valueOf(pageNumber),20);
-		String hql="From Partners news order by news.editTime desc";
+		String hql="From Product news order by news.editTime desc";
 		Page<?> page = baseService.findObjectList(hql, pageable);
-		request.setAttribute("partners", page.getContent());
+		request.setAttribute("products", page.getContent());
 		request.setAttribute("size",page.getTotal());
 		// 分页
 		PaginationUtil.pagination(request,page.getPageNumber(),page.getTotalPages(), 0);
 
-		return "/WEB-INF/back/partners/list.jsp";
+		return "/WEB-INF/back/product/list.jsp";
 	}
 	
 	/**
-	 * 合作伙伴添加
+	 * 公司产品添加
 	 * @return
 	 */
 	@SuppressWarnings("unchecked")
-	@RequestMapping(value="/admin/partners/add")
+	@RequestMapping(value="/admin/product/add")
 	public String add(HttpServletRequest request){
-		List<Industry> industries = (List<Industry>) baseService.findObjectList(Industry.class);
-		request.setAttribute("industries", industries);
-		return "/WEB-INF/back/partners/add.jsp";
+		List<Partners> partners = (List<Partners>) baseService.findObjectList(Partners.class);
+		request.setAttribute("partners", partners);
+		return "/WEB-INF/back/product/add.jsp";
 	} 
 	
 	/**
-	 * 合作伙伴保存
+	 * 公司产品保存
 	 * @return
 	 * */
-	@RequiresPermissions("partners:create")
-	@RequestMapping(value="/admin/partners/save")
-	public String save(Partners partners,HttpServletRequest request){
+	@RequiresPermissions("product:create")
+	@RequestMapping(value="/admin/product/save")
+	public String save(Product product,HttpServletRequest request){
 		MultipartHttpServletRequest multipartRequest = (MultipartHttpServletRequest) request;
 		String storepath = "";
 		Map<String, MultipartFile> files = multipartRequest.getFileMap();
@@ -98,35 +98,38 @@ public class PartnersController {
 			}
 		}
 		if (!storepath.equals("")) {
-			partners.setLogo(storepath);
+			product.setImgpath(storepath);
 		}
-		baseService.saveOrUpdata(partners);
-		return "redirect:/admin/partners/list.jhtml";
+		String partnersId = request.getParameter("partner");
+		Partners partners = (Partners) baseService.findObject(Partners.class, Integer.parseInt(partnersId));
+		product.setPartners(partners);
+		baseService.saveOrUpdata(product);
+		return "redirect:/admin/product/list.jhtml";
 	}
 	/**
-	 * 合作伙伴修改
+	 * 公司产品修改
 	 * @return
 	 */
 	@SuppressWarnings("unchecked")
-	@RequiresPermissions("partners:update")
-	@RequestMapping(value="/admin/partners/edit")
+	@RequiresPermissions("product:update")
+	@RequestMapping(value="/admin/product/edit")
 	public String edit(Integer id, HttpServletRequest request){
-		List<Industry> industries = (List<Industry>) baseService.findObjectList(Industry.class);
-		request.setAttribute("industries", industries);
-		Partners partners = (Partners) baseService.findObject(Partners.class, id);
+		List<Partners> partners = (List<Partners>) baseService.findObjectList(Partners.class);
 		request.setAttribute("partners", partners);
-		return "/WEB-INF/back/partners/edit.jsp";
+		Product product = (Product) baseService.findObject(Product.class, id);
+		request.setAttribute("product", product);
+		return "/WEB-INF/back/product/edit.jsp";
 	}
 	
 	/**
-	 * 合作伙伴删除
+	 * 公司产品删除
 	 * @return
 	 */
-	@RequiresPermissions("culture:delete")
-	@RequestMapping(value="/admin/partners/delete")
+	@RequiresPermissions("product:delete")
+	@RequestMapping(value="/admin/product/delete")
 	public @ResponseBody String cultureDel(Integer[] ids){
 		List<Integer> list = Arrays.asList(ids); 
-		baseService.delete(Partners.class, list);
+		baseService.delete(Product.class, list);
 		return "{\"type\":\"success\"}";
 	}
 }

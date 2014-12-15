@@ -55,6 +55,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					<a href="javascript:;" class="sort" name="id">排序编号</a>
 				</th>
 				<th>
+					<a href="javascript:;" class="sort" name="name">名称</a>
+				</th>
+				<th>
 					<a href="javascript:;" class="sort" name="introduction">介绍</a>
 				</th>
 				<th>
@@ -71,6 +74,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					</td>
 					<td>
 						<span>${status.index+1}</span>
+					</td>
+					<td>
+						${myNew.name}
 					</td>
 					<td>
 						${myNew.introduction}

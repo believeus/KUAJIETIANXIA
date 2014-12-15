@@ -3,12 +3,12 @@
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
-
+ <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<title>添加集团产业 - Powered By believeus</title>
+	<title>公司产品 - Powered By believeus</title>
 	<meta name="author" content="believeus Team" />
 	<meta name="copyright" content="believeus" />
 	<link href="/static/public/css/common_s.css" rel="stylesheet" type="text/css" />
@@ -44,12 +44,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		// 表单验证
 		$inputForm.validate({
 			rules: {
-				introduction: "required",
-				upload_img: "required",
-				content: "required",
-				entitle: "required",
-				encontent: "required",
-				type:"required"
+				descption: "required",
+				partner: "required",
+				name: "required",
+				upload_img: "required"
 			}
 		});
 		
@@ -60,13 +58,26 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   <body>
     <div class="path">
-		<a href="/admin/manager.jhtml" target="_parent">首页</a> &raquo; 添加集团产业
+		<a href="/admin/manager.jhtml" target="_parent">首页</a> &raquo; 添加公司产品
 	</div>
-	<form id="inputForm" action="/admin/industry/save.jhtml" method="post" enctype="multipart/form-data">
+	<form id="inputForm" action="/admin/product/save.jhtml" method="post" enctype="multipart/form-data">
 		<table class="input">
 			<tr>
 				<th>
-					产业名称:
+					所属公司:
+				</th>
+				<td>
+					<select name="partner">
+						<option value="">--请选择--</option>
+						<c:forEach items="${partners }" var="partner">
+							<option value="${partner.id }">${partner.name }</option>
+						</c:forEach>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<th>
+					名称:
 				</th>
 				<td>
 					<input type="text" name="name" class="text"/>
@@ -99,15 +110,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					介绍:
 				</th>
 				<td colspan="3">
-					<textarea id="editor" name="introduction" maxlength="10000" class="editor"></textarea>
-				</td>
-			</tr>
-			<tr id="contentTr">
-				<th>
-					内容:
-				</th>
-				<td colspan="3">
-					<textarea id="editor1" name="content" maxlength="10000" class="editor"></textarea>
+					<textarea id="editor" name="descption" maxlength="10000" class="editor"></textarea>
 				</td>
 			</tr>
 			<tr>

@@ -19,8 +19,55 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   <body>
     <jsp:include page="/WEB-INF/include/header.jsp" />
+    <img src="/static/public/images/bg-2.png" width="100%" style="margin-top: -1px;"/>
+   	<p class="kjtx-main-title">
+   		<span style="border-bottom: 2px solid #922d2c;">集团产业</span>
+	</p>
     <div class="kjtx-main">
-    	<p class="kjtx-main-title">集团产业</p>
+    	<div class="kjtx-main-list">
+    		<div class="kjtx-main-list-img">
+    			<img src="/static/public/images/cy01.jpg" width="272" height="210"/>
+    		</div>
+    		<div class="kjtx-main-list-name">
+    			生物产业:胶原蛋白
+    		</div>
+    		<div class="kjtx-main-list-content">
+	    		跨界天下，是你及家人健康和谐的温暖港湾
+    		</div>
+    	</div>
+    	<div class="kjtx-main-list">
+    		<div class="kjtx-main-list-img">
+    			<img src="/static/public/images/cy01.jpg" width="272" height="210"/>
+    		</div>
+    		<div class="kjtx-main-list-name">
+    			生物产业:胶原蛋白
+    		</div>
+    		<div class="kjtx-main-list-content">
+	    		跨界天下，是你及家人健康和谐的温暖港湾
+    		</div>
+    	</div>
+    	<div class="kjtx-main-list">
+    		<div class="kjtx-main-list-img">
+    			<img src="/static/public/images/cy01.jpg" width="272" height="210"/>
+    		</div>
+    		<div class="kjtx-main-list-name">
+    			生物产业:胶原蛋白
+    		</div>
+    		<div class="kjtx-main-list-content">
+	    		跨界天下，是你及家人健康和谐的温暖港湾
+    		</div>
+    	</div>
+    	<div class="kjtx-main-list" style="margin-right:0;">
+    		<div class="kjtx-main-list-img">
+    			<img src="/static/public/images/cy01.jpg" width="272" height="210"/>
+    		</div>
+    		<div class="kjtx-main-list-name">
+    			生物产业:胶原蛋白
+    		</div>
+    		<div class="kjtx-main-list-content">
+	    		跨界天下，是你及家人健康和谐的温暖港湾
+    		</div>
+    	</div>
     	<div class="kjtx-main-list">
     		<div class="kjtx-main-list-img">
     			<img src="/static/public/images/cy01.jpg" width="272" height="210"/>

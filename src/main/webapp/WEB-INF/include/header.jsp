@@ -32,7 +32,7 @@
 	<!--- start-top-nav---->
 	<div class="top-nav">
 			<ul class="flexy-menu thick orange">
-				<li class="active"><a href="index.html">跨界天下</a>
+				<li class="active"><a href="/">跨界天下</a>
 					<ul>
 						<li><a href="#">集团简介</a></li>
 						<li><a href="#">总裁致辞</a></li>
@@ -40,8 +40,8 @@
 						<li><a href="#">组织架构</a></li>
 					</ul>
 				</li>
-				<li><a href="destinations.html">资质荣誉</a></li>
-				<li><a href="criuses.html">集团资讯</a>
+				<li><a href="/">资质荣誉</a></li>
+				<li><a href="/zixunList.jhtml">集团资讯</a>
 					<ul>
 						<li><a href="#">集团快讯</a></li>
 						<li><a href="#">高层动态</a></li>
@@ -61,6 +61,8 @@
 					</ul>
 				</li>
 				<li><a href="destinations.html">集团文化</a>
+				<li><a href="destinations.html">招商合作</a>
+				<li><a href="destinations.html">会员中心</a>
 				</li>
 				<li><a href="blog.html">联系我们</a>
 					<ul>

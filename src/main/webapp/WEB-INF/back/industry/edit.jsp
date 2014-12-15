@@ -47,9 +47,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			rules: {
 				introduction: "required",
 				content: "required",
-				entitle: "required",
-				encontent: "required",
-				type:"required"
+				name: "required",
+				upload_img: "required"
 			}
 		});
 		
@@ -69,10 +68,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<table class="input">
 			<tr>
 				<th>
-					文化介绍:
+					产业名称:
 				</th>
 				<td>
-					<input type="text" name="introduction" class="text" maxlength="10000" value="${industry.introduction}"/>
+					<input type="text" name="name" class="text" maxlength="10000" value="${industry.name}"/>
 				</td>
 			</tr>
 			<tr id="pathTr">
@@ -99,10 +98,18 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			
 			<tr id="contentTr">
 				<th>
+					介绍:
+				</th>
+				<td colspan="3">
+					<textarea id="editor" name="introduction" class="editor">${industry.introduction}</textarea>
+				</td>
+			</tr>
+			<tr id="contentTr">
+				<th>
 					内容:
 				</th>
 				<td colspan="3">
-					<textarea id="editor" name="content" class="editor">${industry.content}</textarea>
+					<textarea id="editor1" name="content" class="editor">${industry.content}</textarea>
 				</td>
 			</tr>
 			<tr>
