@@ -22,6 +22,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <script type="text/javascript" src="/static/public/js/input.js"></script>
 <script type="text/javascript" src='/static/public/js/me.js'></script>
 <script src="/static/public/js/kjtx/jquery.bxslider.js"></script>
+<link rel="stylesheet" href="/static/public/css/qqstyle.css" type="text/css" />
 <script type="text/javascript">
 	$(document).ready(function(){
 		$('.bxslider').bxSlider({
@@ -33,6 +34,20 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			 slideMargin: 10
 		});
 	});
+	$(document).ready(function(){
+
+		$(".side ul li").hover(function(){
+			$(this).find(".sidebox").stop().animate({"width":"124px"},200).css({"opacity":"1","filter":"Alpha(opacity=100)","background":"#ae1c1c"})	
+		},function(){
+			$(this).find(".sidebox").stop().animate({"width":"54px"},200).css({"opacity":"0.8","filter":"Alpha(opacity=80)","background":"#000"})	
+		});
+		
+	});
+
+	//回到顶部
+	function goTop(){
+		$('html,body').animate({'scrollTop':0},600);
+	}
 </script>
 <!---smoth-scrlling---->
 <script type="text/javascript">
@@ -477,121 +492,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 							<img src="/static/public/images/customers_bottom.jpg" width="185"/>
 						</div>
 					</c:forEach>
-					<!-- <div class="partners-liebiao">
-						<div class="partners-list">
-							<a href="#">
-								<img src="/static/public/images/E8BA-1E00-42A3.png" height="170"/>
-							</a>
-						</div>
-						<img src="/static/public/images/customers_bottom.jpg" width="185"/>
-					</div>
-					<div class="partners-liebiao">
-						<div class="partners-list">
-							<a href="#">
-								<img src="/static/public/images/E8BA-1E00-42A3.png" height="170"/>
-							</a>
-						</div>
-						<img src="/static/public/images/customers_bottom.jpg" width="185"/>
-					</div>
-					<div class="partners-liebiao">
-						<div class="partners-list">
-							<a href="#">
-								<img src="/static/public/images/E8BA-1E00-42A3.png" height="170"/>
-							</a>
-						</div>
-						<img src="/static/public/images/customers_bottom.jpg" width="185"/>
-					</div>
-					<div class="partners-liebiao">
-						<div class="partners-list">
-							<a href="#">
-								<img src="/static/public/images/E8BA-1E00-42A3.png" height="170"/>
-							</a>
-						</div>
-						<img src="/static/public/images/customers_bottom.jpg" width="185"/>
-					</div>
-					<div class="partners-liebiao">
-						<div class="partners-list">
-							<a href="#">
-								<img src="/static/public/images/E8BA-1E00-42A3.png" height="170"/>
-							</a>
-						</div>
-						<img src="/static/public/images/customers_bottom.jpg" width="185"/>
-					</div>
-					<div class="partners-liebiao">
-						<div class="partners-list">
-							<a href="#">
-								<img src="/static/public/images/E8BA-1E00-42A3.png" height="170"/>
-							</a>
-						</div>
-						<img src="/static/public/images/customers_bottom.jpg" width="185"/>
-					</div>
-					<div class="partners-liebiao">
-						<div class="partners-list">
-							<a href="#">
-								<img src="/static/public/images/E8BA-1E00-42A3.png" height="170"/>
-							</a>
-						</div>
-						<img src="/static/public/images/customers_bottom.jpg" width="185"/>
-					</div>
-					<div class="partners-liebiao" style="margin-right:0;">
-						<div class="partners-list">
-							<a href="#">
-								<img src="/static/public/images/E8BA-1E00-42A3.png" height="170"/>
-							</a>
-						</div>
-						<img src="/static/public/images/customers_bottom.jpg" width="185"/>
-					</div> -->
-				</div>
-				<!-- <div class="footer-content-left">
-					<p class="content-left-title">跨界天下</p>
-					<img src="/static/public/images/footerImg.png" />
-				</div> -->
-				<!-- <p class="content-left-title" style="margin-bottom:50px;text-align:center;">
-					<span style="border-bottom: 2px solid #fff;display: block; margin: 0 auto;width: 150px;">在线咨询</span>
-				</p>
-				<div class="footer-content-middle" style="margin-top:0;">
-					<p style="font-size: 21px;color: #fff;">恭候您的垂询</p>
-					<p>咨询电话：027-65650999</p>
-					<p>邮箱：hbydcf@126.com</p>
-					<p>网址：www.eyinde.com</p>
-					<p>地址：武汉市江汉区民权路长江大厦25楼</p>
-				</div>
-				<div class="footer-content-right">
-					<form action="#" method="post">
-						<table>
-							<tr>
-								<td><span>姓名</span></td>
-								<td><span>Email</span></td>
-							</tr>
-							<tr>
-								<td><input type="text" name="username" style="width:385px;height:34px;font-size:15px;border:1px solid #1d1d1d;background:#BCBCBC;margin-right: 75px;"/></td>
-								<td><input type="text" name="email" style="width:385px;height:34px;font-size:15px;border:1px solid #1d1d1d;background:#BCBCBC;"/></td>
-							</tr>
-							<tr>
-								<td colspan="2"><span>标题</span></td>
-							</tr>
-							<tr>
-								<td colspan="2">
-									<input type="text" name="title" style="width:850px;height:34px;font-size:15px;border:1px solid #1d1d1d;background:#BCBCBC;"/>
-								</td>
-							</tr>
-							<tr>
-								<td colspan="2"><span>内容</span></td>
-							</tr>
-							<tr>
-								<td colspan="2">
-									<textarea name="content" style="width:850px;height:102px;resize:none;font-size:15px;border:1px solid #1d1d1d;background:#BCBCBC;"></textarea>
-								</td>
-							</tr>
-							<tr>
-								<td colspan="2" style="text-align:right;">
-									<input type="submit" value="提交" class="subBtn" style="margin:30px 80px 30px 0;"/>
-									<input type="reset" value="重填" class="subBtn" />
-								</td>
-							</tr>
-						</table>
-					</form>
-				</div> -->
 			</div>
 		</div>
 		<jsp:include page="/WEB-INF/include/footer.jsp" />
@@ -614,5 +514,17 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				color:#8E2C2D !important;
 			}
 		</style>
+	<script>
+
+	</script>	
+	<div class="side">
+	 <ul>
+		<li><a href="#"><div class="sidebox"><img src="/static/public/images/side_icon01.png">客服中心</div></a></li>
+		<li><a href="#"><div class="sidebox"><img src="/static/public/images/side_icon02.png">客户案例</div></a></li>
+		<li><a href="javascript:void(0);" ><div class="sidebox"><img src="/static/public/images/side_icon04.png">QQ客服</div></a></li>
+		<li><a href="javascript:void(0);" ><div class="sidebox"><img src="/static/public/images/side_icon03.png">新浪微博</div></a></li>
+		<li style="border:none;"><a href="javascript:goTop();" class="sidetop"><img src="/static/public/images/side_icon05.png"></a></li>
+	 </ul>
+	</div>
 </body>
 </html>
