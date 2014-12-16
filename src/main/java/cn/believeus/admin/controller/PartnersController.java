@@ -76,7 +76,7 @@ public class PartnersController {
 	 * 合作伙伴保存
 	 * @return
 	 * */
-	@RequiresPermissions("partners:create")
+	@RequiresPermissions("partners:create") 
 	@RequestMapping(value="/admin/partners/save")
 	public String save(Partners partners,HttpServletRequest request){
 		MultipartHttpServletRequest multipartRequest = (MultipartHttpServletRequest) request;
@@ -100,6 +100,9 @@ public class PartnersController {
 		if (!storepath.equals("")) {
 			partners.setLogo(storepath);
 		}
+		String industry = request.getParameter("industry");
+		Industry industry2 = (Industry) baseService.findObject(Industry.class, Integer.parseInt(industry));
+		partners.setIndustry(industry2);
 		baseService.saveOrUpdata(partners);
 		return "redirect:/admin/partners/list.jhtml";
 	}

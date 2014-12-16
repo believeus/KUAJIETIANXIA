@@ -984,7 +984,7 @@ input[type="search"].sb-search-input {
 /*---//holiday-types-----*/
 /*----start-footer----*/
 .footer{
-	background:#F3F6FA;
+	background:#fff;
 	width:100%;
 	height:auto;
 }
@@ -992,9 +992,12 @@ input[type="search"].sb-search-input {
 	width:1830px;
 	height:370px;
 	overflow:hidden;
-	background:#F3F6FA;
+	background:#fff;
 	margin:0 auto;
 	padding-top:20px;
+}
+.partners-liebiao{
+	float:left;width:170px; margin-right: 65px;
 }
 .content-left-title{
 	color: #fff;
@@ -1042,8 +1045,11 @@ input[type="search"].sb-search-input {
     cursor:pointer;
 }
 .partners-list img {
-    position: relative;
-    left: -30px;
+    border-radius: 100px;
+    -moz-border-radius: 100px; /* Firefox */
+	-webkit-border-radius: 100px; /* Safari ºÍ Chrome */
+    width: 170px;
+    height: 170px;
 }
 .subBtn{
 	background:#BCBCBC;border:1px solid #BCBCBC;border-radius:3px;padding:7px 40px;cursor:pointer;

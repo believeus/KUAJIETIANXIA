@@ -47,8 +47,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			rules: {
 				introduction: "required",
 				content: "required",
-				name: "required",
-				upload_img: "required"
+				name: "required"
 			}
 		});
 		

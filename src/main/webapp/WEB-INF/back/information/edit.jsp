@@ -46,8 +46,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		$inputForm.validate({
 			rules: {
 				introduction: "required",
-				name: "required",
-				upload_img: "required"
+				name: "required"
 			}
 		});
 		

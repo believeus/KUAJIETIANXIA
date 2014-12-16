@@ -45,9 +45,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		// 表单验证
 		$inputForm.validate({
 			rules: {
+				industry:"required",
 				introduction: "required",
-				name: "required",
-				upload_img: "required"
+				content: "required"
 			}
 		});
 		
@@ -70,7 +70,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					所属产业:
 				</th>
 				<td>
-					<select name="">
+					<select name="industry">
 						<option value="">--请选择--</option>
 						<c:forEach items="${industries }" var="industry">
 							<option value="${industry.id }" <c:if test="${industry.id eq(partners.industry.id) }"></c:if>  >${industry.name }</option>

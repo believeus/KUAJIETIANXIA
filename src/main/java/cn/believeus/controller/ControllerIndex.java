@@ -28,6 +28,7 @@ public class ControllerIndex {
 		//banner
 		List<Banner> banners = (List<Banner>) baseService.findObjectList(Banner.class);
 		request.setAttribute("banners", banners);
+		request.setAttribute("bannerSize", banners.size());
 		//集团文化
 		List<Culture> cultures = (List<Culture>) baseService.findObjectList(Culture.class);
 		request.setAttribute("cultures", cultures);
@@ -36,6 +37,10 @@ public class ControllerIndex {
 		request.setAttribute("industries", industries);
 		//集团资讯
 		List<Information> informations = (List<Information>) baseService.findObjectList(Information.class);
+		for (Information information : informations) {
+			String content = information.getContent().replaceAll("<[^>]+>", "");
+			information.setContent(content);
+		}
 		request.setAttribute("informations", informations);
 		//合作伙伴
 		List<Partners> partners = (List<Partners>) baseService.findObjectList(Partners.class);

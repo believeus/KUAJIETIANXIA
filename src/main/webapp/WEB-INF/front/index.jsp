@@ -3,7 +3,8 @@
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
-
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -71,6 +72,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	    height: 45px;
 	    line-height:45px;
 	}
+	.header {
+	    border-bottom: 1px solid #eee;
+	}
 </style>
 </head>
 
@@ -85,18 +89,24 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		           <!--  <div class="slide"> 
 	                    <img src="/static/public/images/dingsheng.jpg" alt=""/>
 		            </div> -->
-		            <div class="slide">
-		                <img src="/static/public/images/1.jpg" alt=""/>
-		            </div>
-		            <div class="slide">
-		                <img src="/static/public/images/2.jpg" alt=""/>
-		            </div>
-		            <div class="slide">
-		                <img src="/static/public/images/banner2.jpg" alt=""/>
-		            </div>
-		            <div class="slide">
-		                <img src="/static/public/images/banner3.jpg" alt=""/>
-		            </div>
+		            <c:if test="${bannerSize!=0 }">
+			            <c:forEach items="${banners }" var="banner">
+				            <div class="slide">
+				                <img src="${banner.path }" alt=""/>
+				            </div>
+			            </c:forEach>
+		            </c:if>
+		            <c:if test="${bannerSize==0 }">
+			            <div class="slide">
+			                <img src="/static/public/images/2.jpg" alt=""/>
+			            </div>
+			            <div class="slide">
+			                <img src="/static/public/images/banner2.jpg" alt=""/>
+			            </div>
+			            <div class="slide">
+			                <img src="/static/public/images/banner3.jpg" alt=""/>
+			            </div>
+		            </c:if>
 		        </div>
 		        <div class="timers"> </div>
 		        <div class="slidePrev"><span> </span></div>
@@ -136,13 +146,19 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				 <section class="slider">
 		        <div class="flexslider carousel">
 		          <ul class="slides">
+		          <c:forEach items="${cultures }" var="cultrue">
 		            <li onclick="location.href='#';">
-		  	    	    <img src="/static/public/images/huanghelou.png" />
+		  	    	    <img src="${cultrue.path }" />
 		  	    	    <!----place-caption-info---->
 		  	    	    <div class="caption-info">
 		  	    	    	 <div class="caption-info-head">
 		  	    	    	 	<div class="caption-info-head-left">
-			  	    	    	 	<h4><a href="#">黄鹤楼&天下江上第一楼</a></h4>
+			  	    	    	 	<h4><a href="#" title="${cultrue.introduction }">
+			  	    	    	 		${fn:substring(cultrue.introduction, 0, 18)}
+										<c:if test="${fn:length(cultrue.introduction) > 18 }">
+						   					...
+					   					</c:if>
+			  	    	    	 		</a></h4>
 			  	    	    	 	<!-- <span>Bonus Extras!</span> -->
 		  	    	    	 	</div>
 		  	    	    	 	<div class="caption-info-head-right">
@@ -152,15 +168,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		  	    	    	 </div>
 		  	    	    </div>
 		  	    	     <!----//place-caption-info---->
-		  	    		</li>
-		  	    		 <li onclick="location.href='#';">
+	  	    		</li>
+		          </c:forEach>
+		  	    		<!--  <li onclick="location.href='#';">
 		  	    	    <img src="/static/public/images/huanghelou2.png" />
-		  	    	    <!----place-caption-info---->
+		  	    	    --place-caption-info--
 		  	    	    <div class="caption-info">
 		  	    	    	 <div class="caption-info-head">
 		  	    	    	 	<div class="caption-info-head-left">
 			  	    	    	 	<h4><a href="#">昔人已乘黄鹤去，此地空余黄鹤楼。</a></h4>
-			  	    	    	 	<!-- <span>Bonus Extras!</span> -->
+			  	    	    	 	<span>Bonus Extras!</span>
 		  	    	    	 	</div>
 		  	    	    	 	<div class="caption-info-head-right">
 		  	    	    	 		<span> </span>
@@ -168,16 +185,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		  	    	    	 	<div class="clear"> </div>
 		  	    	    	 </div>
 		  	    	    </div>
-		  	    	     <!----//place-caption-info---->
+		  	    	     --//place-caption-info--
 		  	    		</li>
 		  	    		 <li onclick="location.href='#';">
 		  	    	    <img src="/static/public/images/changjiangdaqiao.png" />
-		  	    	    <!----place-caption-info---->
+		  	    	    --place-caption-info--
 		  	    	    <div class="caption-info">
 		  	    	    	 <div class="caption-info-head">
 		  	    	    	 	<div class="caption-info-head-left">
 			  	    	    	 	<h4><a href="#">长江大桥&万里长江第一桥</a></h4>
-			  	    	    	 	<!-- <span>Bonus Extras!</span> -->
+			  	    	    	 	<span>Bonus Extras!</span>
 		  	    	    	 	</div>
 		  	    	    	 	<div class="caption-info-head-right">
 		  	    	    	 		<span> </span>
@@ -185,16 +202,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		  	    	    	 	<div class="clear"> </div>
 		  	    	    	 </div>
 		  	    	    </div>
-		  	    	     <!----//place-caption-info---->
+		  	    	     --//place-caption-info--
 		  	    		</li>
 		  	    		 <li onclick="location.href='#';">
 		  	    	    <img src="/static/public/images/changjiangdaqiao2.png" />
-		  	    	    <!----place-caption-info---->
+		  	    	    --place-caption-info--
 		  	    	    <div class="caption-info">
 		  	    	    	 <div class="caption-info-head" style="line-height:20px;">
 		  	    	    	 	<div class="caption-info-head-left">
 			  	    	    	 	<h4><a href="#">风墙动，龟蛇静，起宏图。</a><br/><a href="#">一桥飞架南北，天堑变通途。</a></h4>
-			  	    	    	 	<!-- <span>Bonus Extras!</span> -->
+			  	    	    	 	<span>Bonus Extras!</span>
 		  	    	    	 	</div>
 		  	    	    	 	<div class="caption-info-head-right">
 		  	    	    	 		<span> </span>
@@ -202,16 +219,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		  	    	    	 	<div class="clear"> </div>
 		  	    	    	 </div>
 		  	    	    </div>
-		  	    	     <!----//place-caption-info---->
+		  	    	     --//place-caption-info--
 		  	    		</li>
 		            <li onclick="location.href='#';">
 		  	    	    <img src="/static/public/images/qingchuanqiao.png" />
-		  	    	    <!----place-caption-info---->
+		  	    	    --place-caption-info--
 		  	    	    <div class="caption-info">
 		  	    	    	 <div class="caption-info-head">
 		  	    	    	 	<div class="caption-info-head-left">
 			  	    	    	 	<h4><a href="#">晴川桥&万绿丛中一点红</a></h4>
-			  	    	    	 	<!-- <span>Bonus Extras!</span> -->
+			  	    	    	 	<span>Bonus Extras!</span>
 		  	    	    	 	</div>
 		  	    	    	 	<div class="caption-info-head-right">
 		  	    	    	 		<span> </span>
@@ -219,16 +236,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		  	    	    	 	<div class="clear"> </div>
 		  	    	    	 </div>
 		  	    	    </div>
-		  	    	     <!----//place-caption-info---->
+		  	    	     --//place-caption-info--
 		  	    		</li>
 		  	    		 <li onclick="location.href='#';">
 		  	    	    <img src="/static/public/images/qingchuanqiu2.png" />
-		  	    	    <!----place-caption-info---->
+		  	    	    --place-caption-info--
 		  	    	    <div class="caption-info">
 		  	    	    	 <div class="caption-info-head">
 		  	    	    	 	<div class="caption-info-head-left">
 			  	    	    	 	<h4><a href="#">晴川沥沥汉阳树，芳草萋萋鹦鹉洲。</a></h4>
-			  	    	    	 	<!-- <span>Bonus Extras!</span> -->
+			  	    	    	 	<span>Bonus Extras!</span>
 		  	    	    	 	</div>
 		  	    	    	 	<div class="caption-info-head-right">
 		  	    	    	 		<span> </span>
@@ -236,16 +253,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		  	    	    	 	<div class="clear"> </div>
 		  	    	    	 </div>
 		  	    	    </div>
-		  	    	     <!----//place-caption-info---->
+		  	    	     --//place-caption-info--
 		  	    		</li>
 		  	    		 <li onclick="location.href='#';">
 		  	    	    <img src="/static/public/images/huanghelou.png" />
-		  	    	    <!----place-caption-info---->
+		  	    	    --place-caption-info--
 		  	    	   <div class="caption-info">
 		  	    	    	 <div class="caption-info-head">
 		  	    	    	 	<div class="caption-info-head-left">
 			  	    	    	 	<h4><a href="#">昔人已乘黄鹤去，此地空余黄鹤楼。</a></h4>
-			  	    	    	 	<!-- <span>Bonus Extras!</span> -->
+			  	    	    	 	<span>Bonus Extras!</span>
 		  	    	    	 	</div>
 		  	    	    	 	<div class="caption-info-head-right">
 		  	    	    	 		<span> </span>
@@ -253,16 +270,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		  	    	    	 	<div class="clear"> </div>
 		  	    	    	 </div>
 		  	    	    </div>
-		  	    	     <!----//place-caption-info---->
+		  	    	     --//place-caption-info--
 		  	    		</li>
 		  	    		 <li onclick="location.href='#';">
 		  	    	    <img src="/static/public/images/qingchuanqiu2.png" />
-		  	    	    <!----place-caption-info---->
+		  	    	    --place-caption-info--
 		  	    	    <div class="caption-info">
 		  	    	    	 <div class="caption-info-head">
 		  	    	    	 	<div class="caption-info-head-left">
 			  	    	    	 	<h4><a href="#">晴川沥沥汉阳树，芳草萋萋鹦鹉洲。</a></h4>
-			  	    	    	 	<!-- <span>Bonus Extras!</span> -->
+			  	    	    	 	<span>Bonus Extras!</span>
 		  	    	    	 	</div>
 		  	    	    	 	<div class="caption-info-head-right">
 		  	    	    	 		<span> </span>
@@ -270,16 +287,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		  	    	    	 	<div class="clear"> </div>
 		  	    	    	 </div>
 		  	    	    </div>
-		  	    	     <!----//place-caption-info---->
+		  	    	     --//place-caption-info--
 		  	    		</li>
 		             <li onclick="location.href='#';">
 		  	    	    <img src="/static/public/images/qingchuanqiao.png" />
-		  	    	    <!----place-caption-info---->
+		  	    	    --place-caption-info--
 		  	    	    <div class="caption-info">
 		  	    	    	 <div class="caption-info-head">
 		  	    	    	 	<div class="caption-info-head-left">
 			  	    	    	 	<h4><a href="#">晴川桥&万绿丛中一点红</a></h4>
-			  	    	    	 	<!-- <span>Bonus Extras!</span> -->
+			  	    	    	 	<span>Bonus Extras!</span>
 		  	    	    	 	</div>
 		  	    	    	 	<div class="caption-info-head-right">
 		  	    	    	 		<span> </span>
@@ -287,16 +304,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		  	    	    	 	<div class="clear"> </div>
 		  	    	    	 </div>
 		  	    	    </div>
-		  	    	     <!----//place-caption-info---->
+		  	    	     --//place-caption-info--
 		  	    		</li>
 		  	    	 <li onclick="location.href='#';">
 		  	    	    <img src="/static/public/images/changjiangdaqiao.png" />
-		  	    	    <!----place-caption-info---->
+		  	    	    --place-caption-info--
 		  	    	    <div class="caption-info">
 		  	    	    	 <div class="caption-info-head" style="line-height:20px;">
 		  	    	    	 	<div class="caption-info-head-left">
 			  	    	    	 	<h4><a href="#">风墙动，龟蛇静，起宏图。</a><br/><a href="#">一桥飞架南北，天堑变通途。</a></h4>
-			  	    	    	 	<!-- <span>Bonus Extras!</span> -->
+			  	    	    	 	<span>Bonus Extras!</span>
 		  	    	    	 	</div>
 		  	    	    	 	<div class="caption-info-head-right">
 		  	    	    	 		<span> </span>
@@ -304,16 +321,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		  	    	    	 	<div class="clear"> </div>
 		  	    	    	 </div>
 		  	    	    </div>
-		  	    	     <!----//place-caption-info---->
+		  	    	     --//place-caption-info--
 		  	    		</li>
 		  	    		 <li onclick="location.href='#';">
 		  	    	    <img src="/static/public/images/changjiangdaqiao2.png" />
-		  	    	    <!----place-caption-info---->
+		  	    	    --place-caption-info--
 		  	    	    <div class="caption-info">
 		  	    	    	 <div class="caption-info-head">
 		  	    	    	 	<div class="caption-info-head-left">
 			  	    	    	 	<h4><a href="#">长江大桥&万里长江第一桥</a></h4>
-			  	    	    	 	<!-- <span>Bonus Extras!</span> -->
+			  	    	    	 	<span>Bonus Extras!</span>
 		  	    	    	 	</div>
 		  	    	    	 	<div class="caption-info-head-right">
 		  	    	    	 		<span> </span>
@@ -321,16 +338,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		  	    	    	 	<div class="clear"> </div>
 		  	    	    	 </div>
 		  	    	    </div>
-		  	    	     <!----//place-caption-info---->
+		  	    	     --//place-caption-info--
 		  	    		</li>
 		  	    		 <li onclick="location.href='#';">
 		  	    	    <img src="/static/public/images/qingchuanqiao.png" />
-		  	    	    <!----place-caption-info---->
+		  	    	    --place-caption-info--
 		  	    	    <div class="caption-info">
 		  	    	    	 <div class="caption-info-head">
 		  	    	    	 	<div class="caption-info-head-left">
 			  	    	    	 	<h4><a href="#">晴川桥&万绿丛中一点红</a></h4>
-			  	    	    	 	<!-- <span>Bonus Extras!</span> -->
+			  	    	    	 	<span>Bonus Extras!</span>
 		  	    	    	 	</div>
 		  	    	    	 	<div class="caption-info-head-right">
 		  	    	    	 		<span> </span>
@@ -338,8 +355,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		  	    	    	 	<div class="clear"> </div>
 		  	    	    	 </div>
 		  	    	    </div>
-		  	    	     <!----//place-caption-info---->
-		  	    		</li>
+		  	    	     --//place-caption-info--
+		  	    		</li> -->
 		          </ul>
 		        </div>
 		      </section>
@@ -355,7 +372,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						<span>跨界天下抱诚守着，随喜乐退!</span>
 					</div>
 					<div class="holiday-type-grids">
+						<c:forEach items="${industries }" var="industry" varStatus="status">
 						<div class="holiday-type-grid" onclick="location.href='#';">
+							<span class="icon${status.index+1 }"> </span>
+							<a href="#">${industry.name }</a>
+						</div>
+						</c:forEach>
+						<!-- <div class="holiday-type-grid" onclick="location.href='#';">
 							<span class="icon1"> </span>
 							<a href="#">生物产业</a>
 						</div>
@@ -378,7 +401,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						<div class="holiday-type-grid" onclick="location.href='#';">
 							<span class="icon6"> </span>
 							<a href="#">正在招商</a>
-						</div>
+						</div> -->
 						<div class="clear"> </div>
 					</div>
 				</div>
@@ -393,7 +416,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			</div>
 			<div class="client-grids">
 				<ul class="bxslider">
-				  <li>
+				  <c:forEach items="${informations }" var="information">
+				  	<li>
+					  	<p>${information.content }</p>
+					  	<a href="#">${information.name }</a>
+					  	<span>${information.name } <a href="#" style="display:inline;font-weight: normal;font-size: 1.1em;">显示更多&gt;&gt;</a></span>
+					  	<label> </label>
+				  	</li>
+				  </c:forEach>
+				  
+				 <!-- <li>
 				  	<p>乐退是个新生词汇，意思是说早点退休享受人生。有备而退，富足而退，健康而退，快乐而退。为自己、为家人筹划合理的养老计划。关注老年群体，建立属于中国老年人的上网社区，公益性网站，呼吁社会力量参与中国养老事业。</p>
 				  	<a href="#">关于乐退</a>
 				  	<span>关于乐退 <a href="#" style="display:inline;font-weight: normal;font-size: 1.1em;">显示更多&gt;&gt;</a></span>
@@ -422,7 +454,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				  	<a href="#">关于乐退</a>
 				  	<span>关于乐退 <a href="#" style="display:inline;font-weight: normal;font-size: 1.1em;">显示更多&gt;&gt;</a></span>
 				  	<label> </label>
-				  </li>
+				  </li> -->
 				</ul>
 			</div>
 		</div>
@@ -435,46 +467,80 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					<span>众志成城 联合梦想</span>
 				</div>
 				<div class="partners-list-parent">
-					<div class="partners-list">
-						<a href="#">
-							<img src="/static/public/images/E8BA-1E00-42A3.png" height="170"/>
-						</a>
+					<c:forEach items="${partners }" var="partner">
+						<div class="partners-liebiao">
+							<div class="partners-list">
+								<a href="#">
+									<img src="${partner.logo }" height="170"/>
+								</a>
+							</div>
+							<img src="/static/public/images/customers_bottom.jpg" width="185"/>
+						</div>
+					</c:forEach>
+					<!-- <div class="partners-liebiao">
+						<div class="partners-list">
+							<a href="#">
+								<img src="/static/public/images/E8BA-1E00-42A3.png" height="170"/>
+							</a>
+						</div>
+						<img src="/static/public/images/customers_bottom.jpg" width="185"/>
 					</div>
-					<div class="partners-list">
-						<a href="#">
-							<img src="/static/public/images/E8BA-1E00-42A3.png" height="170"/>
-						</a>
+					<div class="partners-liebiao">
+						<div class="partners-list">
+							<a href="#">
+								<img src="/static/public/images/E8BA-1E00-42A3.png" height="170"/>
+							</a>
+						</div>
+						<img src="/static/public/images/customers_bottom.jpg" width="185"/>
 					</div>
-					<div class="partners-list">
-						<a href="#">
-							<img src="/static/public/images/E8BA-1E00-42A3.png" height="170"/>
-						</a>
+					<div class="partners-liebiao">
+						<div class="partners-list">
+							<a href="#">
+								<img src="/static/public/images/E8BA-1E00-42A3.png" height="170"/>
+							</a>
+						</div>
+						<img src="/static/public/images/customers_bottom.jpg" width="185"/>
 					</div>
-					<div class="partners-list">
-						<a href="#">
-							<img src="/static/public/images/E8BA-1E00-42A3.png" height="170"/>
-						</a>
+					<div class="partners-liebiao">
+						<div class="partners-list">
+							<a href="#">
+								<img src="/static/public/images/E8BA-1E00-42A3.png" height="170"/>
+							</a>
+						</div>
+						<img src="/static/public/images/customers_bottom.jpg" width="185"/>
 					</div>
-					<div class="partners-list">
-						<a href="#">
-							<img src="/static/public/images/E8BA-1E00-42A3.png" height="170"/>
-						</a>
+					<div class="partners-liebiao">
+						<div class="partners-list">
+							<a href="#">
+								<img src="/static/public/images/E8BA-1E00-42A3.png" height="170"/>
+							</a>
+						</div>
+						<img src="/static/public/images/customers_bottom.jpg" width="185"/>
 					</div>
-					<div class="partners-list">
-						<a href="#">
-							<img src="/static/public/images/E8BA-1E00-42A3.png" height="170"/>
-						</a>
+					<div class="partners-liebiao">
+						<div class="partners-list">
+							<a href="#">
+								<img src="/static/public/images/E8BA-1E00-42A3.png" height="170"/>
+							</a>
+						</div>
+						<img src="/static/public/images/customers_bottom.jpg" width="185"/>
 					</div>
-					<div class="partners-list">
-						<a href="#">
-							<img src="/static/public/images/E8BA-1E00-42A3.png" height="170"/>
-						</a>
+					<div class="partners-liebiao">
+						<div class="partners-list">
+							<a href="#">
+								<img src="/static/public/images/E8BA-1E00-42A3.png" height="170"/>
+							</a>
+						</div>
+						<img src="/static/public/images/customers_bottom.jpg" width="185"/>
 					</div>
-					<div class="partners-list" style="margin-right:0;">
-						<a href="#">
-							<img src="/static/public/images/E8BA-1E00-42A3.png" height="170"/>
-						</a>
-					</div>
+					<div class="partners-liebiao" style="margin-right:0;">
+						<div class="partners-list">
+							<a href="#">
+								<img src="/static/public/images/E8BA-1E00-42A3.png" height="170"/>
+							</a>
+						</div>
+						<img src="/static/public/images/customers_bottom.jpg" width="185"/>
+					</div> -->
 				</div>
 				<!-- <div class="footer-content-left">
 					<p class="content-left-title">跨界天下</p>
