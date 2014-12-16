@@ -11,3 +11,4 @@ cp target/*.war webapps/
 $CATALINA_HOME/bin/startup.sh
 mysqldump -u root -proot kuajietianxia > dbsql/kuajietianxia-$(date +%Y-%m-%d\ %H:%M:%S).sql
 tail -n 200 -f $CATALINA_HOME/logs/catalina.out
+
