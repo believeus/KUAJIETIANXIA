@@ -86,13 +86,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	                    <img src="/static/public/images/dingsheng.jpg" alt=""/>
 		            </div> -->
 		            <div class="slide">
-		                <img src="/static/public/images/ding.jpg" alt=""/>
+		                <img src="/static/public/images/1.jpg" alt=""/>
 		            </div>
 		            <div class="slide">
-		                <img src="/static/public/images/yuzhou.jpg" alt=""/>
-		            </div>
-		            <div class="slide">
-		                <img src="/static/public/images/banner1.jpg" alt=""/>
+		                <img src="/static/public/images/2.jpg" alt=""/>
 		            </div>
 		            <div class="slide">
 		                <img src="/static/public/images/banner2.jpg" alt=""/>
