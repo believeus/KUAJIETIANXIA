@@ -54,6 +54,7 @@
 		<mapping class="cn.believeus.model.Information"/>
 		<mapping class="cn.believeus.model.EnterpriseInfo"/>
 		<mapping class="cn.believeus.model.Product"/>
+		<mapping class="cn.believeus.model.FriendLink"/>
 		
 	</session-factory>
 

@@ -27,7 +27,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	$(document).ready(function(){
 		$('.bxslider').bxSlider({
 			 auto: true,
-				 autoControls: true,
+			 autoControls: true,
 			 minSlides: 4,
 			 maxSlides: 4,
 			 slideWidth:450,
@@ -52,16 +52,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <!---smoth-scrlling---->
 <script type="text/javascript">
 	$(document).ready(function(){
-		/* $('a[href^="#"]').on('click',function (e) {
-		    e.preventDefault();
-		    var target = this.hash,
-		    $target = $(target);
-		    $('html, body').stop().animate({
-		        'scrollTop': $target.offset().top
-		    }, 1000, 'swing', function () {
-		        window.location.hash = target;
-		    });
-		}); */
+		
 	});
 </script>
 <!---//smoth-scrlling---->

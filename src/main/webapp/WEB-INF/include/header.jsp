@@ -32,7 +32,8 @@
 	<!--- start-top-nav---->
 	<div class="top-nav">
 			<ul class="flexy-menu thick orange">
-				<li class="active"><a href="/">跨界天下</a>
+				<li class="active"><a href="/">跨界天下</a></li>
+				<li><a href="/straddling.jhtml">集团介绍</a>
 					<ul>
 						<li><a href="#">集团简介</a></li>
 						<li><a href="#">总裁致辞</a></li>
@@ -40,7 +41,7 @@
 						<li><a href="#">组织架构</a></li>
 					</ul>
 				</li>
-				<li><a href="/">资质荣誉</a></li>
+				<li><a href="/honor.jhtml">资质荣誉</a></li>
 				<li><a href="/zixunList.jhtml">集团资讯</a>
 					<ul>
 						<li><a href="#">集团快讯</a></li>

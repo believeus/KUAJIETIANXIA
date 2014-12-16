@@ -63,7 +63,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	</div>
 	<form id="inputForm" action="/admin/partners/save.jhtml" method="post" enctype="multipart/form-data">
 		<input type="hidden" name="id" value="${partners.id }"/>
-		<input type="hidden" name="path" value="${partners.logo}"/>
+		<input type="hidden" name="logo" value="${partners.logo}"/>
 		<table class="input">
 			<tr>
 				<th>
@@ -73,7 +73,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					<select name="industryName" id="industryName">
 						<option value="">--请选择--</option>
 						<c:forEach items="${industries }" var="industry">
-							<option value="${industry.id }" <c:if test="${industry.id eq(partners.industry.id) }"></c:if>  >${industry.name }</option>
+							<option value="${industry.id }" <c:if test="${industry.id eq(partners.industry.id) }">selected="selected"</c:if>  >${industry.name }</option>
 						</c:forEach>
 					</select>
 				</td>

@@ -63,6 +63,37 @@ public class ControllerIndex {
 		request.setAttribute("industrys", Industrys);
 		return "/WEB-INF/front/destinations.jsp";
 	}
+	/**
+	 * 集团产业-公司列表
+	 * @param request
+	 * @return
+	 */
+	@RequestMapping(value = "/destinationsContent")
+	public String content(HttpServletRequest request) {
+		
+		return "/WEB-INF/front/destinations_content.jsp";
+	}
+	
+	/**
+	 * 荣誉资质
+	 * @param request
+	 * @return
+	 */
+	@RequestMapping(value = "/honor")
+	public String honor(HttpServletRequest request) {
+		
+		return "/WEB-INF/front/honor.jsp";
+	}
+	/**
+	 * 荣誉资质
+	 * @param request
+	 * @return
+	 */
+	@RequestMapping(value = "/straddling")
+	public String straddling(HttpServletRequest request) {
+		
+		return "/WEB-INF/front/straddling.jsp";
+	}
 	
 	/**
 	 * 集团资讯
@@ -83,5 +114,15 @@ public class ControllerIndex {
 		return "/WEB-INF/front/zixunContent.jsp";
 	}
 	
+	/**
+	 * 联系我们
+	 * @param request
+	 * @return
+	 */
+	@RequestMapping(value = "/contactus")
+	public String contactus(HttpServletRequest request) {
+		
+		return "/WEB-INF/front/contactus.jsp";
+	}
 
 }
