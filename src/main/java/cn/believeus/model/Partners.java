@@ -21,6 +21,11 @@ public class Partners extends TbaseEntity {
 	private static final long serialVersionUID = -5743797339215834848L;
 	private String logo;//图片路径
 	private String name;//名称
+	private String address;//公司地址
+	private String legalMan;//公司法人
+	private String regCapital;//注册资本
+	private String companyTye;//公司类型
+	private String bizScope;//经营范围
 	private String introduction;//介绍
 	private Industry industry;
 	private List<Product> products=new ArrayList<Product>();
@@ -58,6 +63,36 @@ public class Partners extends TbaseEntity {
 	}
 	public void setProducts(List<Product> products) {
 		this.products = products;
+	}
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	public String getLegalMan() {
+		return legalMan;
+	}
+	public void setLegalMan(String legalMan) {
+		this.legalMan = legalMan;
+	}
+	public String getRegCapital() {
+		return regCapital;
+	}
+	public void setRegCapital(String regCapital) {
+		this.regCapital = regCapital;
+	}
+	public String getCompanyTye() {
+		return companyTye;
+	}
+	public void setCompanyTye(String companyTye) {
+		this.companyTye = companyTye;
+	}
+	public String getBizScope() {
+		return bizScope;
+	}
+	public void setBizScope(String bizScope) {
+		this.bizScope = bizScope;
 	}
 	
 	
