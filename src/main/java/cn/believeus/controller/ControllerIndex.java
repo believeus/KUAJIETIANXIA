@@ -115,13 +115,27 @@ public class ControllerIndex {
 	}
 	
 	/**
-	 * 联系我们
+	 * 集团产业的相关公司
+	 * 
+	*/
+	@RequestMapping("/industryPartners.jhtml")
+	public String showIndustryList(HttpServletRequest request,Integer industryId){
+		//获得产业
+		Industry industry=(Industry)baseService.findObject(Industry.class, industryId);
+		// 从产业中获取合作伙伴
+		List<Partners> partners=null;
+		if(industry!=null){
+			partners = industry.getPartners();
+		}
+		request.setAttribute("partners", partners);
+		return "/WEB-INF/front/industryPartners.jsp";
+	}
+	 /** 联系我们
 	 * @param request
 	 * @return
 	 */
 	@RequestMapping(value = "/contactus")
 	public String contactus(HttpServletRequest request) {
-		
 		return "/WEB-INF/front/contactus.jsp";
 	}
 

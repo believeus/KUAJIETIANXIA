@@ -26,7 +26,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <div class="kjtx-main">
     	<div class="kjtx-main-list">
     		<div class="kjtx-main-list-img">
-    			<img src="/static/public/images/cy01.jpg" width="272" height="210"/>
+    			<a href="/industryPartners.jhtml?industryId=1"><img src="/static/public/images/cy01.jpg" width="272" height="210"/></a>
     		</div>
     		<div class="kjtx-main-list-name">
     			生物产业:胶原蛋白
