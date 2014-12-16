@@ -100,7 +100,7 @@ public class ProductController {
 		if (!storepath.equals("")) {
 			product.setImgpath(storepath);
 		}
-		String partnersId = request.getParameter("partner");
+		String partnersId = request.getParameter("partnerId");
 		Partners partners = (Partners) baseService.findObject(Partners.class, Integer.parseInt(partnersId));
 		product.setPartners(partners);
 		baseService.saveOrUpdata(product);

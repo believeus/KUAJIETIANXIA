@@ -131,4 +131,9 @@ public class PartnersController {
 		baseService.delete(Partners.class, list);
 		return "{\"type\":\"success\"}";
 	}
+	@RequestMapping(value="/admin/partners/deleteById")
+	public  String deleteById(Integer id){
+		baseService.delete(Partners.class, id);
+		return "redirect:/admin/partners/list.jhtml";
+	}
 }

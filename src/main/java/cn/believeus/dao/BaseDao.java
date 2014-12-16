@@ -1,6 +1,7 @@
 package cn.believeus.dao;
 
 import java.sql.SQLException;
+import java.util.Iterator;
 import java.util.List;
 
 import javax.annotation.Resource;
@@ -38,7 +39,7 @@ public class BaseDao extends HibernateDaoSupport {
 		ht.flush();
 	}
 
-	public void delete(Class<?> clazz,List<?> idList){
+/*	public void delete(Class<?> clazz,List<?> idList){
 		if (idList==null||idList.isEmpty()) {
 			return;
 		}
@@ -54,6 +55,15 @@ public class BaseDao extends HibernateDaoSupport {
 						return query.executeUpdate();
 					}
 				});
+	}*/
+	public void delete(Class<?> clazz,List<?> idList){
+		if (idList==null||idList.isEmpty()) {
+			return;
+		}
+		for (Iterator<?> iterator = idList.iterator(); iterator.hasNext();) {
+			Integer id = (Integer) iterator.next();
+			delete(clazz, id);
+		}
 	}
 	public void delete(Class<?> clazz, final Integer id) {
 		Object object = this.getHibernateTemplate().get(clazz, id);

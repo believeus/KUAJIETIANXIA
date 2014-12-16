@@ -86,6 +86,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					</td>
 					<td>
 						<a href="/admin/partners/edit.jhtml?id=${myNew.id}">[修改]</a>
+						<a href="/admin/partners/deleteById.jhtml?id=${myNew.id}">[删除]</a>
 					</td>
 				</tr>
 			</c:forEach>

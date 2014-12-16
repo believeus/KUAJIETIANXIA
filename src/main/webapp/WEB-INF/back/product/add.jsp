@@ -67,7 +67,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					所属公司:
 				</th>
 				<td>
-					<select name="partner">
+					<select name="partnerId">
 						<option value="">--请选择--</option>
 						<c:forEach items="${partners }" var="partner">
 							<option value="${partner.id }">${partner.name }</option>
