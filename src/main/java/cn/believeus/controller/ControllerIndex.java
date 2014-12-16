@@ -85,7 +85,7 @@ public class ControllerIndex {
 		return "/WEB-INF/front/honor.jsp";
 	}
 	/**
-	 * 荣誉资质
+	 * 招商合作
 	 * @param request
 	 * @return
 	 */
@@ -103,6 +103,15 @@ public class ControllerIndex {
 	@RequestMapping(value = "/zixunList")
 	public String zixun(HttpServletRequest request) {
 		return "/WEB-INF/front/zixunList.jsp";
+	}
+	/**
+	 * 集团介绍
+	 * @param request
+	 * @return
+	 */
+	@RequestMapping(value = "/introduction")
+	public String introduction(HttpServletRequest request) {
+		return "/WEB-INF/front/introduction.jsp";
 	}
 	/**
 	 * 集团资讯
@@ -137,6 +146,22 @@ public class ControllerIndex {
 	@RequestMapping(value = "/contactus")
 	public String contactus(HttpServletRequest request) {
 		return "/WEB-INF/front/contactus.jsp";
+	}
+	/** 公司简介
+	 * @param request
+	 * @return
+	 */
+	@RequestMapping(value = "/kjtxabstract")
+	public String kjtxabstract(HttpServletRequest request) {
+		return "/WEB-INF/front/abstract.jsp";
+	}
+	/** 产品列表
+	 * @param request
+	 * @return
+	 */
+	@RequestMapping(value = "/kjtxproduct")
+	public String product(HttpServletRequest request) {
+		return "/WEB-INF/front/product.jsp";
 	}
 
 }

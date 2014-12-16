@@ -84,7 +84,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 </style>
 </head>
 
-<body>
+<body style="overflow-x:hidden;">
  	<!----start-wrap---->
 		<jsp:include page="/WEB-INF/include/header.jsp" />
 		<!----start-images-slider---->
@@ -374,8 +374,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<div class="wrap">
 					<div class="holiday-type-head">
 						<h3>集团产业</h3>
-						<span>跨界天下海纳百川，厚德载物!</span><br />
-						<span>跨界天下抱诚守着，随喜乐退!</span>
+						<span>跨界天下海纳百川，厚德载物!</span>
 					</div>
 					<div class="holiday-type-grids">
 						<c:forEach items="${industries }" var="industry" varStatus="status">

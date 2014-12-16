@@ -53,14 +53,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   <body>
      <jsp:include page="/WEB-INF/include/header.jsp" />
+     <img src="/static/public/images/11.jpg" alt="" width="100%" />
      <div class="center" style="width: 1200px; height: auto;margin: 0 auto 50px;overflow: hidden;">
-		<div style="font-size: 23px;font-weight: bold;line-height: 65px;height: 55px;">
-			<a style="color: #666666;" href="">联系我们</a>
-		</div>
-		<div style="width: 1200px;height: auto;margin: 0 auto;">
-			<div style="border-bottom: 2px solid #AEAEAE;"></div>
-			<div style="border-bottom: 4px solid #922D2C;width: 92px;margin: -3px 0px 10px;"></div>
-		</div>
+		<p class="kjtx-main-title">
+	   		<span style="border-bottom: 2px solid #922d2c;">联系我们</span>
+		</p>
 		<div style="width: 1200px;height: auto;margin: 10px auto;">
 			<div style="float: left;color: #434343;font-size: 16px;">
 				<div style="margin: 30px auto;">

@@ -50,7 +50,7 @@ body{
     margin-right: 15px;
 }
 .kjtx-main{
-	width:1400px;
+	width:1200px;
 	height:auto;overflow:hidden;
 	margin:0 auto;
 }
@@ -59,14 +59,15 @@ body{
     font-size: 25px;
     margin: 20px auto;	
     color:#666666;
-    width: 1400px;
+    width: 1240px;
     border-bottom: 2px solid #aeaeae;
+    font-weight:bold;
 }
 .kjtx-main-list{
 	width:283px;
 	height:315px;
 	float:left;
-	margin-right:85px;
+	margin-right:20px;
 	margin-bottom:50px;
 	border:1px solid #D0C5BF;
 	/* border-bottom:2px solid #000; */
@@ -86,12 +87,18 @@ body{
 	color:#000;
 }
 .kjtx-more{
-	width:1400px;height:50px;line-height:50px;margin:0 auto;margin-bottom:50px;font-family:microsoft yahei;border-radius:5px;background:#414141;text-align:center;color:#C6C6C6;font-size:20px;font-weight:bold;
+	width:1200px;height:50px;line-height:50px;margin:0 auto;margin-bottom:50px;font-family:microsoft yahei;border-radius:5px;background:#414141;text-align:center;color:#C6C6C6;font-size:20px;font-weight:bold;
 }
 .kjtx-main-list-img{
 	height: 210px;
     padding: 5px 5px 0 5px;
     width: 273px;
+}
+.active li a{
+	color:#dedede !important;
+}
+.active li a:hover{
+	color:#8E2C2D !important;
 }
 .kjtx-main-list-name{
 	width:273px;
@@ -284,6 +291,7 @@ body{
 .top-nav{
 	float:right;
 	position: relative;
+	left:100px;
 	/* width: 67%; */
 }
 /*----//main-header----*/
@@ -310,7 +318,7 @@ body{
 	position:relative;
 }
 .flexy-menu>li>a{
-	padding: 1.3em 1.5em;
+	padding: 1.3em 1.1em;
 	color: #5D6E80;
 	font-weight: 600;
 	font-size: 1.21em;
@@ -943,7 +951,7 @@ input[type="search"].sb-search-input {
 	color:#626262
 }
 .bxslider li{
-	border-top: 5px solid #000 ;
+	border-top: 5px solid #962727 ;
 	padding: 1em;
 	border-left: 1px solid #DDD;
 	border-right: 1px solid #DDD;
@@ -965,17 +973,18 @@ input[type="search"].sb-search-input {
 	color:#333333;
 	line-height:1.5em;
 	height:85px;
+	font-weight:bold;
 }
 .bxslider li a{
 	color: #2C3E50;
 	font-size: 1.2em;
 	display: block;
 	padding: 0.4em 0 0;
-	font-weight:
+	font-weight:bold;
 }
 .bxslider li span{
 	color:#962727;
-	font-size:1.2em;
+	font-size:1em;
 	font-weight: bold;
 }
 .clients{
@@ -2008,7 +2017,17 @@ span.mail a:hover{
 		width: 80%;
 	}
 	.top-nav {
-		width: 70%;
+		/* width: 70%; */
+		
+	}
+	.flexy-menu > li > a {
+		font-size:15px;
+	}
+	.main-content{
+		width:900px;
+	}
+	.footer-content{
+		width:auto;
 	}
 	.p-ww span {
 		margin: 0 0.5em;	

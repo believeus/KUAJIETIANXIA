@@ -29,7 +29,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     			<a href="/industryPartners.jhtml?industryId=1"><img src="/static/public/images/cy01.jpg" width="272" height="210"/></a>
     		</div>
     		<div class="kjtx-main-list-name">
-    			生物产业:胶原蛋白
+    			生物产业
     		</div>
     		<div class="kjtx-main-list-content">
 	    		跨界天下，是你及家人健康和谐的温暖港湾
@@ -37,10 +37,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     	</div>
     	<div class="kjtx-main-list">
     		<div class="kjtx-main-list-img">
-    			<img src="/static/public/images/cy01.jpg" width="272" height="210"/>
+    			<a href="/industryPartners.jhtml?industryId=1"><img src="/static/public/images/cy01.jpg" width="272" height="210"/></a>
     		</div>
     		<div class="kjtx-main-list-name">
-    			生物产业:胶原蛋白
+    			信息产业
     		</div>
     		<div class="kjtx-main-list-content">
 	    		跨界天下，是你及家人健康和谐的温暖港湾
@@ -48,10 +48,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     	</div>
     	<div class="kjtx-main-list">
     		<div class="kjtx-main-list-img">
-    			<img src="/static/public/images/cy01.jpg" width="272" height="210"/>
+    			<a href="/industryPartners.jhtml?industryId=1"><img src="/static/public/images/cy01.jpg" width="272" height="210"/></a>
     		</div>
     		<div class="kjtx-main-list-name">
-    			生物产业:胶原蛋白
+    			投资产业
     		</div>
     		<div class="kjtx-main-list-content">
 	    		跨界天下，是你及家人健康和谐的温暖港湾
@@ -59,10 +59,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     	</div>
     	<div class="kjtx-main-list" style="margin-right:0;">
     		<div class="kjtx-main-list-img">
-    			<img src="/static/public/images/cy01.jpg" width="272" height="210"/>
+    			<a href="/industryPartners.jhtml?industryId=1"><img src="/static/public/images/cy01.jpg" width="272" height="210"/></a>
     		</div>
     		<div class="kjtx-main-list-name">
-    			生物产业:胶原蛋白
+    			餐饮产业
     		</div>
     		<div class="kjtx-main-list-content">
 	    		跨界天下，是你及家人健康和谐的温暖港湾
@@ -70,10 +70,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     	</div>
     	<div class="kjtx-main-list">
     		<div class="kjtx-main-list-img">
-    			<img src="/static/public/images/cy01.jpg" width="272" height="210"/>
+    			<a href="/industryPartners.jhtml?industryId=1"><img src="/static/public/images/cy01.jpg" width="272" height="210"/></a>
     		</div>
     		<div class="kjtx-main-list-name">
-    			生物产业:胶原蛋白
+    			俱乐部产业
     		</div>
     		<div class="kjtx-main-list-content">
 	    		跨界天下，是你及家人健康和谐的温暖港湾
@@ -81,10 +81,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     	</div>
     	<div class="kjtx-main-list">
     		<div class="kjtx-main-list-img">
-    			<img src="/static/public/images/cy01.jpg" width="272" height="210"/>
+    			<a href="/industryPartners.jhtml?industryId=1"><img src="/static/public/images/cy01.jpg" width="272" height="210"/></a>
     		</div>
     		<div class="kjtx-main-list-name">
-    			生物产业:胶原蛋白
+    			招商产业
     		</div>
     		<div class="kjtx-main-list-content">
 	    		跨界天下，是你及家人健康和谐的温暖港湾
@@ -92,10 +92,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     	</div>
     	<div class="kjtx-main-list">
     		<div class="kjtx-main-list-img">
-    			<img src="/static/public/images/cy01.jpg" width="272" height="210"/>
+    			<a href="/industryPartners.jhtml?industryId=1"><img src="/static/public/images/cy01.jpg" width="272" height="210"/></a>
     		</div>
     		<div class="kjtx-main-list-name">
-    			生物产业:胶原蛋白
+    			生物产业
     		</div>
     		<div class="kjtx-main-list-content">
 	    		跨界天下，是你及家人健康和谐的温暖港湾
@@ -103,10 +103,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     	</div>
     	<div class="kjtx-main-list" style="margin-right:0;">
     		<div class="kjtx-main-list-img">
-    			<img src="/static/public/images/cy01.jpg" width="272" height="210"/>
+    			<a href="/industryPartners.jhtml?industryId=1"><img src="/static/public/images/cy01.jpg" width="272" height="210"/></a>
     		</div>
     		<div class="kjtx-main-list-name">
-    			生物产业:胶原蛋白
+    			投资产业
     		</div>
     		<div class="kjtx-main-list-content">
 	    		跨界天下，是你及家人健康和谐的温暖港湾
@@ -114,10 +114,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     	</div>
     	<div class="kjtx-main-list">
     		<div class="kjtx-main-list-img">
-    			<img src="/static/public/images/cy01.jpg" width="272" height="210"/>
+    			<a href="/industryPartners.jhtml?industryId=1"><img src="/static/public/images/cy01.jpg" width="272" height="210"/></a>
     		</div>
     		<div class="kjtx-main-list-name">
-    			生物产业:胶原蛋白
+    			信息产业
     		</div>
     		<div class="kjtx-main-list-content">
 	    		跨界天下，是你及家人健康和谐的温暖港湾
@@ -125,10 +125,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     	</div>
     	<div class="kjtx-main-list">
     		<div class="kjtx-main-list-img">
-    			<img src="/static/public/images/cy01.jpg" width="272" height="210"/>
+    			<a href="/industryPartners.jhtml?industryId=1"><img src="/static/public/images/cy01.jpg" width="272" height="210"/></a>
     		</div>
     		<div class="kjtx-main-list-name">
-    			生物产业:胶原蛋白
+    			生物产业
     		</div>
     		<div class="kjtx-main-list-content">
 	    		跨界天下，是你及家人健康和谐的温暖港湾
@@ -136,10 +136,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     	</div>
     	<div class="kjtx-main-list">
     		<div class="kjtx-main-list-img">
-    			<img src="/static/public/images/cy01.jpg" width="272" height="210"/>
+    			<a href="/industryPartners.jhtml?industryId=1"><img src="/static/public/images/cy01.jpg" width="272" height="210"/></a>
     		</div>
     		<div class="kjtx-main-list-name">
-    			生物产业:胶原蛋白
+    			生物产业
     		</div>
     		<div class="kjtx-main-list-content">
 	    		跨界天下，是你及家人健康和谐的温暖港湾
@@ -147,10 +147,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     	</div>
     	<div class="kjtx-main-list" style="margin-right:0;">
     		<div class="kjtx-main-list-img">
-    			<img src="/static/public/images/cy01.jpg" width="272" height="210"/>
+    			<a href="/industryPartners.jhtml?industryId=1"><img src="/static/public/images/cy01.jpg" width="272" height="210"/></a>
     		</div>
     		<div class="kjtx-main-list-name">
-    			生物产业:胶原蛋白
+    			餐饮产业
     		</div>
     		<div class="kjtx-main-list-content">
 	    		跨界天下，是你及家人健康和谐的温暖港湾

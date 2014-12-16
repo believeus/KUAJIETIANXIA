@@ -7,7 +7,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
-    <title>跨界天下-集团介绍</title>
+    <title>跨界天下-招商合作</title>
     <link rel="stylesheet" href="/static/public/css/fonts.css" />
 	<link rel="stylesheet" href="/static/public/css/style.css" />
 	<link rel="stylesheet" href="/static/public/css/fwslider.css" />
@@ -28,9 +28,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <jsp:include page="/WEB-INF/include/header.jsp" />
     <img src="/static/public/images/11.jpg" width="100%" />
    	<div class="center" style="width: 1200px; height: auto;margin: 0 auto;overflow: hidden;">
-		<div style="font-size: 23px;font-weight: bold;line-height: 65px;height: 40px;margin-left: 20px;">
-			<a style="color: #666666;" href="straddling.jhtml">跨界天下</a>
-		</div>
+		<p class="kjtx-main-title">
+	   		<span style="border-bottom: 2px solid #922d2c;">招商合作</span>
+		</p>
 		<div style="color: #666666;font-size: 18px;font-weight: bold;line-height: 40px;height: 40px;margin-left: 92%;">
 			<a style="color: #666666;" href="">集团简介</a>
 		</div>
@@ -55,7 +55,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					现在的人们复制了这种货郎鼓，摇之发声，高低错落，叮咚悦耳。
 				</div>
 				<div style="margin-top: 6%;font-size: 16px;float: right;margin-right: 20px;">
-					<a style="color: #922D2C;" href="">[更多...]</a>
+					<a style="color: #922D2C;margin-right:30px;" href="/kjtxabstract.jhtml">[更多简介...]</a>
+					<a style="color: #555;" href="/kjtxproduct.jhtml">[查看产品]</a>
 				</div>
 			</div>
 		</div>
@@ -83,7 +84,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					现在的人们复制了这种货郎鼓，摇之发声，高低错落，叮咚悦耳。
 				</div>
 				<div style="margin-top: 6%;font-size: 16px;float: right;margin-right: 20px;">
-					<a style="color: #922D2C;" href="">[更多...]</a>
+					<a style="color: #922D2C;margin-right:30px;" href="/kjtxabstract.jhtml">[更多简介...]</a>
+					<a style="color: #555;" href="/kjtxproduct.jhtml">[查看产品]</a>
 				</div>
 			</div>
 		</div>
@@ -111,7 +113,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					现在的人们复制了这种货郎鼓，摇之发声，高低错落，叮咚悦耳。
 				</div>
 				<div style="margin-top: 6%;font-size: 16px;float: right;margin-right: 20px;">
-					<a style="color: #922D2C;" href="">[更多...]</a>
+					<a style="color: #922D2C;margin-right:30px;" href="/kjtxabstract.jhtml">[更多简介...]</a>
+					<a style="color: #555;" href="/kjtxproduct.jhtml">[查看产品]</a>
 				</div>
 			</div>
 		</div>

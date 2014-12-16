@@ -19,8 +19,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   <body>
     <jsp:include page="/WEB-INF/include/header.jsp" />
+    <img src="/static/public/images/11.jpg" width="100%" style="margin-top: -1px;"/>
     <div class="kjtx-main">
-    	<p class="kjtx-main-title">集团公告<a href="#" style="color: #555;font-size: 18px;">&gt;&gt;集团公告</a></p>
+    	<p class="kjtx-main-title">
+    		<span style="border-bottom: 2px solid #922d2c;">集团公告</span><span style="font-size:15px;font-weight:normal;">&gt;&gt;公告信息</span>
+   		</p>
     	<img src="/static/public//images/zxImg.jpg" width="1210"/>
     	<p class="content-title">1978年8月，习仲勋与参加暑期社会实践活动的习近平在海南。<span class="title-date" style="font-weight:normal">2014-12-12 03:31</span></p>
     	<div class="zx-content">

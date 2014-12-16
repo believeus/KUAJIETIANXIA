@@ -1,6 +1,17 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 
-
+<script type="text/javascript">
+	$(function(){
+		var href = window.location.pathname;
+		//alert(href);
+		$(".right a").each(function(){
+			if(href == $(this).attr("href")){
+				$(this).parent().parent().find("li").removeClass("active");
+				$(this).parent().addClass("active");
+			}
+		});
+	});
+</script>
 <!----start-top-header----->
 <div class="top-header" id="header">
 	<div class="wrap">
@@ -33,7 +44,7 @@
 	<div class="top-nav">
 			<ul class="flexy-menu thick orange">
 				<li class="active"><a href="/">跨界天下</a></li>
-				<li><a href="/straddling.jhtml">集团介绍</a>
+				<li><a href="/introduction.jhtml">集团介绍</a>
 					<ul>
 						<li><a href="#">集团简介</a></li>
 						<li><a href="#">总裁致辞</a></li>
@@ -61,11 +72,11 @@
 						</li>
 					</ul>
 				</li>
-				<li><a href="destinations.html">集团文化</a>
-				<li><a href="destinations.html">招商合作</a>
-				<li><a href="destinations.html">会员中心</a>
+				<li><a href="#">集团文化</a>
+				<li><a href="/straddling.jhtml">招商合作</a>
+				<li><a href="#">会员中心</a>
 				</li>
-				<li><a href="blog.html">联系我们</a>
+				<li><a href="/contactus.jhtml">联系我们</a>
 					<ul>
 						<li><a href="#">邮件咨询</a></li>
 						<li><a href="#">客服咨询</a></li>
