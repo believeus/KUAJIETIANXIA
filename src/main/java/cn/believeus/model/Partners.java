@@ -27,7 +27,7 @@ public class Partners extends TbaseEntity {
 	private String companyTye;//公司类型
 	private String bizScope;//经营范围
 	private String introduction;//介绍
-	private Industry industry;
+	private Industry industry;//所属产业
 	private List<Product> products=new ArrayList<Product>();
 	
 	public String getLogo() {

@@ -21,7 +21,6 @@ import org.springframework.web.multipart.MultipartHttpServletRequest;
 import cn.believeus.PaginationUtil.Page;
 import cn.believeus.PaginationUtil.Pageable;
 import cn.believeus.PaginationUtil.PaginationUtil;
-import cn.believeus.model.Culture;
 import cn.believeus.model.Industry;
 import cn.believeus.model.Partners;
 import cn.believeus.service.BaseService;
@@ -100,9 +99,9 @@ public class PartnersController {
 		if (!storepath.equals("")) {
 			partners.setLogo(storepath);
 		}
-		String industry = request.getParameter("industry");
-		Industry industry2 = (Industry) baseService.findObject(Industry.class, Integer.parseInt(industry));
-		partners.setIndustry(industry2);
+		String industryName = request.getParameter("industryName");
+		Industry industry = (Industry) baseService.findObject(Industry.class, Integer.parseInt(industryName));
+		partners.setIndustry(industry);
 		baseService.saveOrUpdata(partners);
 		return "redirect:/admin/partners/list.jhtml";
 	}

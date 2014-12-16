@@ -50,8 +50,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				content: "required"
 			}
 		});
-		
-		
+		$("#companyTye").val("${partners.companyTye }");
+		$("#industryName").val("${partners.industry.id }");
 	});
 	
 	</script>
@@ -70,7 +70,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					所属产业:
 				</th>
 				<td>
-					<select name="industry">
+					<select name="industryName" id="industryName">
 						<option value="">--请选择--</option>
 						<c:forEach items="${industries }" var="industry">
 							<option value="${industry.id }" <c:if test="${industry.id eq(partners.industry.id) }"></c:if>  >${industry.name }</option>
@@ -84,6 +84,50 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				</th>
 				<td>
 					<input type="text" name="name" class="text" maxlength="10000" value="${partners.name}"/>
+				</td>
+			</tr>
+				<tr>
+				<th>
+					公司地址:
+				</th>
+				<td>
+					<input type="text" name="address" class="text" value="${partners.address}"/>
+				</td>
+			</tr>
+			<tr>
+				<th>
+					公司法人:
+				</th>
+				<td>
+					<input type="text" name="legalMan" class="text" value="${partners.legalMan}"/>
+				</td>
+			</tr>
+			<tr>
+				<th>
+					注册资本:
+				</th>
+				<td>
+					<input type="text" name="regCapital" class="text" value="${partners.regCapital}"/>&nbsp;&nbsp;万元
+				</td>
+			</tr>
+			<tr>
+				<th>
+					公司类型:
+				</th>
+				<td>
+					<select name="companyTye" id="companyTye">
+						<option value="">--请选择--</option>
+						<option value="有限责任公司">有限责任公司</option>
+						<option value="股份有限公司">股份有限公司</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<th>
+					经营范围:
+				</th>
+				<td>
+					<textarea rows="5" cols="50" name="bizScope" >${partners.bizScope}</textarea>
 				</td>
 			</tr>
 			<tr id="pathTr">

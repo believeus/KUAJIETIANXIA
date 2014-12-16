@@ -15,27 +15,28 @@
 	<script type="text/javascript" src='/static/public/js/outlook2.js'></script>
     <script type="text/javascript">
 	 var _menus = {"menus":[
-			{"menuid":"1","icon":"icon-sys","menuname":"内容管理",
+			{"menuid":"1","icon":"icon-sys","menuname":"企业管理",
 				"menus":[
 				         {"menuname":"企业新闻管理","icon":"icon-users","url":"/admin/news/list.jhtml"},
-				         {"menuname":"用户留言管理","icon":"icon-set","url":"/admin/message/list.jhtml"},
-				         {"menuname":"集团文化管理","icon":"icon-set","url":"/admin/culture/list.jhtml"},
-				         {"menuname":"集团产业管理","icon":"icon-set","url":"/admin/industry/list.jhtml"},
-				         {"menuname":"集团资讯管理","icon":"icon-set","url":"/admin/information/list.jhtml"},
 				         {"menuname":"企业信息管理","icon":"icon-set","url":"/admin/companyView.jhtml"},
-				         {"menuname":"首页图片管理","icon":"icon-set","url":"/admin/banner/list.jhtml"},
-				         {"menuname":"合作伙伴管理","icon":"icon-set","url":"/admin/partners/list.jhtml"},
-				         {"menuname":"公司产品管理","icon":"icon-set","url":"/admin/product/list.jhtml"},
+				         {"menuname":"企业产品管理","icon":"icon-set","url":"/admin/product/list.jhtml"},
 					]
 			}
-		/* 	,{"menuid":"2","icon":"icon-sys","menuname":"系统管理",
+		 	,{"menuid":"2","icon":"icon-sys","menuname":"集团管理",
 				"menus":[
-						<c:if test="${sessionUser.id==1}">
-				        {"menuname":"角色管理","icon":"icon-log","url":"/admin/roleList.jhtml"},
-				        </c:if>
-						{"menuname":"管理员管理","icon":"icon-log","url":"/admin/adminList.jhtml"}
+				         {"menuname":"集团文化管理","icon":"icon-set","url":"/admin/culture/list.jhtml"},
+				         {"menuname":"集团产业管理","icon":"icon-set","url":"/admin/industry/list.jhtml"},
+				         {"menuname":"集团伙伴管理","icon":"icon-set","url":"/admin/partners/list.jhtml"},  
+				         {"menuname":"集团资讯管理","icon":"icon-set","url":"/admin/information/list.jhtml"},
 					]
-			} */
+			}
+			,{"menuid":"3","icon":"icon-sys","menuname":"网站管理",
+				"menus":[
+				         {"menuname":"用户留言管理","icon":"icon-set","url":"/admin/message/list.jhtml"},
+				         {"menuname":"首页图片管理","icon":"icon-set","url":"/admin/banner/list.jhtml"},
+				       
+					]
+			} 
 			
 	]};
         //设置登录窗口
