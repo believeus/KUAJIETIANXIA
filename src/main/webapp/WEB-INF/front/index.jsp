@@ -503,16 +503,23 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			.active li a:hover{
 				color:#8E2C2D !important;
 			}
-		</style>
-	<script>
-
-	</script>	
+		</style>	
 	<div class="side">
 	 <ul>
-		<li><a href="#"><div class="sidebox"><img src="/static/public/images/side_icon01.png">客服中心</div></a></li>
-		<li><a href="#"><div class="sidebox"><img src="/static/public/images/side_icon02.png">客户案例</div></a></li>
-		<li><a href="javascript:void(0);" ><div class="sidebox"><img src="/static/public/images/side_icon04.png">QQ客服</div></a></li>
-		<li><a href="javascript:void(0);" ><div class="sidebox"><img src="/static/public/images/side_icon03.png">新浪微博</div></a></li>
+		<!-- <li><a href="#"><div class="sidebox"><img src="/static/public/images/side_icon01.png">客服中心</div></a></li>
+		<li><a href="#"><div class="sidebox"><img src="/static/public/images/side_icon02.png">客户案例</div></a></li> -->
+		<li>
+			<a href="http://wpa.qq.com/msgrd?v=3&uin=569009496&site=qq&menu=yes" target="_blank" >
+			 <div class="sidebox">
+			 	<img src="/static/public/images/side_icon04.png">QQ客服一</div>
+			</a>
+		</li>
+		<li>
+			<a href="http://wpa.qq.com/msgrd?v=3&uin=1058633117&site=qq&menu=yes" target="_blank" >
+			 <div class="sidebox"><img src="/static/public/images/side_icon04.png">QQ客服二</div>
+			</a>
+		</li>
+		<!-- <li><a href="javascript:void(0);" ><div class="sidebox"><img src="/static/public/images/side_icon03.png">新浪微博</div></a></li> -->
 		<li style="border:none;"><a href="javascript:goTop();" class="sidetop"><img src="/static/public/images/side_icon05.png"></a></li>
 	 </ul>
 	</div>
