@@ -142,7 +142,7 @@ body{
     line-height: 45px;
 }
 .main-content{
-	width:1070px;height:auto;overflow:hidden;float:right;	
+	width:900px;height:auto;overflow:hidden;float:right;	
 }
 .main-content a {
     color: #555;
@@ -1052,7 +1052,6 @@ input[type="search"].sb-search-input {
     border-radius: 100px;
     float: left;
     height: 170px;
-    margin-right: 60px;
     width: 170px;
     cursor:pointer;
 }

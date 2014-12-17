@@ -32,9 +32,11 @@ public class ControllerIndex {
 		//集团文化
 		List<Culture> cultures = (List<Culture>) baseService.findObjectList(Culture.class);
 		request.setAttribute("cultures", cultures);
+		request.setAttribute("cSize", cultures.size());
 		//集团产业
 		List<Industry> industries = (List<Industry>) baseService.findObjectList(Industry.class);
 		request.setAttribute("industries", industries);
+		request.setAttribute("iSize", industries.size());
 		//集团资讯
 		List<Information> informations = (List<Information>) baseService.findObjectList(Information.class);
 		for (Information information : informations) {
@@ -42,9 +44,11 @@ public class ControllerIndex {
 			information.setContent(content);
 		}
 		request.setAttribute("informations", informations);
+		request.setAttribute("inSize", informations.size());
 		//合作伙伴
 		List<Partners> partners = (List<Partners>) baseService.findObjectList(Partners.class);
 		request.setAttribute("partners", partners);
+		request.setAttribute("pSize", partners.size());
 		
 		return "/WEB-INF/front/index.jsp";
 	}

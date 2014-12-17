@@ -47,7 +47,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			rules: {
 				industry:"required",
 				introduction: "required",
-				content: "required"
+				content: "required",
+				industryName:"required"
 			}
 		});
 		$("#companyTye").val("${partners.companyTye }");
