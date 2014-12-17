@@ -20,34 +20,41 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		}
 		.search-form{
 			width:1200px;
-			height:90px;
+			height:70px;
 		}
 		.searchBtn{
-			background:#922D2C;
-			color:#fff;
-			border:1px solid #922D2C;
-			padding:5px 25px;
-			font-weight:bold;
-			font-family: microsoft yahei;
-			height:35px;
+			background: none repeat scroll 0 0 #922d2c;
+		    border: 1px solid #922d2c;
+		    color: #fff;
+		    font-family: microsoft yahei;
+		    font-weight: bold;
+		    height: 35px;
+		    margin-left: 12px;
+		    padding: 5px 25px;
+		    position: relative;
+		    top: 1px;
 		}
 		.search-text{
 			border: 1px solid #aeaeae;
 		    height: 35px;
 		    text-indent: 15px;
 		    width: 800px;
+		    margin-left: 10px;
 		}
 		.search-select{
 			border: 1px solid #aeaeae;
 		    height: 35px;
 		    text-indent: 10px;
 		    width: 287px;
+		    color: #666;
+		}
+		.search-select option{
+			text-indent: 19px;
 		}
 		.search-data{
 			font-family: microsoft yahei;
 		    font-size: 15px;
-		    margin: 5px 0;
-		    padding-right: 20px;
+		    margin: 8px 0;
 		    text-align: right;
 		}
 		.search-content{
@@ -80,6 +87,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		.keywordsColor{
 			color:#922D2C;
 		}
+		.page_list a {
+		    color: #555;
+		    margin-right: 5px;
+		}
 	</style>
   </head>
   
@@ -91,13 +102,15 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		</p>
        <div class="center" style="width: 1200px; height: auto;margin: 0 auto 50px;overflow: hidden;">
        		<div class="search-form">
-       			<select name="items" class="search-select">
-       				<option value="1">新闻搜索</option>
-       				<option value="2">产品搜索</option>
-       				<option value="3">公司搜索</option>
-       			</select>
-       			<input type="text" name="keywords" placeholder="国家" class="search-text">
-       			<input type="button" value="GO" class="searchBtn">
+       			<form action="/search.jhtml" method="post">
+	       			<select name="items" class="search-select">
+	       				<option value="1">新闻搜索</option>
+	       				<option value="2">产品搜索</option>
+	       				<option value="3">公司搜索</option>
+	       			</select>
+	       			<input type="text" name="keywords" placeholder="国家" class="search-text">
+	       			<input type="submit" value="GO" class="searchBtn">
+       			</form>
        			<p class="search-data">找到<span style="color:#922D2C;">210502</span>条结果</p>
        		</div>
        		<div class="search-content">
@@ -209,6 +222,20 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
        				</div>
        				<p class="search-date">发布时间：2014.12.17</p>
        			</div>
+       			<p class="page_list" style="text-align:center;">
+	    			<a href="#">首页</a>
+	    			<a href="#">上一页</a>
+	    			<a style="color:#922D2C;" href="#">[1]</a>
+	    			<a href="#">[2]</a>
+	    			<a href="#">[3]</a>
+	    			<a href="#">[4]</a>
+	    			<a href="#">[5]</a>
+	    			<a href="#">[6]</a>
+	    			<a href="#">[7]</a>
+	    			...
+	    			<a href="#">下一页</a>
+	    			<a href="#">尾页</a>
+	    		</p>
        		</div>
 		</div>
       <jsp:include page="/WEB-INF/include/footer.jsp" />

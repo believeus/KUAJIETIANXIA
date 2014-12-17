@@ -40,10 +40,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<div style="border-bottom: 4px solid #922D2C;width: 92px;margin: -3px 0px 10px;"></div>
 			</div>
 			<div style="width: 345px;height: 35px;margin: 10px 0px 0px 73%;text-align: center;font-size: 16px;">
-				<div style="float: left;width: 130px;border: 1px solid #434343;line-height: 30px;">
+				<div style="float: left;width: 130px;border: 1px solid #aeaeae;line-height: 30px;">
 					<a style="color: #434343;" href="/kjtxabstract.jhtml">公司简介</a>
 				</div>
-				<div style="float: left;width: 130px;border: 1px solid #434343;line-height: 30px;background-color: #922D2C;">
+				<div style="float: left;width: 130px;border: 1px solid #922d2c;line-height: 30px;background-color: #922D2C;">
 					<a style="color: #FFFFFF;" href="/kjtxproduct.jhtml">公司产品</a>
 				</div>
 			</div>
