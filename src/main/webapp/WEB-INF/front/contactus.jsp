@@ -49,6 +49,37 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		overflow: hidden;
 	}
 </style>
+<script type="text/javascript">
+	$(function(){
+		$("#leavemsg").click(function(){
+			$.post("/clientLeaveMsg.jhtml?"+$("#inputForm").serialize(),function(date){
+				alert(date);
+			});
+			
+		$.ajax({
+			url: "/clientLeaveMsg.jhtml",
+			type: "get",
+			data: {
+				username:$("#username").val(),
+				email:$("#email").val(),
+				title:$("#title").val(),
+				content:$("#content").val()
+				},
+			dataType: "json",
+			cache: false,
+			success: function(data) {
+					// 如果注册成功，则进行跳转
+					if(data.message=="success"){
+						window.location.href="/";
+					}else{
+						alert(data);
+					}
+				}
+			});
+		});
+		
+	});
+</script>
   </head>
   
   <body>
@@ -69,7 +100,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<div style="line-height: 40px;">地址：${enterpriseInfo.address }</div>
 			</div>
 			<div style="float: left;margin: 20px 0px 20px 50px;color: #434343;font-size: 16px;">
-				<form action="#" method="post">
+				<form action="/clientLeaveMsg.jhtml" method="post" id="inputForm">
 					<div style="height: 80px;">
 						<div style="float: left;">
 							<div style="line-height: 35px">姓名</div>
@@ -90,7 +121,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						<textarea class="textarea" type="text" name="content" id="content" /></textarea>
 					</div>
 					<div style="margin-left: 528px;margin-top: 40px;">
-						<input class="input2" type="submit" value="提交" />
+						<input class="input2" type="button" id="leavemsg" value="提交" />
 					</div>
 				</form>
 			</div>

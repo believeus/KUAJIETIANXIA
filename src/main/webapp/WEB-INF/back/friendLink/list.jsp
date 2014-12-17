@@ -67,7 +67,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					<a href="#"  class="sort">操作</a>
 				</th>
 			</tr>
-			<c:forEach var="friendLink" items="${friendLinks}" varStatus="status">
+			<c:forEach var="friendLink" items="${page.content}" varStatus="status">
 				<tr>
 					<td>
 						<input type="checkbox" name="ids" value="${friendLink.id}" />

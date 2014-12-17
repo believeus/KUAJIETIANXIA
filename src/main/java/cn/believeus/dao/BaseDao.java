@@ -39,23 +39,6 @@ public class BaseDao extends HibernateDaoSupport {
 		ht.flush();
 	}
 
-/*	public void delete(Class<?> clazz,List<?> idList){
-		if (idList==null||idList.isEmpty()) {
-			return;
-		}
-		String ids=idList.toString().replace("[", "(").replace("]", ")");
-		final String hql = "delete from " + clazz.getName()+ " as entity where entity.id in "+ids;
-		this.getHibernateTemplate().execute(
-				new HibernateCallback<Object>() {
-
-					@Override
-					public Object doInHibernate(Session session)
-							throws HibernateException, SQLException {
-						Query query = session.createQuery(hql);
-						return query.executeUpdate();
-					}
-				});
-	}*/
 	public void delete(Class<?> clazz,List<?> idList){
 		if (idList==null||idList.isEmpty()) {
 			return;
@@ -235,7 +218,7 @@ public class BaseDao extends HibernateDaoSupport {
 				});
 	}
 	
-	public Page<?> getPageDateList(final String hql, final Pageable pageable) {
+	public Page<?> findPageDateList(final String hql, final Pageable pageable) {
 		return (Page<?>)getHibernateTemplate().execute(new HibernateCallback<Object>() {
 
 			@SuppressWarnings("unchecked")
@@ -258,7 +241,7 @@ public class BaseDao extends HibernateDaoSupport {
 		});
 	}
 	
-	public Page<?> getPageDateList(final Class<?> clazz, final Pageable pageable) {
+	public Page<?> findPageDateList(final Class<?> clazz, final Pageable pageable) {
 		return (Page<?>)getHibernateTemplate().execute(new HibernateCallback<Object>() {
 
 			@SuppressWarnings("unchecked")
@@ -266,6 +249,30 @@ public class BaseDao extends HibernateDaoSupport {
 			public Object doInHibernate(Session session)
 					throws HibernateException, SQLException {
 				String hql = "from " + clazz.getName();
+				Query query = session.createQuery(hql);
+				long total = query.list().size();
+				query = session.createQuery(hql);
+				int totalPages = (int) Math.ceil((double) total / (double) pageable.getPageSize());
+				if (totalPages < pageable.getPageNumber()) {
+					pageable.setPageNumber(totalPages);
+				}
+				query.setFirstResult((pageable.getPageNumber() - 1) * pageable.getPageSize());
+				query.setMaxResults(pageable.getPageSize());
+			    @SuppressWarnings("rawtypes")
+				Page page = new Page(query.list(), (int)total, pageable);
+			    return page;
+			}
+		});
+	}
+	
+	public Page<?> getPageDateList(final Class<?> clazz,final String property, final String key, final Pageable pageable) {
+		return (Page<?>)getHibernateTemplate().execute(new HibernateCallback<Object>() {
+
+			@SuppressWarnings("unchecked")
+			@Override
+			public Object doInHibernate(Session session)
+					throws HibernateException, SQLException {
+				String hql = "from " + clazz.getName()+" as model where model."+property+" like '%"+key+"%'";
 				Query query = session.createQuery(hql);
 				long total = query.list().size();
 				query = session.createQuery(hql);

@@ -37,7 +37,7 @@ public class FriendLinkController {
 		}
 		Pageable pageable=new Pageable(Integer.valueOf(pageNumber),20);
 		Page<?> page = baseService.findObjectList(FriendLink.class, pageable);
-		request.setAttribute("friendLinks", page.getContent());
+		request.setAttribute("page", page);
 		request.setAttribute("size",page.getTotal());
 		// 分页
 		PaginationUtil.pagination(request,page.getPageNumber(),page.getTotalPages(), 0);

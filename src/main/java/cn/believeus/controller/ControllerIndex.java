@@ -4,7 +4,12 @@ import java.util.List;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import cn.believeus.PaginationUtil.Page;
+import cn.believeus.PaginationUtil.Pageable;
 import cn.believeus.model.*;
 import cn.believeus.service.BaseService;
 
@@ -123,7 +128,9 @@ public class ControllerIndex {
 	 * @return
 	 */
 	@RequestMapping(value = "/zixunContent")
-	public String zixunContent(HttpServletRequest request) {
+	public String zixunContent(HttpServletRequest request,Integer id) {
+		Tnews news=(Tnews)baseService.findObject(Tnews.class, id);
+		request.setAttribute("news", news);
 		return "/WEB-INF/front/zixunContent.jsp";
 	}
 	
@@ -143,21 +150,29 @@ public class ControllerIndex {
 		request.setAttribute("partners", partners);
 		return "/WEB-INF/front/industryPartners.jsp";
 	}
+	/**
+	 * 客户留言
+	 * */
+	@RequestMapping("/clientLeaveMsg")
+	public @ResponseBody String leaveMsg(Tmessage message,HttpServletRequest request){
+		String result="";
+		try {
+			baseService.merge(message);
+			result="留言发送成功";
+		} catch (Exception e) {
+			result="留言发送失败";
+		}
+		return result;
+	}
 	 /** 联系我们
 	 * @param request
 	 * @return
 	 */
-	@SuppressWarnings("unchecked")
 	@RequestMapping(value = "/contactus")
 	public String contactus(HttpServletRequest request) {
-		List<EnterpriseInfo> enterpriseInfo = (List<EnterpriseInfo>) baseService.findObjectList(EnterpriseInfo.class);
-		EnterpriseInfo info =null;
-		if (enterpriseInfo.size()!=0) {
-			info = enterpriseInfo.get(0);
-		}else {
-			info=new EnterpriseInfo();
-		}
-		request.setAttribute("enterpriseInfo", info);
+		String hql="from EnterpriseInfo";
+		EnterpriseInfo enterpriseInfo=(EnterpriseInfo)baseService.findObject(hql);
+		request.setAttribute("enterpriseInfo", enterpriseInfo);
 		return "/WEB-INF/front/contactus.jsp";
 	}
 	/** 公司简介
@@ -182,9 +197,56 @@ public class ControllerIndex {
 	 * @return
 	 */
 	@RequestMapping(value = "/kjtxsearch")
-	public String search(HttpServletRequest request) {
-		
-		return "/WEB-INF/front/search.jsp";
+	public String searchView(HttpServletRequest request) {
+		String pageNumber = request.getParameter("pageNumber");
+		// 如果为空，则设置为1
+		if (StringUtils.isEmpty(pageNumber)) {
+			pageNumber="1";
+		}
+		String hql="from Tnews news";
+		Pageable pageable=new Pageable(Integer.valueOf(pageNumber),20);
+		Page<?> page = (Page<?>) baseService.findObjectList(hql, pageable);
+		request.setAttribute("page", page);
+		return "/WEB-INF/front/searchNews.jsp";
 	}
 
+	/**
+	 * 查询公司，新闻，产品
+	 * */
+	@RequestMapping("/search")
+	public String search(String keywords,String item,HttpServletRequest request){
+		String hql="";
+		String url="";
+		String pageNumber = request.getParameter("pageNumber");
+		// 如果为空，则设置为1
+		if (StringUtils.isEmpty(pageNumber)) {
+			pageNumber="1";
+		}
+		Pageable pageable=new Pageable(Integer.valueOf(pageNumber),20);
+		if(item.equals("news")){
+			hql="from Tnews news";
+			if(!StringUtils.isEmpty(keywords)){
+				hql+=" where news.title like '%"+keywords+"%' or news.content like '%"+keywords+"%'";
+				url="/WEB-INF/front/searchNews.jsp";
+			}
+		}
+		else if (item.equals("product")){
+			hql="from Product product";
+			if(!StringUtils.isEmpty(keywords)){
+				hql+=" where product.name like '%"+keywords+"%'";
+			}
+			url="/WEB-INF/front/searchProduct.jsp";
+		}
+		else if(item.equals("company")) {
+			hql="from Partners partners";
+			if(!StringUtils.isEmpty(keywords)){
+				hql+=" where partners.name like '%"+keywords+"%'";
+			}
+			url="/WEB-INF/front/searchPartners.jsp";
+		}
+		Page<?> page = (Page<?>) baseService.findObjectList(hql, pageable);
+		request.setAttribute("page", page);
+		return url;
+			
+	}
 }
