@@ -87,7 +87,7 @@ public class ProductController {
 			try {
 				inputStream = file.getInputStream();
 				if(inputStream.available()==0){
-					break;
+					continue;
 				}
 				Assert.assertNotNull("upload file InputStream is null", inputStream);
 				String originName=file.getOriginalFilename();

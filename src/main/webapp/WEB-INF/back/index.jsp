@@ -34,7 +34,7 @@
 				"menus":[
 				         {"menuname":"用户留言管理","icon":"icon-set","url":"/admin/message/list.jhtml"},
 				         {"menuname":"首页图片管理","icon":"icon-set","url":"/admin/banner/list.jhtml"},
-				       
+				         {"menuname":"友情链接管理","icon":"icon-set","url":"/admin/friendLink/list.jhtml"},
 					]
 			} 
 			

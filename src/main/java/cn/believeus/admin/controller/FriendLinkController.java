@@ -3,74 +3,52 @@ package cn.believeus.admin.controller;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Map;
+
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+
 import mydfs.storage.server.MydfsTrackerServer;
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
-import org.apache.shiro.authz.annotation.RequiresPermissions;
+
 import org.junit.Assert;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
+
 import cn.believeus.PaginationUtil.Page;
 import cn.believeus.PaginationUtil.Pageable;
 import cn.believeus.PaginationUtil.PaginationUtil;
-import cn.believeus.model.Tnews;
+import cn.believeus.model.FriendLink;
 import cn.believeus.service.BaseService;
 
 @Controller
-public class NewsController {
-	
-	private static final Log log=LogFactory.getLog(NewsController.class);
-	
-	@Resource
-	private MydfsTrackerServer mydfsTrackerServer;
-	
+public class FriendLinkController {
 	@Resource
 	private BaseService baseService;
-
-	/**
-	 * 新闻列表
-	 * @return
-	 */
-	@RequiresPermissions("newsDinamic:view")
-	@RequestMapping(value="/admin/news/list")
-	public String list(HttpServletRequest request){
+	@Resource
+	private MydfsTrackerServer mydfsTrackerServer;
+	@RequestMapping("/admin/friendLink/list")
+	public String friendLinkList(HttpServletRequest request){
 		String pageNumber = request.getParameter("pageNumber");
 		// 如果为空，则设置为1
 		if (StringUtils.isEmpty(pageNumber)) {
 			pageNumber="1";
 		}
 		Pageable pageable=new Pageable(Integer.valueOf(pageNumber),20);
-		String hql="From Tnews news order by news.top desc,news.editTime desc";
-		Page<?> page = baseService.findObjectList(hql, pageable);
-		request.setAttribute("news", page.getContent());
+		Page<?> page = baseService.findObjectList(FriendLink.class, pageable);
+		request.setAttribute("friendLinks", page.getContent());
 		request.setAttribute("size",page.getTotal());
 		// 分页
-		PaginationUtil.pagination(request, page.getPageNumber(),page.getTotalPages(), 0);
-
-		return "/WEB-INF/back/news/list.jsp";
+		PaginationUtil.pagination(request,page.getPageNumber(),page.getTotalPages(), 0);
+		return "/WEB-INF/back/friendLink/list.jsp";
 	}
-	
-	/**
-	 * 新闻添加
-	 * @return
-	 */
-	@RequestMapping(value="/admin/news/add")
-	public String add(){
-		return "/WEB-INF/back/news/add.jsp";
+	@RequestMapping("/admin/friendLink/addView")
+	public String addView(){
+		return "/WEB-INF/back/friendLink/add.jsp";
 	}
-	
-	/**
-	 * 新闻保存
-	 * @return
-	 * */
-	@RequiresPermissions("newsDinamic:create")
-	@RequestMapping(value="/admin/news/save")
-	public String save(Tnews news,HttpServletRequest request){
+	@RequestMapping("/admin/friendLink/save")
+	public String friendLinkSave(HttpServletRequest request,FriendLink friendLink){
 		MultipartHttpServletRequest multipartRequest = (MultipartHttpServletRequest) request;
 		String storepath = "";
 		Map<String, MultipartFile> files = multipartRequest.getFileMap();
@@ -90,20 +68,22 @@ public class NewsController {
 			}
 		}
 		if (!storepath.equals("")) {
-			news.setImgPath(storepath);
+			friendLink.setLogo(storepath);
 		}
-		baseService.saveOrUpdata(news);
-		return "redirect:/admin/news/list.jhtml";
+		baseService.saveOrUpdata(friendLink);
+		return "redirect:/admin/friendLink/list.jhtml";
 	}
-	/**
-	 * 新闻修改
-	 * @return
-	 */
-	@RequiresPermissions("newsDinamic:update")
-	@RequestMapping(value="/admin/news/edit")
-	public String edit(Integer myNewId, HttpServletRequest request){
-		Tnews news = (Tnews) baseService.findObject(Tnews.class, myNewId);
-		request.setAttribute("news", news);
-		return "/WEB-INF/back/news/edit.jsp";
+	@RequestMapping("/admin/friendLink/editView")
+	public String friendLinkEditView(HttpServletRequest request,int id){
+		FriendLink friendLink=(FriendLink)baseService.findObject(FriendLink.class, id);
+		request.setAttribute("friendLink", friendLink);
+		return "/WEB-INF/back/friendLink/edit.jsp";
 	}
+	@RequestMapping("/admin/friendLink/delete")
+	public String friendLinkDelete(int id){
+		baseService.delete(FriendLink.class, id);
+		return "redirect:/admin/friendLink/list.jhtml";
+	}
+	
+	
 }
