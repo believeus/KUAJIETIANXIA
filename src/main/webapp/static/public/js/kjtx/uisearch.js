@@ -80,7 +80,7 @@
 
 	function UISearch( el, options ) {	
 		this.el = el;
-		this.inputEl = el.querySelector( 'form > input.sb-search-input' );
+		//this.inputEl = el.querySelector( 'form > input.sb-search-input' );
 		this._initEvents();
 	}
 
@@ -90,7 +90,7 @@
 				initSearchFn = function( ev ) {
 					ev.stopPropagation();
 					// trim its value
-					self.inputEl.value = self.inputEl.value.trim();
+					//self.inputEl.value = self.inputEl.value.trim();
 					
 					if( !classie.has( self.el, 'sb-search-open' ) ) { // open it
 						ev.preventDefault();
@@ -104,15 +104,15 @@
 
 			this.el.addEventListener( 'click', initSearchFn );
 			this.el.addEventListener( 'touchstart', initSearchFn );
-			this.inputEl.addEventListener( 'click', function( ev ) { ev.stopPropagation(); });
-			this.inputEl.addEventListener( 'touchstart', function( ev ) { ev.stopPropagation(); } );
+			//this.inputEl.addEventListener( 'click', function( ev ) { ev.stopPropagation(); });
+			//this.inputEl.addEventListener( 'touchstart', function( ev ) { ev.stopPropagation(); } );
 		},
 		open : function() {
 			var self = this;
 			classie.add( this.el, 'sb-search-open' );
 			// focus the input
 			if( !mobilecheck() ) {
-				this.inputEl.focus();
+				//this.inputEl.focus();
 			}
 			// close the search input if body is clicked
 			var bodyFn = function( ev ) {
@@ -124,7 +124,7 @@
 			document.addEventListener( 'touchstart', bodyFn );
 		},
 		close : function() {
-			this.inputEl.blur();
+			//this.inputEl.blur();
 			classie.remove( this.el, 'sb-search-open' );
 		}
 	}

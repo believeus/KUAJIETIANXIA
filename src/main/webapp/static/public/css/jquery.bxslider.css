@@ -48,7 +48,8 @@
 
 .bx-wrapper .bx-loading {
 	min-height: 50px;
-	background: url(images/bx_loader.gif) center center no-repeat #fff;
+	background: #fff;
+/* 	background: url(images/bx_loader.gif) center center no-repeat #fff; */
 	height: 100%;
 	width: 100%;
 	position: absolute;
@@ -92,12 +93,12 @@
 
 .bx-wrapper .bx-prev {
 	left: 10px;
-	background: url(/static/public/images/controls.png) no-repeat 0 -32px;
+	/* background: url(/static/public/images/controls.png) no-repeat 0 -32px; */
 }
 
 .bx-wrapper .bx-next {
 	right: 10px;
-	background: url(/static/public/images/controls.png) no-repeat -43px -32px;
+	/* background: url(/static/public/images/controls.png) no-repeat -50px -26px; */
 }
 
 .bx-wrapper .bx-prev:hover {
@@ -105,7 +106,7 @@
 }
 
 .bx-wrapper .bx-next:hover {
-	background-position: -43px 0;
+	background-position: -49px 0;
 }
 
 .bx-wrapper .bx-controls-direction a {
@@ -113,8 +114,8 @@
 	top: 50%;
 	margin-top: -16px;
 	outline: 0;
-	width: 32px;
-	height: 32px;
+	width: 25px;
+	height: 25px;
 	text-indent: -9999px;
 	z-index: 9999;
 }
@@ -135,7 +136,7 @@
 	width: 10px;
 	height: 11px;
 	outline: 0;
-	background: url(/static/public/images/controls.png) -86px -11px no-repeat;
+	/* background: url(/static/public/images/controls.png) -86px -11px no-repeat; */
 	margin: 0 3px;
 }
 
@@ -150,7 +151,7 @@
 	width: 9px;
 	height: 11px;
 	outline: 0;
-	background: url(/static/public/images/controls.png) -86px -44px no-repeat;
+	/* background: url(/static/public/images/controls.png) -86px -44px no-repeat; */
 	margin: 0 3px;
 }
 

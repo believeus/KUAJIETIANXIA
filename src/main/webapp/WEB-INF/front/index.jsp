@@ -23,6 +23,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <script type="text/javascript" src='/static/public/js/me.js'></script>
 <script src="/static/public/js/kjtx/jquery.bxslider.js"></script>
 <link rel="stylesheet" href="/static/public/css/qqstyle.css" type="text/css" />
+<script src="/static/public/js/jquery.lazyload.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
 		$('.bxslider').bxSlider({
@@ -32,6 +33,15 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			 maxSlides: 4,
 			 slideWidth:450,
 			 slideMargin: 10
+		});
+		//懒加载
+		$("img").lazyload({
+			threshold:0,
+            failure_limit:0,
+            event:"scroll",
+            effect:"fadeIn",
+            container:window,
+            skip_invisible:true
 		});
 	});
 	$(document).ready(function(){
@@ -131,7 +141,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			  <script defer src="/static/public/js/kjtx/jquery.flexslider.js"></script>
 			  <script type="text/javascript">
 			    $(function(){
-			      SyntaxHighlighter.all();
+			     // SyntaxHighlighter.all();
 			    });
 			    $(window).load(function(){
 			      $('.flexslider').flexslider({
@@ -151,9 +161,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		          <ul class="slides">
 		          <c:if test="${cSize!=0 }">
 		          
-		          <c:forEach items="${cultures }" var="cultrue">
+		          <c:forEach items="${cultures }" var="cultrue" varStatus="status">
 		            <li onclick="location.href='#';">
-		  	    	    <img src="${cultrue.path }" />
+		            	<c:if test="${status.index > 5 }">
+		  	    	    	<img src="${cultrue.path }"/>
+		  	    	    </c:if>
+		  	    	    <c:if test="${status.index <= 5 }">
+		  	    	    	<img src="/static/public/images/grey.gif" data-original="${cultrue.path }"/>
+		  	    	    </c:if>
 		  	    	    <!----place-caption-info---->
 		  	    	    <div class="caption-info">
 		  	    	    	 <div class="caption-info-head">
@@ -489,7 +504,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						<div class="partners-liebiao" <c:if test="${status.index ==7 }">style="margin-right:0;"</c:if> >
 							<div class="partners-list">
 								<a href="#">
-									<img src="${partner.logo }" height="170"/>
+									<img data-original="${partner.logo }" src="/static/public/images/grey.gif" height="170"/>
 								</a>
 							</div>
 							<img src="/static/public/images/customers_bottom.jpg" width="185"/>

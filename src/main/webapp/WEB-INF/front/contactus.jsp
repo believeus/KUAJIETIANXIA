@@ -63,10 +63,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<div style="margin: 30px auto;">
 					<img src="/static/public/images/map.jpg" style="width: 100%;"/>
 				</div>
-				<div style="line-height: 40px;">咨询电话：027-65650999</div>
-				<div style="line-height: 40px;">邮箱：hbydcf@126.com</div>
-				<div style="line-height: 40px;">网址：www.eyinde.com</div>
-				<div style="line-height: 40px;">地址：武汉市江汉区民权路长江大厦25楼</div>
+				<div style="line-height: 40px;">咨询电话：${enterpriseInfo.tel }</div>
+				<div style="line-height: 40px;">邮箱：${enterpriseInfo.email }</div>
+				<div style="line-height: 40px;">网址：${enterpriseInfo.website }</div>
+				<div style="line-height: 40px;">地址：${enterpriseInfo.address }</div>
 			</div>
 			<div style="float: left;margin: 20px 0px 20px 50px;color: #434343;font-size: 16px;">
 				<form action="#" method="post">

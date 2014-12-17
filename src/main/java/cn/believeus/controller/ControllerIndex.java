@@ -147,8 +147,17 @@ public class ControllerIndex {
 	 * @param request
 	 * @return
 	 */
+	@SuppressWarnings("unchecked")
 	@RequestMapping(value = "/contactus")
 	public String contactus(HttpServletRequest request) {
+		List<EnterpriseInfo> enterpriseInfo = (List<EnterpriseInfo>) baseService.findObjectList(EnterpriseInfo.class);
+		EnterpriseInfo info =null;
+		if (enterpriseInfo.size()!=0) {
+			info = enterpriseInfo.get(0);
+		}else {
+			info=new EnterpriseInfo();
+		}
+		request.setAttribute("enterpriseInfo", info);
 		return "/WEB-INF/front/contactus.jsp";
 	}
 	/** 公司简介
@@ -166,6 +175,16 @@ public class ControllerIndex {
 	@RequestMapping(value = "/kjtxproduct")
 	public String product(HttpServletRequest request) {
 		return "/WEB-INF/front/product.jsp";
+	}
+	
+	/** 站内搜索
+	 * @param request
+	 * @return
+	 */
+	@RequestMapping(value = "/kjtxsearch")
+	public String search(HttpServletRequest request) {
+		
+		return "/WEB-INF/front/search.jsp";
 	}
 
 }

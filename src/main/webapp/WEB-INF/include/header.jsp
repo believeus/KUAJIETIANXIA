@@ -85,20 +85,23 @@
 				</li>
 			</ul>
 			<div class="search-box">
-				<!-- <div id="sb-search" class="sb-search">
-					<form>
+				<div id="sb-search" class="sb-search">
+					<a href="/kjtxsearch.jhtml" title="站内搜索">
+						<img alt="站内搜索" src="/static/public/images/search-icon.png" width="32" height="32">
+					</a>
+					<!-- <form>
 						<input class="sb-search-input" placeholder="Enter your search term..." type="search" name="search" id="search">
 						<input class="sb-search-submit" type="submit" value="">
 						<span class="sb-icon-search"> </span>
-					</form>
-				</div> -->
+					</form> --> 	
+				</div>
 			</div>
 			<!----search-scripts---->
 			<script src="/static/public/js/kjtx/modernizr.custom.js"></script>
 			<script src="/static/public/js/kjtx/classie.js"></script>
-			<script src="/static/public/js/kjtx/uisearch.js"></script>
+			<!-- <script src="/static/public/js/kjtx/uisearch.js"></script> -->
 			<script>
-				new UISearch( document.getElementById( 'sb-search' ) );
+				//new UISearch( document.getElementById( 'sb-search' ) );
 			</script>
 			<!----//search-scripts---->
 	</div>
