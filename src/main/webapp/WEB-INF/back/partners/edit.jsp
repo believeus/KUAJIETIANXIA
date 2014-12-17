@@ -65,6 +65,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<form id="inputForm" action="/admin/partners/save.jhtml" method="post" enctype="multipart/form-data">
 		<input type="hidden" name="id" value="${partners.id }"/>
 		<input type="hidden" name="logo" value="${partners.logo}"/>
+		<input type="hidden" name="img1" value="${partners.img1 }">
+		<input type="hidden" name="img2" value="${partners.img2 }">
+		<input type="hidden" name="img3" value="${partners.img3 }">
 		<table class="input">
 			<tr>
 				<th>
@@ -133,7 +136,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			</tr>
 			<tr id="pathTr">
 				<th>
-					<span class="requiredField">*</span>相关图片:
+					<span class="requiredField">*</span>公司logo:
 				</th>
 				<td colspan="3">
 					<div>
@@ -152,7 +155,77 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					</div>
 				</td>
 			</tr>
-			
+			<tr>
+				<th>
+					公司相关图片:
+				</th>
+				<td colspan="3">
+					<div>
+						<span style="float:left">
+							<div id="preview_wrapper">    
+						        <div id="preview_fake1" >
+						        	<c:choose>
+						        		<c:when test="${partners.img1 ne null }">
+						        		  <img id="preview1" onload="onPreviewLoad(this,190,120)" src="/${partners.img1}?w=200&h=200"/>
+						        		</c:when>
+						        		<c:otherwise>
+						        		  <img id="preview1" onload="onPreviewLoad(this,190,120)" src="/static/public/images/bg.png"/>
+						        		</c:otherwise>
+						        	</c:choose>    
+						        </div>    
+						    </div>    
+						    <br/>    
+						    <input id="upload_img" type="file" name="img-a" onchange="filename0.value=this.value;onUploadImgChange(this,190,120,'preview1','preview_fake1','preview_size_fake1');"/>  
+						    <input type="hidden" id="filename0" name="filename0">
+						    <br/>    
+						    <img id="preview_size_fake1"/> 
+						</span>
+					</div>
+					<div>
+						<span style="float:left">
+							<div id="preview_wrapper">    
+						        <div id="preview_fake2" > 
+						        	<c:choose>
+						        		<c:when test="${partners.img2 ne null }">
+						        			<img id="preview2" onload="onPreviewLoad(this,190,120)" src="/${partners.img2 }?w=200&h=200"/>
+						        		</c:when>
+						        		<c:otherwise>
+						            		<img id="preview2" onload="onPreviewLoad(this,190,120)" src="/static/public/images/bg.png"/>
+						        		</c:otherwise>
+						        	</c:choose>   
+						        </div>    
+						    </div>    
+						    <br/>    
+						    <input id="upload_img" type="file" name="img-b" onchange="filename0.value=this.value;onUploadImgChange(this,190,120,'preview2','preview_fake2','preview_size_fake2');"/>  
+						    <input type="hidden" id="filename0" name="filename0">
+						    <br/>    
+						    <img id="preview_size_fake2"/> 
+						</span>
+					</div>
+					<div>
+						<span style="float:left">
+							<div id="preview_wrapper">    
+						        <div id="preview_fake3" >  
+						        	<c:choose>
+						        		<c:when test="${partners.img3 ne null }">
+						        			<img id="preview2" onload="onPreviewLoad(this,190,120)" src="/${partners.img3}?w=200&h=200"/>
+						        		</c:when>
+						        		<c:otherwise>
+						        		   <img id="preview3" onload="onPreviewLoad(this,190,120)" src="/static/public/images/bg.png"/>
+						        		</c:otherwise>
+						        	</c:choose>  
+						          
+						        </div>    
+						    </div>    
+						    <br/>    
+						    <input id="upload_img" type="file" name="img-c" onchange="filename0.value=this.value;onUploadImgChange(this,190,120,'preview3','preview_fake3','preview_size_fake3');"/>  
+						    <input type="hidden" id="filename0" name="filename0">
+						    <br/>    
+						    <img id="preview_size_fake3"/> 
+						</span>
+					</div>
+				</td>
+			</tr>
 			<tr id="contentTr">
 				<th>
 					介绍:

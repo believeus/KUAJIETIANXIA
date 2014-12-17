@@ -142,7 +142,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						        </div>    
 						    </div>    
 						    <br/>    
-						    <input id="upload_img" type="file" name="upload_img" onchange="filename0.value=this.value;onUploadImgChange(this,190,120,'preview','preview_fake','preview_size_fake');"/>  
+						    <input id="upload_img" type="file" name="logo-a" onchange="filename0.value=this.value;onUploadImgChange(this,190,120,'preview','preview_fake','preview_size_fake');"/>  
 						    <input type="hidden" id="filename0" name="filename0">
 						    <br/>    
 						    <img id="preview_size_fake"/> 
@@ -150,7 +150,55 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					</div>
 				</td>
 			</tr>
-			
+			<tr>
+				<th>
+					公司相关图片:
+				</th>
+				<td colspan="3">
+					<div>
+						<span style="float:left">
+							<div id="preview_wrapper">    
+						        <div id="preview_fake1" >    
+						            <img id="preview1" onload="onPreviewLoad(this,190,120)" src="/static/public/images/bg.png"/>
+						        </div>    
+						    </div>    
+						    <br/>    
+						    <input id="upload_img" type="file" name="img-a" onchange="filename0.value=this.value;onUploadImgChange(this,190,120,'preview1','preview_fake1','preview_size_fake1');"/>  
+						    <input type="hidden" id="filename0" name="filename0">
+						    <br/>    
+						    <img id="preview_size_fake1"/> 
+						</span>
+					</div>
+					<div>
+						<span style="float:left">
+							<div id="preview_wrapper">    
+						        <div id="preview_fake2" >    
+						            <img id="preview2" onload="onPreviewLoad(this,190,120)" src="/static/public/images/bg.png"/>
+						        </div>    
+						    </div>    
+						    <br/>    
+						    <input id="upload_img" type="file" name="img-b" onchange="filename0.value=this.value;onUploadImgChange(this,190,120,'preview2','preview_fake2','preview_size_fake2');"/>  
+						    <input type="hidden" id="filename0" name="filename0">
+						    <br/>    
+						    <img id="preview_size_fake2"/> 
+						</span>
+					</div>
+					<div>
+						<span style="float:left">
+							<div id="preview_wrapper">    
+						        <div id="preview_fake3" >    
+						            <img id="preview3" onload="onPreviewLoad(this,190,120)" src="/static/public/images/bg.png"/>
+						        </div>    
+						    </div>    
+						    <br/>    
+						    <input id="upload_img" type="file" name="img-c" onchange="filename0.value=this.value;onUploadImgChange(this,190,120,'preview3','preview_fake3','preview_size_fake3');"/>  
+						    <input type="hidden" id="filename0" name="filename0">
+						    <br/>    
+						    <img id="preview_size_fake3"/> 
+						</span>
+					</div>
+				</td>
+			</tr>
 			<tr id="contentTr">
 				<th>
 					介绍:

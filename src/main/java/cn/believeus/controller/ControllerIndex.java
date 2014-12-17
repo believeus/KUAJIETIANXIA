@@ -147,6 +147,7 @@ public class ControllerIndex {
 		if(industry!=null){
 			partners = industry.getPartners();
 		}
+		request.setAttribute("industry", industry);
 		request.setAttribute("partners", partners);
 		return "/WEB-INF/front/industryPartners.jsp";
 	}
@@ -180,7 +181,9 @@ public class ControllerIndex {
 	 * @return
 	 */
 	@RequestMapping(value = "/kjtxabstract")
-	public String kjtxabstract(HttpServletRequest request) {
+	public String kjtxabstract(HttpServletRequest request,int id) {
+		Partners partners=(Partners)baseService.findObject(Partners.class, id);
+		request.setAttribute("partners", partners);
 		return "/WEB-INF/front/abstract.jsp";
 	}
 	/** 产品列表
@@ -188,7 +191,11 @@ public class ControllerIndex {
 	 * @return
 	 */
 	@RequestMapping(value = "/kjtxproduct")
-	public String product(HttpServletRequest request) {
+	public String product(HttpServletRequest request,Integer partnerId) {
+		Partners partners=(Partners)baseService.findObject(Partners.class, partnerId);
+		List<Product> products = partners.getProducts();
+		request.setAttribute("products", products);
+		request.setAttribute("partners", partners);
 		return "/WEB-INF/front/product.jsp";
 	}
 	

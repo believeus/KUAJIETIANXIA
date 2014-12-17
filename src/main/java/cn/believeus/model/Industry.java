@@ -6,6 +6,7 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.Lob;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -44,6 +45,7 @@ public class Industry extends TbaseEntity {
 		this.path = path;
 	}
 
+	@Lob
 	public String getIntroduction() {
 		return introduction;
 	}
@@ -52,6 +54,7 @@ public class Industry extends TbaseEntity {
 		this.introduction = introduction;
 	}
 
+	@Lob
 	public String getContent() {
 		return content;
 	}

@@ -7,6 +7,7 @@ import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
+import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
@@ -28,6 +29,9 @@ public class Partners extends TbaseEntity {
 	private String bizScope;//经营范围
 	private String introduction;//介绍
 	private Industry industry;//所属产业
+	private String img1;
+	private String img2;
+	private String img3;
 	private List<Product> products=new ArrayList<Product>();
 	
 	public String getLogo() {
@@ -42,6 +46,7 @@ public class Partners extends TbaseEntity {
 	public void setName(String name) {
 		this.name = name;
 	}
+	@Lob
 	public String getIntroduction() {
 		return introduction;
 	}
@@ -88,11 +93,30 @@ public class Partners extends TbaseEntity {
 	public void setCompanyTye(String companyTye) {
 		this.companyTye = companyTye;
 	}
+	@Lob
 	public String getBizScope() {
 		return bizScope;
 	}
 	public void setBizScope(String bizScope) {
 		this.bizScope = bizScope;
+	}
+	public String getImg1() {
+		return img1;
+	}
+	public void setImg1(String img1) {
+		this.img1 = img1;
+	}
+	public String getImg2() {
+		return img2;
+	}
+	public void setImg2(String img2) {
+		this.img2 = img2;
+	}
+	public String getImg3() {
+		return img3;
+	}
+	public void setImg3(String img3) {
+		this.img3 = img3;
 	}
 	
 	

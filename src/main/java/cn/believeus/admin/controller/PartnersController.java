@@ -49,7 +49,7 @@ public class PartnersController {
 			pageNumber="1";
 		}
 		Pageable pageable=new Pageable(Integer.valueOf(pageNumber),20);
-		String hql="From Partners news order by news.editTime desc";
+		String hql="From Partners partners order by partners.editTime desc";
 		Page<?> page = baseService.findObjectList(hql, pageable);
 		request.setAttribute("partners", page.getContent());
 		request.setAttribute("size",page.getTotal());
@@ -91,13 +91,24 @@ public class PartnersController {
 				Assert.assertNotNull("upload file InputStream is null", inputStream);
 				String originName=file.getOriginalFilename();
 				String extention = originName.substring(originName.lastIndexOf(".") + 1);
-				storepath += mydfsTrackerServer.upload(inputStream, extention);
+				storepath = mydfsTrackerServer.upload(inputStream, extention);
+				if(file.getName().equals("logo-a")){
+					partners.setLogo(storepath);
+				}
+				else if(file.getName().equals("img-a")){
+					partners.setImg1(storepath);
+				}
+				else if (file.getName().equals("img-b")) {
+					partners.setImg2(storepath);
+				}
+				else if (file.getName().equals("img-c")) {
+					partners.setImg3(storepath);
+				}
+				
+				
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
-		}
-		if (!storepath.equals("")) {
-			partners.setLogo(storepath);
 		}
 		String industryName = request.getParameter("industryName");
 		Industry industry = (Industry) baseService.findObject(Industry.class, Integer.parseInt(industryName));
