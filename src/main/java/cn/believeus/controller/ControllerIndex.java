@@ -109,8 +109,14 @@ public class ControllerIndex {
 	 * @param request
 	 * @return
 	 */
+	@SuppressWarnings("unchecked")
 	@RequestMapping(value = "/zixunList")
-	public String zixun(HttpServletRequest request) {
+	public String zixun(HttpServletRequest request ,Integer type) {
+		if(type==null){
+			type=0;
+		}
+		List<Tnews> news = (List<Tnews>) baseService.findObjectList(Tnews.class,"type",type);
+		request.setAttribute("news", news);
 		return "/WEB-INF/front/zixunList.jsp";
 	}
 	/**
@@ -191,11 +197,24 @@ public class ControllerIndex {
 	 * @return
 	 */
 	@RequestMapping(value = "/kjtxproduct")
+<<<<<<< Updated upstream
 	public String product(HttpServletRequest request,Integer partnerId) {
 		Partners partners=(Partners)baseService.findObject(Partners.class, partnerId);
 		List<Product> products = partners.getProducts();
 		request.setAttribute("products", products);
 		request.setAttribute("partners", partners);
+=======
+	public String productList(HttpServletRequest request) {
+		return "/WEB-INF/front/productList.jsp";
+	}
+	/**
+	 * 产品详情
+	 * @param request
+	 * @return
+	 */
+	@RequestMapping(value = "/product")
+	public String product(HttpServletRequest request) {
+>>>>>>> Stashed changes
 		return "/WEB-INF/front/product.jsp";
 	}
 	

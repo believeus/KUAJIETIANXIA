@@ -21,7 +21,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		}
 		.search-form{
 			width:1200px;
-			height:90px;
+			height:70px;
 		}
 		.searchBtn{
 			background:#922D2C;
@@ -31,24 +31,29 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			font-weight:bold;
 			font-family: microsoft yahei;
 			height:35px;
+			margin-left:12px;
 		}
 		.search-text{
 			border: 1px solid #aeaeae;
 		    height: 35px;
 		    text-indent: 15px;
 		    width: 800px;
+		    margin-left:10px;
 		}
 		.search-select{
 			border: 1px solid #aeaeae;
 		    height: 35px;
 		    text-indent: 10px;
 		    width: 287px;
+		    color: #555;
+		}
+		.search-select option{
+			text-indent: 19px;
 		}
 		.search-data{
 			font-family: microsoft yahei;
 		    font-size: 15px;
-		    margin: 5px 0;
-		    padding-right: 20px;
+		    margin: 8px 0;
 		    text-align: right;
 		}
 		.search-content{
@@ -98,7 +103,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
        				<option value="product">产品搜索</option>
        				<option value="company">公司搜索</option>
        			</select>
-       			<input type="text" name="keywords" placeholder="国家" class="search-text">
+       			<input type="text" name="keywords" placeholder="请输入关键字" class="search-text">
        			<input type="submit" value="GO" class="searchBtn">
        			<p class="search-data">找到<span style="color:#922D2C;">210502</span>条结果</p>
        		</div>

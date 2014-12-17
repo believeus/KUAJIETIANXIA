@@ -18,7 +18,7 @@ public class Tnews extends TbaseEntity{
 	private String content;
 	
 	/**
-	 * 0:最新动态 1: 2:常见问题
+	 * 0:关于乐退 1:集团快讯 2:高层动态 3:集团公告
 	 */
 	private Integer type;
 	

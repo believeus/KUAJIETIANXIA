@@ -35,7 +35,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		color: #ffffff;
 		cursor: pointer;
 		font-family: "microsoft yahei";
-		font-size: 16px;
+		font-size: 14px;
 		height: 35px;
 		width: 150px;
 	}
@@ -47,6 +47,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		text-indent: 10px;
 		resize: none;
 		overflow: hidden;
+		font-family: "microsoft yahei";
+		color: #434343;
+		font-size: 14px;	
 	}
 </style>
 <script type="text/javascript">

@@ -27,12 +27,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <body>
     <jsp:include page="/WEB-INF/include/header.jsp" />
     <img src="/static/public/images/11.jpg" width="100%" />
+	<p class="kjtx-main-title">
+   		<span style="border-bottom: 2px solid #922d2c;">招商合作</span>
+	</p>
    	<div class="center" style="width: 1200px; height: auto;margin: 0 auto;overflow: hidden;">
-		<p class="kjtx-main-title">
-	   		<span style="border-bottom: 2px solid #922d2c;">招商合作</span>
-		</p>
 		<div style="color: #666666;font-size: 18px;font-weight: bold;line-height: 40px;height: 40px;margin-left: 92%;">
-			<a style="color: #666666;" href="">集团简介</a>
+			<!-- <a style="color: #666666;" href="">集团简介</a> -->
 		</div>
 		<div style="border: 1px solid #CACBC6;height: 284px;margin: 0 auto;">
 			<div style="float: left;width: 50%;">
@@ -61,7 +61,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			</div>
 		</div>
 		<div style="color: #666666;font-size: 18px;font-weight: bold;line-height: 80px;height: 60px;margin-left: 92%;">
-			<a style="color: #666666;" href="">总裁致词</a>
+			<!-- <a style="color: #666666;" href="">总裁致词</a> -->
 		</div>
 		<div style="border: 1px solid #CACBC6;height: 284px;margin: 0 auto;">
 			<div style="float: left;width: 50%;">
@@ -90,7 +90,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			</div>
 		</div>
 		<div style="color: #666666;font-size: 18px;font-weight: bold;line-height: 80px;height: 60px;margin-left: 92%;">
-			<a style="color: #666666;" href="">发展历程</a>
+			<!-- <a style="color: #666666;" href="">发展历程</a> -->
 		</div>
 		<div style="border: 1px solid #CACBC6;height: 284px;margin: 0 auto;">
 			<div style="float: left;width: 50%;">

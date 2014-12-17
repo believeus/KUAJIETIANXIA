@@ -8,7 +8,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <html>
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<title>添加新闻 - Powered By believeus</title>
+	<title>集团资讯 - Powered By believeus</title>
 	<meta name="author" content="believeus Team" />
 	<meta name="copyright" content="believeus" />
 	<link href="/static/public/css/common_s.css" rel="stylesheet" type="text/css" />
@@ -45,11 +45,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		$inputForm.validate({
 			rules: {
 				title: "required",
+				type: "required",
 				upload_img: "required",
-				content: "required",
-				entitle: "required",
-				encontent: "required",
-				type:"required"
+				content: "required"
 			}
 		});
 		
@@ -60,30 +58,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   <body>
     <div class="path">
-		<a href="/admin/manager.jhtml" target="_parent">首页</a> &raquo; 添加新闻
+		<a href="/admin/manager.jhtml" target="_parent">首页</a> &raquo; 添加集团资讯
 	</div>
-	<form id="inputForm" action="/admin/news/save.jhtml" method="post" enctype="multipart/form-data">
+	<form id="inputForm" action="/admin/information/save.jhtml" method="post" enctype="multipart/form-data">
 		<table class="input">
 			<tr>
 				<th>
-					新闻分类:
+					名称:
 				</th>
 				<td>
-					<select name="type">
-						<option value="">--请选择--</option>
-						<option value="0">关于乐退</option>
-						<option value="1">集团快讯</option>
-						<option value="2">高层动态</option>
-						<option value="3">集团公告</option>
-					</select>
-				</td>
-			</tr>
-			<tr>
-				<th>
-					标题:
-				</th>
-				<td>
-					<input type="text" name="title" class="text" maxlength="200" />
+					<input type="text" name="name" class="text"/>
 				</td>
 			</tr>
 			<tr id="pathTr">
@@ -110,10 +94,18 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			
 			<tr id="contentTr">
 				<th>
+					介绍:
+				</th>
+				<td colspan="3">
+					<textarea id="editor" name="introduction" maxlength="10000" class="editor"></textarea>
+				</td>
+			</tr>
+			<tr id="contentTr">
+				<th>
 					内容:
 				</th>
 				<td colspan="3">
-					<textarea id="editor" name="content" maxlength="10000" class="editor"></textarea>
+					<textarea id="editor1" name="content" maxlength="10000" class="editor"></textarea>
 				</td>
 			</tr>
 			<tr>

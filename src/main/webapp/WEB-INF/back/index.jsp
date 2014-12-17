@@ -28,6 +28,7 @@
 				         {"menuname":"集团产业管理","icon":"icon-set","url":"/admin/industry/list.jhtml"},
 				         {"menuname":"集团伙伴管理","icon":"icon-set","url":"/admin/partners/list.jhtml"},  
 				         {"menuname":"集团资讯管理","icon":"icon-set","url":"/admin/information/list.jhtml"},
+				         {"menuname":"集团简介管理","icon":"icon-set","url":"/admin/introduction/list.jhtml"},
 					]
 			}
 			,{"menuid":"3","icon":"icon-sys","menuname":"网站管理",

@@ -32,9 +32,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<div style="line-height: 65px;height: 55px;">
 				<div style="float: left;font-size: 23px;font-weight: bold;"><a style="color: #434343;" href="#">集团产业</a></div>
 				<div style="float: left;font-size: 18px;margin: 0 8px;">>></div>
-				<div style="float: left;font-size: 16px;"><a style="color: #434343;" href="">银德财富</a></div>
+				<div style="float: left;font-size: 16px;"><a style="color: #434343;" href="/kjtxabstract.jhtml">银德财富</a></div>
 				<div style="float: left;font-size: 18px;margin: 0 8px;">>></div>
-				<div style="float: left;font-size: 16px;"><a style="color: #922D2C;" href="#">公司简介</a></div>
+				<div style="float: left;font-size: 16px;"><a style="color: #922D2C;" href="/kjtxabstract.jhtml">公司简介</a></div>
 			</div>
 			<div style="width: 1200px;height: auto;margin: 0 auto;">
 				<div style="border-bottom: 2px solid #AEAEAE;"></div>

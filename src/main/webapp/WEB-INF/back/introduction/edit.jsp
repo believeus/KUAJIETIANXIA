@@ -8,7 +8,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <html>
   <head>
      <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<title>编辑新闻 - Powered By believeus</title>
+	<title>编辑集团简介 - Powered By believeus</title>
 	<meta name="author" content="believeus Team" />
 	<meta name="copyright" content="believeus" />
 	<link href="/static/public/css/common_s.css" rel="stylesheet" type="text/css" />
@@ -46,10 +46,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		$inputForm.validate({
 			rules: {
 				title: "required",
-				content: "required",
-				entitle: "required",
-				encontent: "required",
-				type:"required"
+				type: "required",
+				content:"required"
 			}
 		});
 		
@@ -61,62 +59,18 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   <body>
      <div class="path">
-		<a href="/admin/manager.jhtml" target="_parent">首页</a> &raquo; 编辑新闻
+		<a href="/admin/manager.jhtml" target="_parent">首页</a> &raquo; 编辑集团简介
 	</div>
-	<form id="inputForm" action="/admin/news/save.jhtml" method="post" enctype="multipart/form-data">
-		<input type="hidden" name="id" value="${news.id }"/>
-		<input type="hidden" name="path" value="${news.imgPath}"/>
+	<form id="inputForm" action="/admin/information/save.jhtml" method="post" enctype="multipart/form-data">
+		<input type="hidden" name="id" value="${enterpriseIntro.id }"/>
+		<input type="hidden" name="path" value="${enterpriseIntro.path}"/>
 		<table class="input">
 			<tr>
 				<th>
-					新闻分类:
+					类型:
 				</th>
 				<td>
-					<select name="type">
-						<c:if test="${news.type==null }">
-							<option value="" selected="selected">--请选择--</option>
-							<option value="0">关于乐退</option>
-							<option value="1">集团快讯</option>
-							<option value="2">高层动态</option>
-							<option value="3">集团公告</option>
-						</c:if>
-						<c:if test="${news.type==0 }">
-							<option value="">--请选择--</option>
-							<option value="0" selected="selected">关于乐退</option>
-							<option value="1">集团快讯</option>
-							<option value="2">高层动态</option>
-							<option value="3">集团公告</option>
-						</c:if>
-						<c:if test="${news.type==1 }">
-							<option value="">--请选择--</option>
-							<option value="0">关于乐退</option>
-							<option value="1" selected="selected">集团快讯</option>
-							<option value="2">高层动态</option>
-							<option value="3">集团公告</option>
-						</c:if>
-						<c:if test="${news.type==2 }">
-							<option value="">--请选择--</option>
-							<option value="0">关于乐退</option>
-							<option value="1">集团快讯</option>
-							<option value="2" selected="selected">高层动态</option>
-							<option value="3">集团公告</option>
-						</c:if>
-						<c:if test="${news.type==3 }">
-							<option value="">--请选择--</option>
-							<option value="0">关于乐退</option>
-							<option value="1">集团快讯</option>
-							<option value="2">高层动态</option>
-							<option value="3" selected="selected">集团公告</option>
-						</c:if>
-					</select>
-				</td>
-			</tr>
-			<tr>
-				<th>
-					新闻中文标题:
-				</th>
-				<td>
-					<input type="text" name="title" class="text" maxlength="10000" value="${news.title}"/>
+					<input type="text" name="name" class="text" maxlength="10000" value="${enterpriseIntro.type}" readonly="readonly"/>
 				</td>
 			</tr>
 			<tr id="pathTr">
@@ -128,7 +82,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						<span style="float:left">
 							<div id="preview_wrapper">    
 						        <div id="preview_fake" >    
-						            <img id="preview" onload="onPreviewLoad(this,190,120)" src="/${news.imgPath}"/>
+						            <img id="preview" onload="onPreviewLoad(this,190,120)" src="${enterpriseIntro.path}"/>
 						        </div>    
 						    </div>    
 						    <br/>    
@@ -143,10 +97,18 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			
 			<tr id="contentTr">
 				<th>
-					中文内容:
+					标题:
 				</th>
 				<td colspan="3">
-					<textarea id="editor" name="content" class="editor">${news.content}</textarea>
+					<textarea id="editor" name="title" class="editor">${enterpriseIntro.title}</textarea>
+				</td>
+			</tr>
+			<tr id="contentTr">
+				<th>
+					内容:
+				</th>
+				<td colspan="3">
+					<textarea id="editor1" name="content" class="editor">${enterpriseIntro.content}</textarea>
 				</td>
 			</tr>
 			<tr>
