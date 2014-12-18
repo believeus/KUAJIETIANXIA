@@ -194,7 +194,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		          <c:if test="${cSize==0 }">
 		  	    		<li onclick="location.href='#';">
 		  	    	    <img src="/static/public/images/huanghelou2.png" />
-		  	    	    --place-caption-info--
+		  	    	  <!--   --place-caption-info-- -->
 		  	    	    <div class="caption-info">
 		  	    	    	 <div class="caption-info-head">
 		  	    	    	 	<div class="caption-info-head-left">
@@ -207,11 +207,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		  	    	    	 	<div class="clear"> </div>
 		  	    	    	 </div>
 		  	    	    </div>
-		  	    	     --//place-caption-info--
+		  	    	     <!--   --place-caption-info-- -->
 		  	    		</li>
 		  	    		 <li onclick="location.href='#';">
 		  	    	    <img src="/static/public/images/changjiangdaqiao.png" />
-		  	    	    --place-caption-info--
+		  	    	   <!--   --place-caption-info-- -->
 		  	    	    <div class="caption-info">
 		  	    	    	 <div class="caption-info-head">
 		  	    	    	 	<div class="caption-info-head-left">
@@ -224,11 +224,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		  	    	    	 	<div class="clear"> </div>
 		  	    	    	 </div>
 		  	    	    </div>
-		  	    	     --//place-caption-info--
+		  	    	    <!--   --place-caption-info-- -->
 		  	    		</li>
 		  	    		 <li onclick="location.href='#';">
 		  	    	    <img src="/static/public/images/changjiangdaqiao2.png" />
-		  	    	    --place-caption-info--
+		  	    	   <!--   --place-caption-info-- -->
 		  	    	    <div class="caption-info">
 		  	    	    	 <div class="caption-info-head" style="line-height:20px;">
 		  	    	    	 	<div class="caption-info-head-left">
@@ -241,11 +241,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		  	    	    	 	<div class="clear"> </div>
 		  	    	    	 </div>
 		  	    	    </div>
-		  	    	     --//place-caption-info--
+		  	    	    <!--   --place-caption-info-- -->
 		  	    		</li>
 		            <li onclick="location.href='#';">
 		  	    	    <img src="/static/public/images/qingchuanqiao.png" />
-		  	    	    --place-caption-info--
+		  	    	   <!--   --place-caption-info-- -->
 		  	    	    <div class="caption-info">
 		  	    	    	 <div class="caption-info-head">
 		  	    	    	 	<div class="caption-info-head-left">
@@ -258,11 +258,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		  	    	    	 	<div class="clear"> </div>
 		  	    	    	 </div>
 		  	    	    </div>
-		  	    	     --//place-caption-info--
+		  	    	    <!--   --place-caption-info-- -->
 		  	    		</li>
 		  	    		 <li onclick="location.href='#';">
 		  	    	    <img src="/static/public/images/qingchuanqiu2.png" />
-		  	    	    --place-caption-info--
+		  	    	   <!--   --place-caption-info-- -->
 		  	    	    <div class="caption-info">
 		  	    	    	 <div class="caption-info-head">
 		  	    	    	 	<div class="caption-info-head-left">
@@ -275,11 +275,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		  	    	    	 	<div class="clear"> </div>
 		  	    	    	 </div>
 		  	    	    </div>
-		  	    	     --//place-caption-info--
+		  	    	   <!--   --place-caption-info-- -->
 		  	    		</li>
 		  	    		 <li onclick="location.href='#';">
 		  	    	    <img src="/static/public/images/huanghelou.png" />
-		  	    	    --place-caption-info--
+		  	    	   <!--   --place-caption-info-- -->
 		  	    	   <div class="caption-info">
 		  	    	    	 <div class="caption-info-head">
 		  	    	    	 	<div class="caption-info-head-left">
@@ -292,11 +292,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		  	    	    	 	<div class="clear"> </div>
 		  	    	    	 </div>
 		  	    	    </div>
-		  	    	     --//place-caption-info--
+		  	    	   <!--   --place-caption-info-- -->
 		  	    		</li>
 		  	    		 <li onclick="location.href='#';">
 		  	    	    <img src="/static/public/images/qingchuanqiu2.png" />
-		  	    	    --place-caption-info--
+		  	    	   <!--   --place-caption-info-- -->
 		  	    	    <div class="caption-info">
 		  	    	    	 <div class="caption-info-head">
 		  	    	    	 	<div class="caption-info-head-left">
@@ -309,11 +309,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		  	    	    	 	<div class="clear"> </div>
 		  	    	    	 </div>
 		  	    	    </div>
-		  	    	     --//place-caption-info--
+		  	    	   <!--   --place-caption-info-- -->
 		  	    		</li>
 		             <li onclick="location.href='#';">
 		  	    	    <img src="/static/public/images/qingchuanqiao.png" />
-		  	    	    --place-caption-info--
+		  	    	  <!--   --place-caption-info-- -->
 		  	    	    <div class="caption-info">
 		  	    	    	 <div class="caption-info-head">
 		  	    	    	 	<div class="caption-info-head-left">
@@ -326,11 +326,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		  	    	    	 	<div class="clear"> </div>
 		  	    	    	 </div>
 		  	    	    </div>
-		  	    	     --//place-caption-info--
+		  	    	  <!--   --place-caption-info-- -->
 		  	    		</li>
 		  	    	 <li onclick="location.href='#';">
 		  	    	    <img src="/static/public/images/changjiangdaqiao.png" />
-		  	    	    --place-caption-info--
+		  	    	  <!--   --place-caption-info-- -->
 		  	    	    <div class="caption-info">
 		  	    	    	 <div class="caption-info-head" style="line-height:20px;">
 		  	    	    	 	<div class="caption-info-head-left">
@@ -343,11 +343,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		  	    	    	 	<div class="clear"> </div>
 		  	    	    	 </div>
 		  	    	    </div>
-		  	    	     --//place-caption-info--
+		  	    	   <!--   --place-caption-info-- -->
 		  	    		</li>
 		  	    		 <li onclick="location.href='#';">
 		  	    	    <img src="/static/public/images/changjiangdaqiao2.png" />
-		  	    	    --place-caption-info--
+		  	    	   <!--   --place-caption-info-- -->
 		  	    	    <div class="caption-info">
 		  	    	    	 <div class="caption-info-head">
 		  	    	    	 	<div class="caption-info-head-left">
@@ -360,11 +360,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		  	    	    	 	<div class="clear"> </div>
 		  	    	    	 </div>
 		  	    	    </div>
-		  	    	     --//place-caption-info--
+		  	    	   <!--   --place-caption-info-- -->
 		  	    		</li>
 		  	    		 <li onclick="location.href='#';">
 		  	    	    <img src="/static/public/images/qingchuanqiao.png" />
-		  	    	    --place-caption-info--
+		  	    	   <!--   --place-caption-info-- -->
 		  	    	    <div class="caption-info">
 		  	    	    	 <div class="caption-info-head">
 		  	    	    	 	<div class="caption-info-head-left">
@@ -377,7 +377,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		  	    	    	 	<div class="clear"> </div>
 		  	    	    	 </div>
 		  	    	    </div>
-		  	    	     --//place-caption-info--
+		  	    	   <!--   --place-caption-info-- -->
 		  	    		</li>
 		  	    		</c:if>
 		          </ul>
