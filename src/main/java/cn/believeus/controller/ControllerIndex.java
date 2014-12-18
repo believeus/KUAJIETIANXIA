@@ -1,5 +1,6 @@
 package cn.believeus.controller;
 
+import java.util.Date;
 import java.util.List;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -79,6 +80,9 @@ public class ControllerIndex {
 	@RequestMapping(value = "/honor")
 	public String honor(HttpServletRequest request) {
 		List<Honor> honors = (List<Honor>) baseService.findObjectList(Honor.class);
+		for (Honor honor : honors) {
+			System.out.println(new Date(honor.getEditTime()));
+		}
 		request.setAttribute("honors", honors);
 		return "/WEB-INF/front/honor.jsp";
 	}
