@@ -192,31 +192,7 @@ public class ControllerIndex {
 		request.setAttribute("partners", partners);
 		return "/WEB-INF/front/abstract.jsp";
 	}
-	/** 产品列表
-	 * @param request
-	 * @return
-	 */
-	@RequestMapping(value = "/kjtxproduct")
-<<<<<<< Updated upstream
-	public String product(HttpServletRequest request,Integer partnerId) {
-		Partners partners=(Partners)baseService.findObject(Partners.class, partnerId);
-		List<Product> products = partners.getProducts();
-		request.setAttribute("products", products);
-		request.setAttribute("partners", partners);
-=======
-	public String productList(HttpServletRequest request) {
-		return "/WEB-INF/front/productList.jsp";
-	}
-	/**
-	 * 产品详情
-	 * @param request
-	 * @return
-	 */
-	@RequestMapping(value = "/product")
-	public String product(HttpServletRequest request) {
->>>>>>> Stashed changes
-		return "/WEB-INF/front/product.jsp";
-	}
+	
 	
 	/** 站内搜索
 	 * @param request

@@ -38,13 +38,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		// 表单验证
 		$inputForm.validate({
 			rules: {
+				partnerId:"required",
 				descption: "required",
 				partner: "required",
 				name: "required"
 			}
 		});
-		
-		
 	});
 	
 	</script>
@@ -56,7 +55,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	</div>
 	<form id="inputForm" action="/admin/product/save.jhtml" method="post" enctype="multipart/form-data">
 		<input type="hidden" name="id" value="${product.id }"/>
-		<input type="hidden" name="path" value="${product.imgpath}"/>
+		<input type="hidden" name="imgpath" value="${product.imgpath}"/>
 		<table class="input">
 			<tr>
 				<th>

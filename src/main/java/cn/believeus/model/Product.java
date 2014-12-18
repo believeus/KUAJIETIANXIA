@@ -2,6 +2,7 @@ package cn.believeus.model;
 
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
+import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
@@ -24,7 +25,7 @@ public class Product extends TbaseEntity{
 		this.name = name;
 	}
 	
-	
+	@Lob
 	public String getDescption() {
 		return descption;
 	}
