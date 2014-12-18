@@ -24,8 +24,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
    		<span style="border-bottom: 2px solid #922d2c;">集团产业</span>
 	</p>
     <div class="kjtx-main">
-    	<c:forEach var="industry" items="${industrys}">
-    		<div class="kjtx-main-list">
+    	<c:forEach var="industry" items="${industrys}" varStatus="status">
+    		<div class="kjtx-main-list" <c:if test="${(status.index+1)%4==0 }">style="margin-right:0;"</c:if> >
     		<div class="kjtx-main-list-img">
     			<a href="/industryPartners.jhtml?industryId=${industry.id }"><img src="/${industry.path }?w=270&h=210" width="272" height="210"/></a>
     		</div>

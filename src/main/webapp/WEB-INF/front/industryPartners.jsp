@@ -25,6 +25,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<script type="text/javascript">$(document).ready(function(){$(".flexy-menu").flexymenu({speed: 400,type: "horizontal",align: "right"});});</script>
 		<!----//End-top-nav-script---->
 		<style type="text/css">
+			body{
+				font-family:microsoft yahei;
+			}
 			.com-list > div {
 			    margin-bottom: 10px;
 			}
@@ -35,12 +38,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<img src="/static/public/images/11.jpg" alt="" width="100%" />
 		<div style="margin: 0 auto;width: 1200px;">
 			<p class="kjtx-main-title">
-	    		<span style="border-bottom: 2px solid #922d2c;">集团产业</span><span style="font-size:15px;font-weight:normal;">&gt;&gt;生态产业</span>
+	    		<span style="border-bottom: 2px solid #922d2c;">集团产业</span><span style="font-size:15px;font-weight:normal;">&gt;&gt;${industry.name}</span>
 	   		</p>
+	   		<div style="font-size: 16px; font-family: microsoft yahei; text-align: center; font-weight: bold;">${industry.introduction }</div>
 			<div style="text-indent: 40px;width: 1000px;height:200px;margin: 0 auto;font-family: microsoft yahei;font-size: 15px;line-height: 30px;">
 				<span>介绍：</span>${industry.content }
 			</div>
-			<span style="margin-left: 95px;font-size:15px;">生物产业/系列公司</span>
+			<span style="margin-left: 95px;font-size:15px;">${industry.name}&nbsp;/&nbsp;系列公司</span>
 			<div style="width: 1005px;height:310px;margin: 10px auto 50px;" class="com-list">
 				<c:forEach var="partner" items="${partners}">
 				<div style="float: left;"><a href="/kjtxabstract.jhtml?id=${partner.id}"><img src="/${partner.logo}?w=200&h=200"/></a></div>

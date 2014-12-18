@@ -53,6 +53,7 @@ body{
 	width:1200px;
 	height:auto;overflow:hidden;
 	margin:0 auto;
+	min-height:500px;
 }
 .kjtx-main-title{
 	font-family: microsoft yahei;

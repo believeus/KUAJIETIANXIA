@@ -398,8 +398,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						<c:forEach items="${industries }" var="industry" varStatus="status">
 							<c:if test="${status.index < 6 }">
 								<div class="holiday-type-grid" onclick="location.href='/industryPartners.jhtml?industryId=${industry.id}';">
-									<span class="icon${status.index+1 }"> </span>
-									<a href="#">${industry.name }</a>
+									<span class="icon${status.index+1 }" title="${industry.name }"> </span>
+									<a title="${industry.name }" href="/industryPartners.jhtml?industryId=${industry.id }">${industry.name }</a>
 								</div>
 							</c:if>
 						</c:forEach>
