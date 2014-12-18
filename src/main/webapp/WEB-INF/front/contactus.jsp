@@ -53,35 +53,34 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	}
 </style>
 <script type="text/javascript">
-	$(function(){
-		$("#leavemsg").click(function(){
-			$.post("/clientLeaveMsg.jhtml?"+$("#inputForm").serialize(),function(date){
-				alert(date);
-			});
-			
-		$.ajax({
-			url: "/clientLeaveMsg.jhtml",
-			type: "get",
-			data: {
-				username:$("#username").val(),
-				email:$("#email").val(),
-				title:$("#title").val(),
-				content:$("#content").val()
-				},
-			dataType: "json",
-			cache: false,
-			success: function(data) {
-					// 如果注册成功，则进行跳转
-					if(data.message=="success"){
-						window.location.href="/";
-					}else{
-						alert(data);
-					}
+$(function(){
+	$("#leavemsg").click(function(){
+		
+		if($("#username").val() ==""){
+			alert("请输入姓名");
+		}else if($("#email").val() == ""){
+			alert("请输入邮箱");
+		}else if (!$("#email").val().match(/^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/)){
+			alert("邮箱格式不正确");
+		}else if($("#title").val() == ""){
+			alert("请输入标题");
+		}else if($("#content").val() == ""){
+			alert("请输入内容");
+		}else{
+			$.ajax({
+				type : "post",
+				url : "/clientLeaveMsg.jhtml",
+				dataType : "json",
+				contentType:"application/x-www-form-urlencoded",
+				data :{"username":$("#username").val(),"email":$("#email").val(),"title":$("#title").val(),"content":$("#content").val()} ,
+				success : function(map) {
+					alert(map.msg);
 				}
 			});
-		});
-		
+			alert("提交成功，等待审核!");
+		}
 	});
+});
 </script>
   </head>
   

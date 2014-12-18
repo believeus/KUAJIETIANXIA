@@ -15,19 +15,14 @@
 	<script type="text/javascript" src='/static/public/js/outlook2.js'></script>
     <script type="text/javascript">
 	 var _menus = {"menus":[
-			{"menuid":"1","icon":"icon-sys","menuname":"企业管理",
+			{"menuid":"2","icon":"icon-sys","menuname":"集团管理",
 				"menus":[
-				         {"menuname":"企业新闻管理","icon":"icon-users","url":"/admin/news/list.jhtml"},
-				         {"menuname":"企业信息管理","icon":"icon-set","url":"/admin/companyView.jhtml"},
-				         {"menuname":"企业产品管理","icon":"icon-set","url":"/admin/product/list.jhtml"},
-					]
-			}
-		 	,{"menuid":"2","icon":"icon-sys","menuname":"集团管理",
-				"menus":[
+				         {"menuname":"集团信息管理","icon":"icon-set","url":"/admin/companyView.jhtml"},
+				         {"menuname":"集团产品管理","icon":"icon-set","url":"/admin/product/list.jhtml"},
 				         {"menuname":"集团文化管理","icon":"icon-set","url":"/admin/culture/list.jhtml"},
 				         {"menuname":"集团产业管理","icon":"icon-set","url":"/admin/industry/list.jhtml"},
 				         {"menuname":"集团伙伴管理","icon":"icon-set","url":"/admin/partners/list.jhtml"},  
-				         {"menuname":"集团资讯管理","icon":"icon-set","url":"/admin/information/list.jhtml"},
+				         {"menuname":"集团资讯管理","icon":"icon-set","url":"/admin/news/list.jhtml"},
 				         {"menuname":"集团简介管理","icon":"icon-set","url":"/admin/introduction/list.jhtml"},
 					]
 			}
