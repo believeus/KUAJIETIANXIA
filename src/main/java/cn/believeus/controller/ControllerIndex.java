@@ -58,20 +58,7 @@ public class ControllerIndex {
 		return "/WEB-INF/front/index.jsp";
 	}
 	
-	/**
-	 * 集团产业
-	 * @param request
-	 * @return
-	 */
-	@RequestMapping(value = "/destinations")
-	public String list(HttpServletRequest request) {
-		int size=6;
-		// 查看集团产业
-		@SuppressWarnings("unchecked")
-		List<Industry> Industrys = (List<Industry>) baseService.findObjectList(Industry.class, size);
-		request.setAttribute("industrys", Industrys);
-		return "/WEB-INF/front/destinations.jsp";
-	}
+	
 	/**
 	 * 集团产业-公司列表
 	 * @param request

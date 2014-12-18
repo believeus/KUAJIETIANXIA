@@ -44,6 +44,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		// 表单验证
 		$inputForm.validate({
 			rules: {
+				name:"required",
 				introduction: "required",
 				upload_img: "required",
 				content: "required",

@@ -60,7 +60,7 @@
 						<li><a href="#">公告</a></li>
 					</ul>
 				</li>
-				<li><a href="destinations.jhtml">集团产业</a>
+				<li><a href="/industryList.jhtml">集团产业</a>
 					<ul>
 						<li><a href="#">生物产业</a></li>
 						<li><a href="#">信息产业</a></li>
