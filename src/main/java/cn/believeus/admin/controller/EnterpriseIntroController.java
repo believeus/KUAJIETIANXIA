@@ -53,35 +53,7 @@ public class EnterpriseIntroController {
 		PaginationUtil.pagination(request,page.getPageNumber(),page.getTotalPages(), 0);
 		List<EnterpriseIntro> enterpriseIntros = new ArrayList<EnterpriseIntro>();
 		if(page.getContent().size()==0){
-			EnterpriseIntro ei1 = new EnterpriseIntro();
-			ei1.setType("集团简介");
-			ei1.setTitle("史上首个拨浪鼓藏品。");
-			ei1.setPath("/static/public/images/honor_1.png");
-			ei1.setContent("新华网北京12月16日电 据新华社“新华视点”微信报道，习近平总书记近日在江苏调研时强调，要“协调推进全面建成小康社会、全面深化改革、全面推进依法治国、全面从严治党，推动改革开放和社会主义现代化建设迈上新台阶。”");
-			baseService.saveOrUpdata(ei1);
-			EnterpriseIntro ei2 = new EnterpriseIntro();
-			ei2.setType("总裁致辞");
-			ei2.setTitle("史上首个拨浪鼓藏品。");
-			ei2.setPath("/static/public/images/honor_1.png");
-			ei2.setContent("新华网北京12月16日电 据新华社“新华视点”微信报道，习近平总书记近日在江苏调研时强调，要“协调推进全面建成小康社会、全面深化改革、全面推进依法治国、全面从严治党，推动改革开放和社会主义现代化建设迈上新台阶。”");
-			baseService.saveOrUpdata(ei2);
-			EnterpriseIntro ei3 = new EnterpriseIntro();
-			ei3.setType("发展历程");
-			ei3.setTitle("史上首个拨浪鼓藏品。");
-			ei3.setPath("/static/public/images/honor_1.png");
-			ei3.setContent("新华网北京12月16日电 据新华社“新华视点”微信报道，习近平总书记近日在江苏调研时强调，要“协调推进全面建成小康社会、全面深化改革、全面推进依法治国、全面从严治党，推动改革开放和社会主义现代化建设迈上新台阶。”");
-			baseService.saveOrUpdata(ei3);
-			EnterpriseIntro ei4 = new EnterpriseIntro();
-			ei4.setType("组织架构");
-			ei4.setTitle("史上首个拨浪鼓藏品。");
-			ei4.setPath("/static/public/images/honor_1.png");
-			ei4.setContent("新华网北京12月16日电 据新华社“新华视点”微信报道，习近平总书记近日在江苏调研时强调，要“协调推进全面建成小康社会、全面深化改革、全面推进依法治国、全面从严治党，推动改革开放和社会主义现代化建设迈上新台阶。”");
-			baseService.saveOrUpdata(ei4);
-			enterpriseIntros.add(ei1);
-			enterpriseIntros.add(ei2);
-			enterpriseIntros.add(ei3);
-			enterpriseIntros.add(ei4);
-			request.setAttribute("enterpriseIntros", enterpriseIntros);
+			
 		}else {
 			request.setAttribute("enterpriseIntros", page.getContent());
 		}

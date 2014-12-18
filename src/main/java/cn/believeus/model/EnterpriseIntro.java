@@ -1,6 +1,7 @@
 package cn.believeus.model;
 
 import javax.persistence.Entity;
+import javax.persistence.Lob;
 import javax.persistence.Table;
 
 /**
@@ -45,6 +46,7 @@ public class EnterpriseIntro extends TbaseEntity {
 		this.title = title;
 	}
 
+	@Lob
 	public String getContent() {
 		return content;
 	}

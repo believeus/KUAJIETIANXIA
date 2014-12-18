@@ -93,13 +93,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			</div>
 			<div class="kjtx-list-content-desc">
 				<p style="font-size: 20px; font-weight: bold;margin: 30px 0 20px;">史上首个拨浪鼓藏品。</p>
-				<p style="font-size: 16px;text-indent: 40px;">新华网北京12月16日电  据新华社“新华视点”微信报道，习近平总书记近日在江苏调研时强调，要“协调推进全面建成小康社会、全面深化改革、全面推进依法治国、全面从严治党，推动改革开放和社会主义现代化建设迈上新台阶。”</p>
+				<p style="font-size: 16px;text-indent: 40px;">xx</p>
 			</div>
 		</div>
 		<div class="kjtx-list-content">
 			<div class="kjtx-list-content-desc" style="float: left; margin-right: 0px; margin-left: 60px;top: -63px;">
 				<p style="font-size: 20px; font-weight: bold;margin: 30px 0 20px;">史上首个拨浪鼓藏品。</p>
-				<p style="font-size: 16px;text-indent: 40px;">新华网北京12月16日电  据新华社“新华视点”微信报道，习近平总书记近日在江苏调研时强调，要“协调推进全面建成小康社会、全面深化改革、全面推进依法治国、全面从严治党，推动改革开放和社会主义现代化建设迈上新台阶。”</p>
+				<p style="font-size: 16px;text-indent: 40px;">xxx</p>
 			</div>
 			<div class="icon-status" style="left: 15px; top: 10px; z-index: 99;">
 				<div class="icon-status-index">2</div>
@@ -119,13 +119,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			</div>
 			<div class="kjtx-list-content-desc" style="top: -123px;">
 				<p style="font-size: 20px; font-weight: bold;margin: 30px 0 20px;">史上首个拨浪鼓藏品。</p>
-				<p style="font-size: 16px;text-indent: 40px;">新华网北京12月16日电  据新华社“新华视点”微信报道，习近平总书记近日在江苏调研时强调，要“协调推进全面建成小康社会、全面深化改革、全面推进依法治国、全面从严治党，推动改革开放和社会主义现代化建设迈上新台阶。”</p>
+				<p style="font-size: 16px;text-indent: 40px;">xxx</p>
 			</div>
 		</div>
 		<div class="kjtx-list-content">
 			<div class="kjtx-list-content-desc" style="float: left; margin-right: 0px; margin-left: 60px;top: -93px;">
 				<p style="font-size: 20px; font-weight: bold;margin: 30px 0 20px;">史上首个拨浪鼓藏品。</p>
-				<p style="font-size: 16px;text-indent: 40px;">新华网北京12月16日电  据新华社“新华视点”微信报道，习近平总书记近日在江苏调研时强调，要“协调推进全面建成小康社会、全面深化改革、全面推进依法治国、全面从严治党，推动改革开放和社会主义现代化建设迈上新台阶。”</p>
+				<p style="font-size: 16px;text-indent: 40px;">xxx</p>
 			</div>
 			<div class="icon-status" style="left: 15px; top: -20px; z-index: 99;">
 				<div class="icon-status-index">4</div>

@@ -68,8 +68,10 @@ public class TbaseEntity implements Serializable,Lifecycle {
 	@Override
 	public boolean onUpdate(Session s) throws CallbackException {
 		TbaseEntity entity=(TbaseEntity)s.get(this.getClass(), id);
-		this.createTime=entity.getCreateTime();
-		this.editTime=System.currentTimeMillis();
+		if(entity!=null){
+		  this.createTime=entity.getCreateTime();
+		  this.editTime=System.currentTimeMillis();
+		}
 		return false;
 	}
 
