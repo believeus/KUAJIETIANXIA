@@ -52,7 +52,7 @@ public class HonorController {
 			pageNumber="1";
 		}
 		Pageable pageable=new Pageable(Integer.valueOf(pageNumber),20);
-		String hql="From honor news order by news.editTime desc";
+		String hql="From Honor news order by news.editTime desc";
 		Page<?> page = baseService.findObjectList(hql, pageable);
 		request.setAttribute("honors", page.getContent());
 		request.setAttribute("size",page.getTotal());

@@ -75,9 +75,11 @@ public class ControllerIndex {
 	 * @param request
 	 * @return
 	 */
+	@SuppressWarnings("unchecked")
 	@RequestMapping(value = "/honor")
 	public String honor(HttpServletRequest request) {
-		
+		List<Honor> honors = (List<Honor>) baseService.findObjectList(Honor.class);
+		request.setAttribute("honors", honors);
 		return "/WEB-INF/front/honor.jsp";
 	}
 	/**
@@ -179,12 +181,33 @@ public class ControllerIndex {
 		request.setAttribute("partners", partners);
 		return "/WEB-INF/front/abstract.jsp";
 	}
-	
+//	/** 产品列表
+//	 * @param request
+//	 * @return
+//	 */
+//	@RequestMapping(value = "/kjtxproduct")
+//	public String product(HttpServletRequest request,Integer partnerId) {
+//		Partners partners=(Partners)baseService.findObject(Partners.class, partnerId);
+//		List<Product> products = partners.getProducts();
+//		request.setAttribute("products", products);
+//		request.setAttribute("partners", partners);
+//		return "/WEB-INF/front/productList.jsp";
+//	}
+//	/**
+//	 * 产品详情
+//	 * @param request
+//	 * @return
+//	 */
+//	@RequestMapping(value = "/product")
+//	public String product(HttpServletRequest request) {
+//		return "/WEB-INF/front/product.jsp";
+//	}
 	
 	/** 站内搜索
 	 * @param request
 	 * @return
 	 */
+	@SuppressWarnings("unchecked")
 	@RequestMapping(value = "/kjtxsearch")
 	public String searchView(HttpServletRequest request) {
 		String pageNumber = request.getParameter("pageNumber");
@@ -196,6 +219,10 @@ public class ControllerIndex {
 		Pageable pageable=new Pageable(Integer.valueOf(pageNumber),20);
 		Page<?> page = (Page<?>) baseService.findObjectList(hql, pageable);
 		request.setAttribute("page", page);
+		for (Tnews news: (List<Tnews>)page.getContent()) {
+			news.setContent(news.getContent().replaceAll("<[^>]+>", ""));
+		}
+		request.setAttribute("news", page.getContent());
 		return "/WEB-INF/front/searchNews.jsp";
 	}
 

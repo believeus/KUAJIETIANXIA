@@ -24,7 +24,7 @@
 				         {"menuname":"集团伙伴管理","icon":"icon-set","url":"/admin/partners/list.jhtml"},  
 				         {"menuname":"集团资讯管理","icon":"icon-set","url":"/admin/news/list.jhtml"},
 				         {"menuname":"集团简介管理","icon":"icon-set","url":"/admin/introduction/list.jhtml"},
-				         {"menuname":"集团资质管理","icon":"icon-set","url":"/admin/honor/list.jhtml"},
+				         {"menuname":"集团荣誉管理","icon":"icon-set","url":"/admin/honor/list.jhtml"},
 					]
 			}
 			,{"menuid":"3","icon":"icon-sys","menuname":"网站管理",

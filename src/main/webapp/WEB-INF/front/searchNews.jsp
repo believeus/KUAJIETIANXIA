@@ -109,22 +109,22 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
        		</div>
        	</form>
        		<div class="search-content">
-       			<c:forEach var="content" items="${page.content}">
+       			<c:forEach var="news" items="${news}">
        				<div class="content-list">
        				<p style="margin:10px 0;">
-       					<a href="/zixunContent.jhtml?id=${content.id}"><font class="keywordsColor"></font>${content.title}</a>
+       					<a href="/zixunContent.jhtml?id=${news.id}"><font class="keywordsColor"></font>${news.title}</a>
    					</p>
        				<div class="content-list-desc">
        					<c:choose>
-    						 <c:when test="${fn:length(content.content) > 100}">
-     							<c:out value="${fn:substring(content.content, 0, 100)}......" />
+    						 <c:when test="${fn:length(news.content) > 100}">
+     							<c:out value="${fn:substring(news.content, 0, 100)}......" />
     						 </c:when>
      						<c:otherwise>
-      							<c:out value="${content.content}" />
+      							<c:out value="${news.content}" />
     						 </c:otherwise>
    						 </c:choose>
        				</div>
-       				<p class="search-date">发布时间：${content.editTime}</p>
+       				<p class="search-date">发布时间：${news.editTime}</p>
        			</div>
        			</c:forEach>
        			

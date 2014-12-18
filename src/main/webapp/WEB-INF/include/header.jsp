@@ -19,7 +19,7 @@
 		<!-- 欢迎您来到跨界天下！ -->
 	</div>
 	<div class="top-header-right" style="color: #fff;font-size: 13px;line-height: 40px;margin-right: 85px;">
-		<!-- 联系我们： -->400-8888-6666
+		<span style="font-family:microsoft yahei;">Call Us Now：400-8888-6666</span>
 		<!-- <ul>
 			<li><a class="face" href="#"><span> </span></a></li>
 			<li><a class="twit" href="#"><span> </span></a></li>
