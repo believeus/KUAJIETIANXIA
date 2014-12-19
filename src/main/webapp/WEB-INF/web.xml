@@ -119,6 +119,24 @@
 	</servlet-mapping>
 	<!--end Name:wuqiwei Date:2013-08-10 AddReason:添加springMVC的支持 -->
 	
+	<!-- Begin:自定义JSTL标签 -->
+	<jsp-config>
+		<!-- Begin Name:wuqiwei Date:2013-08-11 AddReason:将long类型转换成date类型 -->
+		<!-- <%@ taglib uri="http://www.believeus.cn/jstl/date" prefix="date" %> 使用方式 -->
+		<taglib>
+			<taglib-uri>http://www.believeus.cn/jstl/date</taglib-uri>
+			<taglib-location>/WEB-INF/jstl/datetag.tld</taglib-location>
+		</taglib>
+		<!-- End Name:wuqiwei Date:2013-08-11 AddReason:将long类型转换成date类型 -->
+
+		<!-- Begin Name:wuqiwei Date:2013-08-11 AddReason:去除html标签 -->
+		<taglib>
+			<taglib-uri>http://www.believeus.cn/jstl/html</taglib-uri>
+			<taglib-location>/WEB-INF/jstl/htmltag.tld</taglib-location>
+		</taglib>
+		<!-- End:Name:wuqiwei Date:2013-08-11 AddReason:去除html标签 -->
+	</jsp-config>
+	<!-- Begin:自定义JSTL标签 -->
 	<!-- Begin Author:wuqiwei:Data:2014-06-05 AddReason:内嵌式小型分布式文件系统集成 -->
 	 <servlet>
 		<servlet-name>storageClient</servlet-name>

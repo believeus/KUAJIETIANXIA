@@ -5,6 +5,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
+<%@ taglib uri="http://www.believeus.cn/jstl/date" prefix="date" %>
+<%@ taglib uri="http://www.believeus.cn/jstl/html" prefix="html" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
@@ -42,7 +44,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	   		</p>
 	   		<div style="font-size: 16px; font-family: microsoft yahei; text-align: center; font-weight: bold;">${industry.introduction }</div>
 			<div style="text-indent: 40px;width: 1000px;height:200px;margin: 0 auto;font-family: microsoft yahei;font-size: 15px;line-height: 30px;">
-				<span>介绍：</span>${industry.content }
+				<span>介绍：</span>
+				<html:html num="400" value="${industry.content}"></html:html>
 			</div>
 			<span style="margin-left: 95px;font-size:15px;">${industry.name}&nbsp;/&nbsp;系列公司</span>
 			<div style="width: 1005px;height:310px;margin: 10px auto 50px;" class="com-list">
