@@ -5,7 +5,6 @@ import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
 import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
@@ -118,6 +117,4 @@ public class Partners extends TbaseEntity {
 	public void setImg3(String img3) {
 		this.img3 = img3;
 	}
-	
-	
 }

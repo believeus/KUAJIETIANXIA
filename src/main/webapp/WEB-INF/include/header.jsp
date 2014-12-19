@@ -72,7 +72,7 @@
 						</li>
 					</ul>
 				</li>
-				<li><a href="#">集团文化</a>
+				<li><a href="/cultureList.jhtml">集团文化</a>
 				<li><a href="/straddling.jhtml">招商合作</a>
 				<li><a href="#">会员中心</a>
 				</li>

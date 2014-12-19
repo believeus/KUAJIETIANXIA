@@ -15,6 +15,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<script type="text/javascript" src="/static/public/js/kjtx/flexy-menu.js"></script>
 	<script type="text/javascript">$(document).ready(function(){$(".flexy-menu").flexymenu({speed: 400,type: "horizontal",align: "right"});});</script>
 	<!----//End-top-nav-script---->
+	<script type="text/javascript" src="/static/public/js/date.js"></script>
 	<script type="text/javascript">
 		$(function(){
 			var href = window.location.href;
@@ -45,6 +46,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				$("#zx03").removeClass("current");
 				$("#zx00").addClass("current");
 			}
+			
+			//日期
+			$(".title-date").each(function(){
+				var dateTime = $(this).attr("dateTime");
+				var date = getSmpFormatDateByLong(parseInt(dateTime),false);
+				$(this).text(date);
+			});
 		});
 	</script>
   </head>
@@ -70,21 +78,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	    			<li>
 	    				<i class="jiantou"></i>
 	    				<a href="/zixunContent.jhtml?id=${news.id }">${news.title }</a>
-	    				<span class="title-date">2014-11-22</span>
+	    				<span class="title-date" dateTime="${news.editTime }">${news.editTime }</span>
 	   				</li>
    				</c:forEach>
-    			<!-- <li><i class="jiantou"></i><a href="/zixunContent.jhtml">壳氏唯亮相2014中国上海国际网络购物交易会</a><span class="title-date">2014-11-22</span></li>
-    			<li><i class="jiantou"></i><a href="/zixunContent.jhtml">习近平：让互联网发展成果惠及13亿中国人民</a><span class="title-date">2014-11-22</span></li>
-    			<li><i class="jiantou"></i><a href="/zixunContent.jhtml">微信电话本退出之后</a><span class="title-date">2014-11-22</span></li>
-    			<li><i class="jiantou"></i><a href="/zixunContent.jhtml">工信部确认我国将取消食盐专营</a><span class="title-date">2014-11-22</span></li>
-    			<li><i class="jiantou"></i><a href="/zixunContent.jhtml">与新煤化工合作</a><span class="title-date">2014-11-22</span></li>
-    			<li><i class="jiantou"></i><a href="/zixunContent.jhtml">壳氏唯亮相2014中国上海国际网络购物交易会</a><span class="title-date">2014-11-22</span></li>
-    			<li><i class="jiantou"></i><a href="/zixunContent.jhtml">习近平：让互联网发展成果惠及13亿中国人民</a><span class="title-date">2014-11-22</span></li>
-    			<li><i class="jiantou"></i><a href="/zixunContent.jhtml">微信电话本退出之后</a><span class="title-date">2014-11-22</span></li>
-    			<li><i class="jiantou"></i><a href="/zixunContent.jhtml">工信部确认我国将取消食盐专营</a><span class="title-date">2014-11-22</span></li>
-    			<li><i class="jiantou"></i><a href="/zixunContent.jhtml">与新煤化工合作</a><span class="title-date">2014-11-22</span></li>
-    			<li><i class="jiantou"></i><a href="/zixunContent.jhtml">壳氏唯亮相2014中国上海国际网络购物交易会</a><span class="title-date">2014-11-22</span></li>
-    			<li><i class="jiantou"></i><a href="/zixunContent.jhtml">习近平：让互联网发展成果惠及13亿中国人民</a><span class="title-date">2014-11-22</span></li> -->
     		</ul>
     		<p class="page_list">
     			<a href="#">首页</a>

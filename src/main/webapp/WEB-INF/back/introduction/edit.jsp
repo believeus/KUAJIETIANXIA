@@ -70,7 +70,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					类型:
 				</th>
 				<td>
-					<input type="text" name="name" class="text" maxlength="10000" value="${enterpriseIntro.type}" readonly="readonly"/>
+					<input type="text" name="type" class="text" maxlength="10000" value="${enterpriseIntro.type}" readonly="readonly"/>
 				</td>
 			</tr>
 			<tr id="pathTr">

@@ -6,7 +6,13 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import cn.believeus.PaginationUtil.Page;
+import cn.believeus.PaginationUtil.Pageable;
+import cn.believeus.PaginationUtil.PaginationUtil;
+import cn.believeus.model.FriendLink;
 import cn.believeus.model.Industry;
 import cn.believeus.service.BaseService;
 
@@ -21,11 +27,20 @@ public class ControllerIndustry {
 	 */
 	@RequestMapping(value = "/industryList")
 	public String list(HttpServletRequest request) {
-		int size=6;
 		// 查看集团产业
-		@SuppressWarnings("unchecked")
-		List<Industry> Industrys = (List<Industry>) baseService.findObjectList(Industry.class, size);
-		request.setAttribute("industrys", Industrys);
+		
+		String pageNumber = request.getParameter("pageNumber");
+		// 如果为空，则设置为1
+		if (StringUtils.isEmpty(pageNumber)) {
+			pageNumber="1";
+		}
+		Pageable pageable=new Pageable(Integer.valueOf(pageNumber),20);
+		Page<?> page = baseService.findObjectList(Industry.class, pageable);
+		request.setAttribute("page", page);
+		request.setAttribute("size",page.getTotal());
+		// 分页
+		PaginationUtil.pagination(request,page.getPageNumber(),page.getTotalPages(), 0);
+		
 		return "/WEB-INF/front/industryList.jsp";
 	}
 }

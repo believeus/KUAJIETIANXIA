@@ -448,7 +448,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				  <c:forEach items="${informations }" var="information">
 				  	<li>
 					  	<p>${information.content }</p>
-					  	<a href="#">${information.name }</a>
+					  	<a href="zixunContent.jhtml?id=${information.id }" title="${information.name }">${information.name }</a>
 					  	<span>${information.name } <a href="#" style="display:inline;font-weight: normal;font-size: 1.1em;">显示更多&gt;&gt;</a></span>
 					  	<label> </label>
 				  	</li>
@@ -607,12 +607,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<li>
 			<a href="http://wpa.qq.com/msgrd?v=3&uin=569009496&site=qq&menu=yes" target="_blank" >
 			 <div class="sidebox">
-			 	<img src="/static/public/images/side_icon04.png">QQ客服一</div>
+			 	<img src="/static/public/images/side_icon04.png" />QQ客服一</div>
 			</a>
 		</li>
 		<li>
 			<a href="http://wpa.qq.com/msgrd?v=3&uin=1058633117&site=qq&menu=yes" target="_blank" >
-			 <div class="sidebox"><img src="/static/public/images/side_icon04.png">QQ客服二</div>
+			 <div class="sidebox"><img src="/static/public/images/side_icon04.png" />QQ客服二</div>
 			</a>
 		</li>
 		<!-- <li><a href="javascript:void(0);" ><div class="sidebox"><img src="/static/public/images/side_icon03.png">新浪微博</div></a></li> -->

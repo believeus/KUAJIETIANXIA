@@ -91,9 +91,11 @@ public class ControllerIndex {
 	 * @param request
 	 * @return
 	 */
+	@SuppressWarnings("unchecked")
 	@RequestMapping(value = "/straddling")
 	public String straddling(HttpServletRequest request) {
-		
+		List<Partners> partners = (List<Partners>) baseService.findObjectList(Partners.class);
+		request.setAttribute("partners", partners);
 		return "/WEB-INF/front/straddling.jsp";
 	}
 	
@@ -117,8 +119,11 @@ public class ControllerIndex {
 	 * @param request
 	 * @return
 	 */
+	@SuppressWarnings("unchecked")
 	@RequestMapping(value = "/introduction")
 	public String introduction(HttpServletRequest request) {
+		List<EnterpriseIntro> eis = (List<EnterpriseIntro>) baseService.findObjectList(EnterpriseIntro.class);
+		request.setAttribute("enterpriseIntros", eis);
 		return "/WEB-INF/front/introduction.jsp";
 	}
 	/**
@@ -183,7 +188,7 @@ public class ControllerIndex {
 	public String kjtxabstract(HttpServletRequest request,int id) {
 		Partners partners=(Partners)baseService.findObject(Partners.class, id);
 		request.setAttribute("partners", partners);
-		return "/WEB-INF/front/abstract.jsp";
+		return "/WEB-INF/front/abstract.jsp"; 
 	}
 //	/** 产品列表
 //	 * @param request
@@ -197,15 +202,18 @@ public class ControllerIndex {
 //		request.setAttribute("partners", partners);
 //		return "/WEB-INF/front/productList.jsp";
 //	}
-//	/**
-//	 * 产品详情
-//	 * @param request
-//	 * @return
-//	 */
-//	@RequestMapping(value = "/product")
-//	public String product(HttpServletRequest request) {
-//		return "/WEB-INF/front/product.jsp";
-//	}
+	/**
+	 * 集团文化
+	 * @param request
+	 * @return
+	 */
+	@SuppressWarnings("unchecked")
+	@RequestMapping(value = "/cultureList")
+	public String product(HttpServletRequest request) {
+		List<Culture> cultures = (List<Culture>) baseService.findObjectList(Culture.class);
+		request.setAttribute("cultures", cultures);
+		return "/WEB-INF/front/cultureList.jsp";
+	}
 	
 	/** 站内搜索
 	 * @param request
@@ -267,6 +275,5 @@ public class ControllerIndex {
 		Page<?> page = (Page<?>) baseService.findObjectList(hql, pageable);
 		request.setAttribute("page", page);
 		return url;
-			
 	}
 }

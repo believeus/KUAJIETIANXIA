@@ -23,6 +23,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<script type="text/javascript" src="/static/public/js/kjtx/flexy-menu.js"></script>
 	<script type="text/javascript">$(document).ready(function(){$(".flexy-menu").flexymenu({speed: 400,type: "horizontal",align: "right"});});</script>
 	<!----//End-top-nav-script---->
+	<style type="text/css">
+		body{
+			font-family:microsoft yahei;
+		}
+	</style>
   </head>
   
   <body>
@@ -31,9 +36,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     	<div class="center" style="width: 1200px; height: auto;margin: 0 auto;overflow: hidden;">
 			<div style="line-height: 65px;height: 55px;">
 				<div style="float: left;font-size: 23px;font-weight: bold;"><a style="color: #434343;" href="#">集团产业</a></div>
-				<div style="float: left;font-size: 18px;margin: 0 8px;">>></div>
+				<div style="float: left;font-size: 18px;margin: 0 8px;">&gt;&gt;</div>
 				<div style="float: left;font-size: 16px;"><a style="color: #434343;" href="/kjtxabstract.jhtml">银德财富</a></div>
-				<div style="float: left;font-size: 18px;margin: 0 8px;">>></div>
+				<div style="float: left;font-size: 18px;margin: 0 8px;">&gt;&gt;</div>
 				<div style="float: left;font-size: 16px;"><a style="color: #922D2C;" href="/kjtxabstract.jhtml">公司简介</a></div>
 			</div>
 			<div style="width: 1200px;height: auto;margin: 0 auto;">
@@ -50,8 +55,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			</div>
 			<div style="width: 1200px;height: auto;margin: 10px auto;">
 				<div style="width: 58%;height: 210px;margin: 40px auto 10px;">
-					<div style="font-size: 20px;font-weight: bold;line-height: 50px;width: 290px;margin: 0 auto;">
-						湖北银德财富投资创业有限公司
+					<div style="font-size: 20px;font-weight: bold;line-height: 50px;margin: 0 auto;text-align: center;">
+						${partners.name}
 					</div>
 					<div style="margin: 10 auto;">
 						<div style="float: left;margin: 20px 20px;">
@@ -62,32 +67,32 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 							<div style="font-size: 15px;line-height: 30px;">公司法人：${partners.legalMan}</div>
 							<div style="font-size: 15px;line-height: 30px;">注册资金：${partners.regCapital }万元整</div>
 							<div style="font-size: 15px;line-height: 30px;">经营范围：${partners.bizScope }</div>
-							<div style="font-size: 15px;line-height: 30px;">公司地址：武汉市江汉区民权路长江大厦25楼</div>
+							<div style="font-size: 15px;line-height: 30px;">公司地址：${partners.address}</div>
 						</div>
 					</div>
 				</div>
 				<div style="width: 60%; margin-top: 0px; margin-bottom: 0px; margin-left: 160px;">
 					<img alt="" src="/static/public/images/line.jpg" />
 				</div>
-				<div style="font-size: 16px;width: 77%;height: 100px;color: #434343;margin: 40px auto 10px;">
+				<p style="width: 1000px; margin: 0px auto; font-size: 16px; font-weight: bold;">公司介绍:</p>
+				<div style="font-size: 16px;width: 77%;height: auto;color: #434343;margin: 40px auto 10px;">
 					${partners.introduction}
 				</div>
 				<c:if test="${partners.img1 ne null }">
-					<div style="width: 50%;height: 400px;margin: 0 auto;float: left;">
+					<div style="width: 1000px;height: auto;margin: 0 auto;text-align:center;margin-bottom:20px;">
 					  <img alt="" src="/${partners.img1 }" />
 					</div>
 				</c:if>
 				<c:if test="${partners.img2 ne null }">
-					<div style="width: 50%;height: 400px;margin: 0 auto;">
+					<div style="width: 1000px;height: auto;margin: 0 auto;text-align:center;margin-bottom:20px;">
 					 <img alt="" src="/${partners.img2 }" />
 					</div>
 				</c:if>
 				<c:if test="${partners.img3 ne null }">
-					<div style="width: 50%;height: 400px;margin: 0 auto;">
+					<div style="width: 1000px;height: auto;margin: 0 auto;text-align:center;margin-bottom:20px;">
 					  <img alt="" src="/${partners.img3 }" />
 					</div>
 				</c:if>
-				
 				
 				<div style="font-size: 16px;width: 77%;height: 100px;color: #434343;margin: 40px auto 10px;">
 					本公司已经获得武汉股权托管交易中心的认可，成为该中心推荐会员，我们有多年丰富经验的业务团队，

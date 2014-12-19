@@ -10,6 +10,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <title>联系我们</title>
     <link rel="stylesheet" href="/static/public/css/style.css" />
     <script type="text/javascript" src="/static/public/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=2qkpDitMlFIilEPKy62fiWDe"></script>
     <!----start-top-nav-script---->
 	<script type="text/javascript" src="/static/public/js/kjtx/flexy-menu.js"></script>
 	<script type="text/javascript">$(document).ready(function(){$(".flexy-menu").flexymenu({speed: 400,type: "horizontal",align: "right"});});</script>
@@ -80,6 +81,62 @@ $(function(){
 			alert("提交成功，等待审核!");
 		}
 	});
+	
+	// 百度地图API功能
+	function G(id) {
+		return document.getElementById(id);
+	}
+	var map = new BMap.Map("l-map");
+	map.centerAndZoom("江汉区",12); // 初始化地图,设置城市和地图级别。
+	map.enableScrollWheelZoom(); //启用滚轮放大缩小，默认禁用
+	map.enableContinuousZoom(); //启用地图惯性拖拽，默认禁用
+	var gc = new BMap.Geocoder();
+	map.addEventListener("click", function(e){
+	var pt = e.point;
+	gc.getLocation(pt, function(rs){
+	var addComp = rs.addressComponents;
+	$("#suggestId").val(addComp.province + ""+ addComp.city + "" + addComp.district + "" + addComp.street + "" + addComp.streetNumber);
+	//alert(addComp.province + ", " + addComp.city + ", " + addComp.district + ", " + addComp.street + ", " + addComp.streetNumber);
+	});
+	});
+	var ac = new BMap.Autocomplete( //建立一个自动完成的对象
+	{"input" : "suggestId","location" : map});
+	ac.addEventListener("onhighlight", function(e) { //鼠标放在下拉列表上的事件
+	var str = "";
+	var _value = e.fromitem.value;
+	var value = "";
+	if (e.fromitem.index > -1) {
+		value = _value.province + _value.city + _value.district + _value.street + _value.business;
+	}
+	str = "FromItem<br />index = " + e.fromitem.index + "<br />value = " + value;
+	value = "";
+	if (e.toitem.index > -1) {
+		_value = e.toitem.value;
+		value = _value.province + _value.city + _value.district + _value.street + _value.business;
+	}
+	str += "<br />ToItem<br />index = " + e.toitem.index + "<br />value = " + value;
+	G("searchResultPanel").innerHTML = str;
+	});
+	var myValue;
+	ac.addEventListener("onconfirm", function(e) { //鼠标点击下拉列表后的事件
+		var _value = e.item.value;
+		myValue = _value.province + _value.city + _value.district + _value.street + _value.business;
+		G("searchResultPanel").innerHTML ="onconfirm<br />index = " + e.item.index + "<br />myValue = " + myValue;
+		setPlace();
+	});
+	function setPlace(){
+		map.clearOverlays(); //清除地图上所有覆盖物
+	function myFun(){
+		var pp = local.getResults().getPoi(0).point; //获取第一个智能搜索的结果
+		map.centerAndZoom(pp, 18);
+		map.addOverlay(new BMap.Marker(pp)); //添加标注
+	}
+	var local = new BMap.LocalSearch(map, { //智能搜索
+		onSearchComplete: myFun
+	});
+		local.search(myValue);
+	}
+	
 });
 </script>
   </head>
@@ -92,9 +149,11 @@ $(function(){
 	   		<span style="border-bottom: 2px solid #922d2c;">联系我们</span>
 		</p>
 		<div style="width: 1200px;height: auto;margin: 10px auto;">
-			<div style="float: left;color: #434343;font-size: 16px;">
+			<div style="float: left;color: #434343;font-size: 16px;width: 450px;">
 				<div style="margin: 30px auto;">
 					<img src="/static/public/images/map.jpg" style="width: 100%;"/>
+					<!-- <div id="searchResultPanel" style="display: none;width:150px;height:auto;"></div>
+					<div id="l-map" style="width:auto;height:350px;"></div> -->
 				</div>
 				<div style="line-height: 40px;">咨询电话：${enterpriseInfo.tel }</div>
 				<div style="line-height: 40px;">邮箱：${enterpriseInfo.email }</div>

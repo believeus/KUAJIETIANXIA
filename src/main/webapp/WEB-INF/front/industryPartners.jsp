@@ -40,7 +40,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<img src="/static/public/images/11.jpg" alt="" width="100%" />
 		<div style="margin: 0 auto;width: 1200px;">
 			<p class="kjtx-main-title">
-	    		<span style="border-bottom: 2px solid #922d2c;">集团产业</span><span style="font-size:15px;font-weight:normal;">&gt;&gt;${industry.name}</span>
+	    		<span style="border-bottom: 2px solid #922d2c;">
+	    			<a href="/industryList.jhtml" style="color:#666;">集团产业</a>
+    			</span>
+   				<span style="font-size:15px;font-weight:normal;">&gt;&gt;${industry.name}</span>
 	   		</p>
 	   		<div style="font-size: 16px; font-family: microsoft yahei; text-align: center; font-weight: bold;">${industry.introduction }</div>
 			<div style="text-indent: 40px;width: 1000px;height:200px;margin: 0 auto;font-family: microsoft yahei;font-size: 15px;line-height: 30px;">

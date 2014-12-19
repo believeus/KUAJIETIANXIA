@@ -12,19 +12,20 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <head>
     <title>跨界天下-荣誉资质</title>
     <link rel="stylesheet" href="/static/public/css/fonts.css" />
-<link rel="stylesheet" href="/static/public/css/style.css" />
-<link rel="stylesheet" href="/static/public/css/fwslider.css" />
-<link rel="stylesheet" href="/static/public/css/jquery.bxslider.css" />
-<link rel="stylesheet" href="/static/public/css/zalki_hover_img.css" />
-<script type="text/javascript" src="/static/public/js/jquery-1.9.1.min.js"></script>
-<script type="text/javascript" src="/static/public/js/jquery.validate.js"></script>
-<script type="text/javascript" src="/static/public/js/common.js"></script>
-<script type="text/javascript" src="/static/public/js/input.js"></script>
-<script type="text/javascript" src='/static/public/js/me.js'></script>
-<!----start-top-nav-script---->
-<script type="text/javascript" src="/static/public/js/kjtx/flexy-menu.js"></script>
-<script type="text/javascript">$(document).ready(function(){$(".flexy-menu").flexymenu({speed: 400,type: "horizontal",align: "right"});});</script>
-<!----//End-top-nav-script---->
+	<link rel="stylesheet" href="/static/public/css/style.css" />
+	<link rel="stylesheet" href="/static/public/css/fwslider.css" />
+	<link rel="stylesheet" href="/static/public/css/jquery.bxslider.css" />
+	<link rel="stylesheet" href="/static/public/css/zalki_hover_img.css" />
+	<script type="text/javascript" src="/static/public/js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="/static/public/js/jquery.validate.js"></script>
+	<script type="text/javascript" src="/static/public/js/common.js"></script>
+	<script type="text/javascript" src="/static/public/js/input.js"></script>
+	<script type="text/javascript" src='/static/public/js/me.js'></script>
+	<!----start-top-nav-script---->
+	<script type="text/javascript" src="/static/public/js/kjtx/flexy-menu.js"></script>
+	<script type="text/javascript">$(document).ready(function(){$(".flexy-menu").flexymenu({speed: 400,type: "horizontal",align: "right"});});</script>
+	<!----//End-top-nav-script---->
+	<script type="text/javascript" src="/static/public/js/date.js"></script>
     <style type="text/css">
 		body{
 			font-size:12px;
@@ -51,6 +52,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			$(".list").mouseout(function(){
 				$(this).find("div[class='honor']").css("display","none");
 			});
+			
+			//日期
+			$(".honor-date").each(function(){
+				var dateTime = $(this).attr("dateTime");
+				var date = getSmpFormatDateByLong(parseInt(dateTime),false);
+				$(this).text(date);
+			});
 		});
 	</script>
   </head>
@@ -60,7 +68,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
    		<img src="/static/public/images/11.jpg" width="100%" />
    		<div class="center" style="width: 1200px; height: auto;margin: 0 auto;overflow: hidden;">
 			<div style="font-size: 23px;font-weight: bold;line-height: 65px;height: 40px;text-align: center;">
-				<a style="color: #666666;" href="kjtx_world.html">资质荣誉</a>
+				资质荣誉
 			</div>
 			<div style="width: 250px;height: auto;margin: 0 auto;">
 				<div style="border-bottom: 3px solid #AEAEAE;margin: 30px 0px 0px;"></div>
@@ -70,14 +78,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<div style="height: auto;overflow:hidden;border: 1px solid #CACBC6;margin-top: 40px;">
 				<c:forEach items="${honors }" var="honors" varStatus="status">
 					<div style="float: left;" class="list">
-						<a href="">
-							<img height="299.5" width="299"  src="${honors.imgpath }" <c:if test="${status.index>3 }">style="margin-top: -4px;"</c:if> />
-						</a>
+						<img height="299.5" width="299"  src="${honors.imgpath }" <c:if test="${status.index>3 }">style="margin-top: -4px;"</c:if> />
 						<div class="honor" style="font-size: 16px;">
 							<div>${honors.name }</div>
-							<div style="font-size: 12px;">
-								${honors.editTime }
-							</div>
+							<div class="honor-date" style="font-size: 12px;" dateTime="${honors.editTime }">${honors.editTime }</div>
 						</div>
 					</div>
 				</c:forEach>

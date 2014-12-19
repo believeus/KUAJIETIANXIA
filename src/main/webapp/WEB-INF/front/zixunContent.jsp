@@ -3,7 +3,7 @@
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
-
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
@@ -15,6 +15,17 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<script type="text/javascript" src="/static/public/js/kjtx/flexy-menu.js"></script>
 	<script type="text/javascript">$(document).ready(function(){$(".flexy-menu").flexymenu({speed: 400,type: "horizontal",align: "right"});});</script>
 	<!----//End-top-nav-script---->
+	<script type="text/javascript" src="/static/public/js/date.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			//日期
+			$(".title-date").each(function(){
+				var dateTime = $(this).attr("dateTime");
+				var date = getSmpFormatDateByLong(parseInt(dateTime),true);
+				$(this).text(date);
+			});
+		});
+	</script>
   </head>
   
   <body>
@@ -22,10 +33,18 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <img src="/static/public/images/11.jpg" width="100%" style="margin-top: -1px;"/>
     <div class="kjtx-main">
     	<p class="kjtx-main-title">
-    		<span style="border-bottom: 2px solid #922d2c;">集团公告</span><span style="font-size:15px;font-weight:normal;">&gt;&gt;公告信息</span>
+    		<span style="border-bottom: 2px solid #922d2c;">
+    			<a href="/zixunList.jhtml" style="color:#666666;">集团资讯</a>
+   			</span>
+   			<span style="font-size:15px;font-weight:normal;">&gt;&gt;
+    			<c:if test="${news.type ==0}">关于乐退</c:if>
+    			<c:if test="${news.type ==1}">集团快讯</c:if>
+    			<c:if test="${news.type ==2}">高层动态</c:if>
+    			<c:if test="${news.type ==3}">集团公告</c:if>
+   			</span>
    		</p>
     	<img src="/static/public//images/zxImg.jpg" width="1210"/>
-    	<p class="content-title">${news.title }<span class="title-date" style="font-weight:normal">2014-12-12 03:31</span></p>
+    	<p class="content-title">${news.title }<span class="title-date" style="font-weight:normal" dateTime="${news.editTime }">${news.editTime }</span></p>
     	<div class="zx-content">
     		${news.content}
     	</div>
