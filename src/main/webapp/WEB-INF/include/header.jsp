@@ -18,8 +18,11 @@
 	<div class="top-header-left" style="color: #fff;font-size: 13px;line-height: 40px;">
 		<!-- 欢迎您来到跨界天下！ -->
 	</div>
-	<div class="top-header-right" style="color: #fff;font-size: 13px;line-height: 40px;margin-right: 85px;">
-		<span style="font-family:microsoft yahei;">Call Us Now：400-8888-6666</span>
+	<div class="top-header-right" style="color: #fff;font-size: 13px;line-height: 40px;margin-right: 25px;padding-right:20px;">
+		<span style="font-family:microsoft yahei;">
+			<i class="phone-tel"></i>
+			Call Us Now：400-8888-6666
+		</span>
 		<!-- <ul>
 			<li><a class="face" href="#"><span> </span></a></li>
 			<li><a class="twit" href="#"><span> </span></a></li>
@@ -83,12 +86,13 @@
 						<li><a href="#">售后咨询</a></li>
 					</ul>
 				</li>
+				<li><a href="/kjtxsearch.jhtml">站内搜索</a>
 			</ul>
 			<div class="search-box">
 				<div id="sb-search" class="sb-search">
-					<a href="/kjtxsearch.jhtml" title="站内搜索">
+					<!-- <a href="/kjtxsearch.jhtml" title="站内搜索">
 						<img alt="站内搜索" src="/static/public/images/search-icon.png" width="32" height="32">
-					</a>
+					</a> -->
 					<!-- <form>
 						<input class="sb-search-input" placeholder="Enter your search term..." type="search" name="search" id="search">
 						<input class="sb-search-submit" type="submit" value="">

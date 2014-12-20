@@ -105,7 +105,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
        			</select>
        			<input type="text" name="keywords" placeholder="请输入关键字" class="search-text">
        			<input type="submit" value="GO" class="searchBtn">
-       			<p class="search-data">找到<span style="color:#922D2C;">210502</span>条结果</p>
+       			<p class="search-data">找到<span style="color:#922D2C;">${size }</span>条结果</p>
        		</div>
        	</form>
        		<div class="search-content">

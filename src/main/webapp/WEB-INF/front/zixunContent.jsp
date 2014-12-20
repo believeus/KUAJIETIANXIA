@@ -43,7 +43,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     			<c:if test="${news.type ==3}">集团公告</c:if>
    			</span>
    		</p>
-    	<img src="/static/public//images/zxImg.jpg" width="1210"/>
+    	<img src="/${news.imgPath }?w=300&h=300" width="1210"/>
     	<p class="content-title">${news.title }<span class="title-date" style="font-weight:normal" dateTime="${news.editTime }">${news.editTime }</span></p>
     	<div class="zx-content">
     		${news.content}

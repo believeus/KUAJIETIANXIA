@@ -14,11 +14,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<link rel="stylesheet" href="/static/public/css/fwslider.css" />
 	<link rel="stylesheet" href="/static/public/css/jquery.bxslider.css" />
 	<link rel="stylesheet" href="/static/public/css/zalki_hover_img.css" />
+	<link href="/static/public/css/common_s.css" rel="stylesheet" type="text/css" />
 	<script type="text/javascript" src="/static/public/js/jquery-1.9.1.min.js"></script>
 	<script type="text/javascript" src="/static/public/js/jquery.validate.js"></script>
 	<script type="text/javascript" src="/static/public/js/common.js"></script>
 	<script type="text/javascript" src="/static/public/js/input.js"></script>
 	<script type="text/javascript" src='/static/public/js/me.js'></script>
+	<script type="text/javascript" src="/static/public/js/list.js"></script>
 	<!----start-top-nav-script---->
 	<script type="text/javascript" src="/static/public/js/kjtx/flexy-menu.js"></script>
 	<script type="text/javascript">$(document).ready(function(){$(".flexy-menu").flexymenu({speed: 400,type: "horizontal",align: "right"});});</script>
@@ -40,7 +42,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<div style="color: #666666;font-size: 18px;font-weight: bold;line-height: 40px;height: 40px;margin-left: 92%;">
 			<!-- <a style="color: #666666;" href="">集团简介</a> -->
 		</div>
-		<c:forEach items="${partners }" var="partner" varStatus="status">
+		<c:forEach items="${page.content }" var="partner" varStatus="status">
 			<div style="border: 1px solid #CACBC6;height: 284px;margin: 0 auto;margin-bottom:30px;">
 				<div style="float: left;width: 50%;">
 					<a href="#">
@@ -121,10 +123,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				</div>
 			</div>
 		</div> -->
-		<div style="width: 100%;height: 50px;background-color: #414141;text-align: center;border-radius: 3px;margin: 30px auto;">
-			<div style="line-height: 50px;font-size: 18px;font-weight: bold;">
-				<a style="color: #C9C9C9;" href="">查看更多...</a>
-			</div>
+		<div style="width:1200px;height:auto;overflow:hidden;margin:0 auto;text-align:center;">
+		   	<form action="/straddling.jhtml" id="listForm">
+				<jsp:include page="/WEB-INF/include/pagination.jsp" flush="true" />
+			</form>
 		</div>
     </div>
     

@@ -10,7 +10,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <head>
     <title>跨界天下-集团文化</title>
     <link rel="stylesheet" href="/static/public/css/style.css" />
+    <link href="/static/public/css/common_s.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="/static/public/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="/static/public/js/list.js"></script>
 	<!----start-top-nav-script---->
 	<script type="text/javascript" src="/static/public/js/kjtx/flexy-menu.js"></script>
 	<script type="text/javascript">$(document).ready(function(){$(".flexy-menu").flexymenu({speed: 400,type: "horizontal",align: "right"});});</script>
@@ -35,7 +37,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		
 		<div style="width: 1200px;height: auto;margin: 10px auto;overflow:hidden;">
 			<div style="height: auto;margin: 0 auto;overflow:hidden;">
-			<c:forEach items="${cultures }" var="cul" varStatus="status">
+			<c:forEach items="${page.content }" var="cul" varStatus="status">
 				<div style="float: left; width: 590px; height: 220px; margin: 15px 10px 15px 0px;">
 					<div style="float: left;color: #434343;margin-left: 10px;width: 64%;height:200px;">
 						<div style="font-size: 20px;width: 100%;line-height: 40px;" title="${cul.introduction }">
@@ -112,10 +114,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				</div>
 			</div> -->
 		</div>
-		<div style="width: 100%;height: 50px;background-color: #414141;text-align: center;border-radius: 3px;margin: 30px auto;">
-			<div style="line-height: 50px;font-size: 18px;font-weight: bold;">
-				<a style="color: #C9C9C9;" href="">查看更多...</a>
-			</div>
+		<div style="width:1200px;height:auto;overflow:hidden;margin:0 auto;text-align:center;">
+		   	<form action="/cultureList.jhtml" id="listForm">
+				<jsp:include page="/WEB-INF/include/pagination.jsp" flush="true" />
+			</form>
 		</div>
     </div>
     <jsp:include page="/WEB-INF/include/footer.jsp" />

@@ -16,11 +16,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<link rel="stylesheet" href="/static/public/css/fwslider.css" />
 	<link rel="stylesheet" href="/static/public/css/jquery.bxslider.css" />
 	<link rel="stylesheet" href="/static/public/css/zalki_hover_img.css" />
+	<link href="/static/public/css/common_s.css" rel="stylesheet" type="text/css" />
 	<script type="text/javascript" src="/static/public/js/jquery-1.9.1.min.js"></script>
 	<script type="text/javascript" src="/static/public/js/jquery.validate.js"></script>
 	<script type="text/javascript" src="/static/public/js/common.js"></script>
 	<script type="text/javascript" src="/static/public/js/input.js"></script>
 	<script type="text/javascript" src='/static/public/js/me.js'></script>
+	<script type="text/javascript" src="/static/public/js/list.js"></script>
 	<!----start-top-nav-script---->
 	<script type="text/javascript" src="/static/public/js/kjtx/flexy-menu.js"></script>
 	<script type="text/javascript">$(document).ready(function(){$(".flexy-menu").flexymenu({speed: 400,type: "horizontal",align: "right"});});</script>
@@ -40,7 +42,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		    position: absolute;
 		    text-align: center;
 		    width: 299px;
-		    margin-top: -45px;
+		    margin-top: -41px;
 		    display: none;
 		}
 	</style>
@@ -75,10 +77,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<div style="border-bottom: 5px solid #922D2C;width: 120px;margin: -4px auto 0px"></div>
 			</div>
 			
-			<div style="height: auto;overflow:hidden;border: 1px solid #CACBC6;margin-top: 40px;">
-				<c:forEach items="${honors }" var="honors" varStatus="status">
+			<div style="height: auto;overflow:hidden;border: 1px solid #CACBC6;margin-top: 40px;margin-bottom:30px;">
+				<c:forEach items="${page.content }" var="honors" varStatus="status">
 					<div style="float: left;" class="list">
-						<img height="299.5" width="299"  src="${honors.imgpath }" <c:if test="${status.index>3 }">style="margin-top: -4px;"</c:if> />
+						<img height="299.5" width="299"  src="${honors.imgpath }" />
 						<div class="honor" style="font-size: 16px;">
 							<div>${honors.name }</div>
 							<div class="honor-date" style="font-size: 12px;" dateTime="${honors.editTime }">${honors.editTime }</div>
@@ -153,11 +155,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				</div>
 			</div> -->
 			
-			<div style="width: 100%;height: 50px;background-color: #414141;text-align: center;border-radius: 3px;margin: 30px auto;">
-				<div style="line-height: 50px;font-size: 18px;font-weight: bold;">
-					<a style="color: #C9C9C9;" href="">查看更多...</a>
-				</div>
+			<div style="width:1200px;height:auto;overflow:hidden;margin:0 auto;text-align:center;">
+			   	<form action="/honor.jhtml" id="listForm">
+					<jsp:include page="/WEB-INF/include/pagination.jsp" flush="true" />
+				</form>
 			</div>
+			
 	    </div>
    		<jsp:include page="/WEB-INF/include/footer.jsp" />
    		<style type="text/css">

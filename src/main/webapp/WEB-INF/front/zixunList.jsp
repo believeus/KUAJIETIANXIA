@@ -10,12 +10,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     
     <title>集团资讯</title>
     <link rel="stylesheet" href="/static/public/css/style.css" />
+    <link href="/static/public/css/common_s.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="/static/public/js/jquery-1.9.1.min.js"></script>
     <!----start-top-nav-script---->
 	<script type="text/javascript" src="/static/public/js/kjtx/flexy-menu.js"></script>
 	<script type="text/javascript">$(document).ready(function(){$(".flexy-menu").flexymenu({speed: 400,type: "horizontal",align: "right"});});</script>
 	<!----//End-top-nav-script---->
 	<script type="text/javascript" src="/static/public/js/date.js"></script>
+	<script type="text/javascript" src="/static/public/js/list.js"></script>
 	<script type="text/javascript">
 		$(function(){
 			var href = window.location.href;
@@ -74,7 +76,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     	</div>
     	<div class="main-content">
     		<ul>
-    			<c:forEach items="${news }" var="news" varStatus="status">
+    			<c:forEach items="${page.content }" var="news" varStatus="status">
 	    			<li>
 	    				<i class="jiantou"></i>
 	    				<a href="/zixunContent.jhtml?id=${news.id }">${news.title }</a>
@@ -82,20 +84,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	   				</li>
    				</c:forEach>
     		</ul>
-    		<p class="page_list">
-    			<a href="#">首页</a>
-    			<a href="#">上一页</a>
-    			<a style="color:#922D2C;" href="#">[1]</a>
-    			<a href="#">[2]</a>
-    			<a href="#">[3]</a>
-    			<a href="#">[4]</a>
-    			<a href="#">[5]</a>
-    			<a href="#">[6]</a>
-    			<a href="#">[7]</a>
-    			...
-    			<a href="#">下一页</a>
-    			<a href="#">尾页</a>
-    		</p>
+    		<div style="width:900px;height:auto;overflow:hidden;margin:0 auto;text-align:center;">
+			   	<form action="/zixunList.jhtml" id="listForm">
+					<jsp:include page="/WEB-INF/include/pagination.jsp" flush="true" />
+				</form>
+			</div>
     	</div>
     </div>
     <jsp:include page="/WEB-INF/include/footer.jsp" />

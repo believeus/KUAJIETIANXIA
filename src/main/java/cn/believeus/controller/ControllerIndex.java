@@ -1,6 +1,5 @@
 package cn.believeus.controller;
 
-import java.util.Date;
 import java.util.List;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -11,6 +10,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import cn.believeus.PaginationUtil.Page;
 import cn.believeus.PaginationUtil.Pageable;
+import cn.believeus.PaginationUtil.PaginationUtil;
 import cn.believeus.model.*;
 import cn.believeus.service.BaseService;
 
@@ -76,14 +76,19 @@ public class ControllerIndex {
 	 * @param request
 	 * @return
 	 */
-	@SuppressWarnings("unchecked")
 	@RequestMapping(value = "/honor")
 	public String honor(HttpServletRequest request) {
-		List<Honor> honors = (List<Honor>) baseService.findObjectList(Honor.class);
-		for (Honor honor : honors) {
-			System.out.println(new Date(honor.getEditTime()));
+		String pageNumber = request.getParameter("pageNumber");
+		// 如果为空，则设置为1
+		if (StringUtils.isEmpty(pageNumber)) {
+			pageNumber="1";
 		}
-		request.setAttribute("honors", honors);
+		Pageable pageable=new Pageable(Integer.valueOf(pageNumber),20);
+		Page<?> page = baseService.findObjectList(Honor.class, pageable);
+		request.setAttribute("page", page);
+		request.setAttribute("size",page.getTotal());
+		// 分页
+		PaginationUtil.pagination(request,page.getPageNumber(),page.getTotalPages(), 0);
 		return "/WEB-INF/front/honor.jsp";
 	}
 	/**
@@ -91,11 +96,19 @@ public class ControllerIndex {
 	 * @param request
 	 * @return
 	 */
-	@SuppressWarnings("unchecked")
 	@RequestMapping(value = "/straddling")
 	public String straddling(HttpServletRequest request) {
-		List<Partners> partners = (List<Partners>) baseService.findObjectList(Partners.class);
-		request.setAttribute("partners", partners);
+		String pageNumber = request.getParameter("pageNumber");
+		// 如果为空，则设置为1
+		if (StringUtils.isEmpty(pageNumber)) {
+			pageNumber="1";
+		}
+		Pageable pageable=new Pageable(Integer.valueOf(pageNumber),5);
+		Page<?> page = baseService.findObjectList(Partners.class, pageable);
+		request.setAttribute("page", page);
+		request.setAttribute("size",page.getTotal());
+		// 分页
+		PaginationUtil.pagination(request,page.getPageNumber(),page.getTotalPages(), 0);
 		return "/WEB-INF/front/straddling.jsp";
 	}
 	
@@ -104,14 +117,23 @@ public class ControllerIndex {
 	 * @param request
 	 * @return
 	 */
-	@SuppressWarnings("unchecked")
 	@RequestMapping(value = "/zixunList")
 	public String zixun(HttpServletRequest request ,Integer type) {
 		if(type==null){
 			type=0;
 		}
-		List<Tnews> news = (List<Tnews>) baseService.findObjectList(Tnews.class,"type",type);
-		request.setAttribute("news", news);
+		String pageNumber = request.getParameter("pageNumber");
+		// 如果为空，则设置为1
+		if (StringUtils.isEmpty(pageNumber)) {
+			pageNumber="1";
+		}
+		Pageable pageable=new Pageable(Integer.valueOf(pageNumber),20);
+		String hql = "from Tnews news where news.type = type";
+		Page<?> page = baseService.findObjectList(hql, pageable);
+		request.setAttribute("page", page);
+		request.setAttribute("size",page.getTotal());
+		// 分页
+		PaginationUtil.pagination(request,page.getPageNumber(),page.getTotalPages(), 0);
 		return "/WEB-INF/front/zixunList.jsp";
 	}
 	/**
@@ -207,11 +229,19 @@ public class ControllerIndex {
 	 * @param request
 	 * @return
 	 */
-	@SuppressWarnings("unchecked")
 	@RequestMapping(value = "/cultureList")
 	public String product(HttpServletRequest request) {
-		List<Culture> cultures = (List<Culture>) baseService.findObjectList(Culture.class);
-		request.setAttribute("cultures", cultures);
+		String pageNumber = request.getParameter("pageNumber");
+		// 如果为空，则设置为1
+		if (StringUtils.isEmpty(pageNumber)) {
+			pageNumber="1";
+		}
+		Pageable pageable=new Pageable(Integer.valueOf(pageNumber),10);
+		Page<?> page = baseService.findObjectList(Culture.class, pageable);
+		request.setAttribute("page", page);
+		request.setAttribute("size",page.getTotal());
+		// 分页
+		PaginationUtil.pagination(request,page.getPageNumber(),page.getTotalPages(), 0);
 		return "/WEB-INF/front/cultureList.jsp";
 	}
 	
@@ -235,6 +265,7 @@ public class ControllerIndex {
 			news.setContent(news.getContent().replaceAll("<[^>]+>", ""));
 		}
 		request.setAttribute("news", page.getContent());
+		request.setAttribute("size", page.getContent().size());
 		return "/WEB-INF/front/searchNews.jsp";
 	}
 

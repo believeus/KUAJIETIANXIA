@@ -391,7 +391,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<div class="wrap">
 					<div class="holiday-type-head">
 						<h3>集团产业</h3>
-						<span>跨界天下海纳百川，厚德载物!</span>
+						<span style="font-size:15px;font-family:microsoft yahei;">跨界天下海纳百川 厚德载物</span>
 					</div>
 					<div class="holiday-type-grids">
 					<c:if test="${iSize!=0 }">
@@ -438,9 +438,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<!----//End-images-slider---->
 		<!----start-clients---->
 		<div class="clients">
-			<div class="client-head">
+			<div class="offers-head">
 				<h3>集团资讯</h3>
-				<span>海阔凭鱼跃 天空任鸟飞</span>
+				<p>海阔凭鱼跃 天空任鸟飞</p>
 			</div>
 			<div class="client-grids">
 				<ul class="bxslider">
@@ -495,7 +495,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<div class="footer-content">
 				<div class="client-head">
 					<h3>合作伙伴</h3>
-					<span>众志成城 联合梦想</span>
+					<span style="font-size:15px;font-family:microsoft yahei;">众志成城 联合梦想</span>
 				</div>
 				<div class="partners-list-parent">
 				<c:if test="${pSize!=0 }">
@@ -583,10 +583,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<jsp:include page="/WEB-INF/include/footer.jsp" />
 		<!----//End-footer---->
 		<style type="text/css">
-			.flex-viewport{
+			/* .flex-viewport{
 				width: 1685px;
 				margin:0 auto;
-			}
+			} */
 			.slides img {
 			    height: 210px;
 			}
@@ -619,5 +619,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<li style="border:none;"><a href="javascript:goTop();" class="sidetop"><img src="/static/public/images/side_icon05.png"></a></li>
 	 </ul>
 	</div>
+	<script type="text/javascript">
+		$(function(){
+			$(".bx-wrapper").css({"max-width":"auto"});
+		});
+	</script>
 </body>
 </html>
