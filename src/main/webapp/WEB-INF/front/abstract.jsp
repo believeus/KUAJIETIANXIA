@@ -60,7 +60,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					</div>
 					<div style="margin: 10 auto;">
 						<div style="float: left;margin: 20px 20px;">
-							<img src="/${partners.logo }?w=250&h=250" />
+							<img src="/${partners.logo }?w=250&h=250" width="200" height="100"/>
 						</div>
 						<div style="float: left;color: #434343;margin-left: 20px;">
 							<div style="font-size: 15px;line-height: 30px;">公司类型：${partners.companyTye }</div>

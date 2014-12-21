@@ -77,7 +77,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<div class="kjtx-product">
 			<div style="width:1200px;height:auto;overflow:hidden;">
 				<div class="kjtx-product-img">
-					<img src="/${product.imgpath }?w=620&h=500" width="630" height="335"/>
+					<img src="/${product.imgpath }?w=630&h=335" width="630" height="335"/>
 				</div>
 				<div class="kjtx-product-name">
 					<table>

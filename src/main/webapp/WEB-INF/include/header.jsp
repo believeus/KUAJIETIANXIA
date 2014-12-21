@@ -69,11 +69,8 @@
 						<li><a href="/industryList.jhtml">生物产业</a></li>
 						<li><a href="/industryList.jhtml">信息产业</a></li>
 						<li><a href="/industryList.jhtml">投资产业</a></li>
-						<li><a href="/industryList.jhtml">餐饮产业</a>
-							<ul>
-								<li><a href="/industryList.jhtml">俱乐部产业</a></li>
-							</ul>
-						</li>
+						<li><a href="/industryList.jhtml">餐饮产业</a></li>
+						<li><a href="/industryList.jhtml">俱乐部产业</a></li>
 					</ul>
 				</li>
 				<li><a href="/cultureList.jhtml">集团文化</a>

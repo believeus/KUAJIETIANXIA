@@ -30,8 +30,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			body{
 				font-family:microsoft yahei;
 			}
-			.com-list > div {
+			.com-list div {
 			    margin-bottom: 10px;
+			    margin-right:10px;
 			}
 		</style>
 	</head>
@@ -46,15 +47,19 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
    				<span style="font-size:15px;font-weight:normal;">&gt;&gt;${industry.name}</span>
 	   		</p>
 	   		<div style="font-size: 16px; font-family: microsoft yahei; text-align: center; font-weight: bold;">${industry.introduction }</div>
-			<div style="text-indent: 40px;width: 1000px;height:200px;margin: 0 auto;font-family: microsoft yahei;font-size: 15px;line-height: 30px;">
-				<span>介绍：</span>
+			<div style="text-indent: 40px;width: 1000px;height:auto;margin: 0 auto 30px;font-family: microsoft yahei;font-size: 15px;line-height: 30px;">
+				<span style="font-weight: bold;font-size:20px;">介绍：</span>
 				<html:html num="400" value="${industry.content}"></html:html>
 				
 			</div>
-			<span style="margin-left: 95px;font-size:15px;">${industry.name}&nbsp;/&nbsp;系列公司</span>
+			<span style="margin-left: 95px;font-size:20px;font-weight: bold;">${industry.name}&nbsp;/&nbsp;系列公司</span>
 			<div style="width: 1005px;height:310px;margin: 10px auto 50px;" class="com-list">
 				<c:forEach var="partner" items="${partners}">
-				<div style="float: left;"><a href="/kjtxabstract.jhtml?id=${partner.id}"><img src="/${partner.logo}?w=200&h=200"/></a></div>
+					<div style="float: left;">
+						<a href="/kjtxabstract.jhtml?id=${partner.id}">
+							<img src="/${partner.logo}?w=200&h=200" width="200" height="200"/>
+						</a>
+					</div>
 				</c:forEach>
 			</div>
 		</div>

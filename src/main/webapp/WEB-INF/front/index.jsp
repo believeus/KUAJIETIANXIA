@@ -162,18 +162,18 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		          <c:if test="${cSize!=0 }">
 		          
 		          <c:forEach items="${cultures }" var="cultrue" varStatus="status">
-		            <li onclick="location.href='#';">
-		            	<c:if test="${status.index > 5 }">
-		  	    	    	<img src="${cultrue.path }"/>
-		  	    	    </c:if>
-		  	    	    <c:if test="${status.index <= 5 }">
-		  	    	    	<img src="/static/public/images/grey.gif" data-original="${cultrue.path }"/>
+		            <li onclick="location.href='/cultureInfo.jhtml?id=${cultrue.id }';">
+		            	<c:if test="${status.index > 6 }">
+		  	    	    	<img src="${cultrue.path }" style="cursor:pointer;" title="${cultrue.introduction }"/>
+		  	    	    </c:if>	
+		  	    	    <c:if test="${status.index <= 6 }">
+		  	    	    	<img src="/static/public/images/grey.gif" data-original="${cultrue.path }" style="cursor:pointer;" title="${cultrue.introduction }"/>
 		  	    	    </c:if>
 		  	    	    <!----place-caption-info---->
 		  	    	    <div class="caption-info">
 		  	    	    	 <div class="caption-info-head">
 		  	    	    	 	<div class="caption-info-head-left">
-			  	    	    	 	<h4><a href="#" title="${cultrue.introduction }">
+			  	    	    	 	<h4><a href="/cultureInfo.jhtml?id=${cultrue.id }" title="${cultrue.introduction }">
 			  	    	    	 		${fn:substring(cultrue.introduction, 0, 18)}
 										<c:if test="${fn:length(cultrue.introduction) > 18 }">
 						   					...
@@ -199,7 +199,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		  	    	    	 <div class="caption-info-head">
 		  	    	    	 	<div class="caption-info-head-left">
 			  	    	    	 	<h4><a href="#">昔人已乘黄鹤去，此地空余黄鹤楼。</a></h4>
-			  	    	    	 	<span>Bonus Extras!</span>
+			  	    	    	 	<!-- <span>Bonus Extras!</span> -->
 		  	    	    	 	</div>
 		  	    	    	 	<div class="caption-info-head-right">
 		  	    	    	 		<span> </span>
@@ -216,7 +216,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		  	    	    	 <div class="caption-info-head">
 		  	    	    	 	<div class="caption-info-head-left">
 			  	    	    	 	<h4><a href="#">长江大桥&万里长江第一桥</a></h4>
-			  	    	    	 	<span>Bonus Extras!</span>
+			  	    	    	 	<!-- <span>Bonus Extras!</span> -->
 		  	    	    	 	</div>
 		  	    	    	 	<div class="caption-info-head-right">
 		  	    	    	 		<span> </span>
@@ -233,7 +233,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		  	    	    	 <div class="caption-info-head" style="line-height:20px;">
 		  	    	    	 	<div class="caption-info-head-left">
 			  	    	    	 	<h4><a href="#">风墙动，龟蛇静，起宏图。</a><br/><a href="#">一桥飞架南北，天堑变通途。</a></h4>
-			  	    	    	 	<span>Bonus Extras!</span>
+			  	    	    	 	<!-- <span>Bonus Extras!</span> -->
 		  	    	    	 	</div>
 		  	    	    	 	<div class="caption-info-head-right">
 		  	    	    	 		<span> </span>
@@ -250,7 +250,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		  	    	    	 <div class="caption-info-head">
 		  	    	    	 	<div class="caption-info-head-left">
 			  	    	    	 	<h4><a href="#">晴川桥&万绿丛中一点红</a></h4>
-			  	    	    	 	<span>Bonus Extras!</span>
+			  	    	    	 	<!-- <span>Bonus Extras!</span> -->
 		  	    	    	 	</div>
 		  	    	    	 	<div class="caption-info-head-right">
 		  	    	    	 		<span> </span>
@@ -267,7 +267,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		  	    	    	 <div class="caption-info-head">
 		  	    	    	 	<div class="caption-info-head-left">
 			  	    	    	 	<h4><a href="#">晴川沥沥汉阳树，芳草萋萋鹦鹉洲。</a></h4>
-			  	    	    	 	<span>Bonus Extras!</span>
+			  	    	    	 	<!-- <span>Bonus Extras!</span> -->
 		  	    	    	 	</div>
 		  	    	    	 	<div class="caption-info-head-right">
 		  	    	    	 		<span> </span>
@@ -284,7 +284,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		  	    	    	 <div class="caption-info-head">
 		  	    	    	 	<div class="caption-info-head-left">
 			  	    	    	 	<h4><a href="#">昔人已乘黄鹤去，此地空余黄鹤楼。</a></h4>
-			  	    	    	 	<span>Bonus Extras!</span>
+			  	    	    	 	<!-- <span>Bonus Extras!</span> -->
 		  	    	    	 	</div>
 		  	    	    	 	<div class="caption-info-head-right">
 		  	    	    	 		<span> </span>
@@ -301,7 +301,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		  	    	    	 <div class="caption-info-head">
 		  	    	    	 	<div class="caption-info-head-left">
 			  	    	    	 	<h4><a href="#">晴川沥沥汉阳树，芳草萋萋鹦鹉洲。</a></h4>
-			  	    	    	 	<span>Bonus Extras!</span>
+			  	    	    	 	<!-- <span>Bonus Extras!</span> -->
 		  	    	    	 	</div>
 		  	    	    	 	<div class="caption-info-head-right">
 		  	    	    	 		<span> </span>
@@ -318,7 +318,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		  	    	    	 <div class="caption-info-head">
 		  	    	    	 	<div class="caption-info-head-left">
 			  	    	    	 	<h4><a href="#">晴川桥&万绿丛中一点红</a></h4>
-			  	    	    	 	<span>Bonus Extras!</span>
+			  	    	    	 	<!-- <span>Bonus Extras!</span> -->
 		  	    	    	 	</div>
 		  	    	    	 	<div class="caption-info-head-right">
 		  	    	    	 		<span> </span>
@@ -335,7 +335,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		  	    	    	 <div class="caption-info-head" style="line-height:20px;">
 		  	    	    	 	<div class="caption-info-head-left">
 			  	    	    	 	<h4><a href="#">风墙动，龟蛇静，起宏图。</a><br/><a href="#">一桥飞架南北，天堑变通途。</a></h4>
-			  	    	    	 	<span>Bonus Extras!</span>
+			  	    	    	 	<!-- <span>Bonus Extras!</span> -->
 		  	    	    	 	</div>
 		  	    	    	 	<div class="caption-info-head-right">
 		  	    	    	 		<span> </span>
@@ -352,7 +352,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		  	    	    	 <div class="caption-info-head">
 		  	    	    	 	<div class="caption-info-head-left">
 			  	    	    	 	<h4><a href="#">长江大桥&万里长江第一桥</a></h4>
-			  	    	    	 	<span>Bonus Extras!</span>
+			  	    	    	 	<!-- <span>Bonus Extras!</span> -->
 		  	    	    	 	</div>
 		  	    	    	 	<div class="caption-info-head-right">
 		  	    	    	 		<span> </span>
@@ -369,7 +369,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		  	    	    	 <div class="caption-info-head">
 		  	    	    	 	<div class="caption-info-head-left">
 			  	    	    	 	<h4><a href="#">晴川桥&万绿丛中一点红</a></h4>
-			  	    	    	 	<span>Bonus Extras!</span>
+			  	    	    	 	<!-- <span>Bonus Extras!</span> -->
 		  	    	    	 	</div>
 		  	    	    	 	<div class="caption-info-head-right">
 		  	    	    	 		<span> </span>
@@ -503,7 +503,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					<c:if test="${status.index < 8 }">
 						<div class="partners-liebiao" <c:if test="${status.index ==7 }">style="margin-right:0;"</c:if> >
 							<div class="partners-list">
-								<a href="#">
+								<a href="/kjtxabstract.jhtml?id=${partner.id }">
 									<img data-original="${partner.logo }" src="/static/public/images/grey.gif" height="170"/>
 								</a>
 							</div>
