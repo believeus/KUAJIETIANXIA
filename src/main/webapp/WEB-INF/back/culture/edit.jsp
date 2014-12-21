@@ -72,7 +72,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					文化介绍:
 				</th>
 				<td>
-					<input type="text" name="introduction" class="text" maxlength="10000" value="${culture.introduction}"/>
+					<input type="text" name="introduction" class="text"  value="${culture.introduction}"/>
 				</td>
 			</tr>
 			<tr id="pathTr">

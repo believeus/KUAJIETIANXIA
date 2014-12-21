@@ -70,7 +70,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					产业名称:
 				</th>
 				<td>
-					<input type="text" name="name" class="text" maxlength="10000" value="${industry.name}"/>
+					<input type="text" name="name" class="text"  value="${industry.name}"/>
 				</td>
 			</tr>
 			<tr id="pathTr">
