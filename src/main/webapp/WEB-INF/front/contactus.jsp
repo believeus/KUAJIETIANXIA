@@ -159,10 +159,10 @@ $(function(){
 					<!-- <div id="searchResultPanel" style="display: none;width:150px;height:auto;"></div>
 					<div id="l-map" style="width:auto;height:350px;"></div> -->
 				</div>
-				<div style="line-height:30px;">咨询电话：${enterpriseInfo.tel }</div>
-				<div style="line-height:30px;">邮箱：${enterpriseInfo.email }</div>
-				<div style="line-height:30px;">网址：${enterpriseInfo.website }</div>
-				<div style="line-height:30px;">地址：${enterpriseInfo.address }</div>
+				<div style="line-height:30px;">咨询电话：027-65650999</div>
+				<div style="line-height:30px;">邮箱：hbydcf@126.com</div>
+				<div style="line-height:30px;">网址：http://www.kuajietianxia.com</div>
+				<div style="line-height:30px;">地址：武汉市江汉区民权路长江大厦25楼</div>
 			</div>
 			<div style="float: left;margin: 20px 0px 20px 50px;color: #434343;font-size: 16px;">
 				<form action="/clientLeaveMsg.jhtml" method="post" id="inputForm">
