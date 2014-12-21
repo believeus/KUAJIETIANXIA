@@ -17,7 +17,7 @@
 	 var _menus = {"menus":[
 			{"menuid":"2","icon":"icon-sys","menuname":"集团管理",
 				"menus":[
-				         {"menuname":"集团信息管理","icon":"icon-set","url":"/admin/companyView.jhtml"},
+				        /*  {"menuname":"集团信息管理","icon":"icon-set","url":"/admin/companyView.jhtml"}, */
 				         {"menuname":"集团产品管理","icon":"icon-set","url":"/admin/product/list.jhtml"},
 				         {"menuname":"集团文化管理","icon":"icon-set","url":"/admin/culture/list.jhtml"},
 				         {"menuname":"集团产业管理","icon":"icon-set","url":"/admin/industry/list.jhtml"},

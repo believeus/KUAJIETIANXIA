@@ -9,6 +9,9 @@ body{
 	font-size:12px !important;
 	font-family:microsoft yahei;
 }
+h3{
+	font-family: SimHei !important;
+}
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,dl,dt,dd,ol,nav ul,nav li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
 article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, section {display: block;}
 ol,ul{list-style:none;margin:0px;padding:0px;}
@@ -155,8 +158,7 @@ body{
     color: #555;
 }
 .title-date {
-    float: right;
-    font-size: 14px;
+    font-size: 16px;
 }
 .phone-tel{
 	width:18px;
@@ -171,7 +173,15 @@ body{
 	font-family: microsoft yahei;
     font-size: 20px;
     font-weight: bold;
-    margin: 10px 0 30px;	
+    margin: 10px 0;
+    text-align: center;	
+}
+.news-title{
+	border-bottom: 1px dotted #bbbdbf;
+    color: #666;
+    font-size: 13px;
+    margin-bottom: 20px;
+    text-align: center;
 }
 .main-content li {
     border-bottom: 1px dashed #e4e4e4;
@@ -189,7 +199,8 @@ body{
     font-family: microsoft yahei;
     font-size: 15px;
     line-height: 32px;
-    margin-bottom: 90px;
+    margin-bottom: 30px;
+    margin-top:20px;
 }
 /* ********************* */
 /*----start-wrap----*/
@@ -242,6 +253,22 @@ body{
 }
 .top-header-right{
 	float:right;
+}
+.news-up-down{
+	width:1200px;
+	height:auto;
+	overflow:hidden;
+	margin-bottom:20px;
+}
+.news-up-down p{
+	line-height:25px;
+}
+.news-up-down a{
+	color:#666;
+}
+.news-up-down a:hover{
+	color:#820000;
+	text-decoration: underline;
 }
 .reg{
 	color:#1DD2AF;
@@ -1006,7 +1033,7 @@ input[type="search"].sb-search-input {
 	font-weight: bold;
 }
 .clients{
-	padding: 3em 0 6em;
+	padding: 3em 0;
 }
 /*---//holiday-types-----*/
 /*----start-footer----*/
@@ -1021,7 +1048,6 @@ input[type="search"].sb-search-input {
 	overflow:hidden;
 	background:#fff;
 	margin:0 auto;
-	padding-top:20px;
 }
 .friend-link{
 	
@@ -1063,7 +1089,7 @@ input[type="search"].sb-search-input {
 	width:100%;
 	height:auto;
 	overflow:hidden;
-	margin-top:30px;
+	margin-top:50px;
 }
 .partners-list{
 	border: 2px solid #922d2c;

@@ -42,7 +42,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					<div style="float: left;color: #434343;margin-left: 10px;width: 64%;height:200px;">
 						<div style="font-size: 20px;width: 100%;line-height: 40px;" title="${cul.introduction }">
 							${status.index+1 }、
-							${fn:substring(cul.introduction, 0, 16)}
+							<a href="/cultureInfo.jhtml?id=${cul.id }" title="${cul.introduction }">${fn:substring(cul.introduction, 0, 16)}</a>
 							<c:if test="${fn:length(cul.introduction) > 16 }">
 			   					...
 		   					</c:if>
@@ -58,61 +58,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						</div>
 					</div>
 					<div style="float: left; margin: 32px 20px; width: 154px; height: 154px;">
-						<a href="#"><img src="${cul.path }" style="border-radius: 100px;width: 154px;height: 154px;" /></a>
+						<a href="/cultureInfo.jhtml?id=${cul.id }" title="${cul.introduction }"><img src="${cul.path }" style="border-radius: 100px;width: 154px;height: 154px;" /></a>
 					</div>
 				</div>
 			</c:forEach>
 			</div>
-				<!-- <div style="float: left; width: 590px; height: 220px; margin: 15px 0px 15px 10px;">
-					<div style="float: left;color: #434343;margin-left: 10px;width: 64%">
-						<div style="font-size: 20px;width: 100%;line-height: 40px;">2、昔人已乘黄鹤去，此地空余黄鹤楼</div>
-						<div style="font-size: 14px;width: 100%;line-height: 25px;">
-							黄鹤楼，国家5A级景点，享有“天下江山第一楼“、”天下绝景“之称。与晴川阁、古琴台并称武汉三大名胜。
-							黄鹤楼，位于中国湖北省武汉市长江南岸武昌蛇山峰岭之上，始建于三国时代吴黄武二年（公元223年），
-							距今已有1780多年历史。唐时名声始盛，这主要得之于诗人崔颢“昔人已...
-						</div>
-						<div style="font-size: 14px;background-color: #922D2C;margin-top: 10px;text-align: center;width: 30%;line-height: 30px;">
-							<a style="color: #FFFFFF;" href="">详情</a>
-						</div>
-					</div>
-					<div style="float: left; margin: 32px 20px; width: 154px; height: 154px;">
-						<a href="#"><img src="/static/public/images/huanghelou.png" style="border-radius: 100px;width: 154px;height: 154px;" /></a>
-					</div>
-				</div> -->
-			<!-- <div style="height: 260px;margin: 0 auto;">
-				<div style="float: left; width: 590px; height: 220px; margin: 15px 10px 15px 0px;">
-					<div style="float: left;color: #434343;margin-left: 10px;width: 64%">
-						<div style="font-size: 20px;width: 100%;line-height: 40px;">3、长江大桥 & 万里长江第一桥</div>
-						<div style="font-size: 14px;width: 100%;line-height: 25px;">
-							黄鹤楼，国家5A级景点，享有“天下江山第一楼“、”天下绝景“之称。与晴川阁、古琴台并称武汉三大名胜。
-							黄鹤楼，位于中国湖北省武汉市长江南岸武昌蛇山峰岭之上，始建于三国时代吴黄武二年（公元223年），
-							距今已有1780多年历史。唐时名声始盛，这主要得之于诗人崔颢“昔人已...
-						</div>
-						<div style="font-size: 14px;background-color: #922D2C;margin-top: 10px;text-align: center;width: 30%;line-height: 30px;">
-							<a style="color: #FFFFFF;" href="">详情</a>
-						</div>
-					</div>
-					<div style="float: left; margin: 32px 20px; width: 154px; height: 154px;">
-						<a href="#"><img src="/static/public/images/huanghelou.png" style="border-radius: 100px;width: 154px;height: 154px;" /></a>
-					</div>
-				</div>
-				<div style="float: left; width: 590px; height: 220px; margin: 15px 0px 15px 10px;">
-					<div style="float: left;color: #434343;margin-left: 10px;width: 64%">
-						<div style="font-size: 20px;width: 100%;line-height: 40px;">4、黄鹤楼 & 天下江山第一楼</div>
-						<div style="font-size: 14px;width: 100%;line-height: 25px;">
-							黄鹤楼，国家5A级景点，享有“天下江山第一楼“、”天下绝景“之称。与晴川阁、古琴台并称武汉三大名胜。
-							黄鹤楼，位于中国湖北省武汉市长江南岸武昌蛇山峰岭之上，始建于三国时代吴黄武二年（公元223年），
-							距今已有1780多年历史。唐时名声始盛，这主要得之于诗人崔颢“昔人已...
-						</div>
-						<div style="font-size: 14px;background-color: #922D2C;margin-top: 10px;text-align: center;width: 30%;line-height: 30px;">
-							<a style="color: #FFFFFF;" href="">详情</a>
-						</div>
-					</div>
-					<div style="float: left; margin: 32px 20px; width: 154px; height: 154px;">
-						<a href="#"><img src="/static/public/images/huanghelou.png" style="border-radius: 100px;width: 154px;height: 154px;" /></a>
-					</div>
-				</div>
-			</div> -->
 		</div>
 		<div style="width:1200px;height:auto;overflow:hidden;margin:0 auto;text-align:center;">
 		   	<form action="/cultureList.jhtml" id="listForm">

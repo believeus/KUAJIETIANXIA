@@ -80,7 +80,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	    			<li>
 	    				<i class="jiantou"></i>
 	    				<a href="/zixunContent.jhtml?id=${news.id }">${news.title }</a>
-	    				<span class="title-date" dateTime="${news.editTime }">${news.editTime }</span>
+	    				<span class="title-date" style="float:right;" dateTime="${news.editTime }">${news.editTime }</span>
 	   				</li>
    				</c:forEach>
     		</ul>

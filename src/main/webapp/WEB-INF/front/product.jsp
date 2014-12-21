@@ -65,12 +65,19 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     	<jsp:include page="/WEB-INF/include/header.jsp" />
     	<img src="/static/public/images/11.jpg" width="100%" style="margin-top: -1px;"/>
     	<p class="kjtx-main-title">
-	   		<span style="border-bottom: 2px solid #922d2c;">产品详情</span><span style="font-size:16px;font-weight:normal;position: relative;top: -3px;">&gt;&gt;天福太岁系列</span>
+	   		<span style="border-bottom: 2px solid #922d2c;"><a href="/industryList.jhtml" style="color:#666;">集团产业</a></span>
+	   		<span style="font-size:16px;font-weight:normal;position: relative;top: -3px;">
+	   			&gt;&gt;<a href="/industryPartners.jhtml?industryId=${product.partners.industry.id }" style="color:#666;">${product.partners.industry.name }</a>
+   			</span>
+	   		<span style="font-size:16px;font-weight:normal;position: relative;top: -3px;">
+	   			&gt;&gt;<a href="/kjtxabstract.jhtml?id=${product.partners.id }" style="color:#666;">${product.partners.name }</a>
+   			</span>
+	   		<span style="font-size:16px;font-weight:normal;position: relative;top: -3px;">&gt;&gt;产品详情</span>
 		</p>
 		<div class="kjtx-product">
 			<div style="width:1200px;height:auto;overflow:hidden;">
 				<div class="kjtx-product-img">
-					<img src="/${product.imgpath }?w=620&h=500" />
+					<img src="/${product.imgpath }?w=620&h=500" width="630" height="335"/>
 				</div>
 				<div class="kjtx-product-name">
 					<table>

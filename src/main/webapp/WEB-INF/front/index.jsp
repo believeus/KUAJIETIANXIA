@@ -122,8 +122,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		            </c:if>
 		        </div>
 		        <div class="timers"> </div>
-		        <div class="slidePrev"><span> </span></div>
-		        <div class="slideNext"><span> </span></div>
+		        <div class="slidePrev" style="opacity:0.1;"><span> </span></div>
+		        <div class="slideNext" style="opacity:0.1;"><span> </span></div>
 		    </div>
 		    <!--/slider -->
 		</div>
@@ -390,7 +390,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<div class="holiday-types">
 				<div class="wrap">
 					<div class="holiday-type-head">
-						<h3>集团产业</h3>
+						<h3 style="margin-bottom:0.3em;">集团产业</h3>
 						<span style="font-size:15px;font-family:microsoft yahei;">跨界天下海纳百川 厚德载物</span>
 					</div>
 					<div class="holiday-type-grids">
@@ -494,7 +494,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<div class="footer">
 			<div class="footer-content">
 				<div class="client-head">
-					<h3>合作伙伴</h3>
+					<h3 style="margin-bottom:0.3em;">合作伙伴</h3>
 					<span style="font-size:15px;font-family:microsoft yahei;">众志成城 联合梦想</span>
 				</div>
 				<div class="partners-list-parent">

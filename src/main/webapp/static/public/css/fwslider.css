@@ -36,6 +36,7 @@
 	background-position: -60px 0px;
 	background-repeat: no-repeat;
 	cursor: pointer;
+	opacity:0.0;
 }
 #fwslider .slideNext {
    
@@ -53,8 +54,9 @@
 	height: 60px;
 	float: left;
 	background-position: 0px 0px;
-	background-repeat: no-repeat;
+	background-repeat: no-repeat;	
 	cursor: pointer;
+	opacity:0.0;
 }
 
 #fwslider .timers {

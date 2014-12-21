@@ -49,28 +49,29 @@
 				<li class="active"><a href="/">跨界天下</a></li>
 				<li><a href="/introduction.jhtml">集团介绍</a>
 					<ul>
-						<li><a href="#">集团简介</a></li>
-						<li><a href="#">总裁致辞</a></li>
-						<li><a href="#">发展历程</a></li>
-						<li><a href="#">组织架构</a></li>
+						<li><a href="/introduction.jhtml">集团简介</a></li>
+						<li><a href="/introduction.jhtml">总裁致辞</a></li>
+						<li><a href="/introduction.jhtml">发展历程</a></li>
+						<li><a href="/introduction.jhtml">组织架构</a></li>
 					</ul>
 				</li>
 				<li><a href="/honor.jhtml">资质荣誉</a></li>
 				<li><a href="/zixunList.jhtml">集团资讯</a>
 					<ul>
-						<li><a href="#">集团快讯</a></li>
-						<li><a href="#">高层动态</a></li>
-						<li><a href="#">公告</a></li>
+						<li><a href="/zixunList.jhtml">关于乐退</a></li>
+						<li><a href="/zixunList.jhtml">集团快讯</a></li>
+						<li><a href="/zixunList.jhtml">高层动态</a></li>
+						<li><a href="/zixunList.jhtml">集团公告</a></li>
 					</ul>
 				</li>
 				<li><a href="/industryList.jhtml">集团产业</a>
 					<ul>
-						<li><a href="#">生物产业</a></li>
-						<li><a href="#">信息产业</a></li>
-						<li><a href="#">投资产业</a></li>
-						<li><a href="#">餐饮产业</a>
+						<li><a href="/industryList.jhtml">生物产业</a></li>
+						<li><a href="/industryList.jhtml">信息产业</a></li>
+						<li><a href="/industryList.jhtml">投资产业</a></li>
+						<li><a href="/industryList.jhtml">餐饮产业</a>
 							<ul>
-								<li><a href="#">俱乐部产业</a></li>
+								<li><a href="/industryList.jhtml">俱乐部产业</a></li>
 							</ul>
 						</li>
 					</ul>

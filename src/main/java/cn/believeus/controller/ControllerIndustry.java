@@ -40,7 +40,10 @@ public class ControllerIndustry {
 		request.setAttribute("size",page.getTotal());
 		// 分页
 		PaginationUtil.pagination(request,page.getPageNumber(),page.getTotalPages(), 0);
-		
+		//友情链接
+		List<FriendLink> links = (List<FriendLink>) baseService.findObjectList(FriendLink.class);
+		request.setAttribute("links", links);
+		request.setAttribute("lsize", links.size());
 		return "/WEB-INF/front/industryList.jsp";
 	}
 }

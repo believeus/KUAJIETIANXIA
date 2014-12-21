@@ -18,27 +18,31 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<style type="text/css">
 	body{
 		font-size:12px;
+		font-family: microsoft yahei;
 	}
 	a:hover{text-decoration:underline;color: #C20C0C;}
 	.input1{
-		height: 30px;
-		border: 1px solid #A1A1A1;
-		border-radius: 2px;
-		text-indent: 10px;
-		font-size: 14px;
-		font-family: "microsoft yahei";
-		color: #434343;
+		border: 1px solid #a1a1a1;
+	    border-radius: 2px;
+	    color: #434343;
+	    font-family: "microsoft yahei";
+	    font-size: 14px;
+	    height: 40px;
+	    margin-bottom: 23px;
+	    text-indent: 10px;
 	}
 	.input2{
 		background-color: #922d2c;
-		border: 1px none #A1A1A1;
-		border-radius: 2px;
-		color: #ffffff;
-		cursor: pointer;
-		font-family: "microsoft yahei";
-		font-size: 14px;
-		height: 35px;
-		width: 150px;
+	    border: 1px none #a1a1a1;
+	    border-radius: 2px;
+	    color: #ffffff;
+	    cursor: pointer;
+	    float: right;
+	    font-family: "microsoft yahei";
+	    font-size: 18px;
+	    height: 45px;
+	    margin-top: 30px;
+	    width: 160px;
 	}
 	.textarea{
 		width: 674px;
@@ -148,40 +152,25 @@ $(function(){
 		<p class="kjtx-main-title">
 	   		<span style="border-bottom: 2px solid #922d2c;">联系我们</span>
 		</p>
-		<div style="width: 1200px;height: auto;margin: 10px auto;">
+		<div style="width: 1200px;height: auto;margin: 10px auto;overflow: hidden;">
 			<div style="float: left;color: #434343;font-size: 16px;width: 450px;">
 				<div style="margin: 30px auto;">
 					<img src="/static/public/images/map.jpg" style="width: 100%;"/>
 					<!-- <div id="searchResultPanel" style="display: none;width:150px;height:auto;"></div>
 					<div id="l-map" style="width:auto;height:350px;"></div> -->
 				</div>
-				<div style="line-height: 40px;">咨询电话：${enterpriseInfo.tel }</div>
-				<div style="line-height: 40px;">邮箱：${enterpriseInfo.email }</div>
-				<div style="line-height: 40px;">网址：${enterpriseInfo.website }</div>
-				<div style="line-height: 40px;">地址：${enterpriseInfo.address }</div>
+				<div style="line-height:30px;">咨询电话：${enterpriseInfo.tel }</div>
+				<div style="line-height:30px;">邮箱：${enterpriseInfo.email }</div>
+				<div style="line-height:30px;">网址：${enterpriseInfo.website }</div>
+				<div style="line-height:30px;">地址：${enterpriseInfo.address }</div>
 			</div>
 			<div style="float: left;margin: 20px 0px 20px 50px;color: #434343;font-size: 16px;">
 				<form action="/clientLeaveMsg.jhtml" method="post" id="inputForm">
-					<div style="height: 80px;">
-						<div style="float: left;">
-							<div style="line-height: 35px">姓名</div>
-							<input class="input1" style="width: 310px;" type="text" name="username" id="username" />
-						</div>
-						<div style="float: left;margin-left: 50px;">
-							<div style="line-height: 35px">邮箱</div>
-							<input class="input1" style="width: 310px;" type="text" name="email" id="email" />
-						</div>
-					</div>
-					<div style="margin-top: 20px;height: 80px;">
-						<div style="line-height: 35px">标题</div>
-						<input class="input1" style="width: 674px;" type="text" name="title" id="title" />
-					</div>
-					<div style="margin-top: 20px;height: 200px;">
-						<div style="line-height: 35px">内容</div>
-						<!-- textarea去掉右侧滚动条，去掉右下角拖拽 resize: none;overflow: hidden; -->
-						<textarea class="textarea" type="text" name="content" id="content" /></textarea>
-					</div>
-					<div style="margin-left: 528px;margin-top: 40px;">
+					<div style="width: 674px; height: auto; overflow: hidden;margin-top: 9px;">
+						<input class="input1" style="width: 674px;" type="text" name="username" id="username" placeholder="姓名"/>
+						<input class="input1" style="width: 674px;" type="text" name="email" id="email" placeholder="邮箱"/>
+						<input class="input1" style="width: 674px;" type="text" name="title" id="title" placeholder="标题"/>
+						<textarea class="textarea" name="content" id="content" placeholder="内容"/></textarea>
 						<input class="input2" type="button" id="leavemsg" value="提交" />
 					</div>
 				</form>

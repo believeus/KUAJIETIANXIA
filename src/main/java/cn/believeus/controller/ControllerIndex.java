@@ -55,6 +55,10 @@ public class ControllerIndex {
 		List<Partners> partners = (List<Partners>) baseService.findObjectList(Partners.class);
 		request.setAttribute("partners", partners);
 		request.setAttribute("pSize", partners.size());
+		//友情链接
+		List<FriendLink> links = (List<FriendLink>) baseService.findObjectList(FriendLink.class);
+		request.setAttribute("links", links);
+		request.setAttribute("lsize", links.size());
 		
 		return "/WEB-INF/front/index.jsp";
 	}
@@ -89,6 +93,10 @@ public class ControllerIndex {
 		request.setAttribute("size",page.getTotal());
 		// 分页
 		PaginationUtil.pagination(request,page.getPageNumber(),page.getTotalPages(), 0);
+		//友情链接
+		List<FriendLink> links = (List<FriendLink>) baseService.findObjectList(FriendLink.class);
+		request.setAttribute("links", links);
+		request.setAttribute("lsize", links.size());
 		return "/WEB-INF/front/honor.jsp";
 	}
 	/**
@@ -109,6 +117,10 @@ public class ControllerIndex {
 		request.setAttribute("size",page.getTotal());
 		// 分页
 		PaginationUtil.pagination(request,page.getPageNumber(),page.getTotalPages(), 0);
+		//友情链接
+		List<FriendLink> links = (List<FriendLink>) baseService.findObjectList(FriendLink.class);
+		request.setAttribute("links", links);
+		request.setAttribute("lsize", links.size());
 		return "/WEB-INF/front/straddling.jsp";
 	}
 	
@@ -128,12 +140,17 @@ public class ControllerIndex {
 			pageNumber="1";
 		}
 		Pageable pageable=new Pageable(Integer.valueOf(pageNumber),20);
-		String hql = "from Tnews news where news.type = type";
+		String hql = "from Tnews news where news.type = "+type;
+		System.out.println("hql : "+hql);
 		Page<?> page = baseService.findObjectList(hql, pageable);
 		request.setAttribute("page", page);
 		request.setAttribute("size",page.getTotal());
 		// 分页
 		PaginationUtil.pagination(request,page.getPageNumber(),page.getTotalPages(), 0);
+		//友情链接
+		List<FriendLink> links = (List<FriendLink>) baseService.findObjectList(FriendLink.class);
+		request.setAttribute("links", links);
+		request.setAttribute("lsize", links.size());
 		return "/WEB-INF/front/zixunList.jsp";
 	}
 	/**
@@ -146,6 +163,10 @@ public class ControllerIndex {
 	public String introduction(HttpServletRequest request) {
 		List<EnterpriseIntro> eis = (List<EnterpriseIntro>) baseService.findObjectList(EnterpriseIntro.class);
 		request.setAttribute("enterpriseIntros", eis);
+		//友情链接
+		List<FriendLink> links = (List<FriendLink>) baseService.findObjectList(FriendLink.class);
+		request.setAttribute("links", links);
+		request.setAttribute("lsize", links.size());
 		return "/WEB-INF/front/introduction.jsp";
 	}
 	/**
@@ -157,6 +178,10 @@ public class ControllerIndex {
 	public String zixunContent(HttpServletRequest request,Integer id) {
 		Tnews news=(Tnews)baseService.findObject(Tnews.class, id);
 		request.setAttribute("news", news);
+		//友情链接
+		List<FriendLink> links = (List<FriendLink>) baseService.findObjectList(FriendLink.class);
+		request.setAttribute("links", links);
+		request.setAttribute("lsize", links.size());
 		return "/WEB-INF/front/zixunContent.jsp";
 	}
 	
@@ -175,6 +200,10 @@ public class ControllerIndex {
 		}
 		request.setAttribute("industry", industry);
 		request.setAttribute("partners", partners);
+		//友情链接
+		List<FriendLink> links = (List<FriendLink>) baseService.findObjectList(FriendLink.class);
+		request.setAttribute("links", links);
+		request.setAttribute("lsize", links.size());
 		return "/WEB-INF/front/industryPartners.jsp";
 	}
 	/**
@@ -200,6 +229,10 @@ public class ControllerIndex {
 		String hql="from EnterpriseInfo";
 		EnterpriseInfo enterpriseInfo=(EnterpriseInfo)baseService.findObject(hql);
 		request.setAttribute("enterpriseInfo", enterpriseInfo);
+		//友情链接
+		List<FriendLink> links = (List<FriendLink>) baseService.findObjectList(FriendLink.class);
+		request.setAttribute("links", links);
+		request.setAttribute("lsize", links.size());
 		return "/WEB-INF/front/contactus.jsp";
 	}
 	/** 公司简介
@@ -210,6 +243,10 @@ public class ControllerIndex {
 	public String kjtxabstract(HttpServletRequest request,int id) {
 		Partners partners=(Partners)baseService.findObject(Partners.class, id);
 		request.setAttribute("partners", partners);
+		//友情链接
+		List<FriendLink> links = (List<FriendLink>) baseService.findObjectList(FriendLink.class);
+		request.setAttribute("links", links);
+		request.setAttribute("lsize", links.size());
 		return "/WEB-INF/front/abstract.jsp"; 
 	}
 //	/** 产品列表
@@ -242,6 +279,10 @@ public class ControllerIndex {
 		request.setAttribute("size",page.getTotal());
 		// 分页
 		PaginationUtil.pagination(request,page.getPageNumber(),page.getTotalPages(), 0);
+		//友情链接
+		List<FriendLink> links = (List<FriendLink>) baseService.findObjectList(FriendLink.class);
+		request.setAttribute("links", links);
+		request.setAttribute("lsize", links.size());
 		return "/WEB-INF/front/cultureList.jsp";
 	}
 	
@@ -266,6 +307,10 @@ public class ControllerIndex {
 		}
 		request.setAttribute("news", page.getContent());
 		request.setAttribute("size", page.getContent().size());
+		//友情链接
+		List<FriendLink> links = (List<FriendLink>) baseService.findObjectList(FriendLink.class);
+		request.setAttribute("links", links);
+		request.setAttribute("lsize", links.size());
 		return "/WEB-INF/front/searchNews.jsp";
 	}
 
@@ -305,6 +350,28 @@ public class ControllerIndex {
 		}
 		Page<?> page = (Page<?>) baseService.findObjectList(hql, pageable);
 		request.setAttribute("page", page);
+		//友情链接
+		List<FriendLink> links = (List<FriendLink>) baseService.findObjectList(FriendLink.class);
+		request.setAttribute("links", links);
+		request.setAttribute("lsize", links.size());
 		return url;
+	}
+	
+	/**
+	 * 集团文化
+	 * @param request
+	 * @param id
+	 * @return
+	 */
+	@SuppressWarnings("unchecked")
+	@RequestMapping(value="cultureInfo")
+	public String cultureInfo(HttpServletRequest request,Integer id){
+		Culture culture = (Culture) baseService.findObject(Culture.class, id);
+		request.setAttribute("news", culture);
+		//友情链接
+		List<FriendLink> links = (List<FriendLink>) baseService.findObjectList(FriendLink.class);
+		request.setAttribute("links", links);
+		request.setAttribute("lsize", links.size());
+		return "/WEB-INF/front/cultureInfo.jsp";
 	}
 }
