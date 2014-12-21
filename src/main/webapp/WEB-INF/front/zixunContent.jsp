@@ -4,6 +4,7 @@ String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib uri="http://www.believeus.cn/jstl/html" prefix="html" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
@@ -43,7 +44,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     			<c:if test="${news.type ==3}">集团公告</c:if>
    			</span>
    		</p>
-    	<img src="/${news.imgPath }?w=300&h=300" width="1210"/>
+    	<img src="/${news.imgPath }?w=300&h=300"/>
     	<p class="content-title">${news.title }<span class="title-date" style="font-weight:normal" dateTime="${news.editTime }">${news.editTime }</span></p>
     	<div class="zx-content">
     		${news.content}

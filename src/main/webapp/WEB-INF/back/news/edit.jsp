@@ -65,7 +65,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	</div>
 	<form id="inputForm" action="/admin/news/save.jhtml" method="post" enctype="multipart/form-data">
 		<input type="hidden" name="id" value="${news.id }"/>
-		<input type="hidden" name="path" value="${news.imgPath}"/>
+		<input type="hidden" name="imgPath" value="${news.imgPath}"/>
 		<table class="input">
 			<tr>
 				<th>
