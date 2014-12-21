@@ -70,7 +70,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					公司名称:
 				</th>
 				<td>
-					<input type="text" name="name" class="text" maxlength="10000" value="${friendLink.name}"/>
+					<input type="text" name="name" class="text"  value="${friendLink.name}"/>
 				</td>
 			</tr>
 			<tr>
@@ -78,7 +78,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					公司链接:
 				</th>
 				<td>
-					<input type="text" name="url" class="text" maxlength="10000" value="${friendLink.url}"/>&nbsp;&nbsp;例子:http://www.baidu.com
+					<input type="text" name="url" class="text"  value="${friendLink.url}"/>&nbsp;&nbsp;例子:http://www.baidu.com
 				</td>
 			</tr>
 			<tr id="pathTr">

@@ -86,12 +86,13 @@ $(function(){
 		}
 	});
 	
-	/* // 百度地图API功能
+	 // 百度地图API功能
 	function G(id) {
 		return document.getElementById(id);
 	}
 	var map = new BMap.Map("l-map");
-	map.centerAndZoom("江汉区",12); // 初始化地图,设置城市和地图级别。
+	//map.centerAndZoom("江汉区",12); // 初始化地图,设置城市和地图级别。
+	map.centerAndZoom(new BMap.Point(114.31431662552, 30.570363859501), 12);
 	map.enableScrollWheelZoom(); //启用滚轮放大缩小，默认禁用
 	map.enableContinuousZoom(); //启用地图惯性拖拽，默认禁用
 	var gc = new BMap.Geocoder();
@@ -139,7 +140,7 @@ $(function(){
 		onSearchComplete: myFun
 	});
 		local.search(myValue);
-	} */
+	}
 	
 });
 </script>
@@ -155,9 +156,9 @@ $(function(){
 		<div style="width: 1200px;height: auto;margin: 10px auto;overflow: hidden;">
 			<div style="float: left;color: #434343;font-size: 16px;width: 450px;">
 				<div style="margin: 30px auto;">
-					<img src="/static/public/images/map.jpg" style="width: 100%;"/>
-					<!-- <div id="searchResultPanel" style="display: none;width:150px;height:auto;"></div>
-					<div id="l-map" style="width:auto;height:350px;"></div> -->
+					<!--<img src="/static/public/images/map.jpg" style="width: 100%;"/> -->
+					 <div id="searchResultPanel" style="display: none;width:150px;height:auto;"></div>
+					<div id="l-map" style="width:auto;height:350px;"></div>
 				</div>
 				<div style="line-height:30px;">咨询电话：027-65650999</div>
 				<div style="line-height:30px;">邮箱：hbydcf@126.com</div>

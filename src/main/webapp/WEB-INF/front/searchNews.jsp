@@ -62,6 +62,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			border:1px solid #D7D7D7;
 			width:1197px;height:auto;overflow:hidden;
 			padding:20px 0;
+			min-height:215px;
 		}
 		.content-list{
 			width:1065px;

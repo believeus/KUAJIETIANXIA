@@ -1,6 +1,7 @@
 package cn.believeus.model;
 
 import javax.persistence.Entity;
+import javax.persistence.Lob;
 import javax.persistence.Table;
 
 /**
@@ -35,6 +36,7 @@ public class Tmessage extends TbaseEntity {
 	public void setTitle(String title) {
 		this.title = title;
 	}
+	@Lob
 	public String getContent() {
 		return content;
 	}

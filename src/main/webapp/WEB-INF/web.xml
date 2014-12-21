@@ -130,6 +130,7 @@
 		<!-- End Name:wuqiwei Date:2013-08-11 AddReason:将long类型转换成date类型 -->
 
 		<!-- Begin Name:wuqiwei Date:2013-08-11 AddReason:去除html标签 -->
+		<!-- <%@ taglib uri="http://www.believeus.cn/jstl/html" prefix="html" %> 使用方式 -->
 		<taglib>
 			<taglib-uri>http://www.believeus.cn/jstl/html</taglib-uri>
 			<taglib-location>/WEB-INF/jstl/htmltag.tld</taglib-location>

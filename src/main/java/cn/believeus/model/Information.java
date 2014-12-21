@@ -1,6 +1,7 @@
 package cn.believeus.model;
 
 import javax.persistence.Entity;
+import javax.persistence.Lob;
 import javax.persistence.Table;
 
 /**
@@ -44,6 +45,7 @@ public class Information extends TbaseEntity {
 		this.introduction = introduction;
 	}
 
+	@Lob
 	public String getContent() {
 		return content;
 	}

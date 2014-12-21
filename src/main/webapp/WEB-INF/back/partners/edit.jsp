@@ -87,7 +87,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					名称:
 				</th>
 				<td>
-					<input type="text" name="name" class="text" maxlength="10000" value="${partners.name}"/>
+					<input type="text" name="name" class="text"  value="${partners.name}"/>
 				</td>
 			</tr>
 				<tr>

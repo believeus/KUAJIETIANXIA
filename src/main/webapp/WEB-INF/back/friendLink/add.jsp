@@ -107,7 +107,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					介绍:
 				</th>
 				<td colspan="3">
-					<textarea id="editor" name="introduction" maxlength="10000"></textarea>
+					<textarea id="editor" name="introduction"></textarea>
 				</td>
 			</tr>
 			<tr>
