@@ -2,10 +2,15 @@ package cn.believeus.admin.controller;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
+
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+
 import mydfs.storage.server.MydfsTrackerServer;
+
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
@@ -13,11 +18,14 @@ import org.junit.Assert;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
+
 import cn.believeus.PaginationUtil.Page;
 import cn.believeus.PaginationUtil.Pageable;
 import cn.believeus.PaginationUtil.PaginationUtil;
+import cn.believeus.model.Honor;
 import cn.believeus.model.Tnews;
 import cn.believeus.service.BaseService;
 
@@ -105,5 +113,16 @@ public class NewsController {
 		Tnews news = (Tnews) baseService.findObject(Tnews.class, myNewId);
 		request.setAttribute("news", news);
 		return "/WEB-INF/back/news/edit.jsp";
+	}
+	/**
+	 * 新闻删除
+	 * @return
+	 */
+	@RequiresPermissions("news:delete")
+	@RequestMapping(value="/admin/news/delete")
+	public @ResponseBody String cultureDel(Integer[] ids){
+		List<Integer> list = Arrays.asList(ids); 
+		baseService.delete(Tnews.class, list);
+		return "{\"type\":\"success\"}";
 	}
 }
