@@ -68,7 +68,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
    		</p>
     	<div class="main-nav">
     		<ul>
-    			<li><div class="nav_cry"></div><a id="zx00" class="current" href="/zixunList.jhtml?type=0#0">关于乐退</a></li>
+    			<li><div class="nav_cry"></div><a id="zx00" class="current" href="/zixunList.jhtml?type=0#0">综合资讯</a></li>
     			<li><div class="nav_cry"></div><a id="zx01" href="/zixunList.jhtml?type=1#1">集团快讯</a></li>
     			<li><div class="nav_cry"></div><a id="zx02" href="/zixunList.jhtml?type=2#2">高层动态</a></li>
     			<li><div class="nav_cry"></div><a id="zx03" href="/zixunList.jhtml?type=3#3">集团公告</a></li>
