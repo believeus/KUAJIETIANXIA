@@ -116,7 +116,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					新闻中文标题:
 				</th>
 				<td>
-					<input type="text" name="title" class="text" maxlength="10000" value="${news.title}"/>
+					<input type="text" name="title" class="text" value="${news.title}"/>
 				</td>
 			</tr>
 			<tr id="pathTr">
