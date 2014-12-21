@@ -1143,6 +1143,10 @@ input[type="search"].sb-search-input {
     position: relative;
     top: -19px;
 }
+.footer-li-link a:hover{
+	color: #820000;
+	text-decoration: underline;
+}
 .friend-link-span{
 	float: left;color: #8B8C87;font-size: 15px;position: relative;top: -3px;margin-left: 180px;
 }
@@ -1163,6 +1167,14 @@ input[type="search"].sb-search-input {
     color: #fff;
     position: relative;
     top: -13px;
+}
+.footer-li a:hover{
+	color: #820000;
+	text-decoration: underline;
+}
+.wenhua-title:hover{
+	color: #820000;
+	text-decoration: underline;
 }
 .footer-grid{
 	float: left;

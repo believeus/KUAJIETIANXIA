@@ -43,7 +43,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					<div style="float: left;color: #434343;margin-left: 10px;width: 64%;height:200px;">
 						<div style="font-size: 20px;width: 100%;line-height: 40px;" title="${cul.introduction }">
 							${status.index+1 }、
-							<a href="/cultureInfo.jhtml?id=${cul.id }" title="${cul.introduction }">${fn:substring(cul.introduction, 0, 16)}</a>
+							<a class="wenhua-title" href="/cultureInfo.jhtml?id=${cul.id }" title="${cul.introduction }">${fn:substring(cul.introduction, 0, 16)}</a>
 							<c:if test="${fn:length(cul.introduction) > 16 }">
 			   					...
 		   					</c:if>

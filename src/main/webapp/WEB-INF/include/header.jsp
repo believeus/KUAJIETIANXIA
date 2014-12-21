@@ -76,10 +76,10 @@
 				<li><a href="/honor.jhtml">资质荣誉</a></li>
 				<li id="zixun"><a href="/zixunList.jhtml">集团资讯</a>
 					<ul>
-						<li><a href="/zixunList.jhtml">关于乐退</a></li>
-						<li><a href="/zixunList.jhtml">集团快讯</a></li>
-						<li><a href="/zixunList.jhtml">高层动态</a></li>
-						<li><a href="/zixunList.jhtml">集团公告</a></li>
+						<li><a href="/zixunList.jhtml?type=0#0">综合资讯</a></li>
+						<li><a href="/zixunList.jhtml?type=1#1">集团快讯</a></li>
+						<li><a href="/zixunList.jhtml?type=2#2">高层动态</a></li>
+						<li><a href="/zixunList.jhtml?type=3#3">集团公告</a></li>
 					</ul>
 				</li>
 				<li id="chanye"><a href="/industryList.jhtml">集团产业</a>

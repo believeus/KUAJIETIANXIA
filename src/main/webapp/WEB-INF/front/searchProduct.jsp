@@ -4,6 +4,7 @@ String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>  
+<%@taglib uri="http://www.believeus.cn/jstl/date" prefix="date" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
@@ -116,7 +117,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
        				<div class="content-list-desc">
        					${content.descption}
        				</div>
-       				<p class="search-date">发布时间：${content.editTime}</p>
+       				<p class="search-date">发布时间：<date:date parttern="yyyy-MM-dd" value="${news.editTime}"></date:date></p>
        			</div>
        			</c:forEach>
        			

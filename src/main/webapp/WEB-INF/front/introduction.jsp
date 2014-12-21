@@ -92,14 +92,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<div class="icon-status-name">集团简介</div>
 			</div>
 			<div class="kjtx-list-content-desc">
-				<p style="font-size: 20px; font-weight: bold;margin: 30px 0 20px;">史上首个拨浪鼓藏品。</p>
-				<p style="font-size: 16px;text-indent: 40px;">xx</p>
+				<p style="font-size: 20px; font-weight: bold;margin: 30px 0 20px;">集团简介。</p>
+				<p style="font-size: 16px;text-indent: 40px;">测试数据-集团简介</p>
 			</div>
 		</div>
 		<div class="kjtx-list-content">
 			<div class="kjtx-list-content-desc" style="float: left; margin-right: 0px; margin-left: 60px;top: -63px;">
-				<p style="font-size: 20px; font-weight: bold;margin: 30px 0 20px;">史上首个拨浪鼓藏品。</p>
-				<p style="font-size: 16px;text-indent: 40px;">xxx</p>
+				<p style="font-size: 20px; font-weight: bold;margin: 30px 0 20px;">总裁致辞。</p>
+				<p style="font-size: 16px;text-indent: 40px;">测试数据-总裁致辞</p>
 			</div>
 			<div class="icon-status" style="left: 15px; top: 10px; z-index: 99;">
 				<div class="icon-status-index">2</div>
@@ -118,14 +118,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<div class="icon-status-name">发展历程</div>
 			</div>
 			<div class="kjtx-list-content-desc" style="top: -123px;">
-				<p style="font-size: 20px; font-weight: bold;margin: 30px 0 20px;">史上首个拨浪鼓藏品。</p>
-				<p style="font-size: 16px;text-indent: 40px;">xxx</p>
+				<p style="font-size: 20px; font-weight: bold;margin: 30px 0 20px;">发展历程。</p>
+				<p style="font-size: 16px;text-indent: 40px;">测试数据-发展历程</p>
 			</div>
 		</div>
 		<div class="kjtx-list-content">
 			<div class="kjtx-list-content-desc" style="float: left; margin-right: 0px; margin-left: 60px;top: -93px;">
-				<p style="font-size: 20px; font-weight: bold;margin: 30px 0 20px;">史上首个拨浪鼓藏品。</p>
-				<p style="font-size: 16px;text-indent: 40px;">xxx</p>
+				<p style="font-size: 20px; font-weight: bold;margin: 30px 0 20px;">组织架构。</p>
+				<p style="font-size: 16px;text-indent: 40px;">测试数据-组织架构</p>
 			</div>
 			<div class="icon-status" style="left: 15px; top: -20px; z-index: 99;">
 				<div class="icon-status-index">4</div>

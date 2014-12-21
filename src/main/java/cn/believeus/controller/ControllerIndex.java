@@ -226,9 +226,9 @@ public class ControllerIndex {
 	 */
 	@RequestMapping(value = "/contactus")
 	public String contactus(HttpServletRequest request) {
-		String hql="from EnterpriseInfo";
+		/*String hql="from EnterpriseInfo";
 		EnterpriseInfo enterpriseInfo=(EnterpriseInfo)baseService.findObject(hql);
-		request.setAttribute("enterpriseInfo", enterpriseInfo);
+		request.setAttribute("enterpriseInfo", enterpriseInfo);*/
 		//友情链接
 		List<FriendLink> links = (List<FriendLink>) baseService.findObjectList(FriendLink.class);
 		request.setAttribute("links", links);
