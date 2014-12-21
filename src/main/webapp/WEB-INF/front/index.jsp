@@ -492,11 +492,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<!----//End-clients---->
 		<!----start-footer---->
 		<div class="footer">
+			<div class="client-head">
+				<h3 style="margin-bottom:0.3em;">合作伙伴</h3>
+				<span style="font-size:15px;font-family:microsoft yahei;">众志成城 联合梦想</span>
+			</div>
 			<div class="footer-content">
-				<div class="client-head">
-					<h3 style="margin-bottom:0.3em;">合作伙伴</h3>
-					<span style="font-size:15px;font-family:microsoft yahei;">众志成城 联合梦想</span>
-				</div>
 				<div class="partners-list-parent">
 				<c:if test="${pSize!=0 }">
 					<c:forEach items="${partners }" var="partner" varStatus="status">
@@ -580,6 +580,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				</c:if>
 			</div>
 		</div>
+		</div>
 		<jsp:include page="/WEB-INF/include/footer.jsp" />
 		<!----//End-footer---->
 		<style type="text/css">
@@ -606,8 +607,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<li><a href="#"><div class="sidebox"><img src="/static/public/images/side_icon02.png">客户案例</div></a></li> -->
 		<li>
 			<a href="http://wpa.qq.com/msgrd?v=3&uin=569009496&site=qq&menu=yes" target="_blank" >
-			 <div class="sidebox">
-			 	<img src="/static/public/images/side_icon04.png" />QQ客服一</div>
+			 <div class="sidebox"><img src="/static/public/images/side_icon04.png" />QQ客服一</div>
 			</a>
 		</li>
 		<li>
@@ -616,7 +616,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			</a>
 		</li>
 		<!-- <li><a href="javascript:void(0);" ><div class="sidebox"><img src="/static/public/images/side_icon03.png">新浪微博</div></a></li> -->
-		<li style="border:none;"><a href="javascript:goTop();" class="sidetop"><img src="/static/public/images/side_icon05.png"></a></li>
+		<li style="border:none;"><a href="javascript:goTop();" class="sidetop"><img src="/static/public/images/side_icon05.png" /></a></li>
 	 </ul>
 	</div>
 	<script type="text/javascript">

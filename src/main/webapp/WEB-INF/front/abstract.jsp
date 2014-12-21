@@ -39,7 +39,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<div style="float: left;font-size: 18px;margin: 0 8px;">&gt;&gt;</div>
 				<div style="float: left;font-size: 16px;"><a style="color: #434343;" href="/kjtxabstract.jhtml?id=${partners.id }">${partners.name }</a></div>
 				<div style="float: left;font-size: 18px;margin: 0 8px;">&gt;&gt;</div>
-				<div style="float: left;font-size: 16px;">公司简介</div>
+				<div style="float: left;font-size: 16px;color: #434343;">公司简介</div>
 			</div>
 			<div style="width: 1200px;height: auto;margin: 0 auto;">
 				<div style="border-bottom: 2px solid #AEAEAE;"></div>
@@ -58,7 +58,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					<div style="font-size: 20px;font-weight: bold;line-height: 50px;margin: 0 auto;text-align: center;">
 						${partners.name}
 					</div>
-					<div style="margin: 10 auto;">
+					<div style="margin: 10 auto;padding-left: 110px;">
 						<div style="float: left;margin: 20px 20px;">
 							<img src="/${partners.logo }?w=250&h=250" width="200" height="100"/>
 						</div>
@@ -74,7 +74,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<div style="width: 60%; margin-top: 0px; margin-bottom: 0px; margin-left: 160px;">
 					<img alt="" src="/static/public/images/line.jpg" />
 				</div>
-				<p style="width: 1000px; margin: 0px auto; font-size: 16px; font-weight: bold;">公司介绍:</p>
+				<p style="width: 1000px; margin: 20px auto 0; font-size: 16px; font-weight: bold;text-align:center;">公司介绍</p>
 				<div style="font-size: 16px;width: 77%;height: auto;color: #434343;margin: 40px auto 10px;">
 					${partners.introduction}
 				</div>

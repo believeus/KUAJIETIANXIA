@@ -26,6 +26,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   <body>
     <jsp:include page="/WEB-INF/include/header.jsp" />
+    <img src="/static/public/images/11.jpg" alt="" width="100%" />
     <div class="center" style="width: 1200px; height: auto;margin: 0 auto;overflow: hidden;">
 		<div style="line-height: 65px;height: 55px;">
 			<div style="float: left;font-size: 23px;font-weight: bold;color: #434343;">集团文化</div>

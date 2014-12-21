@@ -10,6 +10,24 @@
 				$(this).parent().addClass("active");
 			}
 		});
+		if("/zixunContent.jhtml" == href){
+			$(".right a").each(function(){
+				$(this).parent().parent().find("li").removeClass("active");
+			});
+			$("#zixun").addClass("active");
+		}
+		if("/industryPartners.jhtml" == href || "/kjtxabstract.jhtml" == href || "/kjtxproduct.jhtml" == href || "/productDetail.jhtml" ==href){
+			$(".right a").each(function(){
+				$(this).parent().parent().find("li").removeClass("active");
+			});
+			$("#chanye").addClass("active");
+		}
+		if("/cultureInfo.jhtml" == href){
+			$(".right a").each(function(){
+				$(this).parent().parent().find("li").removeClass("active");
+			});
+			$("#wenhua").addClass("active");
+		}
 	});
 </script>
 <!----start-top-header----->
@@ -56,7 +74,7 @@
 					</ul>
 				</li>
 				<li><a href="/honor.jhtml">资质荣誉</a></li>
-				<li><a href="/zixunList.jhtml">集团资讯</a>
+				<li id="zixun"><a href="/zixunList.jhtml">集团资讯</a>
 					<ul>
 						<li><a href="/zixunList.jhtml">关于乐退</a></li>
 						<li><a href="/zixunList.jhtml">集团快讯</a></li>
@@ -64,7 +82,7 @@
 						<li><a href="/zixunList.jhtml">集团公告</a></li>
 					</ul>
 				</li>
-				<li><a href="/industryList.jhtml">集团产业</a>
+				<li id="chanye"><a href="/industryList.jhtml">集团产业</a>
 					<ul>
 						<li><a href="/industryList.jhtml">生物产业</a></li>
 						<li><a href="/industryList.jhtml">信息产业</a></li>
@@ -73,7 +91,7 @@
 						<li><a href="/industryList.jhtml">俱乐部产业</a></li>
 					</ul>
 				</li>
-				<li><a href="/cultureList.jhtml">集团文化</a>
+				<li id="wenhua"><a href="/cultureList.jhtml">集团文化</a>
 				<li><a href="/straddling.jhtml">招商合作</a>
 				<li><a href="#">会员中心</a>
 				</li>

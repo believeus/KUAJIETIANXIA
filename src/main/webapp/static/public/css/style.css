@@ -205,7 +205,7 @@ body{
 /* ********************* */
 /*----start-wrap----*/
 .wrap{
-	width:70%;
+	width:1330px !important;
 	margin:0 auto;
 }
 /*----start-header----*/
@@ -335,7 +335,7 @@ body{
 	float:right;
 	position: relative;
 	left:100px;
-	width:1200px;
+	width:1200px !important;
 	/* width: 67%; */
 }
 /*----//main-header----*/

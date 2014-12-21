@@ -86,7 +86,7 @@ $(function(){
 		}
 	});
 	
-	// 百度地图API功能
+	/* // 百度地图API功能
 	function G(id) {
 		return document.getElementById(id);
 	}
@@ -139,7 +139,7 @@ $(function(){
 		onSearchComplete: myFun
 	});
 		local.search(myValue);
-	}
+	} */
 	
 });
 </script>
