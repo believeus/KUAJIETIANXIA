@@ -38,7 +38,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     			<a href="/zixunList.jhtml" style="color:#666666;">集团资讯</a>
    			</span>
    			<span style="font-size:15px;font-weight:normal;">&gt;&gt;
-    			<c:if test="${news.type ==0}">关于乐退</c:if>
+    			<c:if test="${news.type ==0}">综合资讯</c:if>
     			<c:if test="${news.type ==1}">集团快讯</c:if>
     			<c:if test="${news.type ==2}">高层动态</c:if>
     			<c:if test="${news.type ==3}">集团公告</c:if>

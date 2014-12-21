@@ -75,7 +75,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					<select name="type">
 						<c:if test="${news.type==null }">
 							<option value="" selected="selected">--请选择--</option>
-							<option value="0">关于乐退</option>
+							<option value="0">综合资讯</option>
 							<option value="1">集团快讯</option>
 							<option value="2">高层动态</option>
 							<option value="3">集团公告</option>
