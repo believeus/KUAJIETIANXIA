@@ -64,6 +64,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			color:#fff;
 			text-align:center;
 			font-size: 50px;
+			transition:all 0.5s ease-in-out 0s;
+		}	
+		.icon-status-index:hover{
+			transform: rotate(360deg);
 		}
 		.icon-status-name{
 			height:40px;

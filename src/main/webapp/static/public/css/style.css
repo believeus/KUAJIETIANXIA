@@ -168,6 +168,10 @@ body{
 	position:relative;
 	top:3px;
 	left:-5px;
+	transition: all 0.3s ease-in-out 0s;
+}
+.phone-tel:hover{
+	transform: rotate(360deg);
 }
 .content-title{
 	font-family: microsoft yahei;
