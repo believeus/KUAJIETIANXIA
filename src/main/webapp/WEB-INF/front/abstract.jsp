@@ -1,5 +1,6 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="html" uri="http://www.believeus.cn/jstl/html" %>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -54,20 +55,20 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				</div>
 			</div>
 			<div style="width: 1200px;height: auto;margin: 10px auto;">
-				<div style="width: 58%;height: 210px;margin: 40px auto 10px;">
-					<div style="font-size: 20px;font-weight: bold;line-height: 50px;margin: 0 auto;text-align: center;">
+				<div style="height: 210px;margin: 40px auto 10px;width: 1200px;">
+					<div style="font-size: 20px; font-weight: bold; line-height: 50px; margin: 0px auto; text-align: center;">
 						${partners.name}
 					</div>
-					<div style="margin: 10 auto;padding-left: 110px;">
+					<div style="height: auto; overflow: hidden; margin: 10px auto; padding-left: 110px; width: 700px;">
 						<div style="float: left;margin: 20px 20px;">
 							<img src="/${partners.logo }?w=250&h=250" width="200" height="100"/>
 						</div>
-						<div style="float: left;color: #434343;margin-left: 20px;">
+						<div style="float: left;color: #434343;margin-left: 90px;">
 							<div style="font-size: 15px;line-height: 30px;">公司类型：${partners.companyTye }</div>
 							<div style="font-size: 15px;line-height: 30px;">公司法人：${partners.legalMan}</div>
 							<div style="font-size: 15px;line-height: 30px;">注册资金：${partners.regCapital }万元整</div>
-							<div style="font-size: 15px;line-height: 30px;">经营范围：${partners.bizScope }</div>
-							<div style="font-size: 15px;line-height: 30px;">公司地址：${partners.address}</div>
+							<div style="font-size: 15px;line-height: 30px;" title="${partners.bizScope }">经营范围：<html:html num="15" value="${partners.bizScope }"></html:html> </div>
+							<div style="font-size: 15px;line-height: 30px;" title="${partners.address}">公司地址：<html:html num="15" value="${partners.address}"></html:html></div>
 						</div>
 					</div>
 				</div>

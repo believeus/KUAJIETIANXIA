@@ -28,6 +28,7 @@ public class ControllerProduct {
 		List<Product> products = partners.getProducts();
 		for (Product product : products) {
 			product.setDescption(product.getDescption().replaceAll("<[^>]+>", ""));
+			product.setDescption(product.getDescption().replaceAll("&nbsp;", ""));
 		}
 		request.setAttribute("products", products);
 		request.setAttribute("partners", partners);
