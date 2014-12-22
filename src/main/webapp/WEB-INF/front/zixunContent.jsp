@@ -53,8 +53,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
    		</p>
    		
    		<div style="width:1200px;height:auto;text-align:center;">
-   			<c:if test="${news.imgPath!=null }">
-	    		<img src="/${news.imgPath }?w=500&h=400" width="500" height="350"/>
+   			<c:if test="${news.imgPath!=null && news.imgPath!=''  }">
+	    		<img src="/${news.imgPath }" width="500" height="350"/>
    			</c:if>
    		</div>
     	<div class="zx-content">

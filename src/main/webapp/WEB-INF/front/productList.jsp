@@ -10,16 +10,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <html>
   <head>
     <title>跨界天下-公司产品</title>
-    <link rel="stylesheet" href="/static/public/css/fonts.css" />
 	<link rel="stylesheet" href="/static/public/css/style.css" />
-	<link rel="stylesheet" href="/static/public/css/fwslider.css" />
-	<link rel="stylesheet" href="/static/public/css/jquery.bxslider.css" />
 	<link rel="stylesheet" href="/static/public/css/zalki_hover_img.css" />
 	<script type="text/javascript" src="/static/public/js/jquery-1.9.1.min.js"></script>
-	<script type="text/javascript" src="/static/public/js/jquery.validate.js"></script>
 	<script type="text/javascript" src="/static/public/js/common.js"></script>
 	<script type="text/javascript" src="/static/public/js/input.js"></script>
-	<script type="text/javascript" src='/static/public/js/me.js'></script>
 	<!----start-top-nav-script---->
 	<script type="text/javascript" src="/static/public/js/kjtx/flexy-menu.js"></script>
 	<script type="text/javascript">$(document).ready(function(){$(".flexy-menu").flexymenu({speed: 400,type: "horizontal",align: "right"});});</script>
@@ -63,7 +58,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<div style="width: 1200px;height: auto;margin: 10px auto;overflow: hidden;min-height:330px;">
 				<div style="height: auto;margin: 0 auto;">
 					<c:forEach items="${products }" var="product">
-						<div style="float: left;width: 378px;height: 150px;border: 1px solid #AEAEAE;margin: 15px  0px;">
+						<div style="float: left;width: 378px;height: 150px;border: 1px solid #AEAEAE;margin: 15px  10px;">
 							<div style="float: left;margin: 20px 20px;">
 								<a href="/productDetail.jhtml?productId=${product.id }"><img src="/${product.imgpath }?w=110&h=110"/></a>
 							</div>

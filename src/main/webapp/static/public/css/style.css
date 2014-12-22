@@ -147,6 +147,10 @@ body{
     font-size: 20px;
     font-family: microsoft yahei;
 }
+.main-nav a:hover {
+	color:#820000;
+	text-decoration: underline;
+}
 .main-nav li {
     border-bottom: 1px solid #BCBCBC;
     line-height: 45px;
