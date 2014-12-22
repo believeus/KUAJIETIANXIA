@@ -26,6 +26,9 @@ public class ControllerProduct {
 	public String productList(HttpServletRequest request,Integer partnerId) {
 		Partners partners=(Partners)baseService.findObject(Partners.class, partnerId);
 		List<Product> products = partners.getProducts();
+		for (Product product : products) {
+			product.setDescption(product.getDescption().replaceAll("<[^>]+>", ""));
+		}
 		request.setAttribute("products", products);
 		request.setAttribute("partners", partners);
 		//友情链接

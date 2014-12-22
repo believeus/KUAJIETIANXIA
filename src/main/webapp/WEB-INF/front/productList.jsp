@@ -1,6 +1,7 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib uri="http://www.believeus.cn/jstl/html" prefix="html" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -67,7 +68,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 									<a class="product-name" href="/productDetail.jhtml?productId=${product.id }">${product.name }</a>
 								</div>
 								<div style="font-size: 15px;width: 100%;line-height: 25px;" title="${product.descption }">
-									<html:html num="25" value="${product.descption }"></html:html>
+									<%-- <html:html num="25" value="${product.descption }"></html:html> --%>
+									${fn:substring(product.descption,0,25) }
+									<c:if test="${fn:length(product.descption) >25 }">...</c:if>
 								</div>
 								<div style="font-size: 14px;background-color: #922D2C;margin-top: 5%;text-align: center;width: 40%;line-height: 25px;margin-left: 52%;">
 									<a style="color: #FFFFFF;" href="/productDetail.jhtml?productId=${product.id }">详情...</a>
