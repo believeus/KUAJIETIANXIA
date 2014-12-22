@@ -5,7 +5,7 @@
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
@@ -42,7 +42,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     	<img src="/static/public/images/11.jpg" alt="" width="100%" />
     	<div class="center" style="width: 1200px; height: auto;margin: 0 auto;overflow: hidden;">
 			<div style="line-height: 65px;height: 55px;">
-				<div style="float: left;font-size: 23px;font-weight: bold;"><a style="color: #434343;" href="">集团产业</a></div>
+				<div style="float: left;font-size: 23px;font-weight: bold;"><a style="color: #434343;" href="/industryList.jhtml">集团产业</a></div>
 				<div style="float: left;font-size: 18px;margin: 0 8px;">>></div>
 				<div style="float: left;font-size: 16px;"><a style="color: #434343;" href="/kjtxabstract.jhtml?id=${partners.id }">${partners.name }</a></div>
 				<div style="float: left;font-size: 18px;margin: 0 8px;">>></div>
@@ -60,19 +60,19 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					<a style="color: #FFFFFF;" href="/kjtxproduct.jhtml">公司产品</a>
 				</div>
 			</div>
-			<div style="width: 1200px;height: auto;margin: 10px auto;overflow: hidden;">
+			<div style="width: 1200px;height: auto;margin: 10px auto;overflow: hidden;min-height:330px;">
 				<div style="height: auto;margin: 0 auto;">
 					<c:forEach items="${products }" var="product">
 						<div style="float: left;width: 378px;height: 150px;border: 1px solid #AEAEAE;margin: 15px  0px;">
 							<div style="float: left;margin: 20px 20px;">
-								<a href="/productDetail.jhtml?productId=${product.id }"><img src="/${product.imgpath }?w=100&h=100" /></a>
+								<a href="/productDetail.jhtml?productId=${product.id }"><img src="/${product.imgpath }?w=110&h=110"/></a>
 							</div>
 							<div style="float: left;color: #434343;margin-left: 10px;width: 55%">
 								<div style="font-size: 20px;width: 100%;line-height: 55px;">
 									<a class="product-name" href="/productDetail.jhtml?productId=${product.id }">${product.name }</a>
 								</div>
-								<div style="font-size: 15px;width: 100%;line-height: 25px;">
-									<html:html num="35" value="${product.descption }"></html:html>
+								<div style="font-size: 15px;width: 100%;line-height: 25px;" title="${product.descption }">
+									<html:html num="25" value="${product.descption }"></html:html>
 								</div>
 								<div style="font-size: 14px;background-color: #922D2C;margin-top: 5%;text-align: center;width: 40%;line-height: 25px;margin-left: 52%;">
 									<a style="color: #FFFFFF;" href="/productDetail.jhtml?productId=${product.id }">详情...</a>

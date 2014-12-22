@@ -1176,6 +1176,13 @@ input[type="search"].sb-search-input {
 	color: #820000;
 	text-decoration: underline;
 }
+.zhaoshang-title{
+	color: #000000;font-size: 18px;font-weight: bold;
+}
+.zhaoshang-title:hover{
+	color: #820000;
+	text-decoration: underline;
+}
 .footer-grid{
 	float: left;
 	width: 23.5%;

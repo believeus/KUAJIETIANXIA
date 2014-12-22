@@ -5,6 +5,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@taglib prefix="html" uri="http://www.believeus.cn/jstl/html" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
@@ -45,18 +46,18 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<c:forEach items="${page.content }" var="partner" varStatus="status">
 			<div style="border: 1px solid #CACBC6;height: 284px;margin: 0 auto;margin-bottom:30px;">
 				<div style="float: left;width: 50%;">
-					<a href="#">
+					<a href="/kjtxabstract.jhtml?id=${partner.id }">
 						<img style="width: 600px;height:265px;margin: 10px;" src="${partner.logo }" title="${partner.introduction }" />
 					</a>
 				</div>
 				<div style="float: left;width: 45%;margin: 10px 10px 10px 40px;">
 					<div style="line-height: 50px;margin-top: -15px">
-						<a href="/kjtxabstract.jhtml?id=${partner.id }" style="color: #000000;font-size: 18px;font-weight: bold;">
+						<a class="zhaoshang-title" href="/kjtxabstract.jhtml?id=${partner.id }">
 							${partner.name }
 						</a>
 					</div>
 					<div style="margin-top: 10px;text-indent: 2em;color: #666666;font-size: 16px;height:190px;">
-						${partner.introduction }
+						<html:html num="350" value="${partner.introduction }"></html:html>
 					</div>
 					<div style="font-size: 16px;float: right;margin-right: 20px;">
 						<a style="color: #922D2C;margin-right:30px;" href="/kjtxabstract.jhtml?id=${partner.id }">[更多简介...]</a>

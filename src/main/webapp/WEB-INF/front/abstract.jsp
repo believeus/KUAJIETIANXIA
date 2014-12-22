@@ -75,7 +75,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					<img alt="" src="/static/public/images/line.jpg" />
 				</div>
 				<p style="width: 1000px; margin: 20px auto 0; font-size: 16px; font-weight: bold;text-align:center;">公司介绍</p>
-				<div style="font-size: 16px;width: 77%;height: auto;color: #434343;margin: 40px auto 10px;">
+				<div style="font-size: 16px;width: 77%;height: auto;color: #434343;margin: 40px auto 10px;text-indent: 40px;">
 					${partners.introduction}
 				</div>
 				<c:if test="${partners.img1 ne null }">

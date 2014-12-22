@@ -86,7 +86,7 @@ $(function(){
 		}
 	});
 	
-	 // 百度地图API功能
+	/*  // 百度地图API功能
 	function G(id) {
 		return document.getElementById(id);
 	}
@@ -140,7 +140,7 @@ $(function(){
 		onSearchComplete: myFun
 	});
 		local.search(myValue);
-	}
+	} */
 	
 });
 </script>
@@ -156,9 +156,9 @@ $(function(){
 		<div style="width: 1200px;height: auto;margin: 10px auto;overflow: hidden;">
 			<div style="float: left;color: #434343;font-size: 16px;width: 450px;">
 				<div style="margin: 30px auto;">
-					<!--<img src="/static/public/images/map.jpg" style="width: 100%;"/> -->
-					 <div id="searchResultPanel" style="display: none;width:150px;height:auto;"></div>
-					<div id="l-map" style="width:auto;height:350px;"></div>
+					<img src="/static/public/images/map.jpg" style="width: 100%;"/> 
+					<!-- <div id="searchResultPanel" style="display: none;width:150px;height:auto;"></div>
+					<div id="l-map" style="width:auto;height:350px;"></div>-->
 				</div>
 				<div style="line-height:30px;">咨询电话：027-65650999</div>
 				<div style="line-height:30px;">邮箱：hbydcf@126.com</div>
