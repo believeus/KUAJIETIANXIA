@@ -5,6 +5,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@taglib prefix="html" uri="http://www.believeus.cn/jstl/html" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
@@ -83,10 +84,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						${myNew.name}
 					</td>
 					<td>
-						${fn:substring(myNew.descption, 0, 12)}
-						<c:if test="${fn:length(myNew.descption) > 12 }">
-		   					...
-	   					</c:if>
+	   					<html:html num="10" value="${myNew.descption }"></html:html>
 					</td>
 					<td>
 						<a href="/admin/product/edit.jhtml?id=${myNew.id}">[修改]</a>
