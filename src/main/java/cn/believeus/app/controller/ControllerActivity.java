@@ -38,11 +38,8 @@ public class ControllerActivity {
 		baseService.saveOrUpdata(variables);
 		Long size = baseService.findSize(TmobileUser.class);
 		request.setAttribute("size", size);
-<<<<<<< Updated upstream
 		List<TmobileUser> users = (List<TmobileUser>) baseService.findObjectList(TmobileUser.class);
 		request.setAttribute("users", users);
-=======
->>>>>>> Stashed changes
 		request.setAttribute("accessCount", accessCount);
 		return "/WEB-INF/app/front/activity.jsp";
 	}
@@ -95,11 +92,6 @@ public class ControllerActivity {
 		request.setAttribute("users", users);
 		request.setAttribute("size", users.size());
 		return "/WEB-INF/app/front/activityUsers.jsp";
-	}
-	
-	public String activityDeleteUser(Integer uid){
-		baseService.delete(TmobileUser.class, uid);
-		return "redirect:/app/activityUsers.jhtml";
 	}
 	
 

@@ -45,6 +45,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	            	</div>
 	                <div class="remid_mob2" style="display: none;">
 	            	    <p>微信帐号：${user.webxinCode }</p>
+	            	    <div id="remid_${status.index+1 }" class="remid_mob2_user clearfix">
+                    	<p class="fl">管理操作：</p>
+                        <div class="fl">
+                        	<a onclick="location.href='/app/userDelete.jhtml?uid=${user.id}'" href="javascript:void(0);">删除此人</a>
+                        </div>
+                    </div>
 	                </div>
 		        </div>
 	        </div>
@@ -94,7 +100,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<div id="foot">
 		<div class="height45"></div>
 		<div class="footer2 gradient_7 box_shadow_1" style="display: block;">
-		    <a onclick="history.go(-1);" href="javascript:void(0);"><div class="footer2_left fl">返回</div></a>
+		    <a onclick="location.href='/app/activity.jhtml'" href="javascript:void(0);"><div class="footer2_left fl">首页</div></a>
 	     <div class="fr">
        		<a onclick="window.location.reload();" href="javascript:void(0);">
        			<div class="footer2_right fl">
