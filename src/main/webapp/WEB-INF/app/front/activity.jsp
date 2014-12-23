@@ -219,7 +219,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <body>
     <header class="top box_shadow_1 clearfix">
 		<div class="top_btnL fl"><a onclick="history.go(-1);" href="javascript:void(0);">返回</a></div>
-	    <div class="top_btnR2 fr"><a onclick="location.href='/activityRegView.jhtml'" href="javascript:void(0);">报名</a></div>
+	    <div class="top_btnR2 fr"><a onclick="location.href='/app/activityRegView.jhtml'" href="javascript:void(0);">报名</a></div>
 	    <p class="top_title">跨界天下-活动报名</p>
 	</header>
    	<div class="a-main">
@@ -267,7 +267,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<p class="p1">陈明：18607103667</p>
    		</div>
    		<a onclick="location.href='/activityRegView.jhtml'" href="javascript:void(0);" class="ex_btn">我要报名（已有0人报名）</a>
-   		<a href="javascript:void(0);" onclick="location.href='/activityUsers.jhtml'" class="btn_general btn3">查看已报名人员信息</a>
+   		<a href="javascript:void(0);" onclick="location.href='/app/activityUsers.jhtml'" class="btn_general btn3">查看已报名人员信息</a>
    		
    		<div class="footer2 gradient_7 box_shadow_1">
 		    <a onclick="" href="javascript:void(0);"><div class="footer2_left fl">首页</div></a>
