@@ -10,6 +10,7 @@ import mydfs.storage.server.MydfsTrackerServer;
 import org.junit.Assert;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 import cn.believeus.model.app.TmobileUser;
@@ -95,5 +96,22 @@ public class ControllerActivity {
 		return "/WEB-INF/app/front/activityUsers.jsp";
 	}
 	
-
+	@RequestMapping("/app/ajaxPhone")
+	public @ResponseBody String ajaxPhone(String phone){
+		TmobileUser user = (TmobileUser)baseService.findObject(TmobileUser.class, "phone", phone);
+		if (user!=null) {
+			return "exist";
+		}else {
+			return "unexist";
+		}
+	}
+	@RequestMapping("/app/ajaxWeiXin")
+	public @ResponseBody String ajaxWeiXin(String weixin){
+		TmobileUser user = (TmobileUser)baseService.findObject(TmobileUser.class, "webxinCode", weixin);
+		if (user!=null) {
+			return "exist";
+		}else {
+			return "unexist";
+		}
+	}
 }

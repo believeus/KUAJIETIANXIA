@@ -62,7 +62,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	    	  $("#msg").css("display","block");
 	    	  $("#msg").delay(1500).fadeOut("fast");
 	    	  return false;
-		  }else if($("#weixin").val()==""){
+	      }else if($("#weixin").val()==""){
 	    	  $("#msg").text("请输入微信号");
 	    	  $("#msg").css("display","block");
 	    	  $("#msg").delay(1500).fadeOut("fast");
@@ -71,6 +71,38 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	    	  $("#inputForm").submit();
 	      }
       });
+      
+      $("#phone").blur(function(){
+    	if($("#phone").val().match(/^1[3|4|5|8][0-9]\d{4,8}$/)){
+	    	  var url="/app/ajaxPhone.jhtml?phone="+$("#phone").val();
+	    	  $.post(url,function(data){
+	    		  if(data=="exist"){
+	    			  $("#msg").text("手机号已被注册");
+	    	    	  $("#msg").css("display","block");
+	    	    	  $("#msg").delay(1500).fadeOut("fast"); 
+	    	    	  $("#phone").val("");
+	    		  }
+	    	  });
+
+		  }
+      });
+      
+      $("#weixin").blur(function(){
+    	  	if($("#weixin").val()!=""){
+    	  		 var url="/app/ajaxWeiXin.jhtml?weixin="+$("#weixin").val();
+     	    	 $.post(url,function(data){
+     	    		if(data=="exist"){
+     	    			 $("#msg").text("微信号已被注册");
+     	    	    	 $("#msg").css("display","block");
+     	    	    	 $("#msg").delay(1500).fadeOut("fast"); 
+     	    	    	 $("#weixin").val("");
+     	    		 }
+     	    	  });
+    	  	}
+  	    	 
+
+        });
+      
     });
    
    
