@@ -4,11 +4,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Map;
 import java.util.List;
-import java.util.Properties;
-
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
-
 import mydfs.storage.server.MydfsTrackerServer;
 import org.junit.Assert;
 import org.springframework.stereotype.Controller;
@@ -96,5 +93,11 @@ public class ControllerActivity {
 		request.setAttribute("size", users.size());
 		return "/WEB-INF/app/front/activityUsers.jsp";
 	}
+	
+	public String activityDeleteUser(Integer uid){
+		baseService.delete(TmobileUser.class, uid);
+		return "redirect:/app/activityUsers.jhtml";
+	}
+	
 
 }
