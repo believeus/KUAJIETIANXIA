@@ -3,6 +3,7 @@ package cn.believeus.app.controller;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Map;
+import java.util.List;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -19,12 +20,15 @@ import org.springframework.web.multipart.MultipartHttpServletRequest;
 import cn.believeus.model.app.TmobileUser;
 import cn.believeus.service.BaseService;
 
-@Controller()
+
+@Controller
 public class ControllerActivity {
 	@Resource
 	private BaseService baseService;
+	
 	@Resource
 	private MydfsTrackerServer mydfsTrackerServer;
+	
 	/**
 	 * 活动报名
 	 * @return
@@ -77,6 +81,9 @@ public class ControllerActivity {
 	 */
 	@RequestMapping("/app/activityUsers")
 	public String activityUsers(HttpServletRequest request){
+		List<TmobileUser> users = (List<TmobileUser>) baseService.findObjectList(TmobileUser.class);
+		request.setAttribute("users", users);
+		request.setAttribute("size", users.size());
 		return "/WEB-INF/app/front/activityUsers.jsp";
 	}
 

@@ -445,7 +445,7 @@ img {
     background-attachment: scroll, scroll;
     background-clip: border-box, border-box;
     background-color: rgba(0, 0, 0, 0);
-    background-image: url("../images/footer2R_L.png"), url("../images/footer2R_R.png");
+   /*  background-image: url("../images/footer2R_L.png"), url("../images/footer2R_R.png"); */
     background-origin: padding-box, padding-box;
     background-position: left 0px, right 0;
     background-repeat: no-repeat, no-repeat;
@@ -458,10 +458,20 @@ img {
     padding: 0 6px;
 }
 .footer2_right_2 {
-    background: url(../images/footer2R_C.png) repeat-x;
+   /*  background: url("/static/public/images/footer2R_C.png") repeat-x scroll 0 0 / auto 28px rgba(0, 0, 0, 0);
     height: 28px;
     padding: 0 4px;
-    text-shadow: 0 1px 0 #000;
+    text-shadow: 0 1px 0 #000; */
+    background: none repeat scroll 0 0 #2d3236;
+    border: 1px solid #131518;
+    border-radius: 4px;
+    color: #fff;
+    display: block;
+    height: 28px;
+    line-height: 28px;
+   /*  margin-top: 8px; */
+    padding: 0 10px;
+    text-align: center;
 }
 .ex_copy {
     color: #666;

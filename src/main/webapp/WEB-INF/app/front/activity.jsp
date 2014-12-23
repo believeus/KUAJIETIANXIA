@@ -14,6 +14,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<meta name="format-detection" content="telephone=no">
 	<meta content="yes" name="apple-mobile-web-app-capable">
 	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<link href="/static/public/css/at.css" type="text/css" rel="stylesheet">
 	<style type="text/css">
 		body{
 			background:#ECECEC;
@@ -30,7 +31,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			
 		}
 		.a-main{
-			margin: 55px 0;
+			margin: 55px 10px;
 		}
 		.a-main-title{
 			text-align: left;
@@ -64,18 +65,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		.a-main-img-div{
 			width:30%;
 			margin:0 auto;
-		}
-		.ex_btn {
-		    background-image: -moz-linear-gradient(center top , #fb172b, #d41324, #dde0e4);
-		    background-image: -webkit-linear-gradient(top,#fb172b, #d41324, #a7101d);
-		    border-radius: 3px;
-		    color: #fff;
-		    display: block;
-		    line-height: 36px;
-		    margin: 10px 0 15px;
-		    text-align: center;
-		    width: 100%;
-		    border: 1px solid #adadab;
 		}
 		.word-img{
 			position: relative;
@@ -176,12 +165,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		    text-shadow: 0 1px 0 #000;
 		    width: 43px;
 		}
-		.footer2_right_2 {
-		    background: url(/static/public/images/footer2R_C.png) repeat-x scroll 0 0 / auto 28px rgba(0, 0, 0, 0);
-		    height: 28px;
-		    padding: 0 4px;
-		    text-shadow: 0 1px 0 #000;
-		}
 		.footer2_left, .footer2_right {
 		    margin-top: 9px;
 		}
@@ -201,7 +184,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		    background-attachment: scroll, scroll;
 		    background-clip: border-box, border-box;
 		    background-color: rgba(0, 0, 0, 0);
-		    background-image: url(/static/public/images/footer2R_L.png), url(/static/public/images/footer2R_R.png);
+		    /* background-image: url(/static/public/images/footer2R_L.png), url(/static/public/images/footer2R_R.png); */
 		    background-origin: padding-box, padding-box;
 		    background-position: left 0px, right 0;
 		    background-repeat: no-repeat, no-repeat;
@@ -227,7 +210,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
    			跨界天下品牌发布暨院线电影《那十年》启动盛典
    		</div>
    		<div class="a-visitNum">
-   			访问数：116 &nbsp;&nbsp;&nbsp;投票数:0
+   			访问数：0 &nbsp;&nbsp;&nbsp;投票数：0 &nbsp;&nbsp;&nbsp;报名数：0
    		</div>
    		<div class="a-main-img">
 			<img src="/static/public/images/k_logo.jpg" width="100%"/>
@@ -270,7 +253,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
    		<a href="javascript:void(0);" onclick="location.href='/app/activityUsers.jhtml'" class="btn_general btn3">查看已报名人员信息</a>
    		
    		<div class="footer2 gradient_7 box_shadow_1">
-		    <a onclick="" href="javascript:void(0);"><div class="footer2_left fl">首页</div></a>
+		    <a onclick="location.href='/activity.jhtml'" href="javascript:void(0);"><div class="footer2_left fl">首页</div></a>
 		     <div class="fr">
 		        <a onclick="location.href='/activityReg.jhtml'" href="javascript:void(0);">
 		            <div class="footer2_right fl">

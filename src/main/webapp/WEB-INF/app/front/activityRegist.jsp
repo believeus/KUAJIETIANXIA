@@ -16,6 +16,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<meta content="black" name="apple-mobile-web-app-status-bar-style">
 	<script type="text/javascript" src="/static/public/js/jquery-1.9.1.min.js"></script>
 	<link href="/static/public/css/at.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="/static/public/js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript">
+		function FpicUp(){
+			//alert("图片上传成功");
+			$(".apply_add2_1_1").text("图片上传成功");
+			$(".apply_add2_1_1").css({"color":"#8EC400","font-weight":"bold"});
+		}
+	</script>
   </head>
    <script type="text/javascript">
     $(function(){
