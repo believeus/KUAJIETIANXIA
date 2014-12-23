@@ -38,8 +38,11 @@ public class ControllerActivity {
 		baseService.saveOrUpdata(variables);
 		Long size = baseService.findSize(TmobileUser.class);
 		request.setAttribute("size", size);
+<<<<<<< Updated upstream
 		List<TmobileUser> users = (List<TmobileUser>) baseService.findObjectList(TmobileUser.class);
 		request.setAttribute("users", users);
+=======
+>>>>>>> Stashed changes
 		request.setAttribute("accessCount", accessCount);
 		return "/WEB-INF/app/front/activity.jsp";
 	}

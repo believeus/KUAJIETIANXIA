@@ -7,6 +7,7 @@ import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import cn.believeus.model.app.TmobileUser;
 import cn.believeus.model.app.Tvariables;
 import cn.believeus.service.BaseService;
 
@@ -24,5 +25,11 @@ public class ActivityAdminController {
 			}
 		}
 		return "error";
+	}
+	
+	@RequestMapping("/app/userDelete")
+	public String activityDeleteUser(Integer uid){
+		baseService.delete(TmobileUser.class, uid);
+		return "redirect:/app/activityUsers.jhtml";
 	}
 }
