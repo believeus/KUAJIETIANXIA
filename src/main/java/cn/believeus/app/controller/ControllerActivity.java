@@ -38,7 +38,8 @@ public class ControllerActivity {
 		baseService.saveOrUpdata(variables);
 		Long size = baseService.findSize(TmobileUser.class);
 		request.setAttribute("size", size);
-		List<TmobileUser> users = (List<TmobileUser>) baseService.findObjectList(TmobileUser.class);
+		String hql="from TmobileUser user order by user.createTime desc ";
+		List<TmobileUser> users = (List<TmobileUser>) baseService.findObjectList(hql,10);
 		request.setAttribute("users", users);
 		request.setAttribute("accessCount", accessCount);
 		return "/WEB-INF/app/front/activity.jsp";
