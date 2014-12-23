@@ -155,6 +155,7 @@ function share_to(){
 
 /*查看报名人员*/
 function apply_user_info(a1){
+	
 	//alert(a1);
 	var c1="remid_mob1_"+a1;
 	

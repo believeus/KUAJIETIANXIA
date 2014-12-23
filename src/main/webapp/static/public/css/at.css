@@ -458,7 +458,7 @@ img {
     padding: 0 6px;
 }
 .footer2_right_2 {
-    background: url("../images/footer2R_C.png") repeat-x scroll 0 0 / auto 28px rgba(0, 0, 0, 0);
+    background: url(../images/footer2R_C.png) repeat-x;
     height: 28px;
     padding: 0 4px;
     text-shadow: 0 1px 0 #000;
@@ -499,12 +499,15 @@ img {
 }
 .gradient_1 {
     background-image: -moz-linear-gradient(center top , #ecedef, #e3e6e9, #dde0e4);
+	background-image: -webkit-linear-gradient(top,#ecedef, #e3e6e9, #dde0e4);
 }
 .gradient_7 {
     background-image: -moz-linear-gradient(center top , #3a434a, #2a3237, #191e22);
+    background-image: -webkit-linear-gradient(top,#3a434a, #2a3237, #191e22);
 }
 .gradient_4 {
     background-image: -moz-linear-gradient(center top , #eee, #ddd);
+    background-image: -webkit-linear-gradient(top,#eee, #ddd);
 }
 .box_shadow_1 {
     box-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
@@ -986,6 +989,7 @@ body.applyIndex {
 }
 .ex_btn {
     background-image: -moz-linear-gradient(center top , #fb172b, #d41324, #dde0e4);
+    background-image: -webkit-linear-gradient(top,#fb172b, #d41324, #a7101d);
     border-radius: 3px;
     color: #fff;
     display: block;
@@ -1872,6 +1876,7 @@ input.mp_ping_btn2 {
 }
 a.btn_mobile1, a.btn_mobile2, a.btn_mobile3, a.btn_mobile4 {
     background-image: -moz-linear-gradient(center top , #fb172b, #d41324, #dde0e4);
+    background-image:-webkit-linear-gradient(top,#fb172b, #d41324, #a7101d);
     border: 1px solid #adadab;
     border-radius: 4px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
