@@ -16,6 +16,24 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<meta content="black" name="apple-mobile-web-app-status-bar-style">
 	<script type="text/javascript" src="/static/public/js/jquery-1.9.1.min.js"></script>
 	<link href="/static/public/css/at.css" type="text/css" rel="stylesheet">
+	<style type="text/css">
+		.a-msg{
+			background: none repeat scroll 0 0 #000;
+		    border-radius: 5px;
+		    color: #fff;
+		    font-size: 20px;
+		    height: 100px;
+		    left: 50%;
+		    line-height: 100px;
+		    margin-left: -100px;
+		    margin-top: -50px;
+		    opacity: 0.9;
+		    position: fixed;
+		    text-align: center;
+		    top: 50%;
+		    width: 200px;
+		}
+	</style>
 	<script type="text/javascript" src="/static/public/js/jquery-1.9.1.min.js"></script>
 	<script type="text/javascript">
 		function FpicUp(){
@@ -27,8 +45,31 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
    <script type="text/javascript">
     $(function(){
+    	 
       $("#apply_add_on1").click(function(){
-    	  $("#inputForm").submit();
+	      if($("#username").val()==""){
+	    	  $("#msg").text("请输入姓名");
+	    	  $("#msg").css("display","block");
+	    	  $("#msg").delay(1500).fadeOut("fast");
+	    	  return false;
+	      }else if($("#phone").val()==""){
+	    	  $("#msg").text("请输入手机号");
+	    	  $("#msg").css("display","block");
+	    	  $("#msg").delay(1500).fadeOut("fast");
+	    	  return false;
+	      }else if(!$("#phone").val().match(/^1[3|4|5|8][0-9]\d{4,8}$/)){
+	    	  $("#msg").text("请正确输入手机号");
+	    	  $("#msg").css("display","block");
+	    	  $("#msg").delay(1500).fadeOut("fast");
+	    	  return false;
+		  }else if($("#weixin").val()==""){
+	    	  $("#msg").text("请输入微信号");
+	    	  $("#msg").css("display","block");
+	    	  $("#msg").delay(1500).fadeOut("fast");
+	    	  return false;
+	      }else{
+	    	  $("#inputForm").submit();
+	      }
       });
     });
    
@@ -55,7 +96,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				      <input type="submit" name="itemUpload" value="上传" id="apply_up_on" class="apply_up_on">
 				   </div>
 				  </div>
-			 <div class="apply_add2_1_1 fl">图片上传</div>
+			 <div class="apply_add2_1_1 fl">图片上传(可不填)</div>
 			</div>
 	        </div>
 		    <input type="hidden" name="picUrl1" id="picUrl1"><input type="hidden" name="picSite1" id="picSite1">
@@ -87,5 +128,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	     </div>
 		</div>
 	</div>
+	<div id="msg" class="a-msg" style="display:none;"></div>
   </body>
 </html>
