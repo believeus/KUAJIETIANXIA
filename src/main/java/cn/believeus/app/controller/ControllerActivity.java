@@ -10,7 +10,6 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
 import mydfs.storage.server.MydfsTrackerServer;
-
 import org.junit.Assert;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,7 +18,6 @@ import org.springframework.web.multipart.MultipartHttpServletRequest;
 import cn.believeus.model.app.TmobileUser;
 import cn.believeus.model.app.Tvariables;
 import cn.believeus.service.BaseService;
-import cn.believeus.util.PropertiesHelp;
 
 
 @Controller
@@ -84,15 +82,7 @@ public class ControllerActivity {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		request.setAttribute("message", "1");
-		Integer accessCount = Integer.parseInt(PropertiesHelp.getValueByKey("project.properties", "accessCount"));
-		++accessCount;
-		PropertiesHelp.setValueByKey("/project.properties", "accessCount", accessCount+"");
-		Long size = baseService.findSize(TmobileUser.class);
-		request.setAttribute("size", size);
-		List<TmobileUser> users = (List<TmobileUser>) baseService.findObjectList(TmobileUser.class);
-		request.setAttribute("users", users);
-		return "/WEB-INF/app/front/activity.jsp";
+		return "redirect:/app/activity.jhtml";
 	}
 	/**
 	 * 查看信息
