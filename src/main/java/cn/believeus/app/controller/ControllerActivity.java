@@ -76,9 +76,9 @@ public class ControllerActivity {
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
-				mobileUser.setCreateTime(System.currentTimeMillis());
-				baseService.merge(mobileUser);
 			}
+			mobileUser.setCreateTime(System.currentTimeMillis());
+			baseService.merge(mobileUser);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
