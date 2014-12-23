@@ -102,6 +102,20 @@ public class BaseDao extends HibernateDaoSupport {
 	public Object findObject(Class<?> clazz, Integer id) {
 		return getHibernateTemplate().get(clazz, id);
 	}
+	// 查找个数
+	public Long findSize(Class<?> clazz){
+		final String hql = "select count(*) from "+clazz.getName();
+		return (Long) this.getHibernateTemplate().execute(
+				new HibernateCallback<Object>() {
+					
+					@Override
+					public Object doInHibernate(Session session)
+							throws HibernateException, SQLException {
+						Query query = session.createQuery(hql);
+						 return query.uniqueResult();
+					}
+				});
+	}
 	public List<?> findObjectList(Class<?> clazz, final Object property,
 			final Object value) {
 		final String hql = "from " + clazz.getName()+ " as entity where entity." + property + " =:value";

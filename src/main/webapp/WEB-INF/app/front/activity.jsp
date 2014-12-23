@@ -210,7 +210,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
    			跨界天下品牌发布暨院线电影《那十年》启动盛典
    		</div>
    		<div class="a-visitNum">
-   			访问数：0 &nbsp;&nbsp;&nbsp;投票数：0 &nbsp;&nbsp;&nbsp;报名数：0
+   			访问数：0 &nbsp;&nbsp;&nbsp;投票数：0 &nbsp;&nbsp;&nbsp;报名数：${size }
    		</div>
    		<div class="a-main-img">
 			<img src="/static/public/images/k_logo.jpg" width="100%"/>

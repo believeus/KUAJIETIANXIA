@@ -57,12 +57,7 @@
 		<mapping class="cn.believeus.model.FriendLink"/>
 		<mapping class="cn.believeus.model.EnterpriseIntro"/>
 		<mapping class="cn.believeus.model.Honor"/>
-<<<<<<< Updated upstream
 		<mapping class="cn.believeus.model.app.TmobileUser"/>
-=======
-		<mapping class="cn.believeus.app.model.TmobileUser"/>
-		
->>>>>>> Stashed changes
 	</session-factory>
 
 </hibernate-configuration>

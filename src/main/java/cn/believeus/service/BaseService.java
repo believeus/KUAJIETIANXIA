@@ -88,6 +88,8 @@ public class BaseService{
 	public Page<?> findObjectList(Class<?> clazz,String property,String key, Pageable pageable) {
 		return (Page<?>) baseDao.getPageDateList(clazz, property, key, pageable);
 	}
-	
+	public Long findSize(Class<?> clazz){
+		return baseDao.findSize(clazz);
+	}
 
 }

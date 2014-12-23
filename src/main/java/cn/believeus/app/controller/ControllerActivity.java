@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Map;
 import java.util.List;
+import java.util.Properties;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -11,6 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import mydfs.storage.server.MydfsTrackerServer;
 
 import org.junit.Assert;
+import org.springframework.core.io.support.PropertiesLoaderUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -19,6 +21,7 @@ import org.springframework.web.multipart.MultipartHttpServletRequest;
 
 import cn.believeus.model.app.TmobileUser;
 import cn.believeus.service.BaseService;
+import cn.believeus.util.PropertiesHelp;
 
 
 @Controller
@@ -35,6 +38,11 @@ public class ControllerActivity {
 	 */
 	@RequestMapping("/app/activity")
 	public String activity(HttpServletRequest request){
+		Integer accessCount = Integer.parseInt(PropertiesHelp.getValueByKey("project.properties", "accessCount"));
+		++accessCount;
+		PropertiesHelp.setValueByKey("/project.properties", "accessCount", accessCount+"");
+		Long size = baseService.findSize(TmobileUser.class);
+		request.setAttribute("size", size);
 		return "/WEB-INF/app/front/activity.jsp";
 	}
 	/**
