@@ -12,14 +12,12 @@ import javax.servlet.http.HttpServletRequest;
 import mydfs.storage.server.MydfsTrackerServer;
 
 import org.junit.Assert;
-import org.springframework.core.io.support.PropertiesLoaderUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
-
 import cn.believeus.model.app.TmobileUser;
+import cn.believeus.model.app.Tvariables;
 import cn.believeus.service.BaseService;
 import cn.believeus.util.PropertiesHelp;
 
@@ -39,20 +37,21 @@ public class ControllerActivity {
 	@SuppressWarnings("unchecked")
 	@RequestMapping("/app/activity")
 	public String activity(HttpServletRequest request){
-		Integer accessCount = Integer.parseInt(PropertiesHelp.getValueByKey("project.properties", "accessCount"));
-		++accessCount;
-		PropertiesHelp.setValueByKey("/project.properties", "accessCount", accessCount+"");
+		Tvariables variables = (Tvariables) baseService.findObject(Tvariables.class, "name", "accessCount");
+		Integer accessCount=Integer.parseInt(variables.getValue());
+		variables.setValue(++accessCount+"");
+		baseService.saveOrUpdata(variables);
 		Long size = baseService.findSize(TmobileUser.class);
 		request.setAttribute("size", size);
 		List<TmobileUser> users = (List<TmobileUser>) baseService.findObjectList(TmobileUser.class);
 		request.setAttribute("users", users);
+		request.setAttribute("accessCount", accessCount);
 		return "/WEB-INF/app/front/activity.jsp";
 	}
 	/**
 	 * 信息填寫页面
 	 * @return
 	 */
-	@SuppressWarnings("unchecked")
 	@RequestMapping("/app/activityRegView")
 	public String activityRegView(HttpServletRequest request){
 		return "/WEB-INF/app/front/activityRegist.jsp";
