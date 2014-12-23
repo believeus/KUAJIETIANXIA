@@ -40,22 +40,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		        <div id="remid_mob_${status.index+1 }" class="remid_mob">
 	        	    <div onclick="apply_user_info('${status.index+1 }')" id="remid_mob1_${status.index+1 }" class="remid_mob1 clearfix">
 	        		    <p class="re_name">${user.username }</p>
-	                    <p class="re_status"><date:date parttern="yyyy-mm-dd" value="${user.editTime }"></date:date></p>
+	                    <p class="re_status"><date:date parttern="yyyy-MM-dd" value="${user.editTime }"></date:date></p>
 	                    <p class="re_phone"><a href="tel://${user.phone }">${user.phone }</a></p>
 	            	</div>
 	                <div class="remid_mob2" style="display: none;">
 	            	    <p>微信帐号：${user.webxinCode }</p>
-	                    <div id="remid_${status.index+1 }" class="remid_mob2_user clearfix">
-	                    	<p class="fl">管理操作：</p>
-	                        <div class="fl">
-	                        	<a onclick="" href="javascript:void(0);">删除此人</a>
-	                        </div>
-	                    </div>
 	                </div>
 		        </div>
 	        </div>
         </c:forEach>
-       <div class="remid_mob_s_8">
+     <!-- <div class="remid_mob_s_8">
 	        <div id="remid_mob_8" class="remid_mob">
         	    <div onclick="apply_user_info('8')" id="remid_mob1_8" class="remid_mob1 clearfix">
         		    <p class="re_name">张三</p>
@@ -73,7 +67,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 </div>
 	        </div>
         </div>
-       <!--   <div class="remid_mob_s_9">
+       <div class="remid_mob_s_9">
 	        <div id="remid_mob_9" class="remid_mob">
         	    <div onclick="apply_user_info('9')" id="remid_mob1_9" class="remid_mob1 clearfix">
         		    <p class="re_name">李四</p>

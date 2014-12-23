@@ -3,7 +3,7 @@
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
-
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
@@ -13,6 +13,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<meta content="no" name="apple-touch-fullscreen">
 	<meta name="format-detection" content="telephone=no">
 	<meta content="yes" name="apple-mobile-web-app-capable">
+	<script type="text/javascript" src="/static/public/js/jquery-1.9.1.min.js"></script>
 	<meta content="black" name="apple-mobile-web-app-status-bar-style">
 	<link href="/static/public/css/at.css" type="text/css" rel="stylesheet">
 	<style type="text/css">
@@ -68,7 +69,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		}
 		.word-img{
 			position: relative;
-		    top: 5px;
 		    width: 20px;
 		    margin: 0 5px;
 		}
@@ -196,12 +196,47 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		    margin-right: 10px;
 		    padding: 0 6px;
 		}
+		.a-msg{
+			background: none repeat scroll 0 0 #000;
+		    border-radius: 5px;
+		    color: #fff;
+		    font-size: 20px;
+		    height: 100px;
+		    left: 50%;
+		    line-height: 100px;
+		    margin-left: -100px;
+		    margin-top: -50px;
+		    opacity: 0.9;
+		    position: fixed;
+		    text-align: center;
+		    top: 50%;
+		    width: 200px;
+		}
+		.user-list{
+			width:49%;
+			height:35px;
+			line-height:35px;
+			float:left;
+			text-align: center;
+			background:#EC2D3C;
+			color:#fff;
+			margin-bottom: 10px;
+			border-radius:4px;
+		}
 	</style>
+	<script type="text/javascript">
+		$(function(){
+			$(".btn_general").click(function(){
+				
+			});
+			$("#msg").delay(1500).fadeOut("fast");
+		});
+	</script>
   </head>
   
   <body>
     <header class="top box_shadow_1 clearfix">
-		<div class="top_btnL fl"><a onclick="history.go(-1);" href="javascript:void(0);">返回</a></div>
+		<!-- <div class="top_btnL fl"><a onclick="history.go(-1);" href="javascript:void(0);">返回</a></div> -->
 	    <div class="top_btnR2 fr"><a onclick="location.href='/app/activityRegView.jhtml'" href="javascript:void(0);">报名</a></div>
 	    <p class="top_title">跨界天下-活动报名</p>
 	</header>
@@ -210,7 +245,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
    			跨界天下品牌发布暨院线电影《那十年》启动盛典
    		</div>
    		<div class="a-visitNum">
-   			访问数：0 &nbsp;&nbsp;&nbsp;投票数：0 &nbsp;&nbsp;&nbsp;报名数：${size }
+   			访问数：${accessCount } &nbsp;&nbsp;&nbsp;报名数：${size }
    		</div>
    		<div class="a-main-img">
 			<img src="/static/public/images/k_logo.jpg" width="100%"/>
@@ -249,13 +284,19 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<p class="p1">周丹：18672911319</p>
 			<p class="p1">陈明：18607103667</p>
    		</div>
-   		<a onclick="location.href='/app/activityRegView.jhtml'" href="javascript:void(0);" class="ex_btn">我要报名（已有0人报名）</a>
+   		<a onclick="location.href='/app/activityRegView.jhtml'" href="javascript:void(0);" class="ex_btn">我要报名（已有${size }人报名）</a>
    		<a href="javascript:void(0);" onclick="location.href='/app/activityUsers.jhtml'" class="btn_general btn3">查看已报名人员信息</a>
    		
+   		<div style="width:100%;height:auto;overflow:hidden;margin-top:10px;">
+	   		<c:forEach items="${users }" var="user" varStatus="status">
+	   			<div class="user-list" <c:if test="${(status.index+1)%2==0 }">style="float:right;"</c:if> >${user.username }</div>
+	   		</c:forEach>
+   		</div>
+   		
    		<div class="footer2 gradient_7 box_shadow_1">
-		    <a onclick="location.href='/activity.jhtml'" href="javascript:void(0);"><div class="footer2_left fl">首页</div></a>
+		    <a onclick="location.href='/app/activity.jhtml'" href="javascript:void(0);"><div class="footer2_left fl">首页</div></a>
 		     <div class="fr">
-		        <a onclick="location.href='/activityReg.jhtml'" href="javascript:void(0);">
+		        <a onclick="location.href='/app/activityRegView.jhtml'" href="javascript:void(0);">
 		            <div class="footer2_right fl">
 		            	<div class="footer2_right_2">报名</div>
 		            </div>
@@ -268,5 +309,15 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
    			&copy;跨界天下
    		</div>
    	</div>
+   	<!-- <div class="">
+   		<form action="">
+   			
+   		</form>
+   	</div> -->
+   	<c:if test="${message eq '1' }">
+	   	<div id="msg" class="a-msg">
+	   		信息提交成功
+	   	</div>
+   	</c:if>
   </body>
 </html>

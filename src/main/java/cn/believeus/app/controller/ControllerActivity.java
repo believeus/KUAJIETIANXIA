@@ -36,6 +36,7 @@ public class ControllerActivity {
 	 * 活动报名
 	 * @return
 	 */
+	@SuppressWarnings("unchecked")
 	@RequestMapping("/app/activity")
 	public String activity(HttpServletRequest request){
 		Integer accessCount = Integer.parseInt(PropertiesHelp.getValueByKey("project.properties", "accessCount"));
@@ -43,12 +44,15 @@ public class ControllerActivity {
 		PropertiesHelp.setValueByKey("/project.properties", "accessCount", accessCount+"");
 		Long size = baseService.findSize(TmobileUser.class);
 		request.setAttribute("size", size);
+		List<TmobileUser> users = (List<TmobileUser>) baseService.findObjectList(TmobileUser.class);
+		request.setAttribute("users", users);
 		return "/WEB-INF/app/front/activity.jsp";
 	}
 	/**
 	 * 信息填寫页面
 	 * @return
 	 */
+	@SuppressWarnings("unchecked")
 	@RequestMapping("/app/activityRegView")
 	public String activityRegView(HttpServletRequest request){
 		return "/WEB-INF/app/front/activityRegist.jsp";
@@ -81,13 +85,21 @@ public class ControllerActivity {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return "redirect:/app/activity.jhtml";
-		
+		request.setAttribute("message", "1");
+		Integer accessCount = Integer.parseInt(PropertiesHelp.getValueByKey("project.properties", "accessCount"));
+		++accessCount;
+		PropertiesHelp.setValueByKey("/project.properties", "accessCount", accessCount+"");
+		Long size = baseService.findSize(TmobileUser.class);
+		request.setAttribute("size", size);
+		List<TmobileUser> users = (List<TmobileUser>) baseService.findObjectList(TmobileUser.class);
+		request.setAttribute("users", users);
+		return "/WEB-INF/app/front/activity.jsp";
 	}
 	/**
 	 * 查看信息
 	 * @return
 	 */
+	@SuppressWarnings("unchecked")
 	@RequestMapping("/app/activityUsers")
 	public String activityUsers(HttpServletRequest request){
 		List<TmobileUser> users = (List<TmobileUser>) baseService.findObjectList(TmobileUser.class);
