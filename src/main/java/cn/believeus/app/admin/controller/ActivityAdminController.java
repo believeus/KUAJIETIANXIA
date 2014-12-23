@@ -20,7 +20,7 @@ public class ActivityAdminController {
 		if(!StringUtils.isEmpty(password)){
 			Tvariables variables = (Tvariables) baseService.findObject(Tvariables.class, "name", "password");
 			if (password.equals(variables.getValue())) {
-				return "success";
+				return "/app/activityUsers.jhtml";
 			}
 		}
 		return "error";

@@ -58,6 +58,7 @@
 		<mapping class="cn.believeus.model.EnterpriseIntro"/>
 		<mapping class="cn.believeus.model.Honor"/>
 		<mapping class="cn.believeus.model.app.TmobileUser"/>
+		<mapping class="cn.believeus.model.app.Tvariables"/>
 	</session-factory>
 
 </hibernate-configuration>

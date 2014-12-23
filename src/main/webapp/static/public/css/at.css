@@ -1137,7 +1137,7 @@ li.ex_mv_li2 {
     border-radius: 5px;
     margin-bottom: 10px;
     padding: 10px 5px;
-    width: 96%;
+    width: 99%;
 }
 .apply_box a {
     background-repeat: no-repeat;
@@ -1227,7 +1227,10 @@ li.ex_mv_li2 {
     color: #888;
 }
 .reset {
-    background-image: url("../images/but02.png");
+    /* background-image: url("../images/but02.png"); */
+    background:#E9E9E9;
+    border-radius:5px;
+    cursor:pointer;
 }
 .apply_boxBtn ul li {
     background-repeat: no-repeat;
@@ -1248,7 +1251,8 @@ li.ex_mv_li2 {
     margin-right: 2px;
 }
 .apply_boxBtn ul li input {
-    background-image: url("../images/but01.png");
+    /* background-image: url(/static/public/images/but01.png); */
+    background:#D1030D;
     background-repeat: no-repeat;
     background-size: 100% auto;
     color: #fff;

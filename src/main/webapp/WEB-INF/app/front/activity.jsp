@@ -212,6 +212,24 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		    top: 50%;
 		    width: 200px;
 		}
+		#msg2{
+			background: none repeat scroll 0 0 #000;
+		    border-radius: 5px;
+		    color: #fff;
+		    font-size: 20px;
+		    height: 100px;
+		    left: 50%;
+		    line-height: 100px;
+		    margin-left: -100px;
+		    margin-top: -50px;
+		    opacity: 0.9;
+		    position: fixed;
+		    text-align: center;
+		    top: 50%;
+		    width: 200px;
+		    display:none;
+		    z-index:99999;
+		}
 		.user-list{
 			width:49%;
 			height:35px;
@@ -223,13 +241,68 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			margin-bottom: 10px;
 			border-radius:4px;
 		}
+		.a-msg-password{
+			background: none repeat scroll 0 0 #000;
+		    border-radius: 5px;
+		    color: #fff;
+		    font-size: 20px;
+		    height: 150px;
+		    left: 50%;
+		    line-height: 100px;
+		    margin-left: -150px;
+		    margin-top: -75px;
+		    opacity: 0.9;
+		    position: fixed;
+		    text-align: center;
+		    top: 50%;
+		    width: 300px;
+		    background:#CCCCCC;
+		    display:none;
+		    z-index:9999;
+		}
+		.bg-pass{
+			background:#000;width:100%;height:auto;opacity:0.9;position:absolute;top:0;z-index:999;display:none;
+		}
+		.subBtn{
+			background:#D4040F;
+			padding:10px 20px;
+			border:1px solid #AAAAAA;
+			color:#fff;
+		}
+		.cBtn{
+			background:#E9E9E9;
+			padding:10px 20px;
+			border:1px solid #AAAAAA;
+		}
 	</style>
 	<script type="text/javascript">
 		$(function(){
 			$(".btn_general").click(function(){
 				
 			});
+			$("#bg-pass").css("height","3223px");
 			$("#msg").delay(1500).fadeOut("fast");
+			$("#viewUsers").click(function(){
+				$("#bg-pass").show();
+				$("#msg-password").show();
+				//location.href = "/app/activityUsers.jhtml";
+			});
+			$("#BtnOn6").click(function(){
+				$("#bg-pass").hide();
+				$("#msg-password").hide();
+			});
+			$("#BtnOn01").click(function(){
+				var url="/app/adminLogin.jhtml?password="+$("#pwd").val();
+				$.post(url,function(data){
+					if(data=="error"){
+						 $("#msg2").text("密码错误");
+				    	 $("#msg2").css("display","block");
+				    	 $("#msg2").delay(1500).fadeOut("fast");
+					}else{
+						location.href=data;
+					}
+				}); 
+			});
 		});
 	</script>
   </head>
@@ -285,7 +358,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<p class="p1">陈明：18607103667</p>
    		</div>
    		<a onclick="location.href='/app/activityRegView.jhtml'" href="javascript:void(0);" class="ex_btn">我要报名（已有${size }人报名）</a>
-   		<a href="javascript:void(0);" onclick="location.href='/app/activityUsers.jhtml'" class="btn_general btn3">查看已报名人员信息</a>
+   		<a href="javascript:void(0);" id="viewUsers" class="btn_general btn3">查看已报名人员信息</a>
    		
    		<div style="width:100%;height:auto;overflow:hidden;margin-top:10px;">
 	   		<c:forEach items="${users }" var="user" varStatus="status">
@@ -319,5 +392,21 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	   		信息提交成功
 	   	</div>
    	</c:if>
+   	<div id="msg2"></div>
+   	<div id="bg-pass" class="bg-pass"></div>
+   	<div id="msg-password" style="display:none;z-index:9999;position:absolute;">
+		<form action="/app/adminLogin.jhtml" method="post">
+	   		<div class="apply_box apply_box2" style="display: block;">
+				<p>请输入管理密码</p>
+			    <input type="password" maxlength="16" placeholder="输入管理密码" required="" name="pwd" id="pwd">
+			    <div class="apply_boxBtn clearfix">
+			    	<ul>
+			           <li id="BtnOn4" class="sub"><input type="button" value="提交" id="BtnOn01" class="BtnOn1"></li>
+			           <li id="BtnOn6" class="reset fr">取消</li>
+			        </ul>
+			    </div>
+			</div>
+		</form>
+   	</div>
   </body>
 </html>
