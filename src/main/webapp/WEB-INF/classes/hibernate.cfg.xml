@@ -57,7 +57,7 @@
 		<mapping class="cn.believeus.model.FriendLink"/>
 		<mapping class="cn.believeus.model.EnterpriseIntro"/>
 		<mapping class="cn.believeus.model.Honor"/>
-		
+		<mapping class="cn.believeus.model.app.TmobileUser"/>
 	</session-factory>
 
 </hibernate-configuration>

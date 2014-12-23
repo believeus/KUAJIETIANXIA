@@ -1,8 +1,7 @@
-package cn.believeus.app.model;
+package cn.believeus.model.app;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;
-
 import cn.believeus.model.TbaseEntity;
 
 @Entity
@@ -15,7 +14,7 @@ public class TmobileUser extends TbaseEntity {
 	private String imgpath;//图片
 	private String vedioURL;//视频连接地址
 	private String motto;//口号
-	private String describe;//描述
+	private String description;//描述
 	public String getUsername() {
 		return username;
 	}
@@ -52,11 +51,11 @@ public class TmobileUser extends TbaseEntity {
 	public void setMotto(String motto) {
 		this.motto = motto;
 	}
-	public String getDescribe() {
-		return describe;
+	public String getDescription() {
+		return description;
 	}
-	public void setDescribe(String describe) {
-		this.describe = describe;
+	public void setDescription(String description) {
+		this.description = description;
 	}
 	
 
