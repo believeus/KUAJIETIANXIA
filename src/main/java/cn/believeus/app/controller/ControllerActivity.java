@@ -55,7 +55,7 @@ public class ControllerActivity {
 	}
 	// 用户注册
 	@RequestMapping("/app/activityReg")
-	public @ResponseBody String activityReg(HttpServletRequest request,TmobileUser mobileUser){
+	public  String activityReg(HttpServletRequest request,TmobileUser mobileUser){
 		try {
 			MultipartHttpServletRequest multipartRequest = (MultipartHttpServletRequest) request;
 			String storepath = "";
@@ -75,12 +75,13 @@ public class ControllerActivity {
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
+				mobileUser.setCreateTime(System.currentTimeMillis());
 				baseService.merge(mobileUser);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return "";
+		return "redirect:/app/activity.jhtml";
 		
 	}
 	/**

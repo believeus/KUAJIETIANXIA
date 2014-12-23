@@ -249,7 +249,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<p class="p1">周丹：18672911319</p>
 			<p class="p1">陈明：18607103667</p>
    		</div>
-   		<a onclick="location.href='/activityRegView.jhtml'" href="javascript:void(0);" class="ex_btn">我要报名（已有0人报名）</a>
+   		<a onclick="location.href='/app/activityRegView.jhtml'" href="javascript:void(0);" class="ex_btn">我要报名（已有0人报名）</a>
    		<a href="javascript:void(0);" onclick="location.href='/app/activityUsers.jhtml'" class="btn_general btn3">查看已报名人员信息</a>
    		
    		<div class="footer2 gradient_7 box_shadow_1">
