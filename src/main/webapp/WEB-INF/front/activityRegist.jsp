@@ -1,0 +1,66 @@
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>跨界天下-活动信息填写</title>
+    <meta charset="utf-8">
+    <meta content="target-densitydpi=get-target-densitydpi,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,width=device-width, user-scalable=no" name="viewport">
+	<meta content="no" name="apple-touch-fullscreen">
+	<meta name="format-detection" content="telephone=no">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<link href="/static/public/css/at.css" type="text/css" rel="stylesheet">
+  </head>
+  
+  <body>
+    <header class="top box_shadow_1 clearfix">
+		<div class="top_btnL fl"><a onclick="history.go(-1);" href="javascript:void(0);">返回</a></div>
+	    <div class="top_btnR2 fr"></div>
+	    <p class="top_title">填写信息</p>
+	</header>
+	<div class="height45"></div>
+	<div class="warp apply_warp">
+		<p class="explain">发布违法、反动内容或冒用他人、组织名义发布，将依据记录提交公安机关处理，请不要涉及敏感政治话题</p>
+	    <div class="apply_add2"><input type="text" placeholder="真实姓名（必填）" required="" maxlength="10" name="username" id="username" class="txt1"></div>
+	    <div class="apply_add2"><input type="text" placeholder="手机，非常重要，唯一身份析别（必填）" required="" maxlength="11" name="phone" id="phone" class="txt1 "></div>
+	    <div class="apply_add2"><input type="text" placeholder="微信，唯一互联网联系方式（必填）" required="" maxlength="30" name="weixin" id="weixin" class="txt1"></div>
+        <div class="apply_add2">
+        	<div id="FpicUpDiv1" class="FpicUpDiv1">
+			<form style="word-spacing: 0; text-indent: 0; margin: 0" action="mjoinpic_up_save.asp" enctype="multipart/form-data" method="post">
+			<div class="apply_add2_1 clearfix"><div id="apply_up1" class="apply_up1 fl"><div class="apply_up1_1"><input type="file" onchange="FpicUp();" name="picfile" class="apply_up_k" id="apply_up_k"><input type="hidden" value="1" name="sessionid"><input type="submit" name="itemUpload" value="上传" id="apply_up_on" class="apply_up_on"></div></div><div class="apply_add2_1_1 fl">图片上传(1)</div></div>
+			</form>
+			</div>
+        </div>
+	    <input type="hidden" name="picUrl1" id="picUrl1"><input type="hidden" name="picSite1" id="picSite1">
+	 	<div class="apply_add2"><input type="text" value="" placeholder="参赛视频，可粘贴“优酷视频”网址（可不填）" required="" maxlength="150" name="matmv" id="matmv" class="txt1"></div>
+	    <div class="apply_add2"><input type="text" placeholder="参赛口号（可不填）" required="" maxlength="30" name="kouhao" id="kouhao" class="txt1"><input type="hidden" value="38" name="aid" id="aid"><input type="hidden" value="" name="netid" id="netid"><input type="hidden" value="yes" name="wxsite" id="wxsite"></div>
+		<div class="apply_add2"><input type="text" placeholder="备注，附加说明（可不填）" required="" maxlength="20" name="beizhu" id="beizhu" class="txt1"></div>
+	    <a onclick="" href="javascript:void(0); " id="apply_add_on1" class="btn_mobile1 apply_sub">提 交</a>
+	</div>
+	<div id="net_re" class="net_re"></div>
+	<a onclick="" href="javascript:void(0);"><div class="ex_copy">&copy;跨界天下</div></a>
+	<div id="foot">
+		<div class="height45"></div>
+		<div class="footer2 gradient_7 box_shadow_1" style="display: block;">
+		    <a onclick="history.go(-1);" href="javascript:void(0);"><div class="footer2_left fl">返回</div></a>
+	     <div class="fr">
+	        <a onclick="location.href='apply-create.html';" href="javascript:void(0);">
+	        	<div class="footer2_right fl">
+	        		<div class="footer2_right_2">发起</div>
+        		</div>
+       		</a>
+       		<a onclick="window.location.reload();" href="javascript:void(0);">
+       			<div class="footer2_right fl">
+       				<div class="footer2_right_2">刷新</div>
+   				</div>
+			</a>
+	     </div>
+		</div>
+	</div>
+  </body>
+</html>
