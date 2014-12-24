@@ -7,7 +7,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
-    <title>跨界天下-活动报名</title>
+    <title>跨界天下启动活动报名</title>
     <meta charset="utf-8">
     <meta content="target-densitydpi=get-target-densitydpi,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,width=device-width, user-scalable=no" name="viewport">
 	<meta content="no" name="apple-touch-fullscreen">
@@ -283,13 +283,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			$(".btn_general").click(function(){
 				
 			});
-			$("#stop_music").click(function(){
+			//背景音乐
+			/* $("#stop_music").click(function(){
 				if($("#emb").attr("src") == "/static/public/jingle_bells.mp3"){
-					$("#emb").attr("src","");
+					$("#emb").remove();
 				}else{
 					location.href="/app/activity.jhtml";
 				}
-			});
+			}); */
 			$("#bg-pass").css("height","3223px");
 			$("#msg").delay(1500).fadeOut("fast");
 			$("#viewUsers").click(function(){
@@ -320,7 +321,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <body>
     <header class="top box_shadow_1 clearfix">
 		<!-- <div class="top_btnL fl"><a onclick="history.go(-1);" href="javascript:void(0);">返回</a></div> -->
-	    <div class="top_btnR2 fr"><a id="stop_music" href="javascript:void(0);">停止背景音乐</a></div>
+	    <!-- <div class="top_btnR2 fr"><a id="stop_music" href="javascript:void(0);">停止背景音乐</a></div> -->
 	    <div class="top_btnR2 fr"><a onclick="location.href='/app/activityRegView.jhtml'" href="javascript:void(0);">报名</a></div>
 	    <p class="top_title">跨界天下启动活动报名</p>
 	</header>
@@ -390,7 +391,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		     </div>
 		</div>
 		<!-- <bgsound loop="true" src="/static/public/jingle_bells.mp3" /> -->
-		<embed id="emb" src="/static/public/jingle_bells.mp3" width=0 height=0 type=audio/mpeg loop="200" autostart="true" controls="pausebutton"></embed>
+		<!-- <embed id="emb" src="/static/public/jingle_bells.mp3" width=0 height=0 type=audio/mpeg loop="200" autostart="true" controls="pausebutton"></embed> -->
    		<div class="a-main-word" style="text-align:center;background:#ECECEC;font-size: 15px;">
    			&copy;跨界天下
    		</div>
