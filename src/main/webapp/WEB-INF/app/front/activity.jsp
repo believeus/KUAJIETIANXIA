@@ -131,20 +131,22 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		    float: right !important;
 		}
 		.top_btnR2 a {
-		    background: none repeat scroll 0 0 #2d3236;
-		    border: 1px solid #131518;
+		    background: none repeat scroll 0 0 #932d2b;
+		   /*  border: 1px solid #131518; */
+		   border: 0;
 		    border-radius: 4px;
 		    color: #fff;
 		    display: block;
 		    height: 28px;
 		    line-height: 28px;
 		    margin-top: 8px;
-		    padding: 0 10px;
+		    padding: 0 18px;
 		    text-align: center;
+		    font-weight:bold;
 		}
 		.top_title {
 		    color: #fff;
-		    font-size: 18px;
+		    font-size: 16px;
 		    line-height: 45px;
 		    margin: 0 auto;
 		    text-align: center;
@@ -386,7 +388,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
    		<div class="footer2 gradient_7 box_shadow_1">
 		    <a onclick="location.href='/app/activity.jhtml'" href="javascript:void(0);"><div class="footer2_left fl">首页</div></a>
 		     <div class="fr">
-		        <a onclick="location.href='/app/activityRegView.jhtml'" href="javascript:void(0);"><div class="footer2_right fl"><div class="footer2_right_2">报名</div></div></a>
+		        <a onclick="location.href='/app/activityRegView.jhtml'" href="javascript:void(0);"><div class="footer2_right fl"><div class="footer2_right_2" style="background:#932D2B;font-weight:bold;padding: 0 20px;border:0;">报名</div></div></a>
 		        <a onclick="window.location.reload();" href="javascript:void(0);"><div class="footer2_right fl"><div class="footer2_right_2">刷新</div></div></a>
 		     </div>
 		</div>

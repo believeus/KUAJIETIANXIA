@@ -112,14 +112,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				            </div>
 			            </c:forEach>
 		            </c:if> --%>
-		            <c:if test="${bannerSize==0 }">
+		            <%-- <c:if test="${bannerSize==0 }"> --%>
 			            <div class="slide">
-			                <img src="/static/public/images/2.jpg" alt=""/>
+			                <img src="/static/public/images/d.jpg" alt=""/>
 			            </div>
 			            <div class="slide">
-			                <img src="/static/public/images/1.jpg" alt=""/>
+			                <img src="/static/public/images/c.jpg" alt=""/>
 			            </div>
-		            </c:if>
+		           <%--  </c:if> --%>
 		        </div>
 		        <div class="timers"> </div>
 		        <div class="slidePrev" style="opacity:0.1;"><span> </span></div>
