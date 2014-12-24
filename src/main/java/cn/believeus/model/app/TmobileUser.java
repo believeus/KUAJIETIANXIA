@@ -14,7 +14,7 @@ public class TmobileUser extends TbaseEntity {
 	private String imgpath;//图片
 	private String vedioURL;//视频连接地址
 	private String motto;//口号
-	private String description;//描述
+	private String description;//单位名称
 	public String getUsername() {
 		return username;
 	}
@@ -57,6 +57,5 @@ public class TmobileUser extends TbaseEntity {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	
 
 }

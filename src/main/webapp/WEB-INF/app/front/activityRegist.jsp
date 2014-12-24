@@ -67,6 +67,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	    	  $("#msg").css("display","block");
 	    	  $("#msg").delay(1500).fadeOut("fast");
 	    	  return false;
+	      }else if($("#description").val()==""){
+	    	  $("#msg").text("请输入单位名称");
+	    	  $("#msg").css("display","block");
+	    	  $("#msg").delay(1500).fadeOut("fast");
+	    	  return false;
 	      }else{
 	    	  $("#inputForm").submit();
 	      }
@@ -120,27 +125,28 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		    <div class="apply_add2"><input type="text" placeholder="真实姓名（必填）" required="" maxlength="10" name="username" id="username" class="txt1"></div>
 		    <div class="apply_add2"><input type="text" placeholder="手机，非常重要，唯一身份析别（必填）" required="" maxlength="11" name="phone" id="phone" class="txt1 "></div>
 		    <div class="apply_add2"><input type="text" placeholder="微信，唯一互联网联系方式（必填）" required="" maxlength="30" name="webxinCode" id="weixin" class="txt1"></div>
-	        <div class="apply_add2">
+	        <!-- <div class="apply_add2">
 				  <div class="apply_add2_1 clearfix">
-				   <div id="apply_up1" class="apply_up1 fl">
-				     <div class="apply_up1_1"><input type="file" onchange="FpicUp();" name="picfile" class="apply_up_k" id="apply_up_k">
-				      <input type="hidden" value="1" name="sessionid">
-				      <input type="submit" name="itemUpload" value="上传" id="apply_up_on" class="apply_up_on">
-				   </div>
-				  </div>
-			 <div class="apply_add2_1_1 fl">图片上传(可不填)</div>
-			</div>
-	        </div>
-		    <input type="hidden" name="picUrl1" id="picUrl1"><input type="hidden" name="picSite1" id="picSite1">
+					   <div id="apply_up1" class="apply_up1 fl">
+					     <div class="apply_up1_1"><input type="file" onchange="FpicUp();" name="picfile" class="apply_up_k" id="apply_up_k">
+					      <input type="hidden" value="1" name="sessionid">
+					      <input type="submit" name="itemUpload" value="上传" id="apply_up_on" class="apply_up_on">
+					   </div>
+					  </div>
+				 	<div class="apply_add2_1_1 fl">图片上传(可不填)</div>
+				</div>
+	        </div> -->
+		    <!-- <input type="hidden" name="picUrl1" id="picUrl1"><input type="hidden" name="picSite1" id="picSite1">
 		 	<div class="apply_add2">
-		 		<input type="text" value="" placeholder="参赛视频，可粘贴“优酷视频”网址（可不填）" required="" maxlength="150" name="vedioURL" id="matmv" class="txt1"></div>
-		    <div class="apply_add2">
+		 		<input type="text" value="" placeholder="参赛视频，可粘贴“优酷视频”网址（可不填）" required="" maxlength="150" name="vedioURL" id="matmv" class="txt1">
+	 		</div> -->
+		   <!--  <div class="apply_add2">
 		    	<input type="text" placeholder="参赛口号（可不填）" required="" maxlength="30" name="motto" id="motto" class="txt1">
 		    	<input type="hidden" value="38" name="aid" id="aid"><input type="hidden" value="" name="netid" id="netid">
 		    	<input type="hidden" value="yes" name="wxsite" id="wxsite">
-		    </div>
+		    </div> -->
 			<div class="apply_add2">
-				<input type="text" placeholder="备注，附加说明（可不填）" required="" maxlength="20" name="note" id="description" class="txt1">
+				<input type="text" placeholder="单位名称（必填）" required="" maxlength="20" name="description" id="description" class="txt1">
 			</div>
 		    <a  href="javascript:void(0); " id="apply_add_on1" class="btn_mobile1 apply_sub">提 交</a>
 	    </form>

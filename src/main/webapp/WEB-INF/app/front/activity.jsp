@@ -274,11 +274,21 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			padding:10px 20px;
 			border:1px solid #AAAAAA;
 		}
+		.p3{
+			color:#942E2C;font-weight: bold;
+		}
 	</style>
 	<script type="text/javascript">
 		$(function(){
 			$(".btn_general").click(function(){
 				
+			});
+			$("#stop_music").click(function(){
+				if($("#emb").attr("src") == "/static/public/jingle_bells.mp3"){
+					$("#emb").attr("src","");
+				}else{
+					location.href="/app/activity.jhtml";
+				}
 			});
 			$("#bg-pass").css("height","3223px");
 			$("#msg").delay(1500).fadeOut("fast");
@@ -310,8 +320,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <body>
     <header class="top box_shadow_1 clearfix">
 		<!-- <div class="top_btnL fl"><a onclick="history.go(-1);" href="javascript:void(0);">返回</a></div> -->
+	    <div class="top_btnR2 fr"><a id="stop_music" href="javascript:void(0);">停止背景音乐</a></div>
 	    <div class="top_btnR2 fr"><a onclick="location.href='/app/activityRegView.jhtml'" href="javascript:void(0);">报名</a></div>
-	    <p class="top_title">跨界天下-活动报名</p>
+	    <p class="top_title">跨界天下启动活动报名</p>
 	</header>
    	<div class="a-main">
    		<div class="a-main-title">
@@ -323,18 +334,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
    		<div class="a-main-img">
 			<img src="/static/public/images/k_logo.jpg" width="100%"/>
    		</div>
-   		<div class="a-main-word">
-   			<img src="/static/public/images/ex_icon1.png" class="word-img"/>
-   			活动时间：2014年12月28日 18:00
-   		</div>
-   		<div class="a-main-word">
-   			<img src="/static/public/images/ex_icon2.png" class="word-img"/>
-   			费用：凭邀请函免费
-   		</div>
-   		<div class="a-main-word">
-   			<img src="/static/public/images/ex_icon5.png" class="word-img"/>
-   			地点：湖北省武汉市武昌区积玉桥万达威斯汀酒店
-   		</div>
+   		
    		<div class="a-main-word">
    			<p class="p1">这里， 将跨领域之鸿沟</p>
 			<p class="p1">这里， 将界定自身之价值</p>
@@ -347,11 +347,27 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<p class="p1" style="line-height: 20px;">我们诚邀阁下参加2014年12月28晚6点于武汉万达威斯汀酒店举办的跨界天下品牌发布暨院线电影《那十年》启动盛典及剧组主创媒体见面会。</p>
 			<p class="p1" style="line-height: 20px;">《那十年》由香港著名音乐人李健达(将徐小凤送上音乐巅峰的殿堂级音乐人)亲自操刀主题曲及背景音乐，神秘大咖乐当幕后推手，姜潮、谈莉娜、易易紫、陈俊文等众多帅男靓女倾情出演。</p>
 			<p class="p1" style="line-height: 20px;">活动当晚姜潮、谈莉娜、易易紫、苗皓钧、冼灏英、王韦智、陈俊文等明星将莅临现场。</p>
-			<p class="p1" style="margin-bottom:30px;">星光璀璨 邀您共享！ </p>
-			
+			<p class="p1">星光璀璨 邀您共享！ </p>
 			<p class="p1">八方齐聚，共襄盛举。</p>
-			<p class="p1" style="margin-bottom:30px;">诚邀阁下拨冗莅临！</p>
-			
+			<p class="p1">诚邀阁下拨冗莅临！</p>
+			<p class="p3" style="margin-top:30px;">雪花飘飘,钟声敲敲,平安夜为你祈祷。</p>
+			<p class="p3">舞姿摇摇,嗓门高高,狂欢夜任你逍遥。</p>
+			<p class="p3">问候捎捎,祝福早早,快乐的圣诞多美好。</p>
+			<p class="p3" style="">愿你圣诞开心乐陶陶。</p>
+		</div>	
+			<div class="a-main-word">
+	   			<img src="/static/public/images/ex_icon1.png" class="word-img"/>
+	   			活动时间：2014年12月28日 18:00
+	   		</div>
+	   		<!-- <div class="a-main-word">
+	   			<img src="/static/public/images/ex_icon2.png" class="word-img"/>
+	   			费用：凭邀请函免费
+	   		</div> -->
+	   		<div class="a-main-word">
+	   			<img src="/static/public/images/ex_icon5.png" class="word-img"/>
+	   			地点：湖北省武汉市武昌区积玉桥万达威斯汀酒店
+	   		</div>
+		<div class="a-main-word">	
 			<p class="p1">本次活动凭邀请函入场，欢迎致电咨询。</p>
 			<p class="p1">刘媛：13098823668</p>
 			<p class="p1">周丹：18672911319</p>
@@ -369,15 +385,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
    		<div class="footer2 gradient_7 box_shadow_1">
 		    <a onclick="location.href='/app/activity.jhtml'" href="javascript:void(0);"><div class="footer2_left fl">首页</div></a>
 		     <div class="fr">
-		        <a onclick="location.href='/app/activityRegView.jhtml'" href="javascript:void(0);">
-		            <div class="footer2_right fl">
-		            	<div class="footer2_right_2">报名</div>
-		            </div>
-		        </a>
+		        <a onclick="location.href='/app/activityRegView.jhtml'" href="javascript:void(0);"><div class="footer2_right fl"><div class="footer2_right_2">报名</div></div></a>
 		        <a onclick="window.location.reload();" href="javascript:void(0);"><div class="footer2_right fl"><div class="footer2_right_2">刷新</div></div></a>
 		     </div>
 		</div>
-		
+		<!-- <bgsound loop="true" src="/static/public/jingle_bells.mp3" /> -->
+		<embed id="emb" src="/static/public/jingle_bells.mp3" width=0 height=0 type=audio/mpeg loop="200" autostart="true" controls="pausebutton"></embed>
    		<div class="a-main-word" style="text-align:center;background:#ECECEC;font-size: 15px;">
    			&copy;跨界天下
    		</div>

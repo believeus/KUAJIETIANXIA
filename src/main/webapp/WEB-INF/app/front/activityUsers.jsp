@@ -44,6 +44,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	                    <p class="re_phone"><a href="tel://${user.phone }">${user.phone }</a></p>
 	            	</div>
 	                <div class="remid_mob2" style="display: none;">
+	            	    <p>单位名称：${user.description }</p>
 	            	    <p>微信帐号：${user.webxinCode }</p>
 	            	    <div id="remid_${status.index+1 }" class="remid_mob2_user clearfix">
                     	<p class="fl">管理操作：</p>
@@ -55,43 +56,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		        </div>
 	        </div>
         </c:forEach>
-     <!-- <div class="remid_mob_s_8">
-	        <div id="remid_mob_8" class="remid_mob">
-        	    <div onclick="apply_user_info('8')" id="remid_mob1_8" class="remid_mob1 clearfix">
-        		    <p class="re_name">张三</p>
-                    <p class="re_status">2014-12-23</p>
-                    <p class="re_phone"><a href="tel://13311112606">13311112606</a></p>
-            	</div>
-                <div class="remid_mob2" style="display: none;">
-            	    <p>微信帐号：13311112606</p>
-                    <div id="remid_8" class="remid_mob2_user clearfix">
-                    	<p class="fl">管理操作：</p>
-                        <div class="fl">
-                        	<a onclick="" href="javascript:void(0);">删除此人</a>
-                        </div>
-                    </div>
-                </div>
-	        </div>
-        </div>
-       <div class="remid_mob_s_9">
-	        <div id="remid_mob_9" class="remid_mob">
-        	    <div onclick="apply_user_info('9')" id="remid_mob1_9" class="remid_mob1 clearfix">
-        		    <p class="re_name">李四</p>
-                    <p class="re_status">2014-12-23</p>
-                    <p class="re_phone"><a href="tel://13311112606">13311112606</a></p>
-            	</div>
-                <div class="remid_mob2" style="display: none;">
-            	    <p>微信帐号：13311112606</p>
-                    <div id="remid_9" class="remid_mob2_user clearfix">
-                    	<p class="fl">管理操作：</p>
-                        <div class="fl">
-                        	<a onclick="" href="javascript:void(0);">删除此人</a>
-                        </div>
-                    </div>
-                </div>
-	        </div>
-        </div> -->
-        
      </div>
 	</article>
 	
@@ -101,13 +65,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<div class="height45"></div>
 		<div class="footer2 gradient_7 box_shadow_1" style="display: block;">
 		    <a onclick="location.href='/app/activity.jhtml'" href="javascript:void(0);"><div class="footer2_left fl">首页</div></a>
-	     <div class="fr">
-       		<a onclick="window.location.reload();" href="javascript:void(0);">
-       			<div class="footer2_right fl">
-       				<div class="footer2_right_2">刷新</div>
-   				</div>
-			</a>
-	     </div>
+		     <div class="fr">
+	       		<a onclick="window.location.reload();" href="javascript:void(0);">
+	       			<div class="footer2_right fl">
+	       				<div class="footer2_right_2">刷新</div>
+	   				</div>
+				</a>
+		     </div>
 		</div>
 	</div>
   </body>
