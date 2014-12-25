@@ -6,6 +6,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>  
  <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
  <%@taglib uri="http://www.believeus.cn/jstl/date" prefix="date" %>
+ <%@taglib uri="http://www.believeus.cn/jstl/html" prefix="html" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
@@ -117,14 +118,15 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
        					<a href="/zixunContent.jhtml?id=${news.id}"><font class="keywordsColor"></font>${news.title}</a>
    					</p>
        				<div class="content-list-desc">
-       					<c:choose>
+       					<html:html num="100" value="${news.content }"></html:html>
+       					<%-- <c:choose>
     						 <c:when test="${fn:length(news.content) > 100}">
      							<c:out value="${fn:substring(news.content, 0, 100)}......" />
     						 </c:when>
      						<c:otherwise>
       							<c:out value="${news.content}" />
     						 </c:otherwise>
-   						 </c:choose>
+   						 </c:choose> --%>
        				</div>
        				<p class="search-date">发布时间：<date:date parttern="yyyy-MM-dd" value="${news.editTime}"></date:date></p>
        			</div>

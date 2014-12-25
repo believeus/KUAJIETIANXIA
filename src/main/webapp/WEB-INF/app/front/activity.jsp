@@ -391,12 +391,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	   			<div class="user-list" <c:if test="${(status.index+1)%2==0 }">style="float:right;"</c:if> >${user.username }</div>
 	   		</c:forEach> --%>
 	   		<div class="erweima">
-	   			<img src="/static/public/images/weixin.jpg" width="100%" />
-	   			<div style="text-align:center;font-weight: bold;">扫一扫，关注跨界天下公众号</div>
+	   			<a href="weixin://profile/KuaJieTianXia"><img src="/static/public/images/weixin.jpg" width="100%" /></a>
+	   			<div style="text-align:center;font-weight: bold;">扫一扫，关注跨界天下公众号(KuaJieTianXia)</div>
 	   		</div>
 	   		<div class="erweima" style="float:right;">
-	   			<img src="/static/public/images/address.png" width="100%" />
-	   			<div style="text-align:center;font-weight: bold;">扫一扫，查看活动地址</div>
+	   			<a href="/activityAddress.jhtml"><img src="/static/public/images/address.png" width="100%" /></a>
+	   			<div style="text-align:center;font-weight: bold;">点一点，查看活动地址</div>
 	   		</div>
    		</div>
    		
@@ -413,11 +413,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
    			&copy;跨界天下
    		</div>
    	</div>
-   	<!-- <div class="">
-   		<form action="">
-   			
-   		</form>
-   	</div> -->
    	<c:if test="${message eq '1' }">
 	   	<div id="msg" class="a-msg">
 	   		信息提交成功
