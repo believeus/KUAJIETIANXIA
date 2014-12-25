@@ -7,7 +7,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
-    <title>跨界天下启动活动报名</title>
+    <title>跨界天下-邀请函</title>
     <meta charset="utf-8">
     <meta content="target-densitydpi=get-target-densitydpi,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,width=device-width, user-scalable=no" name="viewport">
 	<meta content="no" name="apple-touch-fullscreen">
@@ -292,6 +292,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			top:0;
 			background:#000;
 		}
+		.tips{
+			background: #fdb913;
+		    border-radius: 5px;
+		    color: #fff;
+		    font-family: SimSun;
+		    margin-right: 15px;
+		    padding: 5px 10px;
+		}
 	</style>
 	<script type="text/javascript">
 		$(function(){
@@ -345,19 +353,23 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <header class="top box_shadow_1 clearfix">
 		<!-- <div class="top_btnL fl"><a onclick="history.go(-1);" href="javascript:void(0);">返回</a></div> -->
 	    <!-- <div class="top_btnR2 fr"><a id="stop_music" href="javascript:void(0);">停止背景音乐</a></div> -->
-	    <div class="top_btnR2 fr"><a onclick="location.href='/app/activityRegView.jhtml'" href="javascript:void(0);">报名</a></div>
-	    <p class="top_title">跨界天下启动活动报名</p>
+	    <div class="top_btnR2 fr"><a onclick="location.href='/app/activityRegView.jhtml'" href="javascript:void(0);">签到</a></div>
+	    <p class="top_title" style="overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">跨界天下品牌发布暨院线电影《那十年》启动盛典邀请函</p>
 	</header>
    	<div class="a-main">
    		<div class="a-main-title">
-   			跨界天下品牌发布暨院线电影《那十年》启动盛典
+   			跨界天下品牌发布暨院线电影《那十年》启动盛典邀请函
    		</div>
    		<div class="a-visitNum">
-   			访问数：${accessCount } &nbsp;&nbsp;&nbsp;报名数：${size }
+   			访问数：${accessCount }<%--  &nbsp;&nbsp;&nbsp;签到数：${size } --%>
+   		</div>
+   		<div class="a-main-title" style="margin:10px 0;border-radius:5px;">
+   			<span class="tips">诚意邀请</span>跨界天下，诚邀您的光临！
    		</div>
    		<div class="a-main-img">
 			<img src="/static/public/images/k_logo.jpg" width="100%"/>
    		</div>
+		<img alt="" src="/static/public/images/y.jpg" width="100%" style="border-radius:4px;margin-top: 10px;">
    		
    		<div class="a-main-word">
    			<p class="p1">这里， 将跨领域之鸿沟</p>
@@ -374,10 +386,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<p class="p1">星光璀璨 邀您共享！ </p>
 			<p class="p1">八方齐聚，共襄盛举。</p>
 			<p class="p1">诚邀阁下拨冗莅临！</p>
-			<p class="p3" style="margin-top:30px;">雪花飘飘,钟声敲敲,平安夜为你祈祷。</p>
-			<p class="p3">舞姿摇摇,嗓门高高,狂欢夜任你逍遥。</p>
-			<p class="p3">问候捎捎,祝福早早,快乐的圣诞多美好。</p>
-			<p class="p3" style="">愿你圣诞开心乐陶陶。</p>
 		</div>	
 			<div class="a-main-word">
 	   			<img src="/static/public/images/ex_icon1.png" class="word-img"/>
@@ -397,13 +405,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<p class="p1">刘媛：13098823668</p>
 			<p class="p1">陈明：18607103667</p>
    		</div>
-   		<a onclick="location.href='/app/activityRegView.jhtml'" href="javascript:void(0);" class="ex_btn">我要报名（已有${size }人报名）</a>
-   		<!-- <a href="javascript:void(0);" id="viewUsers" class="btn_general btn3">查看已报名人员信息</a> -->
+   		<a onclick="location.href='/app/activityRegView.jhtml'" href="javascript:void(0);" class="ex_btn">我要签到（已有${size }人签到）</a>
+   		<!-- <a href="javascript:void(0);" id="viewUsers" class="btn_general btn3">查看已签到人员信息</a> -->
    		
    		<div style="width:100%;height:auto;overflow:hidden;margin-top:10px;">
 	   		<%-- <c:forEach items="${users }" var="user" varStatus="status">
 	   			<div class="user-list" <c:if test="${(status.index+1)%2==0 }">style="float:right;"</c:if> >${user.username }</div>
 	   		</c:forEach> --%>
+	   		<img alt="" src="/static/public/images/d.jpg" width="100%" style="border-radius:4px;margin-bottom: 10px;">
 	   		<div class="erweima">
 	   			<img id="weixin_id" src="/static/public/images/weixin.jpg" width="100%" />
 	   			<div style="text-align:center;font-weight: bold;">扫一扫，关注跨界天下公众号(KuaJieTianXia)</div>
@@ -417,8 +426,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
    		<div class="footer2 gradient_7 box_shadow_1">
 		    <a onclick="location.href='/app/activity.jhtml'" href="javascript:void(0);"><div class="footer2_left fl">首页</div></a>
 		     <div class="fr">
-		        <a onclick="location.href='/app/activityRegView.jhtml'" href="javascript:void(0);"><div class="footer2_right fl"><div class="footer2_right_2" style="background:#932D2B;font-weight:bold;padding: 0 20px;border:0;">报名</div></div></a>
-		        <a onclick="window.location.reload();" href="javascript:void(0);"><div class="footer2_right fl"><div class="footer2_right_2">刷新</div></div></a>
+		        <a onclick="location.href='/app/activityRegView.jhtml'" href="javascript:void(0);"><div class="footer2_right fl"><div class="footer2_right_2" style="background:#932D2B;font-weight:bold;padding: 0 20px;border:0;">签到</div></div></a>
+		        <!-- <a onclick="window.location.reload();" href="javascript:void(0);"><div class="footer2_right fl"><div class="footer2_right_2">刷新</div></div></a> -->
 		     </div>
 		</div>
 		<!-- <bgsound loop="true" src="/static/public/jingle_bells.mp3" /> -->
