@@ -286,6 +286,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		.erweima img{
 			border-radius:4px;
 		}
+		.b-erweima{
+			width:100%;
+			position:fixed;
+			top:0;
+			background:#000;
+		}
 	</style>
 	<script type="text/javascript">
 		$(function(){
@@ -323,6 +329,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					}
 				}); 
 			});
+			$(".b-erweima img").click(function(){
+				$(".b-erweima").hide();
+			});
+			$("#weixin_id").click(function(){
+				$(".b-erweima").show();
+			});
+			var height = window.screen.height;
+			$(".b-erweima").css("height",height);
 		});
 	</script>
   </head>
@@ -391,7 +405,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	   			<div class="user-list" <c:if test="${(status.index+1)%2==0 }">style="float:right;"</c:if> >${user.username }</div>
 	   		</c:forEach> --%>
 	   		<div class="erweima">
-	   			<a href="weixin://profile/KuaJieTianXia"><img src="/static/public/images/weixin.jpg" width="100%" /></a>
+	   			<img id="weixin_id" src="/static/public/images/weixin.jpg" width="100%" />
 	   			<div style="text-align:center;font-weight: bold;">扫一扫，关注跨界天下公众号(KuaJieTianXia)</div>
 	   		</div>
 	   		<div class="erweima" style="float:right;">
@@ -433,6 +447,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			    </div>
 			</div>
 		</form>
+   	</div>
+   	<div class="b-erweima" style="display:none;">
+   		<img src="/static/public/images/weixin.jpg" width="100%" style="margin-top:50px;"/>
    	</div>
   </body>
 </html>

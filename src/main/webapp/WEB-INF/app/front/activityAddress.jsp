@@ -10,24 +10,11 @@
 	</style>
 	<script type="text/javascript" src="/static/public/js/jquery-1.9.1.min.js"></script>
 	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=2qkpDitMlFIilEPKy62fiWDe"></script>
-	<script type="text/javascript" src="http://counter.sina.com.cn/ip/" charset="gb2312"></script> 
 	<script type="text/javascript">
 		$(function(){
 			// 百度地图API功能
 			var map = new BMap.Map("l-map");            // 创建Map实例
 			map.centerAndZoom(new BMap.Point(114.31431662552, 30.570363859501), 12);
-			/* var driving = new BMap.DrivingRoute(map, {
-			    renderOptions: {
-			        map: map
-			    }
-			});
-
-			driving.search('武汉市洪山区街道口未来城E座', '武汉万达威斯汀酒店'); */
-			//alert(ILData[0]); 
-			/* var url="http://api.map.baidu.com/location/ip?ak=2qkpDitMlFIilEPKy62fiWDe&ip=219.140.15.9&coor=bd09ll";
-			$.get(url,function(data){
-				alert(date.point.x);
-			}); */
 			var local = new BMap.LocalSearch(map, {
 				renderOptions: {map: map, panel: "r-result"}
 			});
@@ -36,7 +23,7 @@
 			var height = window.screen.height;
 			//alert(height);
 			//document.getElementById("l-map").style.height=height;
-			$("#l-map").css({"height":height});
+			$("#l-map").css({"height":"560px"});
 		});
 	
 	</script>
