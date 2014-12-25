@@ -343,7 +343,7 @@ body{
 	float:right;
 	position: relative;
 	left:100px;
-	width:1200px !important;
+	width:990px !important;
 	/* width: 67%; */
 }
 /*----//main-header----*/
@@ -373,7 +373,7 @@ body{
 	padding: 1.3em 1.1em;
 	color: #5D6E80;
 	font-weight: 600;
-	font-size: 1.21em;
+	font-size: 14px;
 	text-decoration: none;
 	display: block;
 	text-transform: uppercase;

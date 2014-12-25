@@ -58,7 +58,7 @@
 	<div class="wrap">
 	<!--- start-logo---->
 	<div class="logo" style="margin-top: 0px; z-index: 99;">
-		<a href="/"><img src="/static/public/images/logo_kjtx.jpg" height="106" title="跨界天下" /></a>
+		<a href="/"><img src="/static/public/images/logo_h.png" height="106" title="跨界天下" /></a>
 	</div>
 	<!--- //End-logo---->
 	<!--- start-top-nav---->

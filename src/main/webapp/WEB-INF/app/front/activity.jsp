@@ -279,6 +279,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		.p3{
 			color:#942E2C;font-weight: bold;
 		}
+		.erweima{
+			width:49%;
+			float:left;
+		}
+		.erweima img{
+			border-radius:4px;
+		}
 	</style>
 	<script type="text/javascript">
 		$(function(){
@@ -372,17 +379,25 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	   		</div>
 		<div class="a-main-word">	
 			<p class="p1">本次活动凭邀请函入场，欢迎致电咨询。</p>
-			<p class="p1">刘媛：13098823668</p>
 			<p class="p1">周丹：18672911319</p>
+			<p class="p1">刘媛：13098823668</p>
 			<p class="p1">陈明：18607103667</p>
    		</div>
    		<a onclick="location.href='/app/activityRegView.jhtml'" href="javascript:void(0);" class="ex_btn">我要报名（已有${size }人报名）</a>
-   		<a href="javascript:void(0);" id="viewUsers" class="btn_general btn3">查看已报名人员信息</a>
+   		<!-- <a href="javascript:void(0);" id="viewUsers" class="btn_general btn3">查看已报名人员信息</a> -->
    		
    		<div style="width:100%;height:auto;overflow:hidden;margin-top:10px;">
-	   		<c:forEach items="${users }" var="user" varStatus="status">
+	   		<%-- <c:forEach items="${users }" var="user" varStatus="status">
 	   			<div class="user-list" <c:if test="${(status.index+1)%2==0 }">style="float:right;"</c:if> >${user.username }</div>
-	   		</c:forEach>
+	   		</c:forEach> --%>
+	   		<div class="erweima">
+	   			<img src="/static/public/images/weixin.jpg" width="100%" />
+	   			<div style="text-align:center;font-weight: bold;">扫一扫，关注跨界天下公众号</div>
+	   		</div>
+	   		<div class="erweima" style="float:right;">
+	   			<img src="/static/public/images/address.png" width="100%" />
+	   			<div style="text-align:center;font-weight: bold;">扫一扫，查看活动地址</div>
+	   		</div>
    		</div>
    		
    		<div class="footer2 gradient_7 box_shadow_1">
