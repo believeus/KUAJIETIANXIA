@@ -415,14 +415,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	   		<img alt="" src="/static/public/images/d.jpg" width="100%" style="border-radius:4px;margin-bottom: 10px;">
 	   		<div class="erweima">
 	   			<img id="weixin_id" src="/static/public/images/weixin.jpg" width="100%" />
-	   			<div style="text-align:center;font-weight: bold;">扫一扫，关注跨界天下公众号(KuaJieTianXia)</div>
+	   			<div style="text-align:center;font-weight: bold;"><span style="color:#942E2C;font-size:17px;">扫一扫</span><br/>关注跨界天下公众号</div>
 	   		</div>
 	   		<div class="erweima" style="float:right;">
 	   			<a href="/activityAddress.jhtml"><img src="/static/public/images/address.png" width="100%" /></a>
-	   			<div style="text-align:center;font-weight: bold;">点一点，查看活动地址</div>
+	   			<div style="text-align:center;font-weight: bold;"><span style="color:#942E2C;font-size:17px;">点一点</span><br/>查看活动地址</div>
 	   		</div>
    		</div>
-   		
+   		<div style="text-align:center;font-weight: bold;color:#942E2C;">微信公众号：KuaJieTianXia</div>
    		<div class="footer2 gradient_7 box_shadow_1">
 		    <a onclick="location.href='/app/activity.jhtml'" href="javascript:void(0);"><div class="footer2_left fl">首页</div></a>
 		     <div class="fr">
