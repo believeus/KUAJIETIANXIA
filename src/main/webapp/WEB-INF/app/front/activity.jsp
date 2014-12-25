@@ -7,7 +7,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
-    <title>跨界天下-邀请函</title>
+    <title>尊敬的贵宾诚邀您参加《那十年》启动盛典仪式</title>
     <meta charset="utf-8">
     <meta content="target-densitydpi=get-target-densitydpi,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,width=device-width, user-scalable=no" name="viewport">
 	<meta content="no" name="apple-touch-fullscreen">
@@ -353,7 +353,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <header class="top box_shadow_1 clearfix">
 		<!-- <div class="top_btnL fl"><a onclick="history.go(-1);" href="javascript:void(0);">返回</a></div> -->
 	    <!-- <div class="top_btnR2 fr"><a id="stop_music" href="javascript:void(0);">停止背景音乐</a></div> -->
-	    <div class="top_btnR2 fr"><a onclick="location.href='/app/activityRegView.jhtml'" href="javascript:void(0);">签到</a></div>
+	    <!-- <div class="top_btnR2 fr"><a onclick="location.href='/app/activityRegView.jhtml'" href="javascript:void(0);">签到</a></div> -->
 	    <p class="top_title" style="overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">跨界天下品牌发布暨院线电影《那十年》启动盛典邀请函</p>
 	</header>
    	<div class="a-main">
@@ -363,13 +363,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
    		<div class="a-visitNum">
    			访问数：${accessCount }<%--  &nbsp;&nbsp;&nbsp;签到数：${size } --%>
    		</div>
-   		<div class="a-main-title" style="margin:10px 0;border-radius:5px;">
-   			<span class="tips">诚意邀请</span>跨界天下，诚邀您的光临！
+   		<div class="a-main-title" style="margin:10px 0;border-radius:5px;text-align:center;">
+   			<!-- <span class="tips">诚意邀请</span> -->跨界天下，诚邀您的光临！
    		</div>
    		<div class="a-main-img">
 			<img src="/static/public/images/k_logo.jpg" width="100%"/>
    		</div>
-		<img alt="" src="/static/public/images/y.jpg" width="100%" style="border-radius:4px;margin-top: 10px;">
+		<img src="/static/public/images/y.jpg" width="100%" style="border-radius:4px;margin-top: 10px;">
    		
    		<div class="a-main-word">
    			<p class="p1">这里， 将跨领域之鸿沟</p>
