@@ -7,7 +7,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
-    <title>尊敬的贵宾诚邀您参加跨界天下《那十年》启动盛典仪式</title>
+    <title>诚邀您参加跨界天下品牌发布暨院线电影《那十年》启动盛典仪式</title>
     <meta charset="utf-8">
     <meta content="target-densitydpi=get-target-densitydpi,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,width=device-width, user-scalable=no" name="viewport">
 	<meta content="no" name="apple-touch-fullscreen">
