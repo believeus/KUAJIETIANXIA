@@ -44,13 +44,17 @@ public class ControllerIndex {
 		request.setAttribute("industries", industries);
 		request.setAttribute("iSize", industries.size());
 		//集团资讯
-		List<Information> informations = (List<Information>) baseService.findObjectList(Information.class);
+		/*List<Information> informations = (List<Information>) baseService.findObjectList(Information.class);
 		for (Information information : informations) {
 			String content = information.getContent().replaceAll("<[^>]+>", "");
 			information.setContent(content);
 		}
 		request.setAttribute("informations", informations);
-		request.setAttribute("inSize", informations.size());
+		request.setAttribute("inSize", informations.size());*/
+		//---------新闻
+		List<Tnews> news = (List<Tnews>) baseService.findObjectList(Tnews.class);
+		request.setAttribute("informations", news);
+		request.setAttribute("inSize", news.size());
 		//合作伙伴
 		List<Partners> partners = (List<Partners>) baseService.findObjectList(Partners.class);
 		request.setAttribute("partners", partners);

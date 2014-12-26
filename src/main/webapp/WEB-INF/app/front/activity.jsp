@@ -300,6 +300,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		    margin-right: 15px;
 		    padding: 5px 10px;
 		}
+		.big-img{
+			width:100%;height:auto;background:#000;position:absolute;top:0;z-index:99999;display: table-cell; vertical-align:middle;text-align:center;
+		}
+		.big-img img{
+			vertical-align:middle;
+		}
 	</style>
 	<script type="text/javascript">
 		$(function(){
@@ -335,7 +341,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					}else{
 						location.href=data;
 					}
-				}); 
+				});
 			});
 			$(".b-erweima img").click(function(){
 				$(".b-erweima").hide();
@@ -345,6 +351,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			});
 			var height = window.screen.height;
 			$(".b-erweima").css("height",height);
+			$(".big-img").css("height","3223px");
 		});
 	</script>
   </head>
@@ -369,7 +376,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
    		<div class="a-main-img">
 			<img src="/static/public/images/k_logo.jpg" width="100%"/>
    		</div>
-		<img src="/static/public/images/y.jpg" width="100%" style="border-radius:4px;margin-top: 10px;">
+		<img id="small-img" src="/static/public/images/y.jpg" width="100%" style="border-radius:4px;margin-top: 10px;">
    		
    		<div class="a-main-word">
    			<p class="p1">这里， 将跨领域之鸿沟</p>
@@ -426,7 +433,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
    		<div class="footer2 gradient_7 box_shadow_1">
 		    <a onclick="location.href='/app/activity.jhtml'" href="javascript:void(0);"><div class="footer2_left fl">首页</div></a>
 		     <div class="fr">
-		        <a onclick="location.href='/app/activityRegView.jhtml'" href="javascript:void(0);"><div class="footer2_right fl"><div class="footer2_right_2" style="background:#932D2B;font-weight:bold;padding: 0 20px;border:0;">签到</div></div></a>
+		        <a onclick="location.href='/app/activityRegView.jhtml'" href="javascript:void(0);"><div class="footer2_right fl"><div class="footer2_right_2" style="background:#932D2B;font-weight:bold;padding: 0 20px;border:0;">请签到</div></div></a>
 		        <!-- <a onclick="window.location.reload();" href="javascript:void(0);"><div class="footer2_right fl"><div class="footer2_right_2">刷新</div></div></a> -->
 		     </div>
 		</div>
@@ -460,5 +467,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
    	<div class="b-erweima" style="display:none;">
    		<img src="/static/public/images/weixin.jpg" width="100%" style="margin-top:50px;"/>
    	</div>
+   <!-- <div class="big-img">
+   		<img src="/static/public/images/y.jpg">
+   	</div> -->
   </body>
 </html>

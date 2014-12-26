@@ -5,6 +5,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
+<%@taglib uri="http://www.believeus.cn/jstl/html" prefix="html" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -447,9 +448,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<c:if test="${inSize!=0 }">
 				  <c:forEach items="${informations }" var="information">
 				  	<li>
-					  	<p>${information.content }</p>
-					  	<a href="zixunContent.jhtml?id=${information.id }" title="${information.name }">${information.name }</a>
-					  	<span>${information.name } <a href="#" style="display:inline;font-weight: normal;font-size: 1.1em;">显示更多&gt;&gt;</a></span>
+					  	<p><html:html num="145" value="${information.content }"></html:html> </p>
+					  	<a href="zixunContent.jhtml?id=${information.id }" title="${information.title }">${information.title }</a>
+					  	<span>${information.title } <a href="#" style="display:inline;font-weight: normal;font-size: 1.1em;">显示更多&gt;&gt;</a></span>
 					  	<label> </label>
 				  	</li>
 				  </c:forEach>
