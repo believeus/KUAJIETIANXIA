@@ -8,6 +8,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <html>
   <head>
     <title>跨界天下-产品详情</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=9"/>
     <link rel="stylesheet" href="/static/public/css/style.css" />
     <script type="text/javascript" src="/static/public/js/jquery-1.9.1.min.js"></script>
     <!----start-top-nav-script---->

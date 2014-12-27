@@ -9,6 +9,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <head>
     
     <title>集团文化</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=9"/>
     <link rel="stylesheet" href="/static/public/css/style.css" />
     <script type="text/javascript" src="/static/public/js/jquery-1.9.1.min.js"></script>
     <!----start-top-nav-script---->

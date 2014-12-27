@@ -10,6 +10,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <html>
   <head>
     <title>跨界天下-公司简介</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=9"/>
     <link rel="stylesheet" href="/static/public/css/fonts.css" />
 	<link rel="stylesheet" href="/static/public/css/style.css" />
 	<link rel="stylesheet" href="/static/public/css/fwslider.css" />

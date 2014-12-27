@@ -8,6 +8,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <html>
   <head>
     <title>联系我们</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=9"/>
     <link rel="stylesheet" href="/static/public/css/style.css" />
     <script type="text/javascript" src="/static/public/js/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=2qkpDitMlFIilEPKy62fiWDe"></script>

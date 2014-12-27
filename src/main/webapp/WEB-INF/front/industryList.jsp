@@ -10,6 +10,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <head>
     
     <title>集团产业</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=9"/>
     <link rel="stylesheet" href="/static/public/css/style.css" />
     <link href="/static/public/css/common_s.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="/static/public/js/jquery-1.9.1.min.js"></script>

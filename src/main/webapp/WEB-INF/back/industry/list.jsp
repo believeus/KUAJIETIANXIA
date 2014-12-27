@@ -4,6 +4,7 @@ String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="html" uri="http://www.believeus.cn/jstl/html" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
@@ -82,7 +83,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						${myNew.introduction}
 					</td>
 					<td>
-						${myNew.content}
+						<html:html num="30" value="${myNew.content}"></html:html>
 					</td>
 					<td>
 						<a href="/admin/industry/edit.jhtml?id=${myNew.id}">[修改]</a>

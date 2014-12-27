@@ -8,6 +8,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <html>
   <head>
     <title>跨界天下-集团简介</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 	<link rel="stylesheet" href="/static/public/css/fonts.css" />
 	<link rel="stylesheet" href="/static/public/css/style.css" />
 	<link rel="stylesheet" href="/static/public/css/fwslider.css" />
@@ -51,7 +52,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			height:92px;
 			border:1px solid #fff;
 			border-radius:5px;
-			background:#DE2B24;
+			background:#932e2c;
 			left: -50px;
 		    position: relative;
 		    top: 65px;
@@ -82,14 +83,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   <body>
     <jsp:include page="/WEB-INF/include/header.jsp" />
-    <img src="/static/public/images/11.jpg" width="100%" />
+    <img src="/static/public/images/js.jpg" width="100%" />
 	<p class="kjtx-main-title">
     		<span style="border-bottom: 2px solid #922d2c;">集团介绍</span>
    		</p>
     <div class="center" style="width: 1200px; height: 1160px;margin: 0 auto;overflow: hidden;">
 		<div class="kjtx-list-content">
 			<div class="kjtx-list-content-img">
-				<img src="/static/public/images/honor_1.png" width="385" height="245"/>
+				<img src="/static/public/images/honor_1.jpg" width="385" height="245"/>
 			</div>
 			<div class="icon-status">
 				<div class="icon-status-index">1</div>
@@ -110,12 +111,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<div class="icon-status-name">总裁致辞</div>
 			</div>
 			<div class="kjtx-list-content-img" style="float: right; position: relative; top: -157px;">
-				<img src="/static/public/images/honor_1.png" width="385" height="245"/>
+				<img src="/static/public/images/honor_2.jpg" width="385" height="245"/>
 			</div>
 		</div>
 		<div class="kjtx-list-content">
 			<div class="kjtx-list-content-img" style="position: relative; top: -30px;">
-				<img src="/static/public/images/honor_1.png" width="385" height="245"/>
+				<img src="/static/public/images/honor_4.jpg" width="385" height="245"/>
 			</div>
 			<div class="icon-status" style="top:35px;">
 				<div class="icon-status-index">3</div>
@@ -136,7 +137,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<div class="icon-status-name">组织架构</div>
 			</div>
 			<div class="kjtx-list-content-img" style="float: right; position: relative; top: -187px;">
-				<img src="/static/public/images/honor_1.png" width="385" height="245"/>
+				<img src="/static/public/images/honor_3.jpg" width="385" height="245"/>
 			</div>
 		</div>
 	</div>

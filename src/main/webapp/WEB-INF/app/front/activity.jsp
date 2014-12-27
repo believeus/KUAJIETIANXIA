@@ -301,7 +301,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		    padding: 5px 10px;
 		}
 		.big-img{
-			width:100%;height:auto;background:#000;position:absolute;top:0;z-index:99999;display: table-cell; vertical-align:middle;text-align:center;
+			width:100%;height:auto;background:#000;position:absolute;z-index:99999;top:0;display: table-cell; vertical-align:middle;text-align:center;display:none;
 		}
 		.big-img img{
 			vertical-align:middle;
@@ -349,6 +349,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			$("#weixin_id").click(function(){
 				$(".b-erweima").show();
 			});
+			/* $(".big-img img").click(function(){
+				$(".big-img").hide();
+			});
+			$("#small-img").click(function(){
+				$(".big-img").show();
+			}); */
 			var height = window.screen.height;
 			$(".b-erweima").css("height",height);
 			$(".big-img").css("height","3223px");
@@ -467,8 +473,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
    	<div class="b-erweima" style="display:none;">
    		<img src="/static/public/images/weixin.jpg" width="100%" style="margin-top:50px;"/>
    	</div>
-   <!-- <div class="big-img">
-   		<img src="/static/public/images/y.jpg">
+    <!-- <div class="big-img">
+   		<img src="/static/public/images/y.jpg" style="margin-top:100px;">
    	</div> -->
   </body>
 </html>

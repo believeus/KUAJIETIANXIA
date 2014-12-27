@@ -147,7 +147,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						        </div>    
 						    </div>    
 						    <br/>    
-						    <input id="upload_img" type="file" name="upload_img" onchange="filename0.value=this.value;onUploadImgChange(this,190,120,'preview','preview_fake','preview_size_fake');"/>  
+						    <input id="upload_img" type="file" name="logo-a" onchange="filename0.value=this.value;onUploadImgChange(this,190,120,'preview','preview_fake','preview_size_fake');"/>  
 						    <input type="hidden" id="filename0" name="filename0">
 						    <br/>    
 						    <img id="preview_size_fake"/> 

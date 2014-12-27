@@ -9,6 +9,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <head>
     
     <title>集团资讯</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=9"/>
     <link rel="stylesheet" href="/static/public/css/style.css" />
     <link href="/static/public/css/common_s.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="/static/public/js/jquery-1.9.1.min.js"></script>
@@ -61,7 +62,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   <body>
     <jsp:include page="/WEB-INF/include/header.jsp" />
-     <img src="/static/public/images/11.jpg" width="100%" style="margin-top: -1px;"/>
+     <img src="/static/public/images/zx.jpg" width="100%" style="margin-top: -1px;"/>
     <div class="kjtx-main">
     	<p class="kjtx-main-title">
     		<span style="border-bottom: 2px solid #922d2c;">集团资讯</span>

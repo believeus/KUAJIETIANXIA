@@ -67,7 +67,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   <body>
    		<jsp:include page="/WEB-INF/include/header.jsp" />
-   		<img src="/static/public/images/11.jpg" width="100%" />
+   		<img src="/static/public/images/ry.jpg" width="100%" />
    		<div class="center" style="width: 1200px; height: auto;margin: 0 auto;overflow: hidden;">
 			<div style="font-size: 23px;font-weight: bold;line-height: 65px;height: 40px;text-align: center;">
 				资质荣誉

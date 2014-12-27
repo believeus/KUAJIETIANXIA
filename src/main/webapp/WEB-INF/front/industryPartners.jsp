@@ -12,6 +12,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<head>
 		<meta charset="utf-8" />
 		<title>跨界天下-产业详情</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9"/>
 		<link rel="stylesheet" href="/static/public/css/fonts.css" />
 		<link rel="stylesheet" href="/static/public/css/style.css" />
 		<link rel="stylesheet" href="/static/public/css/fwslider.css" />
@@ -46,11 +47,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     			</span>
    				<span style="font-size:15px;font-weight:normal;">&gt;&gt;${industry.name}</span>
 	   		</p>
-	   		<div style="font-size: 16px; font-family: microsoft yahei; text-align: center; font-weight: bold;">${industry.introduction }</div>
+	   		<div style="font-size: 16px; font-family: microsoft yahei; text-align: center; font-weight: bold;" title="${industry.introduction }">
+	   			<html:html num="30" value="${industry.introduction }"></html:html>
+   			</div>
 			<div style="text-indent: 40px;width: 1000px;height:auto;margin: 0 auto 30px;font-family: microsoft yahei;font-size: 15px;line-height: 30px;">
 				<span style="font-weight: bold;font-size:20px;">介绍：</span>
-				<html:html num="400" value="${industry.content}"></html:html>
-				
+				${industry.content}
 			</div>
 			<span style="margin-left: 95px;font-size:20px;font-weight: bold;">${industry.name}&nbsp;/&nbsp;系列公司</span>
 			<div style="width: 1005px;height:310px;margin: 10px auto 50px;" class="com-list">
