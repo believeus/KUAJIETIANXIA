@@ -106,28 +106,21 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<div class="icon-status-name">集团简介</div>
 			</div>
 			<div class="kjtx-list-content-desc">
-				<p style="font-size: 20px; font-weight: bold;margin: 30px 0 20px;">集团简介</p>
+				<!-- <p style="font-size: 20px; font-weight: bold;margin: 30px 0 20px;">集团简介</p> -->
 				<p class="jtwh">
 					跨界天下，一切皆为大商而来！
-				</p>
-				<p class="jtwh">
-					使命：打造中国最具规模、最有价值、最有公德心的联盟商企平台；
-				</p>
-				<p class="jtwh">
-					价值观：合法、正道、独特、持久、多赢、乐退；
-				</p>
-				<p class="jtwh">
-					定位：以资本为杠杆、以平台为载体、以需求为核心、服务民营企业；<br/>
-				</p>
-				<p class="jtwh">
-					经营理念：跨界合作、联盟共赢。
+跨界天下是亚太跨界联盟集团中国区总公司。（成立时间为2007年6月）跨界天下是以中小微企业主为主体联盟企成员，通过跨界联盟平台，组织、协调、相互整合对接资源，优化资源配置的综合商企联盟平台组织。区别于传统的商会或企业服务公司。跨界天下提倡引导各会员企业间的资源共享、互惠互利、互相借势增长的共生、互补关系，打破了此消彼长的竞争关系；同时，跨界天下所带来的是涵盖各行业、各年龄阶段、各消费群体之间的资源信息共融与共荣。“以资本为杠杆，以用户体验为互补”。跨界天下是一次彻底的、由独立机构发起的全面的跨行业合作模板，是各联盟企业间更深层次的横向合作，是真正意义上的跨界协力服务平台。
 				</p>
 			</div>
 		</div>
 		<div class="kjtx-list-content">
 			<div class="kjtx-list-content-desc" style="float: left; margin-right: 0px; margin-left: 60px;top: -63px;">
-				<p style="font-size: 20px; font-weight: bold;margin: 30px 0 20px;">总裁致辞</p>
-				<p style="font-size: 16px;text-indent: 40px;">暂无</p>
+				<p style="text-indent: 40px; font-size: 14px; line-height: 21px; margin-top: 10px;">
+					亚太跨界联盟公司自成立于2007年6月。是一家集生物科技研发，金融资本运营管理，娱乐媒体策划制作宣传，商业营销模式创新，健康养生食品种植的多元化综合型商企联盟机构组织。
+致力于打造中国最具规模最有价值最有公德心的联盟商企平台。跨界天下以中小微企业主为主体成员的，通过跨界联盟平台，组织、协调、相互资源对接整合，优化资源配置；提供金融、教育、健康，法务，商业等服务、支持针对行业发展需求进行各种专项支持援助，提升企业竞争力；电子商务和传统销售渠道相结合的线上线下交叉融合；促进跨界企业间消费商共享，对品牌提升，市场拓展，产品销售意义重大，对会员企业产业发展升级具有关键性作用。
+   同时，充分利用互联网数据信息优势，帮助企业创造贴合时代特点的商业模式、产品技术创新，打造新品牌，辅导企业海外上市融资；一对一帮扶模式，跨界产业联盟，整合各行业电商+实体店，〇2〇模式，引用国外资本服务于中国企业。
+跨界天下，志在打破行业枷锁，跨界联盟，资源整合，从竞争走向竞合，我们秉承合法、正道、独特、持久、共赢、乐退的精神，打造中国传统中小微企业的利益共同体，携手实现国家富强、民族产业振兴的中国梦。
+				</p>
 			</div>
 			<div class="icon-status" style="left: 15px; top: 10px; z-index: 99;">
 				<div class="icon-status-index">2</div>

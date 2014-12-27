@@ -114,4 +114,34 @@ public class ControllerActivity {
 			return "unexist";
 		}
 	}
+	
+	@RequestMapping("/app/index")
+	public String index(){
+		return "/WEB-INF/app/front/index.jsp";
+	}
+	
+	@RequestMapping("/app/intro")
+	public String intro(){
+		return "/WEB-INF/app/front/intro.jsp";
+	}
+	
+	@RequestMapping("/app/news")
+	public String news(){
+		return "/WEB-INF/app/front/news.jsp";
+	}
+	
+	@RequestMapping("/app/newsInfo")
+	public String newsInfo(){
+		return "/WEB-INF/app/front/newsInfo.jsp";
+	}
+	
+	@RequestMapping("/app/enterprise")
+	public String enterprise(){
+		return "/WEB-INF/app/front/enterprise.jsp";
+	}
+	
+	@RequestMapping("/app/enterpriseInfo")
+	public String enterpriseInfo(){
+		return "/WEB-INF/app/front/enterpriseInfo.jsp";
+	}
 }
