@@ -10,8 +10,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>跨界天下-首页</title>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<meta name="viewport"content="width=device-width, initial-scale=1"/>
+<meta content="target-densitydpi=get-target-densitydpi,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,width=device-width, user-scalable=no" name="viewport" />
+<meta content="no" name="apple-touch-fullscreen" />
+<meta name="format-detection" content="telephone=no" />
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <link rel="stylesheet" href="/static/public/css/fonts.css" />
 <link rel="stylesheet" href="/static/public/css/style.css" />

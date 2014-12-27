@@ -11,6 +11,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <head>
     <title>跨界天下-招商合作</title>
     <meta http-equiv="X-UA-Compatible" content="IE=9"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta content="target-densitydpi=get-target-densitydpi,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,width=device-width, user-scalable=no" name="viewport" />
+	<meta content="no" name="apple-touch-fullscreen" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta content="yes" name="apple-mobile-web-app-capable" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
     <link rel="stylesheet" href="/static/public/css/fonts.css" />
 	<link rel="stylesheet" href="/static/public/css/style.css" />
 	<link rel="stylesheet" href="/static/public/css/fwslider.css" />

@@ -5,11 +5,18 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@taglib prefix="html" uri="http://www.believeus.cn/jstl/html" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
     <title>跨界天下-集团文化</title>
     <meta http-equiv="X-UA-Compatible" content="IE=9"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta content="target-densitydpi=get-target-densitydpi,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,width=device-width, user-scalable=no" name="viewport" />
+	<meta content="no" name="apple-touch-fullscreen" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta content="yes" name="apple-mobile-web-app-capable" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
     <link rel="stylesheet" href="/static/public/css/style.css" />
     <link href="/static/public/css/common_s.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="/static/public/js/jquery-1.9.1.min.js"></script>
@@ -44,16 +51,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					<div style="float: left;color: #434343;margin-left: 10px;width: 64%;height:200px;">
 						<div style="font-size: 20px;width: 100%;line-height: 40px;" title="${cul.introduction }">
 							${status.index+1 }、
-							<a class="wenhua-title" href="/cultureInfo.jhtml?id=${cul.id }" title="${cul.introduction }">${fn:substring(cul.introduction, 0, 16)}</a>
-							<c:if test="${fn:length(cul.introduction) > 16 }">
-			   					...
-		   					</c:if>
+							<a class="wenhua-title" href="/cultureInfo.jhtml?id=${cul.id }" title="${cul.introduction }"><html:html num="16" value="${cul.introduction }"></html:html></a>
 						</div>
 						<div style="font-size: 14px;width: 100%;line-height: 25px;height:120px;">
-							${fn:substring(cul.content, 0, 120)}
-							<c:if test="${fn:length(cul.content) > 120 }">
-			   					...
-		   					</c:if>
+							<html:html num="120" value="${cul.content }"></html:html>
 						</div>
 						<div style="font-size: 14px;background-color: #922D2C;margin-top: 10px;text-align: center;width: 30%;line-height: 30px;">
 							<a style="color: #FFFFFF;" href="/cultureInfo.jhtml?id=${cul.id }">详情</a>
