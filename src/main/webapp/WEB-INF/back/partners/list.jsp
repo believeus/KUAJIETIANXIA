@@ -62,9 +62,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<th>
 					<a href="javascript:;" class="sort" name="name">名称</a>
 				</th>
-				<th>
+				<!-- <th>
 					<a href="javascript:;" class="sort" name="introduction">介绍</a>
-				</th>
+				</th> -->
 				<th>
 					<a href="#"  class="sort">操作</a>
 				</th>
@@ -83,13 +83,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					<td>
 						${myNew.name}
 					</td>
-					<td>
+					<%-- <td>
 						${fn:substring(myNew.introduction,0,20) }
 						<c:if test="${fn:length(myNew.introduction)>20 }">...</c:if>
-					</td>
+					</td> --%>
 					<td>
 						<a href="/admin/partners/edit.jhtml?id=${myNew.id}">[修改]</a>
-						<a href="/admin/partners/deleteById.jhtml?id=${myNew.id}">[删除]</a>
+						<%-- <a href="/admin/partners/deleteById.jhtml?id=${myNew.id}">[删除]</a> --%>
 					</td>
 				</tr>
 			</c:forEach>

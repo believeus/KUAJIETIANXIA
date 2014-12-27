@@ -78,6 +78,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			text-align:center;
 			font-size: 20px;
 		}
+		.jtwh{
+			font-size: 16px;text-indent: 40px;line-height: 30px;
+		}
 	</style>
   </head>
   
@@ -97,14 +100,28 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<div class="icon-status-name">集团简介</div>
 			</div>
 			<div class="kjtx-list-content-desc">
-				<p style="font-size: 20px; font-weight: bold;margin: 30px 0 20px;">集团简介。</p>
-				<p style="font-size: 16px;text-indent: 40px;">测试数据-集团简介</p>
+				<p style="font-size: 20px; font-weight: bold;margin: 30px 0 20px;">集团简介</p>
+				<p class="jtwh">
+					跨界天下，一切皆为大商而来！
+				</p>
+				<p class="jtwh">
+					使命：打造中国最具规模、最有价值、最有公德心的联盟商企平台；
+				</p>
+				<p class="jtwh">
+					价值观：合法、正道、独特、持久、多赢、乐退；
+				</p>
+				<p class="jtwh">
+					定位：以资本为杠杆、以平台为载体、以需求为核心、服务民营企业；<br/>
+				</p>
+				<p class="jtwh">
+					经营理念：跨界合作、联盟共赢。
+				</p>
 			</div>
 		</div>
 		<div class="kjtx-list-content">
 			<div class="kjtx-list-content-desc" style="float: left; margin-right: 0px; margin-left: 60px;top: -63px;">
-				<p style="font-size: 20px; font-weight: bold;margin: 30px 0 20px;">总裁致辞。</p>
-				<p style="font-size: 16px;text-indent: 40px;">测试数据-总裁致辞</p>
+				<p style="font-size: 20px; font-weight: bold;margin: 30px 0 20px;">总裁致辞</p>
+				<p style="font-size: 16px;text-indent: 40px;">暂无</p>
 			</div>
 			<div class="icon-status" style="left: 15px; top: 10px; z-index: 99;">
 				<div class="icon-status-index">2</div>
@@ -123,14 +140,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<div class="icon-status-name">发展历程</div>
 			</div>
 			<div class="kjtx-list-content-desc" style="top: -123px;">
-				<p style="font-size: 20px; font-weight: bold;margin: 30px 0 20px;">发展历程。</p>
-				<p style="font-size: 16px;text-indent: 40px;">测试数据-发展历程</p>
+				<p style="font-size: 20px; font-weight: bold;margin: 30px 0 20px;">发展历程</p>
+				<p style="font-size: 16px;text-indent: 40px;">暂无</p>
 			</div>
 		</div>
 		<div class="kjtx-list-content">
 			<div class="kjtx-list-content-desc" style="float: left; margin-right: 0px; margin-left: 60px;top: -93px;">
-				<p style="font-size: 20px; font-weight: bold;margin: 30px 0 20px;">组织架构。</p>
-				<p style="font-size: 16px;text-indent: 40px;">测试数据-组织架构</p>
+				<p style="font-size: 20px; font-weight: bold;margin: 30px 0 20px;">组织架构</p>
+				<p style="font-size: 16px;text-indent: 40px;">暂无</p>
 			</div>
 			<div class="icon-status" style="left: 15px; top: -20px; z-index: 99;">
 				<div class="icon-status-index">4</div>

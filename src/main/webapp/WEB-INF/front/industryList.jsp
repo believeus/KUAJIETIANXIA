@@ -23,7 +23,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   <body>
     <jsp:include page="/WEB-INF/include/header.jsp" />
-    <img src="/static/public/images/11.jpg" width="100%" style="margin-top: -1px;"/>
+    <img src="/static/public/images/cy.jpg" width="100%" style="margin-top: -1px;"/>
    	<p class="kjtx-main-title">
    		<span style="border-bottom: 2px solid #922d2c;">集团产业</span>
 	</p>

@@ -39,7 +39,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	</head>
 	<body>
 		<jsp:include page="/WEB-INF/include/header.jsp" />
-		<img src="/static/public/images/11.jpg" alt="" width="100%" />
+		<img src="/static/public/images/cy.jpg" alt="" width="100%" />
 		<div style="margin: 0 auto;width: 1200px;">
 			<p class="kjtx-main-title">
 	    		<span style="border-bottom: 2px solid #922d2c;">
