@@ -82,28 +82,28 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						</c:if>
 						<c:if test="${news.type==0 }">
 							<option value="">--请选择--</option>
-							<option value="0" selected="selected">关于乐退</option>
+							<option value="0" selected="selected">综合资讯</option>
 							<option value="1">集团快讯</option>
 							<option value="2">高层动态</option>
 							<option value="3">集团公告</option>
 						</c:if>
 						<c:if test="${news.type==1 }">
 							<option value="">--请选择--</option>
-							<option value="0">关于乐退</option>
+							<option value="0">综合资讯</option>
 							<option value="1" selected="selected">集团快讯</option>
 							<option value="2">高层动态</option>
 							<option value="3">集团公告</option>
 						</c:if>
 						<c:if test="${news.type==2 }">
 							<option value="">--请选择--</option>
-							<option value="0">关于乐退</option>
+							<option value="0">综合资讯</option>
 							<option value="1">集团快讯</option>
 							<option value="2" selected="selected">高层动态</option>
 							<option value="3">集团公告</option>
 						</c:if>
 						<c:if test="${news.type==3 }">
 							<option value="">--请选择--</option>
-							<option value="0">关于乐退</option>
+							<option value="0">综合资讯</option>
 							<option value="1">集团快讯</option>
 							<option value="2">高层动态</option>
 							<option value="3" selected="selected">集团公告</option>

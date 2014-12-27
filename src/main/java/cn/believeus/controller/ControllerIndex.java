@@ -144,7 +144,7 @@ public class ControllerIndex {
 			pageNumber="1";
 		}
 		Pageable pageable=new Pageable(Integer.valueOf(pageNumber),20);
-		String hql = "from Tnews news where news.type = "+type;
+		String hql = "from Tnews news where news.type = "+type+" order by news.editTime desc";
 		System.out.println("hql : "+hql);
 		Page<?> page = baseService.findObjectList(hql, pageable);
 		request.setAttribute("page", page);

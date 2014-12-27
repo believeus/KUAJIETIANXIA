@@ -448,9 +448,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<c:if test="${inSize!=0 }">
 				  <c:forEach items="${informations }" var="information">
 				  	<li>
-					  	<p><html:html num="145" value="${information.content }"></html:html> </p>
+					  	<p><html:html num="110" value="${information.content }"></html:html> </p>
 					  	<a href="zixunContent.jhtml?id=${information.id }" title="${information.title }">${information.title }</a>
-					  	<span>${information.title } <a href="#" style="display:inline;font-weight: normal;font-size: 1.1em;">显示更多&gt;&gt;</a></span>
+					  	<span>${information.title } <a href="/zixunList.jhtml" style="display:inline;font-weight: normal;font-size: 1.1em;">显示更多&gt;&gt;</a></span>
 					  	<label> </label>
 				  	</li>
 				  </c:forEach>
