@@ -48,7 +48,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<div style="border: 1px solid #CACBC6;height: 284px;margin: 0 auto;margin-bottom:30px;">
 				<div style="float: left;width: 50%;">
 					<a href="/kjtxabstract.jhtml?id=${partner.id }">
-						<img style="width: 600px;height:265px;margin: 10px;" src="${partner.logo }" title="${partner.introduction }" />
+						<img style="width: 600px;height:265px;margin: 10px;" src="${partner.logo }" />
 					</a>
 				</div>
 				<div style="float: left;width: 45%;margin: 10px 10px 10px 40px;">
