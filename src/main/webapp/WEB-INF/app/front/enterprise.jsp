@@ -3,7 +3,8 @@
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
-
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib uri="http://www.believeus.cn/jstl/date" prefix="date" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
@@ -111,51 +112,15 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   		<div class="kjtx-logo">
   			<img src="/static/public/images/logo_h.png" width="100%"/>
   		</div>
-  		
-		<div class="kjtx-news">
+  		<c:forEach items="${partnersList }" var="partners">
+		 <div class="kjtx-news">
 			<div style="padding:0 10px;">
-				<p class="news-list"><a href="/app/enterpriseInfo.jhtml"><i class="jiantou"></i>企业一</a></p>
-				<p class="news-list" style="text-align: right;margin-top:4px;">2014-12-28</p>
+				<p class="news-list"><a href="/app/enterpriseInfo.jhtml?id=${partners.id }"><i class="jiantou"></i>${partners.name }</a></p>
+				<p class="news-list" style="text-align: right;margin-top:4px;"><date:date parttern="yyyy-MM-dd" value="${partners.editTime }"></date:date></p>
 			</div>
-		</div>
-		<div class="kjtx-news">
-			<div style="padding:0 10px;">
-				<p class="news-list"><a href="/app/enterpriseInfo.jhtml"><i class="jiantou"></i>企业二</a></p>
-				<p class="news-list" style="text-align: right;margin-top:4px;">2014-12-28</p>
-			</div>
-		</div>
-		<div class="kjtx-news">
-			<div style="padding:0 10px;">
-				<p class="news-list"><a href="/app/enterpriseInfo.jhtml"><i class="jiantou"></i>企业三</a></p>
-				<p class="news-list" style="text-align: right;margin-top:4px;">2014-12-28</p>
-			</div>
-		</div>
-		<div class="kjtx-news">
-			<div style="padding:0 10px;">
-				<p class="news-list"><a href="/app/enterpriseInfo.jhtml"><i class="jiantou"></i>企业四</a></p>
-				<p class="news-list" style="text-align: right;margin-top:4px;">2014-12-28</p>
-			</div>
-		</div>
-		<div class="kjtx-news">
-			<div style="padding:0 10px;">
-				<p class="news-list"><a href="/app/enterpriseInfo.jhtml"><i class="jiantou"></i>企业五</a></p>
-				<p class="news-list" style="text-align: right;margin-top:4px;">2014-12-28</p>
-			</div>
-		</div>
+		 </div>
+  		</c:forEach>
 		
-    	<div class="kjtx-header">
-    		<div class="kjtx-header-list">
-    			<a href="/app/index.jhtml">首页</a>
-   			</div>
-    		<div class="kjtx-header-list">
-    			<a href="/app/intro.jhtml">集团简介</a>
-   			</div>
-    		<div class="kjtx-header-list">
-    			<a href="/app/news.jhtml">集团资讯</a>
-   			</div>
-    		<div class="kjtx-header-list">
-    			<a href="/app/enterprise.jhtml">战略联盟</a>
-   			</div>
-    	</div>
+    	<jsp:include page="/WEB-INF/app/include/footer.jsp"/>
   </body>
 </html>

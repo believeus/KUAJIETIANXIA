@@ -153,20 +153,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     	<img src="/static/public/images/grey.gif" data-original="/static/public/images/new_12.jpg" width="100%" />
     	<img src="/static/public/images/grey.gif" data-original="/static/public/images/new_13.jpg" width="100%" style="margin-bottom: 45px;"/>
     	</div>
-    	<div class="kjtx-header">
-    		<div class="kjtx-header-list">
-    			<a href="/app/index.jhtml">首页</a>
-   			</div>
-    		<div class="kjtx-header-list">
-    			<a href="/app/intro.jhtml">集团简介</a>
-   			</div>
-    		<div class="kjtx-header-list">
-    			<a href="/app/news.jhtml">集团资讯</a>
-   			</div>
-    		<div class="kjtx-header-list">
-    			<a href="/app/enterprise.jhtml">战略联盟</a>
-   			</div>
-    	</div>
+    	<jsp:include page="/WEB-INF/app/include/footer.jsp"/>
     	<div class="big-img">
     		<img alt="" src="" />
     	</div>

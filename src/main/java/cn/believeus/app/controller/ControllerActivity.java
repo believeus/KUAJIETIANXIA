@@ -13,6 +13,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
+
+import cn.believeus.model.Partners;
+import cn.believeus.model.Tnews;
 import cn.believeus.model.app.TmobileUser;
 import cn.believeus.model.app.Tvariables;
 import cn.believeus.service.BaseService;
@@ -126,22 +129,32 @@ public class ControllerActivity {
 	}
 	
 	@RequestMapping("/app/news")
-	public String news(){
+	public String news(HttpServletRequest request){
+		@SuppressWarnings("unchecked")
+		List<Tnews> newsList = (List<Tnews>)baseService.findObjectList(Tnews.class);
+		request.setAttribute("newsList", newsList);
 		return "/WEB-INF/app/front/news.jsp";
 	}
 	
 	@RequestMapping("/app/newsInfo")
-	public String newsInfo(){
+	public String newsInfo(Integer id,HttpServletRequest request){
+		Tnews news = (Tnews)baseService.findObject(Tnews.class, id);
+		request.setAttribute("news", news);
 		return "/WEB-INF/app/front/newsInfo.jsp";
 	}
 	
 	@RequestMapping("/app/enterprise")
-	public String enterprise(){
+	public String enterprise(HttpServletRequest request){
+		@SuppressWarnings("unchecked")
+		List<Partners> partnersList = (List<Partners>)baseService.findObjectList(Partners.class);
+		request.setAttribute("partnersList", partnersList);
 		return "/WEB-INF/app/front/enterprise.jsp";
 	}
 	
 	@RequestMapping("/app/enterpriseInfo")
-	public String enterpriseInfo(){
+	public String enterpriseInfo(Integer id,HttpServletRequest request){
+		Partners partners = (Partners)baseService.findObject(Partners.class, id);
+		request.setAttribute("partners", partners);
 		return "/WEB-INF/app/front/enterpriseInfo.jsp";
 	}
 }

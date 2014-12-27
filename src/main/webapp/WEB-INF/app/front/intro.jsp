@@ -110,19 +110,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 跨界天下，志在打破行业枷锁，跨界联盟，资源整合，从竞争走向竞合，我们秉承合法、正道、独特、持久、共赢、乐退的精神，打造中国传统中小微企业的利益共同体，携手实现国家富强、民族产业振兴的中国梦。 
 			</div>
 		</div>
-    	<div class="kjtx-header">
-    		<div class="kjtx-header-list">
-    			<a href="/app/index.jhtml">首页</a>
-   			</div>
-    		<div class="kjtx-header-list">
-    			<a href="/app/intro.jhtml">集团简介</a>
-   			</div>
-    		<div class="kjtx-header-list">
-    			<a href="/app/news.jhtml">集团资讯</a>
-   			</div>
-    		<div class="kjtx-header-list">
-    			<a href="/app/enterprise.jhtml">战略联盟</a>
-   			</div>
-    	</div>
+    <jsp:include page="/WEB-INF/app/include/footer.jsp"/>
   </body>
 </html>
