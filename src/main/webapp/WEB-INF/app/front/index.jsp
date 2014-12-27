@@ -39,7 +39,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	            container:window,
 	            skip_invisible:true
 			});
-			$(".imgs img").click(function(){
+			/* $(".imgs img").click(function(){
 				if($(".big-img").css("display") == "none"){
 					$(".big-img").css({"display":"block","height":"2000px","width":"1903px"});
 					$("body").css("overflow-y","hidden");
@@ -52,7 +52,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						$("body").css("overflow-y","auto");
 					}
 				});
-			});
+			}); */
 		});
 	</script>
 	<style type="text/css">
@@ -143,22 +143,36 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		    <!--/slider -->
 		</div>
 		<div class="imgs">
-    	<a href="#"><img src="/static/public/images/news_02.jpg" width="100%"/></a>
-    	<a href="#"><img src="/static/public/images/news_03.jpg" width="100%"/></a>
-    	<a href="#"><img width="100%" src="/static/public/images/grey.gif" data-original="/static/public/images/news_04.jpg"/></a>
-    	<a href="#"><img src="/static/public/images/grey.gif" data-original="/static/public/images/news_05.jpg" width="100%"/></a>
-    	<a href="#"><img src="/static/public/images/grey.gif" data-original="/static/public/images/news_06.jpg" width="100%"/></a>
-    	<a href="#"><img src="/static/public/images/grey.gif" data-original="/static/public/images/news_07.jpg" width="100%"/></a>
-    	<a href="#"><img src="/static/public/images/grey.gif" data-original="/static/public/images/news_08.jpg" width="100%"/></a>
-    	<a href="#"><img src="/static/public/images/grey.gif" data-original="/static/public/images/news_09.jpg" width="100%"/></a>
-    	<a href="#"><img src="/static/public/images/grey.gif" data-original="/static/public/images/news_10.gif" width="100%"/></a>
-    	<a href="#"><img src="/static/public/images/grey.gif" data-original="/static/public/images/news_11.jpg" width="100%"/></a>
-    	<a href="#"><img src="/static/public/images/grey.gif" data-original="/static/public/images/news_12.jpg" width="100%"/></a>
-    	<a href="#"><img src="/static/public/images/grey.gif" data-original="/static/public/images/news_13.jpg" width="100%" style="margin-bottom: 45px;"/></a>
+	    	<img src="/static/public/images/news_02.jpg" width="100%"/>
+	    	<img src="/static/public/images/news_03.jpg" width="100%"/>
+	    	<img width="100%" src="/static/public/images/grey.gif" data-original="/static/public/images/news_04.jpg"/>
+	    	<img src="/static/public/images/grey.gif" data-original="/static/public/images/news_05.jpg" width="100%"/>
+	    	<img src="/static/public/images/grey.gif" data-original="/static/public/images/news_06.jpg" width="100%"/>
+	    	<img src="/static/public/images/grey.gif" data-original="/static/public/images/news_07.jpg" width="100%"/>
+	    	<img src="/static/public/images/grey.gif" data-original="/static/public/images/news_08.jpg" width="100%"/>
+	    	<img src="/static/public/images/grey.gif" data-original="/static/public/images/news_09.jpg" width="100%"/>
+	    	<img src="/static/public/images/grey.gif" data-original="/static/public/images/news_10.gif" width="100%"/>
+	    	<img src="/static/public/images/grey.gif" data-original="/static/public/images/news_11.jpg" width="100%"/>
+	    	<img src="/static/public/images/grey.gif" data-original="/static/public/images/news_12.jpg" width="100%"/>
+	    	<img src="/static/public/images/grey.gif" data-original="/static/public/images/news_13.jpg" width="100%" style="margin-bottom: 45px;"/>
     	</div>
+<!-- 		<div class="imgs">
+	    	<a href="#"><img src="/static/public/images/news_02.jpg" width="100%"/></a>
+	    	<a href="#"><img src="/static/public/images/news_03.jpg" width="100%"/></a>
+	    	<a href="#"><img width="100%" src="/static/public/images/grey.gif" data-original="/static/public/images/news_04.jpg"/></a>
+	    	<a href="#"><img src="/static/public/images/grey.gif" data-original="/static/public/images/news_05.jpg" width="100%"/></a>
+	    	<a href="#"><img src="/static/public/images/grey.gif" data-original="/static/public/images/news_06.jpg" width="100%"/></a>
+	    	<a href="#"><img src="/static/public/images/grey.gif" data-original="/static/public/images/news_07.jpg" width="100%"/></a>
+	    	<a href="#"><img src="/static/public/images/grey.gif" data-original="/static/public/images/news_08.jpg" width="100%"/></a>
+	    	<a href="#"><img src="/static/public/images/grey.gif" data-original="/static/public/images/news_09.jpg" width="100%"/></a>
+	    	<a href="#"><img src="/static/public/images/grey.gif" data-original="/static/public/images/news_10.gif" width="100%"/></a>
+	    	<a href="#"><img src="/static/public/images/grey.gif" data-original="/static/public/images/news_11.jpg" width="100%"/></a>
+	    	<a href="#"><img src="/static/public/images/grey.gif" data-original="/static/public/images/news_12.jpg" width="100%"/></a>
+	    	<a href="#"><img src="/static/public/images/grey.gif" data-original="/static/public/images/news_13.jpg" width="100%" style="margin-bottom: 45px;"/></a>
+    	</div> -->
     	<jsp:include page="/WEB-INF/app/include/footer.jsp"/>
-    	<div class="big-img">
+    	<!-- <div class="big-img">
     		<img alt="" src="" />
-    	</div>
+    	</div> -->
   </body>
 </html>
