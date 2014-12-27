@@ -23,7 +23,7 @@
 				         {"menuname":"集团产业管理","icon":"icon-set","url":"/admin/industry/list.jhtml"},
 				         {"menuname":"集团伙伴管理","icon":"icon-set","url":"/admin/partners/list.jhtml"},  
 				         {"menuname":"集团资讯管理","icon":"icon-set","url":"/admin/news/list.jhtml"},
-				         {"menuname":"集团简介管理","icon":"icon-set","url":"/admin/introduction/list.jhtml"},
+				         /* {"menuname":"集团简介管理","icon":"icon-set","url":"/admin/introduction/list.jhtml"}, */
 				         {"menuname":"集团荣誉管理","icon":"icon-set","url":"/admin/honor/list.jhtml"},
 					]
 			}
