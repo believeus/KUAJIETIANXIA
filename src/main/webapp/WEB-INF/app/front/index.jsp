@@ -39,12 +39,19 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	            container:window,
 	            skip_invisible:true
 			});
-			var height = $("body").css("height");
 			$(".imgs img").click(function(){
-				//alert($(this).css("width"));
-				$(".big-img").css({"display":"block","height":height,"width":"1903px"});
-				$(".big-img img").css({"margin-top":$(this).css("top")});
-				$(".big-img img").attr("src",$(this).attr("src"));
+				if($(".big-img").css("display") == "none"){
+					$(".big-img").css({"display":"block","height":"2000px","width":"1903px"});
+					$("body").css("overflow-y","hidden");
+					//$(".big-img img").css({"margin-top":$(this).scrollTop});
+					$(".big-img img").attr("src",$(this).attr("src"));
+				}
+				$(".big-img img").click(function(){
+					if($(".big-img").css("display") == "block"){
+						$(".big-img").css({"display":"none"});
+						$("body").css("overflow-y","auto");
+					}
+				});
 			});
 		});
 	</script>
@@ -101,10 +108,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			display:none;
 			position:absolute;
 			top:0;
-			z-index:998;
-			/* -webkit-transform: rotate(90deg);/*Safari 4+,Google Chrome 1+ 
-			-moz-transform: rotate(90deg);/*Firefox 3.5+
-			filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);/*ie*/ */
+			z-index:9999;
 		}
 		.big-img img{
 			margin-top:100px;
@@ -112,7 +116,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	</style>
   </head>
   <body>
-  	<%-- <jsp:include page="/WEB-INF/include/header.jsp" /> --%>
   		<div class="kjtx-tel">
   			<span style="font-family:microsoft yahei;">
 				<i class="phone-tel"></i>
@@ -140,18 +143,18 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		    <!--/slider -->
 		</div>
 		<div class="imgs">
-    	<img src="/static/public/images/new_02.jpg" width="100%"/>
-    	<img src="/static/public/images/new_03.jpg" width="100%"/>
-    	<img width="100%" src="/static/public/images/grey.gif" data-original="/static/public/images/new_04.jpg"/>
-    	<img src="/static/public/images/grey.gif" data-original="/static/public/images/new_05.jpg" width="100%"/>
-    	<img src="/static/public/images/grey.gif" data-original="/static/public/images/new_06.jpg" width="100%"/>
-    	<img src="/static/public/images/grey.gif" data-original="/static/public/images/new_07.jpg" width="100%"/>
-    	<img src="/static/public/images/grey.gif" data-original="/static/public/images/new_08.jpg" width="100%"/>
-    	<img src="/static/public/images/grey.gif" data-original="/static/public/images/new_09.jpg" width="100%"/>
-    	<img src="/static/public/images/grey.gif" data-original="/static/public/images/new_10.gif" width="100%"/>
-    	<img src="/static/public/images/grey.gif" data-original="/static/public/images/new_11.jpg" width="100%"/>
-    	<img src="/static/public/images/grey.gif" data-original="/static/public/images/new_12.jpg" width="100%" />
-    	<img src="/static/public/images/grey.gif" data-original="/static/public/images/new_13.jpg" width="100%" style="margin-bottom: 45px;"/>
+    	<a href="#"><img src="/static/public/images/news_02.jpg" width="100%"/></a>
+    	<a href="#"><img src="/static/public/images/news_03.jpg" width="100%"/></a>
+    	<a href="#"><img width="100%" src="/static/public/images/grey.gif" data-original="/static/public/images/news_04.jpg"/></a>
+    	<a href="#"><img src="/static/public/images/grey.gif" data-original="/static/public/images/news_05.jpg" width="100%"/></a>
+    	<a href="#"><img src="/static/public/images/grey.gif" data-original="/static/public/images/news_06.jpg" width="100%"/></a>
+    	<a href="#"><img src="/static/public/images/grey.gif" data-original="/static/public/images/news_07.jpg" width="100%"/></a>
+    	<a href="#"><img src="/static/public/images/grey.gif" data-original="/static/public/images/news_08.jpg" width="100%"/></a>
+    	<a href="#"><img src="/static/public/images/grey.gif" data-original="/static/public/images/news_09.jpg" width="100%"/></a>
+    	<a href="#"><img src="/static/public/images/grey.gif" data-original="/static/public/images/news_10.gif" width="100%"/></a>
+    	<a href="#"><img src="/static/public/images/grey.gif" data-original="/static/public/images/news_11.jpg" width="100%"/></a>
+    	<a href="#"><img src="/static/public/images/grey.gif" data-original="/static/public/images/news_12.jpg" width="100%"/></a>
+    	<a href="#"><img src="/static/public/images/grey.gif" data-original="/static/public/images/news_13.jpg" width="100%" style="margin-bottom: 45px;"/></a>
     	</div>
     	<jsp:include page="/WEB-INF/app/include/footer.jsp"/>
     	<div class="big-img">

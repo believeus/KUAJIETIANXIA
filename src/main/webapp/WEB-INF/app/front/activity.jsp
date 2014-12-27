@@ -279,6 +279,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		.p3{
 			color:#942E2C;font-weight: bold;
 		}
+<<<<<<< Updated upstream
 		.erweima{
 			width:49%;
 			float:left;
@@ -306,6 +307,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		.big-img img{
 			vertical-align:middle;
 		}
+=======
+>>>>>>> Stashed changes
 	</style>
 	<script type="text/javascript">
 		$(function(){
@@ -320,6 +323,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					location.href="/app/activity.jhtml";
 				}
 			}); */
+			$("#stop_music").click(function(){
+				if($("#emb").attr("src") == "/static/public/jingle_bells.mp3"){
+					$("#emb").attr("src","");
+				}else{
+					location.href="/app/activity.jhtml";
+				}
+			});
 			$("#bg-pass").css("height","3223px");
 			$("#msg").delay(1500).fadeOut("fast");
 			$("#viewUsers").click(function(){
@@ -365,9 +375,15 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <body>
     <header class="top box_shadow_1 clearfix">
 		<!-- <div class="top_btnL fl"><a onclick="history.go(-1);" href="javascript:void(0);">返回</a></div> -->
+<<<<<<< Updated upstream
 	    <!-- <div class="top_btnR2 fr"><a id="stop_music" href="javascript:void(0);">停止背景音乐</a></div> -->
 	    <!-- <div class="top_btnR2 fr"><a onclick="location.href='/app/activityRegView.jhtml'" href="javascript:void(0);">签到</a></div> -->
 	    <p class="top_title" style="overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">跨界天下品牌发布暨院线电影《那十年》启动盛典邀请函</p>
+=======
+	    <div class="top_btnR2 fr"><a id="stop_music" href="javascript:void(0);">停止背景音乐</a></div>
+	    <div class="top_btnR2 fr"><a onclick="location.href='/app/activityRegView.jhtml'" href="javascript:void(0);">报名</a></div>
+	    <p class="top_title">跨界天下启动活动报名</p>
+>>>>>>> Stashed changes
 	</header>
    	<div class="a-main">
    		<div class="a-main-title">
@@ -382,7 +398,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
    		<div class="a-main-img">
 			<img src="/static/public/images/k_logo.jpg" width="100%"/>
    		</div>
+<<<<<<< Updated upstream
 		<img id="small-img" src="/static/public/images/y.jpg" width="100%" style="border-radius:4px;margin-top: 10px;">
+=======
+>>>>>>> Stashed changes
    		
    		<div class="a-main-word">
    			<p class="p1">这里， 将跨领域之鸿沟</p>
@@ -399,6 +418,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<p class="p1">星光璀璨 邀您共享！ </p>
 			<p class="p1">八方齐聚，共襄盛举。</p>
 			<p class="p1">诚邀阁下拨冗莅临！</p>
+<<<<<<< Updated upstream
+=======
+			<p class="p3" style="margin-top:30px;">雪花飘飘,钟声敲敲,平安夜为你祈祷。</p>
+			<p class="p3">舞姿摇摇,嗓门高高,狂欢夜任你逍遥。</p>
+			<p class="p3">问候捎捎,祝福早早,快乐的圣诞多美好。</p>
+			<p class="p3" style="">愿你圣诞开心乐陶陶。</p>
+>>>>>>> Stashed changes
 		</div>	
 			<div class="a-main-word">
 	   			<img src="/static/public/images/ex_icon1.png" class="word-img"/>
@@ -439,12 +465,21 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
    		<div class="footer2 gradient_7 box_shadow_1">
 		    <a onclick="location.href='/app/activity.jhtml'" href="javascript:void(0);"><div class="footer2_left fl">首页</div></a>
 		     <div class="fr">
+<<<<<<< Updated upstream
 		        <a onclick="location.href='/app/activityRegView.jhtml'" href="javascript:void(0);"><div class="footer2_right fl"><div class="footer2_right_2" style="background:#932D2B;font-weight:bold;padding: 0 20px;border:0;">请签到</div></div></a>
 		        <!-- <a onclick="window.location.reload();" href="javascript:void(0);"><div class="footer2_right fl"><div class="footer2_right_2">刷新</div></div></a> -->
 		     </div>
 		</div>
 		<!-- <bgsound loop="true" src="/static/public/jingle_bells.mp3" /> -->
 		<!-- <embed id="emb" src="/static/public/jingle_bells.mp3" width=0 height=0 type=audio/mpeg loop="200" autostart="true" controls="pausebutton"></embed> -->
+=======
+		        <a onclick="location.href='/app/activityRegView.jhtml'" href="javascript:void(0);"><div class="footer2_right fl"><div class="footer2_right_2">报名</div></div></a>
+		        <a onclick="window.location.reload();" href="javascript:void(0);"><div class="footer2_right fl"><div class="footer2_right_2">刷新</div></div></a>
+		     </div>
+		</div>
+		<!-- <bgsound loop="true" src="/static/public/jingle_bells.mp3" /> -->
+		<embed id="emb" src="/static/public/jingle_bells.mp3" width=0 height=0 type=audio/mpeg loop="200" autostart="true" controls="pausebutton"></embed>
+>>>>>>> Stashed changes
    		<div class="a-main-word" style="text-align:center;background:#ECECEC;font-size: 15px;">
    			&copy;跨界天下
    		</div>

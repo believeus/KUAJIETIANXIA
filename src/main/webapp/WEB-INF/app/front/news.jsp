@@ -5,6 +5,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib uri="http://www.believeus.cn/jstl/date" prefix="date" %>
+<%@ taglib uri="http://www.believeus.cn/jstl/html" prefix="html" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
@@ -99,6 +100,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		.kjtx-news{
 			width:100%;overflow:hidden;height:auto;margin-bottom:5px;
 		}
+		.jiantou{
+			margin-right:5px;
+		}
 	</style>
   </head>
   <body>
@@ -113,15 +117,17 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   			<img src="/static/public/images/logo_h.png" width="100%"/>
   		</div>
 		
-		<c:forEach var="news" items="${newsList}">
-			<div class="kjtx-news">
-			<div style="padding:0 10px;">
-				<p class="news-list"><a href="/app/newsInfo.jhtml?id=${news.id }"><i class="jiantou"></i>${news.title }</a></p>
-				
-				<p class="news-list" style="text-align: right;margin-top:4px;"><date:date parttern="yyyy-MM-dd" value="${news.editTime }"></date:date></p>
-			</div>
+		<div style="margin-bottom: 50px;">
+			<c:forEach var="news" items="${newsList}">
+				<div class="kjtx-news">
+					<div style="padding:0 10px;">
+						<p class="news-list"><a href="/app/newsInfo.jhtml?id=${news.id }"><i class="jiantou"></i><html:html num="6" value="${news.title }"></html:html></a></p>
+						
+						<p class="news-list" style="text-align: right;margin-top:4px;font-size:12px;"><date:date parttern="yyyy-MM-dd" value="${news.editTime }"></date:date></p>
+					</div>
+				</div>
+			</c:forEach>
 		</div>
-		</c:forEach>
     	<jsp:include page="/WEB-INF/app/include/footer.jsp"/>
   </body>
 </html>

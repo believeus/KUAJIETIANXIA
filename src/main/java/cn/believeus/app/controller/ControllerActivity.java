@@ -157,4 +157,12 @@ public class ControllerActivity {
 		request.setAttribute("partners", partners);
 		return "/WEB-INF/app/front/enterpriseInfo.jsp";
 	}
+	/**
+	 * 引导页
+	 * @return
+	 */
+	@RequestMapping("/app/flashPage")
+	public String flashPage(HttpServletRequest request){
+		return "/WEB-INF/app/front/flash_page.jsp";
+	}
 }

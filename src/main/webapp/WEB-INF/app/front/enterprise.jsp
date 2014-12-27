@@ -5,6 +5,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib uri="http://www.believeus.cn/jstl/date" prefix="date" %>
+<%@ taglib uri="http://www.believeus.cn/jstl/html" prefix="html" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
@@ -99,6 +100,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		.kjtx-news{
 			width:100%;overflow:hidden;height:auto;margin-bottom:5px;
 		}
+		.jiantou{
+			margin-right:5px;
+		}
 	</style>
   </head>
   <body>
@@ -106,7 +110,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   		<div class="kjtx-tel">
   			<span style="font-family:microsoft yahei;">
 				<i class="phone-tel"></i>
-				Call Us Now：<a href="tel://400-6565-0999">400-6565-0999</a>
+				Call Us Now：<a href="tel://400-6565-0999">027-6565-0999</a>
 			</span>
   		</div>
   		<div class="kjtx-logo">
@@ -115,8 +119,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   		<c:forEach items="${partnersList }" var="partners">
 		 <div class="kjtx-news">
 			<div style="padding:0 10px;">
-				<p class="news-list"><a href="/app/enterpriseInfo.jhtml?id=${partners.id }"><i class="jiantou"></i>${partners.name }</a></p>
-				<p class="news-list" style="text-align: right;margin-top:4px;"><date:date parttern="yyyy-MM-dd" value="${partners.editTime }"></date:date></p>
+				<p class="news-list"><a href="/app/enterpriseInfo.jhtml?id=${partners.id }"><i class="jiantou"></i><html:html num="6" value="${partners.name }"></html:html></a></p>
+				<p class="news-list" style="text-align: right;margin-top:4px;font-size:12px;"><date:date parttern="yyyy-MM-dd" value="${partners.editTime }"></date:date></p>
 			</div>
 		 </div>
   		</c:forEach>
