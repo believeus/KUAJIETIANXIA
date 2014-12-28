@@ -162,13 +162,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<div style="margin-top:30px;margin-bottom: 30px;height:auto;overflow: hidden;">
 				<p class="pro-title" style="margin-bottom:30px;">公司产品</p>
 				<div class="pro-list">
-					<a href="/app/productInfo.jhtml"><img src="/static/public/images/ht.jpg" width="100%"/></a>
+					<a href="/app/productInfo.jhtml"><img src="/static/public/images/111.jpg" width="100%"/></a>
 					<div style="text-align: center;padding:10px 0;">
 						<a href="/app/productInfo.jhtml" class="pro-name">活力胶原蛋白多肽粉</a>
 					</div>
 				</div>
 				<div class="pro-list">
-					<a href="/app/productInfo2.jhtml"><img src="/static/public/images/mm.jpg" width="100%"/></a>
+					<a href="/app/productInfo2.jhtml"><img src="/static/public/images/222.jpg" width="100%"/></a>
 					<div style="text-align: center;padding:10px 0;">
 						<a href="/app/productInfo2.jhtml" class="pro-name">活力胶原蛋白蚕丝面膜</a>
 					</div>

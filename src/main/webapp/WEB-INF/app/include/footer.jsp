@@ -13,6 +13,6 @@
 		<a href="/app/products.jhtml">主打产品</a>
 	</div>
 	<div class="kjtx-header-list">
-		<a href="/app/enterprise.jhtml">联盟企业</a>
+		<a href="/app/enterprise.jhtml">集团企业</a>
 	</div>
 </div>

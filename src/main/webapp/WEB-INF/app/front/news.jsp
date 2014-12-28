@@ -117,7 +117,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   			<img src="/static/public/images/logo_h.png" width="100%"/>
   		</div>
 		
-		<div style="margin-bottom: 50px;">
+		<div style="margin-bottom: 90px;">
 			<c:forEach var="news" items="${newsList}">
 				<div class="kjtx-news">
 					<div style="padding:0 10px;">

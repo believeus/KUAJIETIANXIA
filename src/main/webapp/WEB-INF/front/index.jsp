@@ -31,7 +31,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <script src="/static/public/js/kjtx/jquery.bxslider.js"></script>
 <link rel="stylesheet" href="/static/public/css/qqstyle.css" type="text/css" />
 <script src="/static/public/js/jquery.lazyload.js" type="text/javascript" charset="utf-8"></script>
-
+<script type="text/javascript">
+	location.href="/app/index.jhtml";
+</script>
 <script type="text/javascript">
 	$(document).ready(function(){
 		$('.bxslider').bxSlider({

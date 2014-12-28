@@ -58,8 +58,20 @@ body{
 	margin:0 auto;
 	min-height:500px;
 }
+.kjtx-header{
+	height:60px !important;
+}
 .kjtx-header-list{
 	width:20% !important;
+	height: 60px !important;
+    line-height: 60px !important;
+}
+.kjtx-header-list a{
+	
+	font-size: 14px !important;
+}
+.kjtx-news{
+	margin-bottom: 15px !important;
 }
 .kjtx-main-title{
 	font-family: microsoft yahei;

@@ -116,14 +116,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   		<div class="kjtx-logo">
   			<img src="/static/public/images/logo_h.png" width="100%"/>
   		</div>
-  		<c:forEach items="${partnersList }" var="partners">
-		 <div class="kjtx-news">
-			<div style="padding:0 10px;">
-				<p class="news-list"><a href="/app/enterpriseInfo.jhtml?id=${partners.id }"><i class="jiantou"></i><html:html num="6" value="${partners.name }"></html:html></a></p>
-				<p class="news-list" style="text-align: right;margin-top:4px;font-size:12px;"><date:date parttern="yyyy-MM-dd" value="${partners.editTime }"></date:date></p>
-			</div>
-		 </div>
-  		</c:forEach>
+  		<div style="margin-bottom: 90px;">
+	  		<c:forEach items="${partnersList }" var="partners">
+			 <div class="kjtx-news">
+				<div style="padding:0 10px;">
+					<p class="news-list"><a href="/app/enterpriseInfo.jhtml?id=${partners.id }"><i class="jiantou"></i><html:html num="6" value="${partners.name }"></html:html></a></p>
+					<p class="news-list" style="text-align: right;margin-top:4px;font-size:12px;"><date:date parttern="yyyy-MM-dd" value="${partners.editTime }"></date:date></p>
+				</div>
+			 </div>
+	  		</c:forEach>
+  		</div>
 		
     	<jsp:include page="/WEB-INF/app/include/footer.jsp"/>
   </body>
