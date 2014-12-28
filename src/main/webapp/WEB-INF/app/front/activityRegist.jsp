@@ -16,6 +16,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<meta content="black" name="apple-mobile-web-app-status-bar-style">
 	<script type="text/javascript" src="/static/public/js/jquery-1.9.1.min.js"></script>
 	<link href="/static/public/css/at.css" type="text/css" rel="stylesheet">
+	<link rel="shortcut icon" type="image/x-icon" href="/static/public/images/favicon.ico" />
 	<style type="text/css">
 		.a-msg{
 			background: none repeat scroll 0 0 #000;

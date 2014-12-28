@@ -16,6 +16,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<script type="text/javascript" src="/static/public/js/jquery-1.9.1.min.js"></script>
 	<meta content="black" name="apple-mobile-web-app-status-bar-style">
 	<link href="/static/public/css/at.css" type="text/css" rel="stylesheet">
+	<link rel="shortcut icon" type="image/x-icon" href="/static/public/images/favicon.ico" />
 	<style type="text/css">
 		body{
 			background:#ECECEC;

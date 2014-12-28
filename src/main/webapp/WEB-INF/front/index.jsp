@@ -18,6 +18,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <meta content="yes" name="apple-mobile-web-app-capable" />
 <meta content="black" name="apple-mobile-web-app-status-bar-style" />
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<link rel="shortcut icon" type="image/x-icon" href="/static/public/images/favicon.ico" />
 <link rel="stylesheet" href="/static/public/css/fonts.css" />
 <link rel="stylesheet" href="/static/public/css/style.css" />
 <link rel="stylesheet" href="/static/public/css/fwslider.css" />

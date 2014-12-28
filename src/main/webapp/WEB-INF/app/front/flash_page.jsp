@@ -8,6 +8,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <html>
   <head>
     <title>平安夜</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/static/public/images/favicon.ico" />
     <style type="text/css">
     	body{
     		margin:0;

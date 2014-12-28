@@ -15,6 +15,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<meta name="format-detection" content="telephone=no">
 	<meta content="yes" name="apple-mobile-web-app-capable">
 	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<link rel="shortcut icon" type="image/x-icon" href="/static/public/images/favicon.ico" />
 	<link href="/static/public/css/at.css" type="text/css" rel="stylesheet">
 	<script type="text/javascript" src="/static/public/js/jquery-1.9.1.min.js"></script>
 	<script type="text/javascript" src="/static/public/js/app.js"></script>

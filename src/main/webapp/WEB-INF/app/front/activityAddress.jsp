@@ -3,6 +3,7 @@
 <html>
 <head>
 	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+	<link rel="shortcut icon" type="image/x-icon" href="/static/public/images/favicon.ico" />
 	<style type="text/css">
 		body, html{width: 100%;height: 100%; margin:0;font-family:"微软雅黑";}
 		#l-map{height:300px;width:100%;}

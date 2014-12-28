@@ -16,6 +16,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<meta content="yes" name="apple-mobile-web-app-capable">
 	<meta content="black" name="apple-mobile-web-app-status-bar-style">
 	<link rel="stylesheet" href="/static/public/css/style.css" />
+	<link rel="shortcut icon" type="image/x-icon" href="/static/public/images/favicon.ico" />
 	<script type="text/javascript" src="/static/public/js/jquery-1.9.1.min.js"></script>
 	<script type="text/javascript">
 		$(function(){
@@ -110,7 +111,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   		<div class="kjtx-tel">
   			<span style="font-family:microsoft yahei;">
 				<i class="phone-tel"></i>
-				Call Us Now：<a href="tel://400-6565-0999">027-6565-0999</a>
+				Call Us Now：<a href="tel://+86-27-65650999">+86-27-65650999</a>
 			</span>
   		</div>
   		<div class="kjtx-logo">
