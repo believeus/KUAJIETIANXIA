@@ -65,6 +65,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<form id="inputForm" action="/admin/partners/save.jhtml" method="post" enctype="multipart/form-data">
 		<table class="input">
 			<tr>
+				<th>排名：</th>
+				<td><input type="text" class="text" name="num" /></td>
+			</tr>
+			<tr>
 				<th>
 					所属产业:
 				</th>

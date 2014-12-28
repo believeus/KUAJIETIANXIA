@@ -70,6 +70,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<input type="hidden" name="img3" value="${partners.img3 }">
 		<table class="input">
 			<tr>
+				<th>排名：</th>
+				<td><input type="text" class="text" name="num" value="${partners.num }"/></td>
+			</tr>
+			<tr>
 				<th>
 					所属产业:
 				</th>

@@ -146,7 +146,7 @@ public class ControllerActivity {
 	@SuppressWarnings("unchecked")
 	@RequestMapping("/app/enterprise")
 	public String enterprise(HttpServletRequest request){
-		String hql="from Partners p order by p.editTime desc ";
+		String hql="from Partners p order by p.num desc ";
 		List<Partners> partnersList = (List<Partners>)baseService.findObjectList(hql);
 		request.setAttribute("partnersList", partnersList);
 		return "/WEB-INF/app/front/enterprise.jsp";

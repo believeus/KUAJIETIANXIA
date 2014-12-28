@@ -49,7 +49,7 @@ public class PartnersController {
 			pageNumber="1";
 		}
 		Pageable pageable=new Pageable(Integer.valueOf(pageNumber),20);
-		String hql="From Partners partners order by partners.editTime desc";
+		String hql="From Partners partners order by partners.num desc";
 		Page<?> page = baseService.findObjectList(hql, pageable);
 		request.setAttribute("partners", page.getContent());
 		request.setAttribute("size",page.getTotal());

@@ -31,6 +31,15 @@ public class Partners extends TbaseEntity {
 	private String img1;
 	private String img2;
 	private String img3;
+	private Integer num;//排名
+	
+	
+	public Integer getNum() {
+		return num;
+	}
+	public void setNum(Integer num) {
+		this.num = num;
+	}
 	private List<Product> products=new ArrayList<Product>();
 	
 	public String getLogo() {
