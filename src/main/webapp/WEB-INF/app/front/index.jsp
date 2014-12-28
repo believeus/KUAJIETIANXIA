@@ -8,7 +8,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <html>
   <head>
     <title>跨界天下-首页</title>
-	<meta content="target-densitydpi=get-target-densitydpi,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,width=device-width, user-scalable=no" name="viewport">
+	<meta content="target-densitydpi=get-target-densitydpi,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,width=device-width, user-scalable=yes" name="viewport">
 	<meta content="no" name="apple-touch-fullscreen">
 	<meta name="format-detection" content="telephone=no">
 	<meta content="yes" name="apple-mobile-web-app-capable">
@@ -119,7 +119,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   		<div class="kjtx-tel">
   			<span style="font-family:microsoft yahei;">
 				<i class="phone-tel"></i>
-				Call Us Now：<a href="tel://400-6565-0999">400-6565-0999</a>
+				Call Us Now：<a href="tel://400-6565-0999">027-6565-0999</a>
 			</span>
   		</div>
   		<div class="kjtx-logo">

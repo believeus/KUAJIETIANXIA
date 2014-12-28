@@ -102,7 +102,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   		<div class="kjtx-tel">
   			<span style="font-family:microsoft yahei;">
 				<i class="phone-tel"></i>
-				Call Us Now：<a href="tel://400-6565-0999">400-6565-0999</a>
+				Call Us Now：<a href="tel://400-6565-0999">027-6565-0999</a>
 			</span>
   		</div>
   		<div class="kjtx-logo">
