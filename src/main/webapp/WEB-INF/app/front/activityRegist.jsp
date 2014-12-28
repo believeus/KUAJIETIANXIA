@@ -146,11 +146,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		    	<input type="hidden" value="yes" name="wxsite" id="wxsite">
 		    </div> -->
 			<div class="apply_add2">
-<<<<<<< Updated upstream
 				<input type="text" placeholder="单位名称（可不填）" required="" maxlength="20" name="description" id="description" class="txt1">
-=======
-				<input type="text" placeholder="单位名称（必填）" required="" maxlength="20" name="description" id="description" class="txt1">
->>>>>>> Stashed changes
 			</div>
 		    <a  href="javascript:void(0); " id="apply_add_on1" class="btn_mobile1 apply_sub">提 交</a>
 	    </form>
