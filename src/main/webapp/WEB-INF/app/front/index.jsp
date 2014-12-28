@@ -85,7 +85,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		}
 		.kjtx-header-list{
 			float:left;
-			width:25%;
+			width:20%;
 			height:40px;
 			line-height:40px;
 			text-align: center;

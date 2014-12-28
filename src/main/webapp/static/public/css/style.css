@@ -58,6 +58,9 @@ body{
 	margin:0 auto;
 	min-height:500px;
 }
+.kjtx-header-list{
+	width:20% !important;
+}
 .kjtx-main-title{
 	font-family: microsoft yahei;
     font-size: 25px;

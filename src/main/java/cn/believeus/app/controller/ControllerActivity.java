@@ -165,4 +165,18 @@ public class ControllerActivity {
 	public String flashPage(HttpServletRequest request){
 		return "/WEB-INF/app/front/flash_page.jsp";
 	}
+	
+	@RequestMapping("/app/products")
+	public String products(){
+		return "/WEB-INF/app/front/products.jsp";
+	}
+	@RequestMapping("/app/productInfo")
+	public String productInfo(){
+		return "/WEB-INF/app/front/productInfo.jsp";
+	}
+	@RequestMapping("/app/productInfo2")
+	public String productInfo2(){
+		return "/WEB-INF/app/front/productInfo2.jsp";
+	}
+
 }
