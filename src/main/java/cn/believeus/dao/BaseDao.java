@@ -231,7 +231,19 @@ public class BaseDao extends HibernateDaoSupport {
 					}
 				});
 	}
-	
+	public List<?> findObjectList(final String hql) {
+		return (List<?>) getHibernateTemplate().execute(
+				new HibernateCallback<Object>() {
+
+					@Override
+					public Object doInHibernate(Session session)
+							throws HibernateException, SQLException {
+						Query query = session.createQuery(hql);
+						List<?> list = query.list();
+						return list;
+					}
+				});
+	}
 	public Page<?> findPageDateList(final String hql, final Pageable pageable) {
 		return (Page<?>)getHibernateTemplate().execute(new HibernateCallback<Object>() {
 

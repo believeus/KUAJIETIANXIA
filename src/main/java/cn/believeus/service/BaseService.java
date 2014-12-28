@@ -91,5 +91,8 @@ public class BaseService{
 	public Long findSize(Class<?> clazz){
 		return baseDao.findSize(clazz);
 	}
+	public List<?> findObjectList(final String hql) {
+		return baseDao.findObjectList(hql);
+	}
 
 }

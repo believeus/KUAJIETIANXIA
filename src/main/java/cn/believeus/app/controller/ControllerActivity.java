@@ -143,10 +143,11 @@ public class ControllerActivity {
 		return "/WEB-INF/app/front/newsInfo.jsp";
 	}
 	
+	@SuppressWarnings("unchecked")
 	@RequestMapping("/app/enterprise")
 	public String enterprise(HttpServletRequest request){
-		@SuppressWarnings("unchecked")
-		List<Partners> partnersList = (List<Partners>)baseService.findObjectList(Partners.class);
+		String hql="from Partners p order by p.editTime desc ";
+		List<Partners> partnersList = (List<Partners>)baseService.findObjectList(hql);
 		request.setAttribute("partnersList", partnersList);
 		return "/WEB-INF/app/front/enterprise.jsp";
 	}
