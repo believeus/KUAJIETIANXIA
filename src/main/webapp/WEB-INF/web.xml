@@ -53,7 +53,7 @@
 	
 	<filter>
 		<filter-name>forwardFilter</filter-name>
-		<filter-class>cn.believeus.filter.ForwardFilter</filter-class>
+		<filter-class>cn.believeus.filter.StatisticalCountFilter</filter-class>
 	</filter>
 	<!-- 经测试filter的执行过程是按照filter-mapping的顺序决定的 ,比如说来了一个.html的请求 -->
 	

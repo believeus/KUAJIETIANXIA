@@ -36,16 +36,11 @@ public class ControllerActivity {
 	@SuppressWarnings("unchecked")
 	@RequestMapping("/app/activity")
 	public String activity(HttpServletRequest request){
-		Tvariables variables = (Tvariables) baseService.findObject(Tvariables.class, "name", "accessCount");
-		Integer accessCount=Integer.parseInt(variables.getValue());
-		variables.setValue(++accessCount+"");
-		baseService.saveOrUpdata(variables);
 		Long size = baseService.findSize(TmobileUser.class);
 		request.setAttribute("size", size);
 		String hql="from TmobileUser user order by user.createTime desc ";
 		List<TmobileUser> users = (List<TmobileUser>) baseService.findObjectList(hql,10);
 		request.setAttribute("users", users);
-		request.setAttribute("accessCount", accessCount);
 		return "/WEB-INF/app/front/activity.jsp";
 	}
 	/**
