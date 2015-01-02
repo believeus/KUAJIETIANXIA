@@ -152,7 +152,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		
 		<p class="pro-title">活力胶原蛋白蚕丝面膜</p>
 		<div style="width:50%;margin:0 auto 50px;">
-			<img src="/static/public/images/ht.png" width="100%"/>
+			<img src="/static/public/images/mm.jpg" width="100%"/>
 		</div>
 		<div style="">
 			<p class="pro-dis">

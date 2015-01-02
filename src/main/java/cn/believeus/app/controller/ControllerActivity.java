@@ -123,10 +123,12 @@ public class ControllerActivity {
 		return "/WEB-INF/app/front/intro.jsp";
 	}
 	
+	@SuppressWarnings("unchecked")
 	@RequestMapping("/app/news")
 	public String news(HttpServletRequest request){
-		@SuppressWarnings("unchecked")
-		List<Tnews> newsList = (List<Tnews>)baseService.findObjectList(Tnews.class);
+		String hql = "from Tnews news order by news.editTime desc";
+		List<Tnews> newsList = (List<Tnews>)baseService.findObjectList(hql);
+//		List<Tnews> newsList = (List<Tnews>)baseService.findObjectList(Tnews.class);
 		request.setAttribute("newsList", newsList);
 		return "/WEB-INF/app/front/news.jsp";
 	}
