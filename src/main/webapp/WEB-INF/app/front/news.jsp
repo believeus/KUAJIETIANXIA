@@ -18,6 +18,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<link rel="shortcut icon" type="image/x-icon" href="/static/public/images/favicon.ico" />
 	<link rel="stylesheet" href="/static/public/css/style.css" />
 	<script type="text/javascript" src="/static/public/js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="/static/public/js/list.js"></script>
 	<script type="text/javascript">
 		$(function(){
 			
@@ -104,6 +105,135 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		.jiantou{
 			margin-right:5px;
 		}
+		/* ---------- Pagination ---------- */
+
+		div.pagination {
+			height: 20px;
+			width:300px;
+			margin:0 auto;
+		}
+		
+		div.pagination a, div.pagination span {
+			height: 18px;
+			line-height: 18px;
+			display: inline;
+			float: left;
+			margin-left: 3px;
+			text-align: center;
+			vertical-align: middle;
+			white-space: nowrap;
+			outline: none;
+			blr: expression(this.hideFocus = true);
+		}
+		
+		div.pagination a {
+			padding: 0px 5px;
+			border: 1px solid #cccccc;
+		}
+		
+		div.pagination a:hover {
+			border: 1px solid #fd6d01;
+			text-decoration: none;
+		}
+		
+		div.pagination a.previousPage {
+			width: 18px;
+			padding: 0px;
+			background: url(/static/public/images/list.gif) 0px -180px no-repeat;
+		}
+		
+		div.pagination span.previousPage {
+			width: 18px;
+			cursor: default;
+			border: 1px solid #cccccc;
+			background: url(/static/public/images/list.gif) -30px -180px no-repeat;
+		}
+		
+		div.pagination a.nextPage {
+			width: 18px;
+			padding: 0px;
+			background: url(/static/public/images/list.gif) 0px -210px no-repeat;
+		}
+		
+		div.pagination span.nextPage {
+			width: 18px;
+			cursor: default;
+			border: 1px solid #cccccc;
+			background: url(/static/public/images/list.gif) -30px -210px no-repeat;
+		}
+		
+		div.pagination a.firstPage {
+			width: 18px;
+			padding: 0px;
+			background: url(/static/public/images/list.gif) -60px -180px no-repeat;
+		}
+		
+		div.pagination span.firstPage {
+			width: 18px;
+			cursor: default;
+			border: 1px solid #cccccc;
+			background: url(/static/public/images/list.gif) -90px -180px no-repeat;
+		}
+		
+		div.pagination a.lastPage {
+			width: 18px;
+			padding: 0px;
+			background: url(/static/public/images/list.gif) -60px -210px no-repeat;
+		}
+		
+		div.pagination span.lastPage {
+			width: 18px;
+			cursor: default;
+			border: 1px solid #cccccc;
+			background: url(/static/public/images/list.gif) -90px -210px no-repeat;
+		}
+		
+		div.pagination .currentPage {
+			padding: 0px 5px;
+			color: #fd6d01!important;
+			font-weight: bold;
+			cursor: default;
+			border: 1px solid #fd6d01;
+			background-color: #ffede1;
+		}
+		
+		div.pagination .pageBreak {
+			padding: 0px 5px;
+			color: #3366cc;
+			cursor: default;
+		}
+		
+		div.pagination .pageSkip {
+			vertical-align: middle;
+			padding: 0px 3px;
+			color: #666666;
+		}
+		
+		div.pagination .pageSkip input {
+			width: 18px;
+			height: 18px;
+			line-height: 18px;
+			padding: 0px;
+			margin: 0px 5px;
+			text-align: center;
+			vertical-align: top;
+			*vertical-align: middle;
+			ime-mode: disabled;
+			border: 1px solid #cccccc;
+		}
+		
+		div.pagination .pageSkip button {
+			width: 20px;
+			height: 20px;
+			margin: 0px 0px 0px 5px;
+			vertical-align: top;
+			*vertical-align: middle;
+			cursor: pointer;
+			outline: none;
+			blr: expression(this.hideFocus = true);
+			border: none;
+			background: url(/static/public/images/list.gif) -120px -210px no-repeat;
+		}
 	</style>
   </head>
   <body>
@@ -119,7 +249,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   		</div>
 		
 		<div style="margin-bottom: 90px;">
-			<c:forEach var="news" items="${newsList}">
+			<c:forEach var="news" items="${news}">
 				<div class="kjtx-news">
 					<div style="padding:0 10px;">
 						<p class="news-list"><a href="/app/newsInfo.jhtml?id=${news.id }"><i class="jiantou"></i><html:html num="6" value="${news.title }"></html:html></a></p>
@@ -128,6 +258,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					</div>
 				</div>
 			</c:forEach>
+			<form action="/app/news.jhtml" id="listForm">
+				<jsp:include page="/WEB-INF/include/pagination.jsp" flush="true" />
+			</form>
 		</div>
     	<jsp:include page="/WEB-INF/app/include/footer.jsp"/>
   </body>

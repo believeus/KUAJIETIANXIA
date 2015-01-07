@@ -2,22 +2,28 @@ package cn.believeus.app.controller;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.Map;
 import java.util.List;
+import java.util.Map;
+
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+
 import mydfs.storage.server.MydfsTrackerServer;
+
 import org.junit.Assert;
 import org.springframework.stereotype.Controller;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 
+import cn.believeus.PaginationUtil.Page;
+import cn.believeus.PaginationUtil.Pageable;
+import cn.believeus.PaginationUtil.PaginationUtil;
 import cn.believeus.model.Partners;
 import cn.believeus.model.Tnews;
 import cn.believeus.model.app.TmobileUser;
-import cn.believeus.model.app.Tvariables;
 import cn.believeus.service.BaseService;
 
 
@@ -126,10 +132,23 @@ public class ControllerActivity {
 	@SuppressWarnings("unchecked")
 	@RequestMapping("/app/news")
 	public String news(HttpServletRequest request){
-		String hql = "from Tnews news order by news.editTime desc";
+		/*String hql = "from Tnews news order by news.editTime desc";
 		List<Tnews> newsList = (List<Tnews>)baseService.findObjectList(hql);
-//		List<Tnews> newsList = (List<Tnews>)baseService.findObjectList(Tnews.class);
-		request.setAttribute("newsList", newsList);
+		request.setAttribute("newsList", newsList);*/
+		
+		String pageNumber = request.getParameter("pageNumber");
+		// 如果为空，则设置为1
+		if (StringUtils.isEmpty(pageNumber)) {
+			pageNumber="1";
+		}
+		Pageable pageable=new Pageable(Integer.valueOf(pageNumber),10);
+		String hql="From Tnews news order by news.editTime desc";
+		Page<?> page = baseService.findObjectList(hql, pageable);
+		request.setAttribute("news", page.getContent());
+		request.setAttribute("size",page.getTotal());
+		// 分页
+		PaginationUtil.pagination(request, page.getPageNumber(),page.getTotalPages(), 0);
+		
 		return "/WEB-INF/app/front/news.jsp";
 	}
 	

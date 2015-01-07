@@ -161,7 +161,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 			</div>
 			<div style="margin-top:30px;margin-bottom: 30px;height:auto;overflow: hidden;">
-				<p class="pro-title" style="margin-bottom:30px;">公司产品</p>
+				<p class="pro-title" style="margin-bottom:30px;">旗下生物科技产品</p>
 				<div class="pro-list">
 					<a href="/app/productInfo.jhtml"><img src="/static/public/images/111.jpg" width="100%"/></a>
 					<div style="text-align: center;padding:10px 0;">

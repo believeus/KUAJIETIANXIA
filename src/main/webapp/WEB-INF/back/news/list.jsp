@@ -57,9 +57,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<th>
 					<a href="javascript:;" class="sort" name="title">标题</a>
 				</th>
-				<th>
+				<!-- <th>
 					<a href="javascript:;" class="sort" name="top">置顶</a>
-				</th>
+				</th> -->
 				<th>
 					<a href="#"  class="sort">操作</a>
 				</th>
@@ -75,12 +75,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					<td>
 						${myNew.title}
 					</td>
-					<td>
+					<%-- <td>
 					    <c:choose>
 					       <c:when test="${myNew.top eq 1}"><a href="/admin/news/down.jhtml?myNewId=${myNew.id}"><font color="green">取消置顶</font></a></c:when>
 					       <c:otherwise><a href="/admin/news/top.jhtml?myNewId=${myNew.id}"><font color="red">点击置顶</font></a></c:otherwise>
 					    </c:choose>
-					</td>
+					</td> --%>
 					<td>
 						<a href="/admin/news/edit.jhtml?myNewId=${myNew.id}">[修改]</a>
 					</td>
