@@ -105,6 +105,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<i class="phone-tel"></i>
 				Call Us Now：<a href="tel://+86-27-65650999">+86-27-65650999</a>
 			</span>
+			<span class="vipcenter">
+				<a href="http://no77520.web03.mzserver.net/ldq/manage/main.php" title="会员中心" target="_blank">会员中心</a>
+			</span>
   		</div>
   		<div class="kjtx-logo">
   			<img src="/static/public/images/logo_h.png" width="100%"/>
