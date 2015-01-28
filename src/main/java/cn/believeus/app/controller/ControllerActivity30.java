@@ -1,4 +1,4 @@
-/*package cn.believeus.app.controller;
+package cn.believeus.app.controller;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -23,36 +23,36 @@ import cn.believeus.PaginationUtil.Pageable;
 import cn.believeus.PaginationUtil.PaginationUtil;
 import cn.believeus.model.Partners;
 import cn.believeus.model.Tnews;
-import cn.believeus.model.app.TmobileUser;
+import cn.believeus.model.app.TUser;
 import cn.believeus.service.BaseService;
 
 
 @Controller
-public class ControllerActivity {
+public class ControllerActivity30 {
 	@Resource
 	private BaseService baseService;
 	
 	@Resource
 	private MydfsTrackerServer mydfsTrackerServer;
 	
-	*//**
+	/**
 	 * 活动报名
 	 * @return
-	 *//*
+	 */
 	@SuppressWarnings("unchecked")
 	@RequestMapping("/app/activity")
 	public String activity(HttpServletRequest request){
-		Long size = baseService.findSize(TmobileUser.class);
+		Long size = baseService.findSize(TUser.class);
 		request.setAttribute("size", size);
-		String hql="from TmobileUser user order by user.createTime desc ";
-		List<TmobileUser> users = (List<TmobileUser>) baseService.findObjectList(hql,10);
+		String hql="from TUser user order by user.createTime desc ";
+		List<TUser> users = (List<TUser>) baseService.findObjectList(hql,10);
 		request.setAttribute("users", users);
 		return "/WEB-INF/app/front/activity.jsp";
 	}
-	*//**
+	/**
 	 * 信息填寫页面
 	 * @return
-	 *//*
+	 */
 	@RequestMapping("/app/activityRegView")
 	public String activityRegView(HttpServletRequest request){
 		return "/WEB-INF/app/front/activityRegist.jsp";
@@ -60,7 +60,7 @@ public class ControllerActivity {
 	
 	// 用户注册
 	@RequestMapping("/app/activityReg")
-	public  String activityReg(HttpServletRequest request,TmobileUser mobileUser){
+	public  String activityReg(HttpServletRequest request,TUser mobileUser){
 		try {
 			MultipartHttpServletRequest multipartRequest = (MultipartHttpServletRequest) request;
 			String storepath = "";
@@ -76,7 +76,6 @@ public class ControllerActivity {
 					String originName=file.getOriginalFilename();
 					String extention = originName.substring(originName.lastIndexOf(".") + 1);
 					storepath = mydfsTrackerServer.upload(inputStream, extention);
-					mobileUser.setImgpath(storepath);
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
@@ -88,14 +87,14 @@ public class ControllerActivity {
 		}
 		return "redirect:/app/activity.jhtml";
 	}
-	*//**
+	/**
 	 * 查看信息
 	 * @return
-	 *//*
+	 */
 	@SuppressWarnings("unchecked")
 	@RequestMapping("/app/activityUsers")
 	public String activityUsers(HttpServletRequest request){
-		List<TmobileUser> users = (List<TmobileUser>) baseService.findObjectList(TmobileUser.class);
+		List<TUser> users = (List<TUser>) baseService.findObjectList(TUser.class);
 		request.setAttribute("users", users);
 		request.setAttribute("size", users.size());
 		return "/WEB-INF/app/front/activityUsers.jsp";
@@ -103,7 +102,7 @@ public class ControllerActivity {
 	
 	@RequestMapping("/app/ajaxPhone")
 	public @ResponseBody String ajaxPhone(String phone){
-		TmobileUser user = (TmobileUser)baseService.findObject(TmobileUser.class, "phone", phone);
+		TUser user = (TUser)baseService.findObject(TUser.class, "phone", phone);
 		if (user!=null) {
 			return "exist";
 		}else {
@@ -112,7 +111,7 @@ public class ControllerActivity {
 	}
 	@RequestMapping("/app/ajaxWeiXin")
 	public @ResponseBody String ajaxWeiXin(String weixin){
-		TmobileUser user = (TmobileUser)baseService.findObject(TmobileUser.class, "webxinCode", weixin);
+		TUser user = (TUser)baseService.findObject(TUser.class, "webxinCode", weixin);
 		if (user!=null) {
 			return "exist";
 		}else {
@@ -132,9 +131,9 @@ public class ControllerActivity {
 	
 	@RequestMapping("/app/news")
 	public String news(HttpServletRequest request){
-		String hql = "from Tnews news order by news.editTime desc";
+		/*String hql = "from Tnews news order by news.editTime desc";
 		List<Tnews> newsList = (List<Tnews>)baseService.findObjectList(hql);
-		request.setAttribute("newsList", newsList);
+		request.setAttribute("newsList", newsList);*/
 		
 		String pageNumber = request.getParameter("pageNumber");
 		// 如果为空，则设置为1
@@ -174,10 +173,10 @@ public class ControllerActivity {
 		request.setAttribute("partners", partners);
 		return "/WEB-INF/app/front/enterpriseInfo.jsp";
 	}
-	*//**
+	/**
 	 * 引导页
 	 * @return
-	 *//*
+	 */
 	@RequestMapping("/app/flashPage")
 	public String flashPage(HttpServletRequest request){
 		return "/WEB-INF/app/front/flash_page.jsp";
@@ -197,4 +196,3 @@ public class ControllerActivity {
 	}
 
 }
-*/

@@ -7,7 +7,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
-    <title>诚邀您参加中华擎天长生产业智慧高端平台战略研讨会</title>
+    <title>诚邀您参加跨界天下品牌发布暨院线电影《那十年》启动盛典仪式</title>
     <meta charset="utf-8">
     <meta content="target-densitydpi=get-target-densitydpi,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,width=device-width, user-scalable=yes" name="viewport">
 	<meta content="no" name="apple-touch-fullscreen">
@@ -375,37 +375,42 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<!-- <div class="top_btnL fl"><a onclick="history.go(-1);" href="javascript:void(0);">返回</a></div> -->
 	    <!-- <div class="top_btnR2 fr"><a id="stop_music" href="javascript:void(0);">停止背景音乐</a></div> -->
 	    <!-- <div class="top_btnR2 fr"><a onclick="location.href='/app/activityRegView.jhtml'" href="javascript:void(0);">签到</a></div> -->
-	    <p class="top_title" style="overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">中华擎天长生产业智慧高端平台战略研讨会邀请函</p>
+	    <p class="top_title" style="overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">跨界天下品牌发布暨院线电影《那十年》启动盛典邀请函</p>
 	</header>
    	<div class="a-main">
    		<div class="a-main-title">
-   			中华擎天长生产业智慧高端平台战略研讨会邀请函
+   			跨界天下品牌发布暨院线电影《那十年》启动盛典邀请函
    		</div>
    		<div class="a-visitNum">
    			访问数：${accessCount }<%--  &nbsp;&nbsp;&nbsp;签到数：${size } --%>
    		</div>
    		<div class="a-main-title" style="margin:10px 0;border-radius:5px;text-align:center;">
-   			<!-- <span class="tips">诚意邀请</span> -->擎天长生，诚邀您的光临！
+   			<!-- <span class="tips">诚意邀请</span> -->跨界天下，诚邀您的光临！
    		</div>
    		<div class="a-main-img">
-			<img src="/static/public/images/k-logo.png" width="100%"/>
+			<img src="/static/public/images/k_logo.jpg" width="100%"/>
    		</div>
-		<!-- <img id="small-img" src="/static/public/images/y.jpg" width="100%" style="border-radius:4px;margin-top: 10px;"> -->
+		<img id="small-img" src="/static/public/images/y.jpg" width="100%" style="border-radius:4px;margin-top: 10px;">
    		
    		<div class="a-main-word">
-   			<p class="p1">商战伊始，唯嬴独尊！</p>
-			<p class="p1">借天时、顺地利、嬴人和</p>
-			<p class="p1">追求的必是经典，造就的尽是不凡。</p>
-			<p class="p1" style="margin-bottom: 30px;line-height: 20px;">至此，擎天长生智能智慧高端平台厚积薄发，横空出世。</p>
+   			<p class="p1">这里， 将跨领域之鸿沟</p>
+			<p class="p1">这里， 将界定自身之价值</p>
+			<p class="p1">这里， 将联和众人之力</p>
+			<p class="p1">这里， 将盟定天下大势</p>
+			<p class="p1">所以，追求的都是经典，造就的尽是不凡</p>
+			<p class="p1" style="margin-bottom:30px;">至此，跨界天下厚积薄发，横空出世。</p>
 			
 			<p class="p1">尊敬的________先生/女士</p>
-			<p class="p1" style="line-height: 20px;">我们诚邀阁下参加2015年1月30晚9点于武汉四季鑫宝来酒店举办的中华擎天长生产业智慧高端平台战略研讨会。</p>
+			<p class="p1" style="line-height: 20px;">我们诚邀阁下参加2014年12月28晚6点于武汉万达威斯汀酒店举办的跨界天下品牌发布暨院线电影《那十年》启动盛典及剧组主创媒体见面会。</p>
+			<p class="p1" style="line-height: 20px;">《那十年》由香港著名音乐人李健达(将徐小凤送上音乐巅峰的殿堂级音乐人)亲自操刀主题曲及背景音乐，神秘大咖乐当幕后推手，姜潮、谈莉娜、易易紫、陈俊文等众多帅男靓女倾情出演。</p>
+			<p class="p1" style="line-height: 20px;">活动当晚姜潮、谈莉娜、易易紫、苗皓钧、冼灏英、王韦智、陈俊文等明星将莅临现场。</p>
+			<p class="p1">星光璀璨 邀您共享！ </p>
 			<p class="p1">八方齐聚，共襄盛举。</p>
 			<p class="p1">诚邀阁下拨冗莅临！</p>
 		</div>	
 			<div class="a-main-word">
 	   			<img src="/static/public/images/ex_icon1.png" class="word-img"/>
-	   			宴会时间：2015年1月30日上午9：00
+	   			活动时间：2014年12月28日 18:00
 	   		</div>
 	   		<!-- <div class="a-main-word">
 	   			<img src="/static/public/images/ex_icon2.png" class="word-img"/>
@@ -413,12 +418,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	   		</div> -->
 	   		<div class="a-main-word">
 	   			<img src="/static/public/images/ex_icon5.png" class="word-img"/>
-	   			地点：湖北省武汉市武昌区雄楚大道87号武汉四季鑫宝来酒店
+	   			地点：湖北省武汉市武昌区积玉桥万达威斯汀酒店
 	   		</div>
 		<div class="a-main-word">	
 			<p class="p1">本次活动凭邀请函入场，欢迎致电咨询。</p>
-			<p class="p1">沈总：18971088805</p>
-			<p class="p1">袁总：15971489255</p>
+			<p class="p1">周丹：18672911319</p>
+			<p class="p1">刘媛：13098823668</p>
+			<p class="p1">陈明：18607103667</p>
    		</div>
    		<a onclick="location.href='/app/activityRegView.jhtml'" href="javascript:void(0);" class="ex_btn">我要签到（已有${size }人签到）</a>
    		<!-- <a href="javascript:void(0);" id="viewUsers" class="btn_general btn3">查看已签到人员信息</a> -->
@@ -427,7 +433,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	   		<%-- <c:forEach items="${users }" var="user" varStatus="status">
 	   			<div class="user-list" <c:if test="${(status.index+1)%2==0 }">style="float:right;"</c:if> >${user.username }</div>
 	   		</c:forEach> --%>
-	   		<!-- <img alt="" src="/static/public/images/d.jpg" width="100%" style="border-radius:4px;margin-bottom: 10px;">
+	   		<img alt="" src="/static/public/images/d.jpg" width="100%" style="border-radius:4px;margin-bottom: 10px;">
 	   		<div class="erweima">
 	   			<img id="weixin_id" src="/static/public/images/weixin.jpg" width="100%" />
 	   			<div style="text-align:center;font-weight: bold;"><span style="color:#942E2C;font-size:17px;">扫一扫</span><br/>关注跨界天下公众号</div>
@@ -435,9 +441,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	   		<div class="erweima" style="float:right;">
 	   			<a href="/activityAddress.jhtml"><img src="/static/public/images/address.png" width="100%" /></a>
 	   			<div style="text-align:center;font-weight: bold;"><span style="color:#942E2C;font-size:17px;">点一点</span><br/>查看活动地址</div>
-	   		</div> -->
+	   		</div>
    		</div>
-   		<!-- <div style="text-align:center;font-weight: bold;color:#942E2C;">微信公众号：KuaJieTianXia</div> -->
+   		<div style="text-align:center;font-weight: bold;color:#942E2C;">微信公众号：KuaJieTianXia</div>
    		<div class="footer2 gradient_7 box_shadow_1">
 		    <a onclick="location.href='/app/activity.jhtml'" href="javascript:void(0);"><div class="footer2_left fl">首页</div></a>
 		     <div class="fr">
@@ -448,7 +454,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<!-- <bgsound loop="true" src="/static/public/jingle_bells.mp3" /> -->
 		<!-- <embed id="emb" src="/static/public/jingle_bells.mp3" width=0 height=0 type=audio/mpeg loop="200" autostart="true" controls="pausebutton"></embed> -->
    		<div class="a-main-word" style="text-align:center;background:#ECECEC;font-size: 15px;">
-   			&copy;擎天长生
+   			&copy;跨界天下
    		</div>
    	</div>
    	<c:if test="${message eq '1' }">

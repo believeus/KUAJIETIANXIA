@@ -7,7 +7,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
-    <title>跨界天下-活动信息填写</title>
+    <title>擎天长生-活动信息填写</title>
     <meta charset="utf-8">
     <meta content="target-densitydpi=get-target-densitydpi,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,width=device-width, user-scalable=no" name="viewport">
 	<meta content="no" name="apple-touch-fullscreen">
@@ -153,7 +153,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	    </form>
 	</div>
 	<div id="net_re" class="net_re"></div>
-	<a onclick="" href="javascript:void(0);"><div class="ex_copy">&copy;跨界天下</div></a>
+	<a onclick="" href="javascript:void(0);"><div class="ex_copy">&copy;擎天长生</div></a>
 	<div id="foot">
 		<div class="height45"></div>
 		<div class="footer2 gradient_7 box_shadow_1" style="display: block;">
