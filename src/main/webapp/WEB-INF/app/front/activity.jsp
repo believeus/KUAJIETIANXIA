@@ -388,24 +388,24 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
    			<!-- <span class="tips">诚意邀请</span> -->擎天长生，诚邀您的光临！
    		</div>
    		<div class="a-main-img">
-			<img src="/static/public/images/k-logo.png" width="100%"/>
+			<img src="/static/public/images/k-logo2.png" width="100%"/>
    		</div>
 		<!-- <img id="small-img" src="/static/public/images/y.jpg" width="100%" style="border-radius:4px;margin-top: 10px;"> -->
    		
    		<div class="a-main-word">
-   			<p class="p1">商战伊始，唯嬴独尊！</p>
-			<p class="p1">借天时、顺地利、嬴人和</p>
+   			<p class="p1">商战伊始，唯赢独尊！</p>
+			<p class="p1">借天时、顺地利、赢人和</p>
 			<p class="p1">追求的必是经典，造就的尽是不凡。</p>
-			<p class="p1" style="margin-bottom: 30px;line-height: 20px;">至此，擎天长生智能智慧高端平台厚积薄发，横空出世。</p>
+			<p class="p1" style="margin-bottom: 30px;line-height: 20px;">至此，中华擎天长生产业智慧高端平台厚积薄发，横空出世。</p>
 			
 			<p class="p1">尊敬的________先生/女士</p>
-			<p class="p1" style="line-height: 20px;">我们诚邀阁下参加2015年1月30晚9点于武汉四季鑫宝来酒店举办的中华擎天长生产业智慧高端平台战略研讨会。</p>
+			<p class="p1" style="line-height: 20px;">我们诚邀阁下参加2015年1月30上午9点于武汉四季鑫宝来酒店举办的中华擎天长生产业智慧高端平台战略研讨会。</p>
 			<p class="p1">八方齐聚，共襄盛举。</p>
 			<p class="p1">诚邀阁下拨冗莅临！</p>
 		</div>	
 			<div class="a-main-word">
 	   			<img src="/static/public/images/ex_icon1.png" class="word-img"/>
-	   			宴会时间：2015年1月30日上午9：00
+	   			参会时间：2015年1月30日上午9：00
 	   		</div>
 	   		<!-- <div class="a-main-word">
 	   			<img src="/static/public/images/ex_icon2.png" class="word-img"/>
